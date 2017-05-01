@@ -1,0 +1,24 @@
+<table>
+  <tr>
+    <th><a href="?sort_by=manufacturer_id">Fabricante</a></th>
+    <th><a href="?sort_by=title">Nombre</a></th>
+    <th><a href="?sort_by=reference">Referencia</a></th>
+    <th colspan="3"></th>
+  </tr>
+
+<% @articles.each do |article| %>
+  <tr>
+    <td><%= link_to article.manufacturer.name, controller: "manufacturer", :action => 'show', :id => article.manufacturer %></td>
+    <td><%= link_to article.title, :action => 'show', :id => article %> </td>
+    <td><%= h article.reference %></td>
+    <td><%= link_to 'Mostrar', :action => 'show', :id => article %></td>
+    <td><%= link_to 'Editar', :action => 'edit', :id => article  %></td>
+    <td><%= button_to 'Borrar', { :action => 'destroy', :id => article },
+                      data: { confirm: "Seguro que quieres borrar el artículo #{article.title}?" } %></td>
+  </tr>
+<% end %>
+</table>
+<br/>
+<%= will_paginate @articles, :page_links => false, :link_separator => ' | ',
+                          :previous_label => 'Anterior', :next_label => 'Siguiente' %>
+<p><%= link_to 'Añadir nuevo articulo', :action => 'new' %></p>

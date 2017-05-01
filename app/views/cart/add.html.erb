@@ -1,0 +1,9 @@
+<strong>Por favor confirma que quieres añadir <em><%= @article.title %></em> a tu carrito de la compra.</strong>
+<br><br>
+<div style="float: left; width: auto;">
+<%= button_to 'Cancelar', { :controller => 'catalog', :action => 'index' }, :method => :get %>
+</div>
+<div style="float: left; width: auto;">
+<%= button_to 'Confirmar', :action => 'add', :id => params[:id] %>
+</div>
+<br>

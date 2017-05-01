@@ -1,0 +1,28 @@
+<dl>
+  <dt>Nombre</dt>
+  <dd><%= @article.title %></dd>
+  <dt>Fabricante</dt>
+  <dd><%= @article.manufacturer.name %></dd>
+  <dt>Fecha de fabricación</dt>
+  <dd><%= @article.manufactured_at.strftime("%d/%m/%Y at %I:%M%p") %></dd>
+  <dt>Proveedores</dt>
+  <dd><%= @article.supplier_names %></dd>
+  <dt>Referencia</dt>
+  <dd><%= @article.reference %></dd>
+  <dt>Descripción</dt>
+  <%= RedCloth.new(@article.blurb).to_html.html_safe if @article.blurb %>
+  <dt>Precio</dt>
+  <dd><%= @article.price %></dd>
+  <dt>Talla</dt>
+  <dd><%= @article.size %></dd>
+  <dt>Imagen</dt>
+  <% if @article.cover_image.exists? then %>
+    <dd><%= image_tag @article.cover_image.url %></dd>
+  <% else %>
+    <dd><%= image_tag '/missing.png' %></dd>
+    <p> No existe imagen para el artículo. Por favor añada una. </p>
+  <% end %>
+</dl>
+
+<%= link_to 'Editar', :action => 'edit', :id => @article %> |
+<%= link_to 'Atrás', :action => 'index' %>

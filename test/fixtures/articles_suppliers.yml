@@ -1,0 +1,25 @@
+articulo_1_and_proveedor1:
+  created_at: <%= Time.now.strftime "%Y-%m-%d %H:%M:%S" %>
+  updated_at: <%= Time.now.strftime "%Y-%m-%d %H:%M:%S" %>
+  article_id: 1
+  supplier_id: 1
+articulo_2_and_proveedor1:
+  created_at: <%= Time.now.strftime "%Y-%m-%d %H:%M:%S" %>
+  updated_at: <%= Time.now.strftime "%Y-%m-%d %H:%M:%S" %>
+  article_id: 2
+  supplier_id: 1
+articulo_3_and_proveedor2:
+  created_at: <%= Time.now.strftime "%Y-%m-%d %H:%M:%S" %>
+  updated_at: <%= Time.now.strftime "%Y-%m-%d %H:%M:%S" %>
+  article_id: 3
+  supplier_id: 2
+articulo_4_and_proveedor2:
+  created_at: <%= Time.now.strftime "%Y-%m-%d %H:%M:%S" %>
+  updated_at: <%= Time.now.strftime "%Y-%m-%d %H:%M:%S" %>
+  article_id: 4
+  supplier_id: 2
+articulo_5_and_proveedor1:
+  created_at: <%= Time.now.strftime "%Y-%m-%d %H:%M:%S" %>
+  updated_at: <%= Time.now.strftime "%Y-%m-%d %H:%M:%S" %>
+  article_id: 5
+  supplier_id: 1

@@ -1,0 +1,80 @@
+articulo_1:
+  id: 1
+  title: Articulo_1
+  manufacturer_id: 1
+  reference: 199-199-199-1
+  manufactured_at: <%= Time.now.strftime("%Y-%m-%d") %>
+  price: 100
+  size: 40
+articulo_2:
+  id: 2
+  title: Articulo_2
+  manufacturer_id: 1
+  reference: 199-199-199-2
+  manufactured_at: <%= Time.now.strftime("%Y-%m-%d") %>
+  price: 200
+  size: 40
+articulo_3:
+  id: 3
+  title: Articulo_3
+  manufacturer_id: 2
+  reference: 199-199-199-3
+  manufactured_at: <%= Time.now.strftime("%Y-%m-%d") %>
+  price: 300
+  size: 40
+articulo_4:
+  id: 4
+  title: Articulo_4
+  manufacturer_id: 2
+  reference: 199-199-199-4
+  manufactured_at: <%= Time.now.strftime("%Y-%m-%d") %>
+  price: 400
+  size: 40
+articulo_5:
+  id: 5
+  title: Articulo_5
+  manufacturer_id: 2
+  reference: 199-199-199-5
+  manufactured_at: <%= Time.now.strftime("%Y-%m-%d") %>
+  price: 500
+  size: 40
+articulo_6:
+  id: 6
+  title: Articulo_6
+  manufacturer_id: 2
+  reference: 199-199-199-6
+  manufactured_at: <%= Time.now.strftime("%Y-%m-%d") %>
+  price: 600
+  size: 40
+articulo_7:
+  id: 7
+  title: Articulo_7
+  manufacturer_id: 2
+  reference: 199-199-199-7
+  manufactured_at: <%= Time.now.strftime("%Y-%m-%d") %>
+  price: 700
+  size: 40
+articulo_8:
+  id: 8
+  title: Articulo_8
+  manufacturer_id: 2
+  reference: 199-199-199-8
+  manufactured_at: <%= Time.now.strftime("%Y-%m-%d") %>
+  price: 800
+  size: 40
+articulo_9:
+  id: 9
+  title: Articulo_9
+  manufacturer_id: 2
+  reference: 199-199-199-9
+  manufactured_at: <%= Time.now.strftime("%Y-%m-%d") %>
+  price: 900
+  size: 40
+articulo_10:
+  id: 10
+  title: Articulo_10
+  manufacturer_id: 2
+  reference: 299-199-199-1
+  manufactured_at: <%= Time.now.strftime("%Y-%m-%d") %>
+  price: 1000
+  size: 40

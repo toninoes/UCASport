@@ -1,0 +1,8 @@
+<tr>
+  <td><%= link_to manufacturer.name, :action => 'show', :id => manufacturer %></td>
+  <td><%= link_to 'Editar', :action => 'edit', :id => manufacturer %></td>
+  <td>
+    <%= button_to 'Borrar', { :action => 'destroy', :id => manufacturer },
+        data: { confirm: "Estás seguro que quieres borrar el fabricante #{manufacturer.name}?" } %>
+  </td>
+</tr>

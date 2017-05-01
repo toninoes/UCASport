@@ -1,0 +1,9 @@
+<dl>
+  <dt>Nombre</dt>
+  <dd><%= @supplier.first_name %></dd>
+  <dt>Apellidos</dt>
+  <dd><%= @supplier.last_name %></dd>
+</dl>
+
+<%= link_to 'Editar', :action => 'edit', :id => @supplier %> |
+<%= link_to 'Atrás', :action => 'index' %>

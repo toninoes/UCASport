@@ -1,0 +1,61 @@
+<% if @article.errors.any? %>
+  <div id="errorExplanation">
+  <h2><%= pluralize(@article.errors.count, "error") %> prohibido guardar este artículo:</h2>
+    <ul>
+      <% @article.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
+<div class="field">
+  <p><label for="article_title">Título</label><br/>
+  <%= text_field 'article', 'title' %></p>
+</div>
+
+<div class="field">
+  <p><label for="article_manufacturer">Fabricante</label><br/>
+  <%= collection_select :article, :manufacturer_id, @manufacturers, :id, :name %></p>
+</div>
+
+<div class="field">
+  <p><label for="article[supplier_ids][]">Proveedores</label><br/>
+  <%= select_tag 'article[supplier_ids][]', options_from_collection_for_select(@suppliers, :id, :name,
+      @article.suppliers.collect{|supplier| supplier.id}), { :multiple => true, :size => 5 } %></p>
+</div>
+
+<div class="field"><p>
+  <label for="article_manufactured_at">Fecha de Fabricación</label><br/>
+  <%= datetime_select 'article', 'manufactured_at' %></p>
+</div>
+
+<div class="field">
+  <p><label for="article_reference">Referencia</label><br/>
+  <%= text_field 'article', 'reference' %></p>
+</div>
+
+<div class="field">
+  <p><label for="article_blurb">Descripción</label><br/>
+  <%= text_area 'article', 'blurb' %></p>
+</div>
+
+<div class="field">
+  <p><label for="article_price">Precio</label><br/>
+  <%= text_field 'article', 'price' %></p>
+</div>
+
+<div class="field">
+  <p><label for="article_size">Talla</label><br/>
+  <%= text_field 'article', 'size' %></p>
+</div>
+
+<div class="field">
+  <% if @article.cover_image.exists? then %>
+    <dd><%= image_tag @article.cover_image.url %></dd>
+  <% else %>
+    <p> No existe imagen para el artículo. Por favor añada una. </p>
+  <% end %>
+  <p><label for="article_cover_image">Imagen</label><br/>
+  <%= file_field 'article', :cover_image %></p>
+</div>

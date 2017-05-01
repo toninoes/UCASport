@@ -1,0 +1,6 @@
+<%= form_tag "/admin/article/create", :multipart => true do %>
+  <%= render :partial => 'form' %>
+  <%= submit_tag 'Crear articulo' %>
+<% end %>
+
+<%= link_to 'Atrás', :action => 'index' %>

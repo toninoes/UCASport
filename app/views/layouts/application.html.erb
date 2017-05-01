@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= @page_title || 'UCASport' %></title>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <div id="header">
+    <h1 id="logo">UCASport&trade;</h1>
+    <h2 id="slogan">Expertos en zapatillas deportivas</h2>
+
+  </div>
+
+  <div id="menu">
+    <ul>
+      <li><a href="/admin/supplier">Proveedores</a>&nbsp;|&nbsp;</li>
+      <li><a href="/admin/manufacturer">Fabricantes</a>&nbsp;|&nbsp;</li>
+      <li><a href="/admin/article">Artículos</a>&nbsp;|&nbsp;</li>
+      <li><a href="/admin/order">Pedidos</a>&nbsp;|&nbsp;</li>
+      <li><a href="/">Catálogo</a>&nbsp;|&nbsp;</li>
+      <li><a href="/about">Sobre UCASport</a>&nbsp;</li>
+    </ul>
+  </div>
+
+  <div id="content">
+    <h1><%= @page_title if @page_title %></h1>
+    <% if flash[:notice] %>
+      <div id="notice"><%= flash[:notice] %></div>
+    <% end %>
+    <%= yield %>
+  </div>
+
+  <% if @cart %>
+    <div id="shopping_cart"><%= render :partial => 'cart/cart' %></div>
+  <% end %>
+
+  <div id="footer">
+    &copy; 2015-2017 UCASport
+  </div>
+</body>
+</html>

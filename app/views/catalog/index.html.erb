@@ -1,0 +1,3 @@
+<%= render :partial => 'articles' %>
+<%= will_paginate @articles, :page_links => false, :link_separator => ' | ',
+                          :previous_label => 'Anterior', :next_label => 'Siguiente' %>

@@ -1,0 +1,15 @@
+<% if @manufacturer.errors.any? %>
+  <div id="errorExplanation">
+  <h2><%= pluralize(@manufacturer.errors.count, "error") %> prohíben guardar este fabricante:</h2>
+    <ul>
+      <% @manufacturer.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
+<div class="field">
+  <p><label for="manufacturer_name">Nombre</label><br/>
+  <%= text_field 'manufacturer', 'name' %></p>
+</div>

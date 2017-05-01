@@ -1,0 +1,20 @@
+<% if @supplier.errors.any? %>
+  <div id="errorExplanation">
+  <h2><%= pluralize(@supplier.errors.count, "error") %> prohíben guardar este proveedor:</h2>
+    <ul>
+      <% @supplier.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
+<div class="field">
+  <p><label for="supplier_first_name">Nombre</label><br/>
+  <%= text_field 'supplier', 'first_name' %></p>
+</div>
+
+<div class="field">
+  <p><label for="supplier_last_name">Apellidos</label><br/>
+  <%= text_field 'supplier', 'last_name' %></p>
+</div>

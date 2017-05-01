@@ -1,0 +1,9 @@
+<strong>Por favor confirma para eliminar <em><%= @article.title %></em> del carrito de la compra.</strong>
+<br><br>
+<div style="float: left; width: auto;">
+<%= button_to 'Cancelar', { :controller => 'catalog', :action => 'index' }, :method => :get %>
+</div>
+<div style="float: left; width: auto;">
+<%= button_to 'Confirmar', :action => 'remove', :id => params[:id] %>
+</div>
+<br>

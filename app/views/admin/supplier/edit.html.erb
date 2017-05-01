@@ -1,0 +1,7 @@
+<%= form_tag :action => 'update', :id => @supplier do %>
+  <%= render :partial => 'form' %>
+  <%= submit_tag 'Actualizar proveedor' %>
+<% end %>
+
+<%= link_to 'Ver', :action => 'show', :id => @supplier %> |
+<%= link_to 'Atrás', :action => 'index' %>
