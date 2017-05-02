@@ -13594,3 +13594,621 @@ Processing by CatalogController#index as HTML
   [1m[35mCartItem Load (0.3ms)[0m  SELECT `cart_items`.* FROM `cart_items` WHERE `cart_items`.`cart_id` = 5
   Rendered cart/_cart.html.erb (1.5ms)
 Completed 200 OK in 33ms (Views: 29.5ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/admin/article/" for 127.0.0.1 at 2017-05-01 08:43:54 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (30.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by Admin::ArticleController#index as HTML
+  [1m[35mArticle Load (29.3ms)[0m  SELECT  `articles`.* FROM `articles` LIMIT 5 OFFSET 0
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM `articles`[0m
+  [1m[35mManufacturer Load (0.6ms)[0m  SELECT  `manufacturers`.* FROM `manufacturers` WHERE `manufacturers`.`id` = 5 LIMIT 1
+  [1m[36mManufacturer Load (0.5ms)[0m  [1mSELECT  `manufacturers`.* FROM `manufacturers` WHERE `manufacturers`.`id` = 7 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `manufacturers`.* FROM `manufacturers` WHERE `manufacturers`.`id` = 5 LIMIT 1  [["id", 5]]
+  [1m[36mManufacturer Load (0.4ms)[0m  [1mSELECT  `manufacturers`.* FROM `manufacturers` WHERE `manufacturers`.`id` = 6 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `manufacturers`.* FROM `manufacturers` WHERE `manufacturers`.`id` = 7 LIMIT 1  [["id", 7]]
+  Rendered admin/article/index.html.erb within layouts/application (149.5ms)
+Completed 200 OK in 596ms (Views: 491.0ms | ActiveRecord: 61.3ms)
+
+
+Started GET "/assets/about.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-05-01 08:43:54 +0200
+
+
+Started GET "/assets/admin/supplier.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-05-01 08:43:54 +0200
+
+
+Started GET "/assets/catalog.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-05-01 08:43:54 +0200
+
+
+Started GET "/assets/admin/manufacturer.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-05-01 08:43:54 +0200
+
+
+Started GET "/assets/cart.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-05-01 08:43:54 +0200
+
+
+Started GET "/assets/admin/article.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-05-01 08:43:55 +0200
+
+
+Started GET "/assets/style.self-28c50fed0fbf40c4e00e2c6a9dc7872cb7466e25803d031cd7fc5cb4ba105fd8.css?body=1" for 127.0.0.1 at 2017-05-01 08:43:55 +0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2017-05-01 08:43:55 +0200
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2017-05-01 08:43:55 +0200
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2017-05-01 08:43:55 +0200
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2017-05-01 08:43:55 +0200
+
+
+Started GET "/assets/about.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-05-01 08:43:55 +0200
+
+
+Started GET "/assets/admin/article.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-05-01 08:43:55 +0200
+
+
+Started GET "/assets/admin/manufacturer.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-05-01 08:43:55 +0200
+
+
+Started GET "/assets/admin/supplier.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-05-01 08:43:55 +0200
+
+
+Started GET "/assets/cart.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-05-01 08:43:55 +0200
+
+
+Started GET "/assets/catalog.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-05-01 08:43:55 +0200
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2017-05-01 08:43:55 +0200
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-01 08:43:58 +0200
+Processing by CatalogController#index as HTML
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (13.1ms)[0m  INSERT INTO `carts` (`created_at`, `updated_at`) VALUES ('2017-05-01 06:43:58', '2017-05-01 06:43:58')
+  [1m[36m (62.8ms)[0m  [1mCOMMIT[0m
+  [1m[35mArticle Load (1.0ms)[0m  SELECT  `articles`.* FROM `articles`  ORDER BY articles.id desc LIMIT 5 OFFSET 0
+  [1m[36mHABTM_Suppliers Load (6.0ms)[0m  [1mSELECT `articles_suppliers`.* FROM `articles_suppliers` WHERE `articles_suppliers`.`article_id` IN (12, 11, 8, 6, 5)[0m
+  [1m[35mSupplier Load (0.8ms)[0m  SELECT `suppliers`.* FROM `suppliers` WHERE `suppliers`.`id` IN (2, 3, 4, 5, 6)
+  [1m[36mManufacturer Load (0.9ms)[0m  [1mSELECT `manufacturers`.* FROM `manufacturers` WHERE `manufacturers`.`id` IN (5, 7, 6)[0m
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM `articles`
+  Rendered catalog/_articles.html.erb (319.5ms)
+  Rendered catalog/index.html.erb within layouts/application (339.1ms)
+  [1m[36mCartItem Load (0.7ms)[0m  [1mSELECT `cart_items`.* FROM `cart_items` WHERE `cart_items`.`cart_id` = 7[0m
+  Rendered cart/_cart.html.erb (36.1ms)
+Completed 200 OK in 563ms (Views: 219.7ms | ActiveRecord: 323.4ms)
+  [1m[36mActiveRecord::SchemaMigration Load (86.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to CreateOrders (20170502091305)
+DEPRECATION WARNING: `#timestamps` was called without specifying an option for `null`. In Rails 5, this behavior will change to `null: false`. You should manually specify `null: true` to prevent the behavior of your existing migrations from changing. (called from block in change at /home/toni/projects/UCASport/db/migrate/20170502091305_create_orders.rb:18)
+  [1m[35m (310.6ms)[0m  CREATE TABLE `orders` (`id` int(11) auto_increment PRIMARY KEY, `email` varchar(255), `phone_number` varchar(255), `ship_to_first_name` varchar(255), `ship_to_last_name` varchar(255), `ship_to_address` varchar(255), `ship_to_city` varchar(255), `ship_to_postal_code` varchar(255), `ship_to_country_code` varchar(255), `customer_ip` varchar(255), `status` varchar(255), `error_message` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (14.2ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20170502091305')
+  [1m[36m (47.8ms)[0m  [1mCOMMIT[0m
+Migrating to CreateOrderItems (20170502091320)
+DEPRECATION WARNING: `#timestamps` was called without specifying an option for `null`. In Rails 5, this behavior will change to `null: false`. You should manually specify `null: true` to prevent the behavior of your existing migrations from changing. (called from block in up at /home/toni/projects/UCASport/db/migrate/20170502091320_create_order_items.rb:8)
+  [1m[35m (310.1ms)[0m  CREATE TABLE `order_items` (`id` int(11) auto_increment PRIMARY KEY, `article_id` int(11), `order_id` int(11), `price` float, `amount` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36m (781.2ms)[0m  [1mALTER TABLE order_items ADD CONSTRAINT fk_order_items_orders
+              FOREIGN KEY (order_id) REFERENCES orders(id) ON DELETE CASCADE[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20170502091320')[0m
+  [1m[35m (74.0ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.6ms)[0m  SELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'eshop6_development'
+  AND fk.table_name = 'articles'
+
+  [1m[36m (0.4ms)[0m  [1mSHOW CREATE TABLE `articles`[0m
+  [1m[35m (0.6ms)[0m  SELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'eshop6_development'
+  AND fk.table_name = 'articles_suppliers'
+
+  [1m[36m (0.4ms)[0m  [1mSHOW CREATE TABLE `articles_suppliers`[0m
+  [1m[35m (0.6ms)[0m  SELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'eshop6_development'
+  AND fk.table_name = 'cart_items'
+
+  [1m[36m (0.4ms)[0m  [1mSHOW CREATE TABLE `cart_items`[0m
+  [1m[35m (0.5ms)[0m  SELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'eshop6_development'
+  AND fk.table_name = 'carts'
+
+  [1m[36m (0.4ms)[0m  [1mSHOW CREATE TABLE `carts`[0m
+  [1m[35m (0.6ms)[0m  SELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'eshop6_development'
+  AND fk.table_name = 'manufacturers'
+
+  [1m[36m (0.4ms)[0m  [1mSHOW CREATE TABLE `manufacturers`[0m
+  [1m[35m (0.6ms)[0m  SELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'eshop6_development'
+  AND fk.table_name = 'order_items'
+
+  [1m[36m (0.4ms)[0m  [1mSHOW CREATE TABLE `order_items`[0m
+  [1m[35m (0.5ms)[0m  SELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'eshop6_development'
+  AND fk.table_name = 'orders'
+
+  [1m[36m (0.4ms)[0m  [1mSHOW CREATE TABLE `orders`[0m
+  [1m[35m (0.5ms)[0m  SELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'eshop6_development'
+  AND fk.table_name = 'suppliers'
+
+  [1m[36m (0.3ms)[0m  [1mSHOW CREATE TABLE `suppliers`[0m
+
+
+Started GET "/catalog/latest" for 127.0.0.1 at 2017-05-02 12:36:04 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by CatalogController#latest as HTML
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `carts` (`created_at`, `updated_at`) VALUES ('2017-05-02 10:36:04', '2017-05-02 10:36:04')[0m
+  [1m[35m (89.1ms)[0m  COMMIT
+  [1m[36mArticle Load (0.8ms)[0m  [1mSELECT  `articles`.* FROM `articles`  ORDER BY articles.id desc LIMIT 5[0m
+  [1m[35mHABTM_Suppliers Load (0.6ms)[0m  SELECT `articles_suppliers`.* FROM `articles_suppliers` WHERE `articles_suppliers`.`article_id` IN (12, 11, 8, 6, 5)
+  [1m[36mSupplier Load (0.3ms)[0m  [1mSELECT `suppliers`.* FROM `suppliers` WHERE `suppliers`.`id` IN (2, 3, 4, 5, 6)[0m
+  [1m[35mManufacturer Load (0.3ms)[0m  SELECT `manufacturers`.* FROM `manufacturers` WHERE `manufacturers`.`id` IN (5, 7, 6)
+  Rendered catalog/_articles.html.erb (124.9ms)
+  Rendered catalog/latest.html.erb within layouts/application (129.6ms)
+  [1m[36mCartItem Load (0.3ms)[0m  [1mSELECT `cart_items`.* FROM `cart_items` WHERE `cart_items`.`cart_id` = 8[0m
+  Rendered cart/_cart.html.erb (11.8ms)
+Completed 200 OK in 823ms (Views: 671.3ms | ActiveRecord: 104.6ms)
+
+
+Started GET "/assets/checkout.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-05-02 12:36:05 +0200
+
+
+Started GET "/assets/checkout.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-05-02 12:36:05 +0200
+
+
+Started GET "/cart/add?id=11" for 127.0.0.1 at 2017-05-02 12:36:12 +0200
+Processing by CartController#add as HTML
+  Parameters: {"id"=>"11"}
+  [1m[35mCart Load (0.5ms)[0m  SELECT  `carts`.* FROM `carts` WHERE `carts`.`id` = 8 LIMIT 1
+  [1m[36mArticle Load (0.4ms)[0m  [1mSELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 11 LIMIT 1[0m
+  Rendered cart/add.html.erb within layouts/application (6.8ms)
+  [1m[35mCartItem Load (0.5ms)[0m  SELECT `cart_items`.* FROM `cart_items` WHERE `cart_items`.`cart_id` = 8
+  Rendered cart/_cart.html.erb (3.0ms)
+Completed 200 OK in 144ms (Views: 127.3ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/cart/add?id=11" for 127.0.0.1 at 2017-05-02 12:36:14 +0200
+Processing by CartController#add as HTML
+  Parameters: {"authenticity_token"=>"g+TXGD4jJCgspTA/+TPF6nc5PHjgWXeJ6g8VRTboiF31o2NHDhkPOnQ+9LCFNqC1HPJr1WNNJoxRCnS7K8m/eg==", "id"=>"11"}
+  [1m[36mCart Load (0.8ms)[0m  [1mSELECT  `carts`.* FROM `carts` WHERE `carts`.`id` = 8 LIMIT 1[0m
+  [1m[35mArticle Load (0.6ms)[0m  SELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 11 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 11 LIMIT 1[0m  [["id", "11"]]
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM `cart_items` WHERE `cart_items`.`cart_id` = 8 AND `cart_items`.`article_id` = 11
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `cart_items` (`article_id`, `amount`, `price`, `cart_id`, `created_at`, `updated_at`) VALUES (11, 1, 50.0, 8, '2017-05-02 10:36:14', '2017-05-02 10:36:14')
+  [1m[36m (99.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mArticle Load (0.8ms)[0m  SELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 11 LIMIT 1
+Redirected to http://localhost:3000/
+Completed 302 Found in 131ms (ActiveRecord: 103.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-02 12:36:14 +0200
+Processing by CatalogController#index as HTML
+  [1m[36mCart Load (0.6ms)[0m  [1mSELECT  `carts`.* FROM `carts` WHERE `carts`.`id` = 8 LIMIT 1[0m
+  [1m[35mArticle Load (0.6ms)[0m  SELECT  `articles`.* FROM `articles`  ORDER BY articles.id desc LIMIT 5 OFFSET 0
+  [1m[36mHABTM_Suppliers Load (0.5ms)[0m  [1mSELECT `articles_suppliers`.* FROM `articles_suppliers` WHERE `articles_suppliers`.`article_id` IN (12, 11, 8, 6, 5)[0m
+  [1m[35mSupplier Load (0.5ms)[0m  SELECT `suppliers`.* FROM `suppliers` WHERE `suppliers`.`id` IN (2, 3, 4, 5, 6)
+  [1m[36mManufacturer Load (0.4ms)[0m  [1mSELECT `manufacturers`.* FROM `manufacturers` WHERE `manufacturers`.`id` IN (5, 7, 6)[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM `articles`
+  Rendered catalog/_articles.html.erb (25.2ms)
+  Rendered catalog/index.html.erb within layouts/application (27.4ms)
+  Rendered cart/_cart_notice.html.erb (0.4ms)
+  [1m[36mCartItem Load (0.5ms)[0m  [1mSELECT `cart_items`.* FROM `cart_items` WHERE `cart_items`.`cart_id` = 8[0m
+  [1m[35mArticle Load (0.4ms)[0m  SELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 11 LIMIT 1
+  Rendered cart/_item.html.erb (1.1ms)
+  Rendered cart/_cart.html.erb (5.3ms)
+Completed 200 OK in 88ms (Views: 81.9ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/admin/article/" for 127.0.0.1 at 2017-05-02 12:39:34 +0200
+Processing by Admin::ArticleController#index as HTML
+  [1m[36mArticle Load (0.4ms)[0m  [1mSELECT  `articles`.* FROM `articles` LIMIT 5 OFFSET 0[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `articles`
+  [1m[36mManufacturer Load (0.4ms)[0m  [1mSELECT  `manufacturers`.* FROM `manufacturers` WHERE `manufacturers`.`id` = 5 LIMIT 1[0m
+  [1m[35mManufacturer Load (0.3ms)[0m  SELECT  `manufacturers`.* FROM `manufacturers` WHERE `manufacturers`.`id` = 7 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `manufacturers`.* FROM `manufacturers` WHERE `manufacturers`.`id` = 5 LIMIT 1[0m  [["id", 5]]
+  [1m[35mManufacturer Load (0.3ms)[0m  SELECT  `manufacturers`.* FROM `manufacturers` WHERE `manufacturers`.`id` = 6 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `manufacturers`.* FROM `manufacturers` WHERE `manufacturers`.`id` = 7 LIMIT 1[0m  [["id", 7]]
+  Rendered admin/article/index.html.erb within layouts/application (14.1ms)
+Completed 200 OK in 49ms (Views: 46.6ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-02 12:39:38 +0200
+Processing by CatalogController#index as HTML
+  [1m[35mCart Load (0.5ms)[0m  SELECT  `carts`.* FROM `carts` WHERE `carts`.`id` = 8 LIMIT 1
+  [1m[36mArticle Load (0.4ms)[0m  [1mSELECT  `articles`.* FROM `articles`  ORDER BY articles.id desc LIMIT 5 OFFSET 0[0m
+  [1m[35mHABTM_Suppliers Load (0.4ms)[0m  SELECT `articles_suppliers`.* FROM `articles_suppliers` WHERE `articles_suppliers`.`article_id` IN (12, 11, 8, 6, 5)
+  [1m[36mSupplier Load (0.7ms)[0m  [1mSELECT `suppliers`.* FROM `suppliers` WHERE `suppliers`.`id` IN (2, 3, 4, 5, 6)[0m
+  [1m[35mManufacturer Load (0.5ms)[0m  SELECT `manufacturers`.* FROM `manufacturers` WHERE `manufacturers`.`id` IN (5, 7, 6)
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM `articles`[0m
+  Rendered catalog/_articles.html.erb (17.1ms)
+  Rendered catalog/index.html.erb within layouts/application (19.0ms)
+  [1m[35mCartItem Load (0.3ms)[0m  SELECT `cart_items`.* FROM `cart_items` WHERE `cart_items`.`cart_id` = 8
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 11 LIMIT 1[0m
+  Rendered cart/_item.html.erb (1.0ms)
+  Rendered cart/_cart.html.erb (5.2ms)
+Completed 200 OK in 55ms (Views: 49.7ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/cart/add?id=11" for 127.0.0.1 at 2017-05-02 12:39:42 +0200
+Processing by CartController#add as HTML
+  Parameters: {"id"=>"11"}
+  [1m[35mCart Load (0.7ms)[0m  SELECT  `carts`.* FROM `carts` WHERE `carts`.`id` = 8 LIMIT 1
+  [1m[36mArticle Load (0.6ms)[0m  [1mSELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 11 LIMIT 1[0m
+  Rendered cart/add.html.erb within layouts/application (1.0ms)
+  [1m[35mCartItem Load (0.8ms)[0m  SELECT `cart_items`.* FROM `cart_items` WHERE `cart_items`.`cart_id` = 8
+  [1m[36mArticle Load (0.7ms)[0m  [1mSELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 11 LIMIT 1[0m
+  Rendered cart/_item.html.erb (0.7ms)
+  Rendered cart/_cart.html.erb (5.7ms)
+Completed 200 OK in 47ms (Views: 42.4ms | ActiveRecord: 2.8ms)
+
+
+Started POST "/cart/add?id=11" for 127.0.0.1 at 2017-05-02 12:40:10 +0200
+Processing by CartController#add as HTML
+  Parameters: {"authenticity_token"=>"PKk4lrev0XSDFQK5iuIrlgQDFwi6LANQ/Tig8Xc2w91K7ozJh5X6ZtuOxjb2507Jb8hApTk4UlVGPcEPahf0+g==", "id"=>"11"}
+  [1m[35mCart Load (0.6ms)[0m  SELECT  `carts`.* FROM `carts` WHERE `carts`.`id` = 8 LIMIT 1
+  [1m[36mArticle Load (0.5ms)[0m  [1mSELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 11 LIMIT 1[0m
+  [1m[35mCACHE (0.2ms)[0m  SELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 11 LIMIT 1  [["id", "11"]]
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM `cart_items` WHERE `cart_items`.`cart_id` = 8 AND `cart_items`.`article_id` = 11[0m
+  [1m[35mCartItem Load (0.5ms)[0m  SELECT  `cart_items`.* FROM `cart_items` WHERE `cart_items`.`cart_id` = 8 AND `cart_items`.`article_id` = 11  ORDER BY `cart_items`.`id` ASC LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  UPDATE `cart_items` SET `amount` = 2, `updated_at` = '2017-05-02 10:40:10' WHERE `cart_items`.`id` = 1
+  [1m[36m (46.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mArticle Load (0.6ms)[0m  SELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 11 LIMIT 1
+Redirected to http://localhost:3000/
+Completed 302 Found in 63ms (ActiveRecord: 50.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-02 12:40:10 +0200
+Processing by CatalogController#index as HTML
+  [1m[36mCart Load (0.5ms)[0m  [1mSELECT  `carts`.* FROM `carts` WHERE `carts`.`id` = 8 LIMIT 1[0m
+  [1m[35mArticle Load (0.4ms)[0m  SELECT  `articles`.* FROM `articles`  ORDER BY articles.id desc LIMIT 5 OFFSET 0
+  [1m[36mHABTM_Suppliers Load (0.4ms)[0m  [1mSELECT `articles_suppliers`.* FROM `articles_suppliers` WHERE `articles_suppliers`.`article_id` IN (12, 11, 8, 6, 5)[0m
+  [1m[35mSupplier Load (0.3ms)[0m  SELECT `suppliers`.* FROM `suppliers` WHERE `suppliers`.`id` IN (2, 3, 4, 5, 6)
+  [1m[36mManufacturer Load (0.3ms)[0m  [1mSELECT `manufacturers`.* FROM `manufacturers` WHERE `manufacturers`.`id` IN (5, 7, 6)[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `articles`
+  Rendered catalog/_articles.html.erb (13.9ms)
+  Rendered catalog/index.html.erb within layouts/application (14.9ms)
+  Rendered cart/_cart_notice.html.erb (0.1ms)
+  [1m[36mCartItem Load (0.4ms)[0m  [1mSELECT `cart_items`.* FROM `cart_items` WHERE `cart_items`.`cart_id` = 8[0m
+  [1m[35mArticle Load (0.3ms)[0m  SELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 11 LIMIT 1
+  Rendered cart/_item.html.erb (0.6ms)
+  Rendered cart/_cart.html.erb (5.4ms)
+Completed 200 OK in 49ms (Views: 44.6ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/cart/add?id=8" for 127.0.0.1 at 2017-05-02 12:40:14 +0200
+Processing by CartController#add as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mCart Load (0.7ms)[0m  [1mSELECT  `carts`.* FROM `carts` WHERE `carts`.`id` = 8 LIMIT 1[0m
+  [1m[35mArticle Load (0.6ms)[0m  SELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 8 LIMIT 1
+  Rendered cart/add.html.erb within layouts/application (1.6ms)
+  [1m[36mCartItem Load (0.5ms)[0m  [1mSELECT `cart_items`.* FROM `cart_items` WHERE `cart_items`.`cart_id` = 8[0m
+  [1m[35mArticle Load (0.6ms)[0m  SELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 11 LIMIT 1
+  Rendered cart/_item.html.erb (1.5ms)
+  Rendered cart/_cart.html.erb (9.5ms)
+Completed 200 OK in 77ms (Views: 71.8ms | ActiveRecord: 2.4ms)
+
+
+Started POST "/cart/add?id=8" for 127.0.0.1 at 2017-05-02 12:40:16 +0200
+Processing by CartController#add as HTML
+  Parameters: {"authenticity_token"=>"1XdaT2wHAUYwApTSlHdx9fepbe8VRxQ+z/Ws6X9xXy2jMO4QXD0qVGiZUF3ochSqnGI6QpZTRTt08M0XYlBoCg==", "id"=>"8"}
+  [1m[36mCart Load (0.8ms)[0m  [1mSELECT  `carts`.* FROM `carts` WHERE `carts`.`id` = 8 LIMIT 1[0m
+  [1m[35mArticle Load (0.7ms)[0m  SELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 8 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 8 LIMIT 1[0m  [["id", "8"]]
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM `cart_items` WHERE `cart_items`.`cart_id` = 8 AND `cart_items`.`article_id` = 8
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO `cart_items` (`article_id`, `amount`, `price`, `cart_id`, `created_at`, `updated_at`) VALUES (8, 1, 12.0, 8, '2017-05-02 10:40:16', '2017-05-02 10:40:16')
+  [1m[36m (82.0ms)[0m  [1mCOMMIT[0m
+  [1m[35mArticle Load (0.3ms)[0m  SELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 8 LIMIT 1
+Redirected to http://localhost:3000/
+Completed 302 Found in 96ms (ActiveRecord: 85.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-02 12:40:16 +0200
+Processing by CatalogController#index as HTML
+  [1m[36mCart Load (0.3ms)[0m  [1mSELECT  `carts`.* FROM `carts` WHERE `carts`.`id` = 8 LIMIT 1[0m
+  [1m[35mArticle Load (0.3ms)[0m  SELECT  `articles`.* FROM `articles`  ORDER BY articles.id desc LIMIT 5 OFFSET 0
+  [1m[36mHABTM_Suppliers Load (0.3ms)[0m  [1mSELECT `articles_suppliers`.* FROM `articles_suppliers` WHERE `articles_suppliers`.`article_id` IN (12, 11, 8, 6, 5)[0m
+  [1m[35mSupplier Load (0.3ms)[0m  SELECT `suppliers`.* FROM `suppliers` WHERE `suppliers`.`id` IN (2, 3, 4, 5, 6)
+  [1m[36mManufacturer Load (0.2ms)[0m  [1mSELECT `manufacturers`.* FROM `manufacturers` WHERE `manufacturers`.`id` IN (5, 7, 6)[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM `articles`
+  Rendered catalog/_articles.html.erb (11.7ms)
+  Rendered catalog/index.html.erb within layouts/application (12.5ms)
+  Rendered cart/_cart_notice.html.erb (0.0ms)
+  [1m[36mCartItem Load (0.4ms)[0m  [1mSELECT `cart_items`.* FROM `cart_items` WHERE `cart_items`.`cart_id` = 8[0m
+  [1m[35mArticle Load (0.3ms)[0m  SELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 11 LIMIT 1
+  Rendered cart/_item.html.erb (0.5ms)
+  [1m[36mArticle Load (0.3ms)[0m  [1mSELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 8 LIMIT 1[0m
+  Rendered cart/_item.html.erb (0.4ms)
+  Rendered cart/_cart.html.erb (5.7ms)
+Completed 200 OK in 45ms (Views: 41.8ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/checkout" for 127.0.0.1 at 2017-05-02 12:40:18 +0200
+Processing by CheckoutController#index as HTML
+  [1m[35mCart Load (0.5ms)[0m  SELECT  `carts`.* FROM `carts` WHERE `carts`.`id` = 8 LIMIT 1
+  [1m[36mArticle Exists (0.6ms)[0m  [1mSELECT  1 AS one FROM `articles` INNER JOIN `cart_items` ON `articles`.`id` = `cart_items`.`article_id` WHERE `cart_items`.`cart_id` = 8 LIMIT 1[0m
+  Rendered checkout/index.html.erb within layouts/application (19.4ms)
+  [1m[35mCartItem Load (0.4ms)[0m  SELECT `cart_items`.* FROM `cart_items` WHERE `cart_items`.`cart_id` = 8
+  [1m[36mArticle Load (0.3ms)[0m  [1mSELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 11 LIMIT 1[0m
+  Rendered cart/_item.html.erb (0.6ms)
+  [1m[35mArticle Load (0.3ms)[0m  SELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 8 LIMIT 1
+  Rendered cart/_item.html.erb (0.5ms)
+  Rendered cart/_cart.html.erb (6.0ms)
+Completed 200 OK in 92ms (Views: 53.7ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/checkout" for 127.0.0.1 at 2017-05-02 12:41:15 +0200
+Processing by CheckoutController#index as HTML
+  [1m[36mCart Load (0.6ms)[0m  [1mSELECT  `carts`.* FROM `carts` WHERE `carts`.`id` = 8 LIMIT 1[0m
+  [1m[35mArticle Exists (0.4ms)[0m  SELECT  1 AS one FROM `articles` INNER JOIN `cart_items` ON `articles`.`id` = `cart_items`.`article_id` WHERE `cart_items`.`cart_id` = 8 LIMIT 1
+  Rendered checkout/index.html.erb within layouts/application (21.6ms)
+  [1m[36mCartItem Load (0.3ms)[0m  [1mSELECT `cart_items`.* FROM `cart_items` WHERE `cart_items`.`cart_id` = 8[0m
+  [1m[35mArticle Load (0.2ms)[0m  SELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 11 LIMIT 1
+  Rendered cart/_item.html.erb (0.5ms)
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 8 LIMIT 1[0m
+  Rendered cart/_item.html.erb (0.4ms)
+  Rendered cart/_cart.html.erb (4.6ms)
+Completed 200 OK in 57ms (Views: 50.4ms | ActiveRecord: 1.7ms)
+
+
+Started POST "/checkout/submit_order" for 127.0.0.1 at 2017-05-02 12:42:04 +0200
+Processing by CheckoutController#submit_order as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Cb75/Fl+x+j3DmdgmQyAUCXLlqwlsu5iE7lQoETr1AR/+U2jaUTs+q+Vo+/lCeUPTgDBAaamv2eovDFeWcrjIw==", "order"=>{"email"=>"dffsa@sdds.es", "phone_number"=>"956956956", "ship_to_first_name"=>"ljhli ", "ship_to_last_name"=>"ih ", "ship_to_address"=>"iuhiou", "ship_to_city"=>"cay", "ship_to_postal_code"=>"11100", "ship_to_country_code"=>"es", "card_type"=>"Visa", "card_expiration_month"=>"1", "card_expiration_year"=>"2017", "card_number"=>"4007000000027", "card_verification_value"=>"123"}, "cart"=>{"id"=>"8"}, "commit"=>"Enviar pedido"}
+  [1m[35mCart Load (0.5ms)[0m  SELECT  `carts`.* FROM `carts` WHERE `carts`.`id` = 8 LIMIT 1
+  [1m[36mCartItem Load (0.4ms)[0m  [1mSELECT `cart_items`.* FROM `cart_items` WHERE `cart_items`.`cart_id` = 8[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `orders` (`email`, `phone_number`, `ship_to_first_name`, `ship_to_last_name`, `ship_to_address`, `ship_to_city`, `ship_to_postal_code`, `ship_to_country_code`, `customer_ip`, `status`, `created_at`, `updated_at`) VALUES ('dffsa@sdds.es', '956956956', 'ljhli ', 'ih ', 'iuhiou', 'cay', '11100', 'ES', '127.0.0.1', 'open', '2017-05-02 10:42:04', '2017-05-02 10:42:04')[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `order_items` (`article_id`, `price`, `amount`, `order_id`, `created_at`, `updated_at`) VALUES (11, 50.0, 2, 1, '2017-05-02 10:42:04', '2017-05-02 10:42:04')
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `order_items` (`article_id`, `price`, `amount`, `order_id`, `created_at`, `updated_at`) VALUES (8, 12.0, 1, 1, '2017-05-02 10:42:04', '2017-05-02 10:42:04')[0m
+  [1m[35m (94.6ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (36.3ms)[0m  UPDATE `orders` SET `status` = 'failed', `error_message` = 'Tarjeta de crédito no válida', `updated_at` = '2017-05-02 10:42:04' WHERE `orders`.`id` = 1
+  [1m[36m (44.0ms)[0m  [1mCOMMIT[0m
+  Rendered checkout/index.html.erb within layouts/application (13.2ms)
+  [1m[35mArticle Load (0.3ms)[0m  SELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 11 LIMIT 1
+  Rendered cart/_item.html.erb (0.5ms)
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 8 LIMIT 1[0m
+  Rendered cart/_item.html.erb (0.5ms)
+  Rendered cart/_cart.html.erb (3.8ms)
+Completed 200 OK in 247ms (Views: 40.6ms | ActiveRecord: 178.2ms)
+
+
+Started POST "/checkout/submit_order" for 127.0.0.1 at 2017-05-02 12:42:15 +0200
+Processing by CheckoutController#submit_order as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9fkjyp/W9Uo/0K1W0iVI8IuozFY84pmGDftgEv2h74qDvpeVr+zeWGdLadmuIC2v4GOb+7/2yIO2/gHs4IDYrQ==", "order"=>{"email"=>"dffsa@sdds.es", "phone_number"=>"956956956", "ship_to_first_name"=>"ljhli ", "ship_to_last_name"=>"ih ", "ship_to_address"=>"iuhiou", "ship_to_city"=>"cay", "ship_to_postal_code"=>"11100", "ship_to_country_code"=>"es", "card_type"=>"MasterCard", "card_expiration_month"=>"1", "card_expiration_year"=>"2017", "card_number"=>"4007000000027", "card_verification_value"=>"123"}, "cart"=>{"id"=>"8"}, "commit"=>"Enviar pedido"}
+  [1m[35mCart Load (0.7ms)[0m  SELECT  `carts`.* FROM `carts` WHERE `carts`.`id` = 8 LIMIT 1
+  [1m[36mCartItem Load (0.5ms)[0m  [1mSELECT `cart_items`.* FROM `cart_items` WHERE `cart_items`.`cart_id` = 8[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO `orders` (`email`, `phone_number`, `ship_to_first_name`, `ship_to_last_name`, `ship_to_address`, `ship_to_city`, `ship_to_postal_code`, `ship_to_country_code`, `customer_ip`, `status`, `created_at`, `updated_at`) VALUES ('dffsa@sdds.es', '956956956', 'ljhli ', 'ih ', 'iuhiou', 'cay', '11100', 'ES', '127.0.0.1', 'open', '2017-05-02 10:42:15', '2017-05-02 10:42:15')[0m
+  [1m[35mSQL (79.9ms)[0m  INSERT INTO `order_items` (`article_id`, `price`, `amount`, `order_id`, `created_at`, `updated_at`) VALUES (11, 50.0, 2, 2, '2017-05-02 10:42:15', '2017-05-02 10:42:15')
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `order_items` (`article_id`, `price`, `amount`, `order_id`, `created_at`, `updated_at`) VALUES (8, 12.0, 1, 2, '2017-05-02 10:42:15', '2017-05-02 10:42:15')[0m
+  [1m[35m (64.8ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (32.6ms)[0m  UPDATE `orders` SET `status` = 'failed', `error_message` = 'Tarjeta de crédito no válida', `updated_at` = '2017-05-02 10:42:15' WHERE `orders`.`id` = 2
+  [1m[36m (44.1ms)[0m  [1mCOMMIT[0m
+  Rendered checkout/index.html.erb within layouts/application (11.3ms)
+  [1m[35mArticle Load (0.4ms)[0m  SELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 11 LIMIT 1
+  Rendered cart/_item.html.erb (0.4ms)
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 8 LIMIT 1[0m
+  Rendered cart/_item.html.erb (0.3ms)
+  Rendered cart/_cart.html.erb (3.7ms)
+Completed 200 OK in 276ms (Views: 35.2ms | ActiveRecord: 224.4ms)
+
+
+Started POST "/checkout/submit_order" for 127.0.0.1 at 2017-05-02 12:42:37 +0200
+Processing by CheckoutController#submit_order as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"viYzIGMwuVH0B8wpJJ07YTQmDbxtxDbQccB2lgDmRLbIYYd/UwqSQ6ycCKZYmF4+X+1aEe7QZ9XKxRdoHcdzkQ==", "order"=>{"email"=>"dffsa@sdds.es", "phone_number"=>"956956956", "ship_to_first_name"=>"ljhli ", "ship_to_last_name"=>"ih ", "ship_to_address"=>"iuhiou", "ship_to_city"=>"cay", "ship_to_postal_code"=>"11100", "ship_to_country_code"=>"es", "card_type"=>"Visa", "card_expiration_month"=>"1", "card_expiration_year"=>"2017", "card_number"=>"4012888818888", "card_verification_value"=>"123"}, "cart"=>{"id"=>"8"}, "commit"=>"Enviar pedido"}
+  [1m[35mCart Load (0.4ms)[0m  SELECT  `carts`.* FROM `carts` WHERE `carts`.`id` = 8 LIMIT 1
+  [1m[36mCartItem Load (0.4ms)[0m  [1mSELECT `cart_items`.* FROM `cart_items` WHERE `cart_items`.`cart_id` = 8[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `orders` (`email`, `phone_number`, `ship_to_first_name`, `ship_to_last_name`, `ship_to_address`, `ship_to_city`, `ship_to_postal_code`, `ship_to_country_code`, `customer_ip`, `status`, `created_at`, `updated_at`) VALUES ('dffsa@sdds.es', '956956956', 'ljhli ', 'ih ', 'iuhiou', 'cay', '11100', 'ES', '127.0.0.1', 'open', '2017-05-02 10:42:37', '2017-05-02 10:42:37')[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `order_items` (`article_id`, `price`, `amount`, `order_id`, `created_at`, `updated_at`) VALUES (11, 50.0, 2, 3, '2017-05-02 10:42:37', '2017-05-02 10:42:37')
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `order_items` (`article_id`, `price`, `amount`, `order_id`, `created_at`, `updated_at`) VALUES (8, 12.0, 1, 3, '2017-05-02 10:42:37', '2017-05-02 10:42:37')[0m
+  [1m[35m (82.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (31.1ms)[0m  UPDATE `orders` SET `status` = 'failed', `error_message` = 'Tarjeta de crédito no válida', `updated_at` = '2017-05-02 10:42:37' WHERE `orders`.`id` = 3
+  [1m[36m (33.2ms)[0m  [1mCOMMIT[0m
+  Rendered checkout/index.html.erb within layouts/application (11.7ms)
+  [1m[35mArticle Load (0.4ms)[0m  SELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 11 LIMIT 1
+  Rendered cart/_item.html.erb (0.5ms)
+  [1m[36mArticle Load (0.3ms)[0m  [1mSELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 8 LIMIT 1[0m
+  Rendered cart/_item.html.erb (0.4ms)
+  Rendered cart/_cart.html.erb (3.7ms)
+Completed 200 OK in 198ms (Views: 36.3ms | ActiveRecord: 149.5ms)
+
+
+Started POST "/checkout/submit_order" for 127.0.0.1 at 2017-05-02 12:42:47 +0200
+Processing by CheckoutController#submit_order as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"84eCbdXphml1ARHVXCBvb49RQjO0u3qZYWv9dyaulM6FwDYy5dOtey2a1VogJQow5JoVnjevK5zabpyJO4+j6Q==", "order"=>{"email"=>"dffsa@sdds.es", "phone_number"=>"956956956", "ship_to_first_name"=>"ljhli ", "ship_to_last_name"=>"ih ", "ship_to_address"=>"iuhiou", "ship_to_city"=>"cay", "ship_to_postal_code"=>"11100", "ship_to_country_code"=>"es", "card_type"=>"Visa", "card_expiration_month"=>"9", "card_expiration_year"=>"2017", "card_number"=>"4012888818888", "card_verification_value"=>"123"}, "cart"=>{"id"=>"8"}, "commit"=>"Enviar pedido"}
+  [1m[35mCart Load (0.5ms)[0m  SELECT  `carts`.* FROM `carts` WHERE `carts`.`id` = 8 LIMIT 1
+  [1m[36mCartItem Load (0.4ms)[0m  [1mSELECT `cart_items`.* FROM `cart_items` WHERE `cart_items`.`cart_id` = 8[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO `orders` (`email`, `phone_number`, `ship_to_first_name`, `ship_to_last_name`, `ship_to_address`, `ship_to_city`, `ship_to_postal_code`, `ship_to_country_code`, `customer_ip`, `status`, `created_at`, `updated_at`) VALUES ('dffsa@sdds.es', '956956956', 'ljhli ', 'ih ', 'iuhiou', 'cay', '11100', 'ES', '127.0.0.1', 'open', '2017-05-02 10:42:47', '2017-05-02 10:42:47')[0m
+  [1m[35mSQL (83.0ms)[0m  INSERT INTO `order_items` (`article_id`, `price`, `amount`, `order_id`, `created_at`, `updated_at`) VALUES (11, 50.0, 2, 4, '2017-05-02 10:42:47', '2017-05-02 10:42:47')
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO `order_items` (`article_id`, `price`, `amount`, `order_id`, `created_at`, `updated_at`) VALUES (8, 12.0, 1, 4, '2017-05-02 10:42:48', '2017-05-02 10:42:48')[0m
+  [1m[35m (86.2ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE `orders` SET `status` = 'processed', `updated_at` = '2017-05-02 10:42:49' WHERE `orders`.`id` = 4
+  [1m[36m (36.9ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mDELETE FROM `cart_items` WHERE `cart_items`.`id` = 1[0m
+  [1m[35mSQL (0.4ms)[0m  DELETE FROM `cart_items` WHERE `cart_items`.`id` = 2
+  [1m[36m (85.0ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/checkout/thank_you
+Completed 302 Found in 1342ms (ActiveRecord: 295.3ms)
+
+
+Started GET "/checkout/thank_you" for 127.0.0.1 at 2017-05-02 12:42:49 +0200
+Processing by CheckoutController#thank_you as HTML
+  Rendered checkout/thank_you.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 25ms (Views: 25.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cart/clear" for 127.0.0.1 at 2017-05-02 12:44:24 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by CartController#clear as HTML
+  [1m[35mCart Load (0.4ms)[0m  SELECT  `carts`.* FROM `carts` WHERE `carts`.`id` = 8 LIMIT 1
+  Rendered cart/clear.html.erb within layouts/application (2.7ms)
+  [1m[36mCartItem Load (0.6ms)[0m  [1mSELECT `cart_items`.* FROM `cart_items` WHERE `cart_items`.`cart_id` = 8[0m
+  Rendered cart/_cart.html.erb (15.6ms)
+Completed 200 OK in 339ms (Views: 307.0ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/checkout" for 127.0.0.1 at 2017-05-02 12:44:28 +0200
+Processing by CheckoutController#index as HTML
+  [1m[35mCart Load (0.7ms)[0m  SELECT  `carts`.* FROM `carts` WHERE `carts`.`id` = 8 LIMIT 1
+  [1m[36mArticle Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM `articles` INNER JOIN `cart_items` ON `articles`.`id` = `cart_items`.`article_id` WHERE `cart_items`.`cart_id` = 8 LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 76ms (ActiveRecord: 4.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-02 12:44:28 +0200
+Processing by CatalogController#index as HTML
+  [1m[35mCart Load (0.5ms)[0m  SELECT  `carts`.* FROM `carts` WHERE `carts`.`id` = 8 LIMIT 1
+  [1m[36mArticle Load (0.4ms)[0m  [1mSELECT  `articles`.* FROM `articles`  ORDER BY articles.id desc LIMIT 5 OFFSET 0[0m
+  [1m[35mHABTM_Suppliers Load (0.3ms)[0m  SELECT `articles_suppliers`.* FROM `articles_suppliers` WHERE `articles_suppliers`.`article_id` IN (12, 11, 8, 6, 5)
+  [1m[36mSupplier Load (0.2ms)[0m  [1mSELECT `suppliers`.* FROM `suppliers` WHERE `suppliers`.`id` IN (2, 3, 4, 5, 6)[0m
+  [1m[35mManufacturer Load (0.2ms)[0m  SELECT `manufacturers`.* FROM `manufacturers` WHERE `manufacturers`.`id` IN (5, 7, 6)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `articles`[0m
+  Rendered catalog/_articles.html.erb (45.9ms)
+  Rendered catalog/index.html.erb within layouts/application (47.5ms)
+  [1m[35mCartItem Load (0.3ms)[0m  SELECT `cart_items`.* FROM `cart_items` WHERE `cart_items`.`cart_id` = 8
+  Rendered cart/_cart.html.erb (1.4ms)
+Completed 200 OK in 74ms (Views: 68.0ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-02 12:45:04 +0200
+Processing by CatalogController#index as HTML
+  [1m[36mCart Load (0.5ms)[0m  [1mSELECT  `carts`.* FROM `carts` WHERE `carts`.`id` = 8 LIMIT 1[0m
+  [1m[35mArticle Load (0.4ms)[0m  SELECT  `articles`.* FROM `articles`  ORDER BY articles.id desc LIMIT 5 OFFSET 0
+  [1m[36mHABTM_Suppliers Load (0.3ms)[0m  [1mSELECT `articles_suppliers`.* FROM `articles_suppliers` WHERE `articles_suppliers`.`article_id` IN (12, 11, 8, 6, 5)[0m
+  [1m[35mSupplier Load (0.3ms)[0m  SELECT `suppliers`.* FROM `suppliers` WHERE `suppliers`.`id` IN (2, 3, 4, 5, 6)
+  [1m[36mManufacturer Load (0.3ms)[0m  [1mSELECT `manufacturers`.* FROM `manufacturers` WHERE `manufacturers`.`id` IN (5, 7, 6)[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `articles`
+  Rendered catalog/_articles.html.erb (63.8ms)
+  Rendered catalog/index.html.erb within layouts/application (65.2ms)
+  [1m[36mCartItem Load (0.2ms)[0m  [1mSELECT `cart_items`.* FROM `cart_items` WHERE `cart_items`.`cart_id` = 8[0m
+  Rendered cart/_cart.html.erb (6.3ms)
+Completed 200 OK in 119ms (Views: 90.9ms | ActiveRecord: 8.3ms)
+
+
+Started GET "/checkout" for 127.0.0.1 at 2017-05-02 12:45:07 +0200
+Processing by CheckoutController#index as HTML
+  [1m[35mCart Load (0.4ms)[0m  SELECT  `carts`.* FROM `carts` WHERE `carts`.`id` = 8 LIMIT 1
+  [1m[36mArticle Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM `articles` INNER JOIN `cart_items` ON `articles`.`id` = `cart_items`.`article_id` WHERE `cart_items`.`cart_id` = 8 LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 33ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-02 12:45:07 +0200
+Processing by CatalogController#index as HTML
+  [1m[35mCart Load (0.5ms)[0m  SELECT  `carts`.* FROM `carts` WHERE `carts`.`id` = 8 LIMIT 1
+  [1m[36mArticle Load (0.4ms)[0m  [1mSELECT  `articles`.* FROM `articles`  ORDER BY articles.id desc LIMIT 5 OFFSET 0[0m
+  [1m[35mHABTM_Suppliers Load (0.4ms)[0m  SELECT `articles_suppliers`.* FROM `articles_suppliers` WHERE `articles_suppliers`.`article_id` IN (12, 11, 8, 6, 5)
+  [1m[36mSupplier Load (0.4ms)[0m  [1mSELECT `suppliers`.* FROM `suppliers` WHERE `suppliers`.`id` IN (2, 3, 4, 5, 6)[0m
+  [1m[35mManufacturer Load (0.3ms)[0m  SELECT `manufacturers`.* FROM `manufacturers` WHERE `manufacturers`.`id` IN (5, 7, 6)
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `articles`[0m
+  Rendered catalog/_articles.html.erb (15.4ms)
+  Rendered catalog/index.html.erb within layouts/application (16.6ms)
+  [1m[35mCartItem Load (0.4ms)[0m  SELECT `cart_items`.* FROM `cart_items` WHERE `cart_items`.`cart_id` = 8
+  Rendered cart/_cart.html.erb (1.6ms)
+Completed 200 OK in 48ms (Views: 44.0ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-02 12:45:34 +0200
+Processing by CatalogController#index as HTML
+  [1m[36mCart Load (0.3ms)[0m  [1mSELECT  `carts`.* FROM `carts` WHERE `carts`.`id` = 8 LIMIT 1[0m
+  [1m[35mArticle Load (0.4ms)[0m  SELECT  `articles`.* FROM `articles`  ORDER BY articles.id desc LIMIT 5 OFFSET 0
+  [1m[36mHABTM_Suppliers Load (0.3ms)[0m  [1mSELECT `articles_suppliers`.* FROM `articles_suppliers` WHERE `articles_suppliers`.`article_id` IN (12, 11, 8, 6, 5)[0m
+  [1m[35mSupplier Load (0.2ms)[0m  SELECT `suppliers`.* FROM `suppliers` WHERE `suppliers`.`id` IN (2, 3, 4, 5, 6)
+  [1m[36mManufacturer Load (0.2ms)[0m  [1mSELECT `manufacturers`.* FROM `manufacturers` WHERE `manufacturers`.`id` IN (5, 7, 6)[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `articles`
+  Rendered catalog/_articles.html.erb (52.6ms)
+  Rendered catalog/index.html.erb within layouts/application (53.4ms)
+  [1m[36mCartItem Load (0.2ms)[0m  [1mSELECT `cart_items`.* FROM `cart_items` WHERE `cart_items`.`cart_id` = 8[0m
+  Rendered cart/_cart.html.erb (5.4ms)
+Completed 200 OK in 101ms (Views: 77.6ms | ActiveRecord: 5.9ms)
+
+
+Started GET "/checkout" for 127.0.0.1 at 2017-05-02 12:45:37 +0200
+Processing by CheckoutController#index as HTML
+  [1m[35mCart Load (0.4ms)[0m  SELECT  `carts`.* FROM `carts` WHERE `carts`.`id` = 8 LIMIT 1
+  [1m[36mArticle Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM `articles` INNER JOIN `cart_items` ON `articles`.`id` = `cart_items`.`article_id` WHERE `cart_items`.`cart_id` = 8 LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 26ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-02 12:45:37 +0200
+Processing by CatalogController#index as HTML
+  [1m[35mCart Load (0.3ms)[0m  SELECT  `carts`.* FROM `carts` WHERE `carts`.`id` = 8 LIMIT 1
+  [1m[36mArticle Load (0.3ms)[0m  [1mSELECT  `articles`.* FROM `articles`  ORDER BY articles.id desc LIMIT 5 OFFSET 0[0m
+  [1m[35mHABTM_Suppliers Load (0.3ms)[0m  SELECT `articles_suppliers`.* FROM `articles_suppliers` WHERE `articles_suppliers`.`article_id` IN (12, 11, 8, 6, 5)
+  [1m[36mSupplier Load (0.3ms)[0m  [1mSELECT `suppliers`.* FROM `suppliers` WHERE `suppliers`.`id` IN (2, 3, 4, 5, 6)[0m
+  [1m[35mManufacturer Load (0.3ms)[0m  SELECT `manufacturers`.* FROM `manufacturers` WHERE `manufacturers`.`id` IN (5, 7, 6)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `articles`[0m
+  Rendered catalog/_articles.html.erb (11.5ms)
+  Rendered catalog/index.html.erb within layouts/application (12.3ms)
+  [1m[35mCartItem Load (0.3ms)[0m  SELECT `cart_items`.* FROM `cart_items` WHERE `cart_items`.`cart_id` = 8
+  Rendered cart/_cart.html.erb (1.2ms)
+Completed 200 OK in 36ms (Views: 32.7ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-02 12:45:45 +0200
+Processing by CatalogController#index as HTML
+  [1m[36mCart Load (0.3ms)[0m  [1mSELECT  `carts`.* FROM `carts` WHERE `carts`.`id` = 8 LIMIT 1[0m
+  [1m[35mArticle Load (0.3ms)[0m  SELECT  `articles`.* FROM `articles`  ORDER BY articles.id desc LIMIT 5 OFFSET 0
+  [1m[36mHABTM_Suppliers Load (0.4ms)[0m  [1mSELECT `articles_suppliers`.* FROM `articles_suppliers` WHERE `articles_suppliers`.`article_id` IN (12, 11, 8, 6, 5)[0m
+  [1m[35mSupplier Load (0.5ms)[0m  SELECT `suppliers`.* FROM `suppliers` WHERE `suppliers`.`id` IN (2, 3, 4, 5, 6)
+  [1m[36mManufacturer Load (0.3ms)[0m  [1mSELECT `manufacturers`.* FROM `manufacturers` WHERE `manufacturers`.`id` IN (5, 7, 6)[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `articles`
+  Rendered catalog/_articles.html.erb (16.5ms)
+  Rendered catalog/index.html.erb within layouts/application (17.7ms)
+  [1m[36mCartItem Load (0.4ms)[0m  [1mSELECT `cart_items`.* FROM `cart_items` WHERE `cart_items`.`cart_id` = 8[0m
+  Rendered cart/_cart.html.erb (1.6ms)
+Completed 200 OK in 49ms (Views: 45.0ms | ActiveRecord: 2.3ms)

@@ -7630,3 +7630,282 @@ Completed 302 Found in 21ms (ActiveRecord: 5.3ms)
   [1m[35mCart Load (0.5ms)[0m  SELECT  `carts`.* FROM `carts` WHERE `carts`.`id` = 980190966 LIMIT 1
   [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM `cart_items` WHERE `cart_items`.`cart_id` = 980190966[0m
   [1m[35m (35.3ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (23.5ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[36m (1325.8ms)[0m  [1mDROP DATABASE IF EXISTS `eshop6_test`[0m
+  [1m[35m (0.5ms)[0m  CREATE DATABASE `eshop6_test` DEFAULT CHARACTER SET `utf8` COLLATE `utf8_unicode_ci`
+  [1m[36m (273.1ms)[0m  [1mCREATE TABLE `articles` (`id` int(11) auto_increment PRIMARY KEY, `title` varchar(255) NOT NULL, `manufacturer_id` int(11) NOT NULL, `manufactured_at` datetime, `reference` varchar(13), `blurb` text, `size` int(11), `price` float(24), `created_at` datetime, `updated_at` datetime, `cover_image_file_name` varchar(255), `cover_image_content_type` varchar(255), `cover_image_file_size` int(11), `cover_image_updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35m (264.8ms)[0m  CREATE  INDEX `fk_articles_manufacturers` USING btree ON `articles` (`manufacturer_id`) 
+  [1m[36m (287.0ms)[0m  [1mCREATE TABLE `articles_suppliers` (`id` int(11) auto_increment PRIMARY KEY, `supplier_id` int(11) NOT NULL, `article_id` int(11) NOT NULL, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35m (264.6ms)[0m  CREATE  INDEX `fk_articles_suppliers_articles` USING btree ON `articles_suppliers` (`article_id`) 
+  [1m[36m (265.4ms)[0m  [1mCREATE  INDEX `fk_articles_suppliers_suppliers` USING btree ON `articles_suppliers` (`supplier_id`) [0m
+  [1m[35m (300.0ms)[0m  CREATE TABLE `cart_items` (`id` int(11) auto_increment PRIMARY KEY, `article_id` int(11), `cart_id` int(11), `price` float(24), `amount` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36m (276.4ms)[0m  [1mCREATE TABLE `carts` (`id` int(11) auto_increment PRIMARY KEY, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35m (276.3ms)[0m  CREATE TABLE `manufacturers` (`id` int(11) auto_increment PRIMARY KEY, `name` varchar(255) NOT NULL, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36m (242.7ms)[0m  [1mCREATE TABLE `order_items` (`id` int(11) auto_increment PRIMARY KEY, `article_id` int(11), `order_id` int(11), `price` float(24), `amount` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35m (253.7ms)[0m  CREATE  INDEX `fk_order_items_orders` USING btree ON `order_items` (`order_id`) 
+  [1m[36m (297.7ms)[0m  [1mCREATE TABLE `orders` (`id` int(11) auto_increment PRIMARY KEY, `email` varchar(255), `phone_number` varchar(255), `ship_to_first_name` varchar(255), `ship_to_last_name` varchar(255), `ship_to_address` varchar(255), `ship_to_city` varchar(255), `ship_to_postal_code` varchar(255), `ship_to_country_code` varchar(255), `customer_ip` varchar(255), `status` varchar(255), `error_message` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35m (399.3ms)[0m  CREATE TABLE `suppliers` (`id` int(11) auto_increment PRIMARY KEY, `first_name` varchar(255) NOT NULL, `last_name` varchar(255) NOT NULL, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (649.0ms)[0m  [1mALTER TABLE `articles` ADD CONSTRAINT `fk_articles_manufacturers`
+FOREIGN KEY (`manufacturer_id`)
+  REFERENCES `manufacturers` (`id`)
+ ON DELETE CASCADE[0m
+  [1m[35m (858.0ms)[0m  ALTER TABLE `articles_suppliers` ADD CONSTRAINT `fk_articles_suppliers_articles`
+FOREIGN KEY (`article_id`)
+  REFERENCES `articles` (`id`)
+ ON DELETE CASCADE
+  [1m[36m (694.9ms)[0m  [1mALTER TABLE `articles_suppliers` ADD CONSTRAINT `fk_articles_suppliers_suppliers`
+FOREIGN KEY (`supplier_id`)
+  REFERENCES `suppliers` (`id`)
+ ON DELETE CASCADE[0m
+  [1m[35m (759.1ms)[0m  ALTER TABLE `order_items` ADD CONSTRAINT `fk_order_items_orders`
+FOREIGN KEY (`order_id`)
+  REFERENCES `orders` (`id`)
+ ON DELETE CASCADE
+  [1m[36m (297.5ms)[0m  [1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (410.6ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations`  ON `schema_migrations` (`version`) 
+  [1m[36m (0.3ms)[0m  [1mSELECT version FROM `schema_migrations`[0m
+  [1m[35m (33.2ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20170502091320')
+  [1m[36m (33.3ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20130630150644')[0m
+  [1m[35m (33.2ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20170502091305')
+  [1m[36m (33.1ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20170321100602')[0m
+  [1m[35m (33.1ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20170427122245')
+  [1m[36m (33.2ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20170328092851')[0m
+  [1m[35m (35.1ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20170427122257')
+  [1m[36m (33.2ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20170404092937')[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.7ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+  [1m[36m (0.6ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.4ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM `order_items`
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `order_items` (`created_at`, `updated_at`, `id`) VALUES ('2017-05-02 09:31:43', '2017-05-02 09:31:43', 980190962)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `order_items` (`created_at`, `updated_at`, `id`) VALUES ('2017-05-02 09:31:43', '2017-05-02 09:31:43', 298486374)
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `carts`[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `carts` (`created_at`, `updated_at`, `id`) VALUES ('2017-05-02 09:31:43', '2017-05-02 09:31:43', 980190962)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `carts` (`created_at`, `updated_at`, `id`) VALUES ('2017-05-02 09:31:43', '2017-05-02 09:31:43', 298486374)[0m
+  [1m[35mFixture Delete (0.4ms)[0m  DELETE FROM `orders`
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO `orders` (`created_at`, `updated_at`, `id`) VALUES ('2017-05-02 09:31:43', '2017-05-02 09:31:43', 980190962)[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO `orders` (`created_at`, `updated_at`, `id`) VALUES ('2017-05-02 09:31:43', '2017-05-02 09:31:43', 298486374)
+  [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM `articles`[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (1, 'Articulo_1', 1, '199-199-199-1', '2017-05-02', 100.0, 40, '2017-05-02 09:31:43', '2017-05-02 09:31:43')
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (2, 'Articulo_2', 1, '199-199-199-2', '2017-05-02', 200.0, 40, '2017-05-02 09:31:43', '2017-05-02 09:31:43')[0m
+  [1m[35mFixture Insert (69.9ms)[0m  INSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (3, 'Articulo_3', 2, '199-199-199-3', '2017-05-02', 300.0, 40, '2017-05-02 09:31:43', '2017-05-02 09:31:43')
+  [1m[36mFixture Insert (0.6ms)[0m  [1mINSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (4, 'Articulo_4', 2, '199-199-199-4', '2017-05-02', 400.0, 40, '2017-05-02 09:31:43', '2017-05-02 09:31:43')[0m
+  [1m[35mFixture Insert (0.6ms)[0m  INSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (5, 'Articulo_5', 2, '199-199-199-5', '2017-05-02', 500.0, 40, '2017-05-02 09:31:43', '2017-05-02 09:31:43')
+  [1m[36mFixture Insert (0.6ms)[0m  [1mINSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (6, 'Articulo_6', 2, '199-199-199-6', '2017-05-02', 600.0, 40, '2017-05-02 09:31:43', '2017-05-02 09:31:43')[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (7, 'Articulo_7', 2, '199-199-199-7', '2017-05-02', 700.0, 40, '2017-05-02 09:31:43', '2017-05-02 09:31:43')
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (8, 'Articulo_8', 2, '199-199-199-8', '2017-05-02', 800.0, 40, '2017-05-02 09:31:43', '2017-05-02 09:31:43')[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (9, 'Articulo_9', 2, '199-199-199-9', '2017-05-02', 900.0, 40, '2017-05-02 09:31:43', '2017-05-02 09:31:43')
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (10, 'Articulo_10', 2, '299-199-199-1', '2017-05-02', 1000.0, 40, '2017-05-02 09:31:43', '2017-05-02 09:31:43')[0m
+  [1m[35mFixture Delete (1.0ms)[0m  DELETE FROM `articles_suppliers`
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO `articles_suppliers` (`created_at`, `updated_at`, `article_id`, `supplier_id`) VALUES ('2017-05-02 11:31:43', '2017-05-02 11:31:43', 1, 1)[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO `articles_suppliers` (`created_at`, `updated_at`, `article_id`, `supplier_id`) VALUES ('2017-05-02 11:31:43', '2017-05-02 11:31:43', 2, 1)
+  [1m[36mFixture Insert (76.7ms)[0m  [1mINSERT INTO `articles_suppliers` (`created_at`, `updated_at`, `article_id`, `supplier_id`) VALUES ('2017-05-02 11:31:43', '2017-05-02 11:31:43', 3, 2)[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO `articles_suppliers` (`created_at`, `updated_at`, `article_id`, `supplier_id`) VALUES ('2017-05-02 11:31:43', '2017-05-02 11:31:43', 4, 2)
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO `articles_suppliers` (`created_at`, `updated_at`, `article_id`, `supplier_id`) VALUES ('2017-05-02 11:31:43', '2017-05-02 11:31:43', 5, 1)[0m
+  [1m[35mFixture Delete (0.5ms)[0m  DELETE FROM `cart_items`
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO `cart_items` (`created_at`, `updated_at`, `id`) VALUES ('2017-05-02 09:31:44', '2017-05-02 09:31:44', 980190962)[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO `cart_items` (`created_at`, `updated_at`, `id`) VALUES ('2017-05-02 09:31:44', '2017-05-02 09:31:44', 298486374)
+  [1m[36mFixture Delete (0.5ms)[0m  [1mDELETE FROM `suppliers`[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO `suppliers` (`id`, `first_name`, `last_name`, `created_at`, `updated_at`) VALUES (1, 'Pepe', 'Mateo', '2017-05-02 09:31:44', '2017-05-02 09:31:44')
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO `suppliers` (`id`, `first_name`, `last_name`, `created_at`, `updated_at`) VALUES (2, 'Toni', 'Gavira', '2017-05-02 09:31:44', '2017-05-02 09:31:44')[0m
+  [1m[35mFixture Delete (0.5ms)[0m  DELETE FROM `manufacturers`
+  [1m[36mFixture Insert (0.6ms)[0m  [1mINSERT INTO `manufacturers` (`id`, `name`, `created_at`, `updated_at`) VALUES (1, 'Adidas', '2017-05-02 09:31:44', '2017-05-02 09:31:44')[0m
+  [1m[35mFixture Insert (0.6ms)[0m  INSERT INTO `manufacturers` (`id`, `name`, `created_at`, `updated_at`) VALUES (2, 'Nike', '2017-05-02 09:31:44', '2017-05-02 09:31:44')
+  [1m[36m (71.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+----------------------------------
+OrderTest: test_create_valid_order
+----------------------------------
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO `orders` (`email`, `phone_number`, `ship_to_first_name`, `ship_to_last_name`, `ship_to_address`, `ship_to_city`, `ship_to_postal_code`, `ship_to_country_code`, `customer_ip`, `status`, `created_at`, `updated_at`) VALUES ('email@email.com', '666112233', 'Firstname', 'Lastname', 'Address', 'City', '00000', 'ES', '127.0.0.1', 'open', '2017-05-02 09:31:44', '2017-05-02 09:31:44')[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `order_items` (`article_id`, `price`, `amount`, `order_id`, `created_at`, `updated_at`) VALUES (1, 155.25, 3, 980190963, '2017-05-02 09:31:44', '2017-05-02 09:31:44')
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (354.5ms)[0m  [1mUPDATE `orders` SET `status` = 'processed', `updated_at` = '2017-05-02 09:31:46' WHERE `orders`.`id` = 980190963[0m
+  [1m[35m (0.4ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mOrder Load (0.8ms)[0m  [1mSELECT  `orders`.* FROM `orders` WHERE `orders`.`id` = 980190963 LIMIT 1[0m
+  [1m[35m (0.8ms)[0m  SELECT COUNT(*) FROM `order_items` WHERE `order_items`.`order_id` = 980190963
+  [1m[36mOrderItem Load (0.9ms)[0m  [1mSELECT `order_items`.* FROM `order_items` WHERE `order_items`.`order_id` = 980190963[0m
+  [1m[35m (0.4ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.8ms)[0m  [1mUPDATE `orders` SET `status` = 'closed', `updated_at` = '2017-05-02 09:31:46' WHERE `orders`.`id` = 980190963[0m
+  [1m[35m (0.4ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (67.6ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+---------------------------
+OrderTest: test_validations
+---------------------------
+  [1m[36m (0.4ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.3ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `order_items`[0m
+  [1m[35mFixture Insert (90.5ms)[0m  INSERT INTO `order_items` (`created_at`, `updated_at`, `id`) VALUES ('2017-05-02 10:34:20', '2017-05-02 10:34:20', 980190962)
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO `order_items` (`created_at`, `updated_at`, `id`) VALUES ('2017-05-02 10:34:20', '2017-05-02 10:34:20', 298486374)[0m
+  [1m[35mFixture Delete (0.4ms)[0m  DELETE FROM `carts`
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO `carts` (`created_at`, `updated_at`, `id`) VALUES ('2017-05-02 10:34:20', '2017-05-02 10:34:20', 980190962)[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO `carts` (`created_at`, `updated_at`, `id`) VALUES ('2017-05-02 10:34:20', '2017-05-02 10:34:20', 298486374)
+  [1m[36mFixture Delete (0.5ms)[0m  [1mDELETE FROM `orders`[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `orders` (`created_at`, `updated_at`, `id`) VALUES ('2017-05-02 10:34:20', '2017-05-02 10:34:20', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `orders` (`created_at`, `updated_at`, `id`) VALUES ('2017-05-02 10:34:20', '2017-05-02 10:34:20', 298486374)[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM `articles`
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (1, 'Articulo_1', 1, '199-199-199-1', '2017-05-02', 100.0, 40, '2017-05-02 10:34:20', '2017-05-02 10:34:20')[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (2, 'Articulo_2', 1, '199-199-199-2', '2017-05-02', 200.0, 40, '2017-05-02 10:34:20', '2017-05-02 10:34:20')
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (3, 'Articulo_3', 2, '199-199-199-3', '2017-05-02', 300.0, 40, '2017-05-02 10:34:20', '2017-05-02 10:34:20')[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (4, 'Articulo_4', 2, '199-199-199-4', '2017-05-02', 400.0, 40, '2017-05-02 10:34:20', '2017-05-02 10:34:20')
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (5, 'Articulo_5', 2, '199-199-199-5', '2017-05-02', 500.0, 40, '2017-05-02 10:34:20', '2017-05-02 10:34:20')[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (6, 'Articulo_6', 2, '199-199-199-6', '2017-05-02', 600.0, 40, '2017-05-02 10:34:20', '2017-05-02 10:34:20')
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (7, 'Articulo_7', 2, '199-199-199-7', '2017-05-02', 700.0, 40, '2017-05-02 10:34:20', '2017-05-02 10:34:20')[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (8, 'Articulo_8', 2, '199-199-199-8', '2017-05-02', 800.0, 40, '2017-05-02 10:34:20', '2017-05-02 10:34:20')
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (9, 'Articulo_9', 2, '199-199-199-9', '2017-05-02', 900.0, 40, '2017-05-02 10:34:20', '2017-05-02 10:34:20')[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (10, 'Articulo_10', 2, '299-199-199-1', '2017-05-02', 1000.0, 40, '2017-05-02 10:34:20', '2017-05-02 10:34:20')
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM `articles_suppliers`[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `articles_suppliers` (`created_at`, `updated_at`, `article_id`, `supplier_id`) VALUES ('2017-05-02 12:34:20', '2017-05-02 12:34:20', 1, 1)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `articles_suppliers` (`created_at`, `updated_at`, `article_id`, `supplier_id`) VALUES ('2017-05-02 12:34:20', '2017-05-02 12:34:20', 2, 1)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `articles_suppliers` (`created_at`, `updated_at`, `article_id`, `supplier_id`) VALUES ('2017-05-02 12:34:20', '2017-05-02 12:34:20', 3, 2)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `articles_suppliers` (`created_at`, `updated_at`, `article_id`, `supplier_id`) VALUES ('2017-05-02 12:34:20', '2017-05-02 12:34:20', 4, 2)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `articles_suppliers` (`created_at`, `updated_at`, `article_id`, `supplier_id`) VALUES ('2017-05-02 12:34:20', '2017-05-02 12:34:20', 5, 1)
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `cart_items`[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `cart_items` (`created_at`, `updated_at`, `id`) VALUES ('2017-05-02 10:34:20', '2017-05-02 10:34:20', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `cart_items` (`created_at`, `updated_at`, `id`) VALUES ('2017-05-02 10:34:20', '2017-05-02 10:34:20', 298486374)[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM `suppliers`
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `suppliers` (`id`, `first_name`, `last_name`, `created_at`, `updated_at`) VALUES (1, 'Pepe', 'Mateo', '2017-05-02 10:34:20', '2017-05-02 10:34:20')[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO `suppliers` (`id`, `first_name`, `last_name`, `created_at`, `updated_at`) VALUES (2, 'Toni', 'Gavira', '2017-05-02 10:34:20', '2017-05-02 10:34:20')
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM `manufacturers`[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `manufacturers` (`id`, `name`, `created_at`, `updated_at`) VALUES (1, 'Adidas', '2017-05-02 10:34:20', '2017-05-02 10:34:20')
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `manufacturers` (`id`, `name`, `created_at`, `updated_at`) VALUES (2, 'Nike', '2017-05-02 10:34:20', '2017-05-02 10:34:20')[0m
+  [1m[35m (69.1ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+-----------------------------------
+CheckoutTest: test_submitting_order
+-----------------------------------
+Started POST "/cart/add" for 127.0.0.1 at 2017-05-02 12:34:20 +0200
+Processing by CartController#add as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO `carts` (`created_at`, `updated_at`) VALUES ('2017-05-02 10:34:21', '2017-05-02 10:34:21')
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mArticle Load (0.6ms)[0m  SELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM `cart_items` WHERE `cart_items`.`cart_id` = 980190963 AND `cart_items`.`article_id` = 1
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO `cart_items` (`article_id`, `amount`, `price`, `cart_id`, `created_at`, `updated_at`) VALUES (1, 1, 100.0, 980190963, '2017-05-02 10:34:21', '2017-05-02 10:34:21')
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mArticle Load (0.5ms)[0m  SELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 1 LIMIT 1
+Redirected to http://www.example.com/
+Completed 302 Found in 108ms (ActiveRecord: 3.5ms)
+Started GET "/checkout" for 127.0.0.1 at 2017-05-02 12:34:21 +0200
+  [1m[36m (41.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+-------------------------------------------------
+CheckoutTest: test_empty_cart_shows_error_message
+-------------------------------------------------
+Started GET "/checkout" for 127.0.0.1 at 2017-05-02 12:34:21 +0200
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.3ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.2ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM `order_items`[0m
+  [1m[35mFixture Insert (119.9ms)[0m  INSERT INTO `order_items` (`created_at`, `updated_at`, `id`) VALUES ('2017-05-02 10:35:33', '2017-05-02 10:35:33', 980190962)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `order_items` (`created_at`, `updated_at`, `id`) VALUES ('2017-05-02 10:35:33', '2017-05-02 10:35:33', 298486374)[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM `carts`
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO `carts` (`created_at`, `updated_at`, `id`) VALUES ('2017-05-02 10:35:33', '2017-05-02 10:35:33', 980190962)[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO `carts` (`created_at`, `updated_at`, `id`) VALUES ('2017-05-02 10:35:33', '2017-05-02 10:35:33', 298486374)
+  [1m[36mFixture Delete (0.5ms)[0m  [1mDELETE FROM `orders`[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `orders` (`created_at`, `updated_at`, `id`) VALUES ('2017-05-02 10:35:33', '2017-05-02 10:35:33', 980190962)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `orders` (`created_at`, `updated_at`, `id`) VALUES ('2017-05-02 10:35:33', '2017-05-02 10:35:33', 298486374)[0m
+  [1m[35mFixture Delete (1.0ms)[0m  DELETE FROM `articles`
+  [1m[36mFixture Insert (0.6ms)[0m  [1mINSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (1, 'Articulo_1', 1, '199-199-199-1', '2017-05-02', 100.0, 40, '2017-05-02 10:35:33', '2017-05-02 10:35:33')[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (2, 'Articulo_2', 1, '199-199-199-2', '2017-05-02', 200.0, 40, '2017-05-02 10:35:33', '2017-05-02 10:35:33')
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (3, 'Articulo_3', 2, '199-199-199-3', '2017-05-02', 300.0, 40, '2017-05-02 10:35:33', '2017-05-02 10:35:33')[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (4, 'Articulo_4', 2, '199-199-199-4', '2017-05-02', 400.0, 40, '2017-05-02 10:35:33', '2017-05-02 10:35:33')
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (5, 'Articulo_5', 2, '199-199-199-5', '2017-05-02', 500.0, 40, '2017-05-02 10:35:33', '2017-05-02 10:35:33')[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (6, 'Articulo_6', 2, '199-199-199-6', '2017-05-02', 600.0, 40, '2017-05-02 10:35:33', '2017-05-02 10:35:33')
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (7, 'Articulo_7', 2, '199-199-199-7', '2017-05-02', 700.0, 40, '2017-05-02 10:35:33', '2017-05-02 10:35:33')[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (8, 'Articulo_8', 2, '199-199-199-8', '2017-05-02', 800.0, 40, '2017-05-02 10:35:33', '2017-05-02 10:35:33')
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (9, 'Articulo_9', 2, '199-199-199-9', '2017-05-02', 900.0, 40, '2017-05-02 10:35:33', '2017-05-02 10:35:33')[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (10, 'Articulo_10', 2, '299-199-199-1', '2017-05-02', 1000.0, 40, '2017-05-02 10:35:33', '2017-05-02 10:35:33')
+  [1m[36mFixture Delete (0.6ms)[0m  [1mDELETE FROM `articles_suppliers`[0m
+  [1m[35mFixture Insert (0.6ms)[0m  INSERT INTO `articles_suppliers` (`created_at`, `updated_at`, `article_id`, `supplier_id`) VALUES ('2017-05-02 12:35:33', '2017-05-02 12:35:33', 1, 1)
+  [1m[36mFixture Insert (0.6ms)[0m  [1mINSERT INTO `articles_suppliers` (`created_at`, `updated_at`, `article_id`, `supplier_id`) VALUES ('2017-05-02 12:35:33', '2017-05-02 12:35:33', 2, 1)[0m
+  [1m[35mFixture Insert (0.6ms)[0m  INSERT INTO `articles_suppliers` (`created_at`, `updated_at`, `article_id`, `supplier_id`) VALUES ('2017-05-02 12:35:33', '2017-05-02 12:35:33', 3, 2)
+  [1m[36mFixture Insert (0.6ms)[0m  [1mINSERT INTO `articles_suppliers` (`created_at`, `updated_at`, `article_id`, `supplier_id`) VALUES ('2017-05-02 12:35:33', '2017-05-02 12:35:33', 4, 2)[0m
+  [1m[35mFixture Insert (0.6ms)[0m  INSERT INTO `articles_suppliers` (`created_at`, `updated_at`, `article_id`, `supplier_id`) VALUES ('2017-05-02 12:35:33', '2017-05-02 12:35:33', 5, 1)
+  [1m[36mFixture Delete (0.6ms)[0m  [1mDELETE FROM `cart_items`[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `cart_items` (`created_at`, `updated_at`, `id`) VALUES ('2017-05-02 10:35:33', '2017-05-02 10:35:33', 980190962)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `cart_items` (`created_at`, `updated_at`, `id`) VALUES ('2017-05-02 10:35:33', '2017-05-02 10:35:33', 298486374)[0m
+  [1m[35mFixture Delete (0.6ms)[0m  DELETE FROM `suppliers`
+  [1m[36mFixture Insert (0.6ms)[0m  [1mINSERT INTO `suppliers` (`id`, `first_name`, `last_name`, `created_at`, `updated_at`) VALUES (1, 'Pepe', 'Mateo', '2017-05-02 10:35:33', '2017-05-02 10:35:33')[0m
+  [1m[35mFixture Insert (0.6ms)[0m  INSERT INTO `suppliers` (`id`, `first_name`, `last_name`, `created_at`, `updated_at`) VALUES (2, 'Toni', 'Gavira', '2017-05-02 10:35:33', '2017-05-02 10:35:33')
+  [1m[36mFixture Delete (0.6ms)[0m  [1mDELETE FROM `manufacturers`[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `manufacturers` (`id`, `name`, `created_at`, `updated_at`) VALUES (1, 'Adidas', '2017-05-02 10:35:33', '2017-05-02 10:35:33')
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `manufacturers` (`id`, `name`, `created_at`, `updated_at`) VALUES (2, 'Nike', '2017-05-02 10:35:33', '2017-05-02 10:35:33')[0m
+  [1m[35m (86.9ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+-------------------------------------------------
+CheckoutTest: test_empty_cart_shows_error_message
+-------------------------------------------------
+Started GET "/checkout" for 127.0.0.1 at 2017-05-02 12:35:33 +0200
+Processing by CheckoutController#index as HTML
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `carts` (`created_at`, `updated_at`) VALUES ('2017-05-02 10:35:33', '2017-05-02 10:35:33')
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mArticle Exists (0.9ms)[0m  SELECT  1 AS one FROM `articles` INNER JOIN `cart_items` ON `articles`.`id` = `cart_items`.`article_id` WHERE `cart_items`.`cart_id` = 980190964 LIMIT 1
+Redirected to http://www.example.com/
+Completed 302 Found in 80ms (ActiveRecord: 1.4ms)
+  [1m[36m (44.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+-----------------------------------
+CheckoutTest: test_submitting_order
+-----------------------------------
+Started POST "/cart/add" for 127.0.0.1 at 2017-05-02 12:35:33 +0200
+Processing by CartController#add as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36m (0.4ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO `carts` (`created_at`, `updated_at`) VALUES ('2017-05-02 10:35:33', '2017-05-02 10:35:33')
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mArticle Load (0.6ms)[0m  SELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM `cart_items` WHERE `cart_items`.`cart_id` = 980190965 AND `cart_items`.`article_id` = 1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `cart_items` (`article_id`, `amount`, `price`, `cart_id`, `created_at`, `updated_at`) VALUES (1, 1, 100.0, 980190965, '2017-05-02 10:35:34', '2017-05-02 10:35:34')
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mArticle Load (0.3ms)[0m  SELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 1 LIMIT 1
+Redirected to http://www.example.com/
+Completed 302 Found in 50ms (ActiveRecord: 3.5ms)
+Started GET "/checkout" for 127.0.0.1 at 2017-05-02 12:35:34 +0200
+Processing by CheckoutController#index as HTML
+  [1m[36mCart Load (0.3ms)[0m  [1mSELECT  `carts`.* FROM `carts` WHERE `carts`.`id` = 980190965 LIMIT 1[0m
+  [1m[35mArticle Exists (0.4ms)[0m  SELECT  1 AS one FROM `articles` INNER JOIN `cart_items` ON `articles`.`id` = `cart_items`.`article_id` WHERE `cart_items`.`cart_id` = 980190965 LIMIT 1
+  Rendered checkout/index.html.erb within layouts/application (41.6ms)
+  Rendered cart/_cart_notice.html.erb (0.5ms)
+  [1m[36mCartItem Load (0.7ms)[0m  [1mSELECT `cart_items`.* FROM `cart_items` WHERE `cart_items`.`cart_id` = 980190965[0m
+  [1m[35mArticle Load (0.6ms)[0m  SELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 1 LIMIT 1
+  Rendered cart/_item.html.erb (1.6ms)
+  Rendered cart/_cart.html.erb (9.4ms)
+Completed 200 OK in 1132ms (Views: 1126.3ms | ActiveRecord: 2.1ms)
+  [1m[36mCart Load (0.7ms)[0m  [1mSELECT  `carts`.* FROM `carts`  ORDER BY `carts`.`id` DESC LIMIT 1[0m
+Started POST "/checkout/submit_order" for 127.0.0.1 at 2017-05-02 12:35:35 +0200
+Processing by CheckoutController#submit_order as HTML
+  Parameters: {"cart"=>{"id"=>"980190965"}, "order"=>{"email"=>"email@email.com", "phone_number"=>"666112233", "ship_to_first_name"=>"Firstname", "ship_to_last_name"=>"Lastname", "ship_to_address"=>"Address", "ship_to_city"=>"City", "ship_to_postal_code"=>"00000", "ship_to_country_code"=>"Country", "card_type"=>"Visa", "card_number"=>"4007000000027", "card_expiration_month"=>"3", "card_expiration_year"=>"2018", "card_verification_value"=>"000"}}
+  [1m[35mCart Load (0.3ms)[0m  SELECT  `carts`.* FROM `carts` WHERE `carts`.`id` = 980190965 LIMIT 1
+  [1m[36mCartItem Load (0.6ms)[0m  [1mSELECT `cart_items`.* FROM `cart_items` WHERE `cart_items`.`cart_id` = 980190965[0m
+  [1m[35m (0.4ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO `orders` (`email`, `phone_number`, `ship_to_first_name`, `ship_to_last_name`, `ship_to_address`, `ship_to_city`, `ship_to_postal_code`, `ship_to_country_code`, `customer_ip`, `status`, `created_at`, `updated_at`) VALUES ('email@email.com', '666112233', 'Firstname', 'Lastname', 'Address', 'City', '00000', 'COUNTRY', '127.0.0.1', 'open', '2017-05-02 10:35:35', '2017-05-02 10:35:35')[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO `order_items` (`article_id`, `price`, `amount`, `order_id`, `created_at`, `updated_at`) VALUES (1, 100.0, 1, 980190964, '2017-05-02 10:35:35', '2017-05-02 10:35:35')
+  [1m[36m (0.3ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.7ms)[0m  [1mUPDATE `orders` SET `status` = 'processed', `updated_at` = '2017-05-02 10:35:37' WHERE `orders`.`id` = 980190964[0m
+  [1m[35m (0.3ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.4ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  DELETE FROM `cart_items` WHERE `cart_items`.`id` = 980190964
+  [1m[36m (0.3ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/checkout/thank_you
+Completed 302 Found in 1883ms (ActiveRecord: 5.3ms)
+  [1m[35m (130.8ms)[0m  ROLLBACK

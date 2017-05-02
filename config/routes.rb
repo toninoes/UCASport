@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 
   get 'about' => 'about#index'
   get 'catalog' => 'catalog#index'
+  get 'checkout' => 'checkout#index'
   get 'admin/manufacturer' => 'admin/manufacturer#index'
   get 'admin/supplier' => 'admin/supplier#index'
   get 'admin/article' => 'admin/article#index'
@@ -48,5 +49,9 @@ Rails.application.routes.draw do
   post 'cart/remove'
   get 'cart/clear'
   post 'cart/clear'
+
+  get 'checkout/index'
+  post 'checkout/submit_order'
+  get 'checkout/thank_you'
 
 end
