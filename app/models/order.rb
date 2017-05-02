@@ -10,29 +10,37 @@ class Order < ActiveRecord::Base
   validates_presence_of :order_items,
                         :message => 'Tu carrito de la compra está vacío! ' +
                                     'Por favor añade al menos un artículo al carrito antes de enviar la orden.'
-  validates_format_of :email, :with => /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i
-  validates_length_of :phone_number, :in => 7..20
+  validates_format_of :email, :with => /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i, :message => 'Introduzca correctamente el e-mail'
+  validates_length_of :phone_number, :in => 7..20, :message => 'La longitud del numero de telefono debe ser entre 7 y 20 caracteres'
 
-  validates_length_of :ship_to_first_name, :in => 2..255
-  validates_length_of :ship_to_last_name, :in => 2..255
-  validates_length_of :ship_to_address, :in => 2..255
-  validates_length_of :ship_to_city, :in => 2..255
-  validates_length_of :ship_to_postal_code, :in => 2..255
-  validates_length_of :ship_to_country_code, :in => 2..255
+  validates_length_of :ship_to_first_name, :in => 2..255, :message => 'La longitud del nombre debe ser entre 2 y 255 caracteres'
+  validates_length_of :ship_to_last_name, :in => 2..255, :message => 'La longitud de los apellidos debe ser entre 2 y 255 caracteres'
+  validates_length_of :ship_to_address, :in => 2..255, :message => 'La longitud de la dirección debe ser entre 2 y 255 caracteres'
+  validates_length_of :ship_to_city, :in => 2..255, :message => 'La longitud de la ciudad debe ser entre 2 y 255 caracteres'
+  validates_length_of :ship_to_postal_code, :in => 2..255, :message => 'La longitud del código postal debe ser entre 2 y 255 caracteres'
+  validates_length_of :ship_to_country_code, :in => 2..255, :in => 2..255, :message => 'La longitud del código de pais debe ser entre 2 y 255 caracteres'
 
-  validates_length_of :customer_ip, :in => 7..15
+  validates_length_of :customer_ip, :in => 7..15, :message => 'La longitud de la direccion ip del cliente debe ser entre 7 y 15 caracteres'
   validates_inclusion_of :status, :in => %w(open processed closed failed)
 
   validates_inclusion_of :card_type, :in => ['Visa', 'MasterCard', 'American Express', 'Discover'], :on => :create
-  validates_length_of :card_number, :in => 13..19, :on => :create
+  validates_length_of :card_number, :in => 13..19, :on => :create, :message => 'La longitud del numero de tarjeta debe ser entre 13 y 19 caracteres'
   validates_inclusion_of :card_expiration_month, :in => %w(1 2 3 4 5 6 7 8 9 10 11 12), :on => :create
   validates_inclusion_of :card_expiration_year, :in => %w(2017 2018 2019 2020 2021 2022), :on => :create
-  validates_length_of :card_verification_value, :in => 3..4, :on => :create
+  validates_length_of :card_verification_value, :in => 3..4, :on => :create, :message => 'La longitud del codigo de verificacion de la tarjeta debe ser entre 3 y 4 caracteres'
 
   def total
     sum = 0
     order_items.each do |item|
       sum += item.price * item.amount
+    end
+    sum
+  end
+
+  def amount
+    sum = 0
+    order_items.each do |item|
+      sum += item.amount
     end
     sum
   end

@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get 'admin/manufacturer' => 'admin/manufacturer#index'
   get 'admin/supplier' => 'admin/supplier#index'
   get 'admin/article' => 'admin/article#index'
+  get 'admin/order' => 'admin/order#index'
 
   get 'about/index'
 
@@ -37,6 +38,12 @@ Rails.application.routes.draw do
   get 'admin/article/show'
   get 'admin/article/show/:id' => 'admin/article#show'
   get 'admin/article/index'
+
+  post 'admin/order/close'
+  post 'admin/order/destroy'
+  get 'admin/order/show'
+  get 'admin/order/show/:id' => 'admin/order#show'
+  get 'admin/order/index'
 
   get 'catalog/show'
   get 'catalog/show/:id' => 'catalog#show'
