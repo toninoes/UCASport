@@ -10,7 +10,7 @@ class Order < ActiveRecord::Base
   validates_presence_of :order_items,
                         :message => 'Tu carrito de la compra está vacío! ' +
                                     'Por favor añade al menos un artículo al carrito antes de enviar la orden.'
-  validates_format_of :email, :with => /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i, :message => 'Introduzca correctamente el e-mail'
+  validates_format_of :email, :with => /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i, :message => 'El formato del e-mail no es correcto'
   validates_length_of :phone_number, :in => 7..20, :message => 'La longitud del numero de telefono debe ser entre 7 y 20 caracteres'
 
   validates_length_of :ship_to_first_name, :in => 2..255, :message => 'La longitud del nombre debe ser entre 2 y 255 caracteres'
@@ -18,7 +18,7 @@ class Order < ActiveRecord::Base
   validates_length_of :ship_to_address, :in => 2..255, :message => 'La longitud de la dirección debe ser entre 2 y 255 caracteres'
   validates_length_of :ship_to_city, :in => 2..255, :message => 'La longitud de la ciudad debe ser entre 2 y 255 caracteres'
   validates_length_of :ship_to_postal_code, :in => 2..255, :message => 'La longitud del código postal debe ser entre 2 y 255 caracteres'
-  validates_length_of :ship_to_country_code, :in => 2..255, :in => 2..255, :message => 'La longitud del código de pais debe ser entre 2 y 255 caracteres'
+  validates_length_of :ship_to_country_code, :in => 2..255, :message => 'La longitud del código de pais debe ser entre 2 y 255 caracteres'
 
   validates_length_of :customer_ip, :in => 7..15, :message => 'La longitud de la direccion ip del cliente debe ser entre 7 y 15 caracteres'
   validates_inclusion_of :status, :in => %w(open processed closed failed)

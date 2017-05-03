@@ -8,8 +8,8 @@ class CheckoutTest < ActionDispatch::IntegrationTest
     get '/checkout'
     assert_response :redirect
     assert_redirected_to :controller => 'catalog'
-    assert_equal flash[:notice], 'Su carro de la compra está vacío! ' +
-                                 'Por favor añade al menos un artículo al carrito para proceder al pago.'
+    assert_equal flash[:notice], 'Tu carrito de la compra está vacío! ' +
+                                 'Por favor añade al menos un artículo al carrito antes de enviar la orden.'
   end
 
   test "submitting_order" do
