@@ -1,5 +1,5 @@
 class CheckoutController < ApplicationController
-  before_filter :initialize_cart, :only => :index # <========================== sprint 7 probar a quitar a partir de la , y quitar el oculto de index
+  before_filter :initialize_cart, :only => :index
 
   def index
     @order = Order.new
@@ -12,7 +12,7 @@ class CheckoutController < ApplicationController
   end
 
   def submit_order
-    @cart = Cart.find(params[:cart][:id]) # <========================== sprint 7 si funciona todo probar a quitar
+    @cart = Cart.find(params[:cart][:id])
     @order = Order.new(order_params)
     @order.ship_to_country_code = @order.ship_to_country_code.upcase
     @order.customer_ip = request.remote_ip

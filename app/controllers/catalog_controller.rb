@@ -1,6 +1,6 @@
 class CatalogController < ApplicationController
   before_filter :initialize_cart, :except => :show
-  #before_filter :require_no_user
+  before_filter :require_no_user
 
   def show
     @article = Article.find(params[:id])

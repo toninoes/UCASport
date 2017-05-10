@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class Admin::ArticleControllerTest < ActionController::TestCase
+class UserControllerTest < ActionController::TestCase
   test "should get new" do
     get :new
     assert_response :success
@@ -21,18 +21,8 @@ class Admin::ArticleControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test "should get destroy" do
-    get :destroy
-    assert_response :success
-  end
-
   test "should get show" do
     get :show
-    assert_response :success
-  end
-
-  test "should get index" do
-    get :index
     assert_response :success
   end
 

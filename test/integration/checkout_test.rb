@@ -17,11 +17,8 @@ class CheckoutTest < ActionDispatch::IntegrationTest
     get '/checkout'
     assert_response :success
     assert_select 'legend', 'Información de contacto'
-    # assert_tag :tag => 'legend', :content => 'Contact Information'
     assert_select 'legend', 'Direccion de envío'
-    # assert_tag :tag => 'legend', :content => 'Shipping Address'
     assert_select 'legend', 'Información de facturación'
-    # assert_tag :tag => 'legend', :content => 'Billing Information'
 
     post '/checkout/submit_order', :cart => { :id => Cart.last.id }, :order => {
       # Contact information

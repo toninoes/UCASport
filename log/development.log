@@ -16190,3 +16190,531 @@ Processing by Admin::OrderController#index as HTML
   Rendered admin/order/_navigation.html.erb (2.0ms)
   Rendered admin/order/index.html.erb within layouts/application (20.7ms)
 Completed 200 OK in 65ms (Views: 59.9ms | ActiveRecord: 4.2ms)
+  [1m[36mActiveRecord::SchemaMigration Load (51.5ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to CreateUsers (20170509090901)
+DEPRECATION WARNING: `#timestamps` was called without specifying an option for `null`. In Rails 5, this behavior will change to `null: false`. You should manually specify `null: true` to prevent the behavior of your existing migrations from changing. (called from block in change at /home/toni/projects/UCASport/db/migrate/20170509090901_create_users.rb:18)
+  [1m[35m (330.1ms)[0m  CREATE TABLE `users` (`id` int(11) auto_increment PRIMARY KEY, `name` varchar(255) NOT NULL, `login` varchar(255) NOT NULL, `email` varchar(255) NOT NULL, `crypted_password` varchar(255) NOT NULL, `password_salt` varchar(255) NOT NULL, `persistence_token` varchar(255) NOT NULL, `perishable_token` varchar(255) NOT NULL, `login_count` int(11) DEFAULT 0 NOT NULL, `failed_login_count` int(11) DEFAULT 0 NOT NULL, `last_request_at` datetime, `current_login_at` datetime, `last_login_at` datetime, `current_login_ip` varchar(255), `last_login_ip` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (13.4ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20170509090901')
+  [1m[36m (47.6ms)[0m  [1mCOMMIT[0m
+Migrating to CreateUserSessions (20170509090942)
+  [1m[35m (321.8ms)[0m  CREATE TABLE `user_sessions` (`id` int(11) auto_increment PRIMARY KEY, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20170509090942')
+  [1m[36m (40.7ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.7ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+  [1m[36m (0.8ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'eshop6_development'
+  AND fk.table_name = 'articles'
+[0m
+  [1m[35m (0.5ms)[0m  SHOW CREATE TABLE `articles`
+  [1m[36m (0.8ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'eshop6_development'
+  AND fk.table_name = 'articles_suppliers'
+[0m
+  [1m[35m (0.5ms)[0m  SHOW CREATE TABLE `articles_suppliers`
+  [1m[36m (0.7ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'eshop6_development'
+  AND fk.table_name = 'cart_items'
+[0m
+  [1m[35m (0.5ms)[0m  SHOW CREATE TABLE `cart_items`
+  [1m[36m (0.7ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'eshop6_development'
+  AND fk.table_name = 'carts'
+[0m
+  [1m[35m (0.5ms)[0m  SHOW CREATE TABLE `carts`
+  [1m[36m (0.7ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'eshop6_development'
+  AND fk.table_name = 'manufacturers'
+[0m
+  [1m[35m (0.5ms)[0m  SHOW CREATE TABLE `manufacturers`
+  [1m[36m (0.7ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'eshop6_development'
+  AND fk.table_name = 'order_items'
+[0m
+  [1m[35m (0.6ms)[0m  SHOW CREATE TABLE `order_items`
+  [1m[36m (0.7ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'eshop6_development'
+  AND fk.table_name = 'orders'
+[0m
+  [1m[35m (0.4ms)[0m  SHOW CREATE TABLE `orders`
+  [1m[36m (0.6ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'eshop6_development'
+  AND fk.table_name = 'suppliers'
+[0m
+  [1m[35m (0.5ms)[0m  SHOW CREATE TABLE `suppliers`
+  [1m[36m (0.7ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'eshop6_development'
+  AND fk.table_name = 'user_sessions'
+[0m
+  [1m[35m (0.4ms)[0m  SHOW CREATE TABLE `user_sessions`
+  [1m[36m (0.7ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'eshop6_development'
+  AND fk.table_name = 'users'
+[0m
+  [1m[35m (0.5ms)[0m  SHOW CREATE TABLE `users`
+
+
+Started GET "/admin/article/" for 127.0.0.1 at 2017-05-09 11:18:55 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by Admin::ArticleController#index as HTML
+  [1m[35mArticle Load (0.6ms)[0m  SELECT  `articles`.* FROM `articles` LIMIT 5 OFFSET 0
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM `articles`[0m
+  [1m[35mManufacturer Load (0.9ms)[0m  SELECT  `manufacturers`.* FROM `manufacturers` WHERE `manufacturers`.`id` = 5 LIMIT 1
+  [1m[36mManufacturer Load (0.6ms)[0m  [1mSELECT  `manufacturers`.* FROM `manufacturers` WHERE `manufacturers`.`id` = 7 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `manufacturers`.* FROM `manufacturers` WHERE `manufacturers`.`id` = 5 LIMIT 1  [["id", 5]]
+  [1m[36mManufacturer Load (0.3ms)[0m  [1mSELECT  `manufacturers`.* FROM `manufacturers` WHERE `manufacturers`.`id` = 6 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `manufacturers`.* FROM `manufacturers` WHERE `manufacturers`.`id` = 7 LIMIT 1  [["id", 7]]
+  Rendered admin/article/index.html.erb within layouts/application (73.9ms)
+ApplicationController::current_user
+ApplicationController::current_user_session
+Completed 500 Internal Server Error in 1543ms (ActiveRecord: 6.7ms)
+
+ActionView::Template::Error (undefined method `logout_on_timeout' for #<Class:0x007f29721ecf10>):
+    10:   <div id="header">
+    11:     <h1 id="logo">UCASport&trade;</h1>
+    12:     <h2 id="slogan">Expertos en zapatillas deportivas</h2>
+    13:     <% if current_user %>
+    14:       <p id="loginlogout">
+    15:         Logged in as <%= current_user.login %>
+    16:         (<%= link_to "Editar cuenta", :controller => '/user', :action => :show %>)
+  app/models/user_session.rb:2:in `<class:UserSession>'
+  app/models/user_session.rb:1:in `<top (required)>'
+  app/controllers/application_controller.rb:23:in `current_user_session'
+  app/controllers/application_controller.rb:29:in `current_user'
+  app/views/layouts/application.html.erb:13:in `_app_views_layouts_application_html_erb___2866269030430141927_30981140'
+
+
+  Rendered /home/toni/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.3ms)
+  Rendered /home/toni/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.3ms)
+  Rendered /home/toni/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/toni/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (27.3ms)
+  Rendered /home/toni/.rvm/gems/ruby-2.2.4/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/toni/.rvm/gems/ruby-2.2.4/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/toni/.rvm/gems/ruby-2.2.4/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/toni/.rvm/gems/ruby-2.2.4/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/toni/.rvm/gems/ruby-2.2.4/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (39.0ms)
+  Rendered /home/toni/.rvm/gems/ruby-2.2.4/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/toni/.rvm/gems/ruby-2.2.4/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/toni/.rvm/gems/ruby-2.2.4/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (68.7ms)
+
+
+Started GET "/admin/article/" for 127.0.0.1 at 2017-05-09 11:20:26 +0200
+Processing by Admin::ArticleController#index as HTML
+ApplicationController::require_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 1.8ms)
+
+NoMethodError (undefined method `logout_on_timeout' for #<Class:0x007f2970f53e08>):
+  app/models/user_session.rb:2:in `<class:UserSession>'
+  app/models/user_session.rb:1:in `<top (required)>'
+  app/controllers/application_controller.rb:23:in `current_user_session'
+  app/controllers/application_controller.rb:29:in `current_user'
+  app/controllers/application_controller.rb:34:in `require_user'
+
+
+  Rendered /home/toni/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (11.4ms)
+  Rendered /home/toni/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.2ms)
+  Rendered /home/toni/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/toni/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (31.3ms)
+  Rendered /home/toni/.rvm/gems/ruby-2.2.4/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/toni/.rvm/gems/ruby-2.2.4/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/toni/.rvm/gems/ruby-2.2.4/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/toni/.rvm/gems/ruby-2.2.4/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/toni/.rvm/gems/ruby-2.2.4/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (13.3ms)
+  Rendered /home/toni/.rvm/gems/ruby-2.2.4/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/toni/.rvm/gems/ruby-2.2.4/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/toni/.rvm/gems/ruby-2.2.4/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (26.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-09 11:20:41 +0200
+Processing by CatalogController#index as HTML
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO `carts` (`created_at`, `updated_at`) VALUES ('2017-05-09 09:20:41', '2017-05-09 09:20:41')
+  [1m[36m (88.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mArticle Load (0.4ms)[0m  SELECT  `articles`.* FROM `articles`  ORDER BY articles.id desc LIMIT 5 OFFSET 0
+  [1m[36mHABTM_Suppliers Load (0.9ms)[0m  [1mSELECT `articles_suppliers`.* FROM `articles_suppliers` WHERE `articles_suppliers`.`article_id` IN (12, 11, 8, 6, 5)[0m
+  [1m[35mSupplier Load (0.4ms)[0m  SELECT `suppliers`.* FROM `suppliers` WHERE `suppliers`.`id` IN (2, 3, 4, 5, 6)
+  [1m[36mManufacturer Load (0.4ms)[0m  [1mSELECT `manufacturers`.* FROM `manufacturers` WHERE `manufacturers`.`id` IN (5, 7, 6)[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `articles`
+  Rendered catalog/_articles.html.erb (107.7ms)
+  Rendered catalog/index.html.erb within layouts/application (109.6ms)
+ApplicationController::current_user
+ApplicationController::current_user_session
+Completed 500 Internal Server Error in 308ms (ActiveRecord: 97.2ms)
+
+ActionView::Template::Error (undefined method `logout_on_timeout' for #<Class:0x007f2971f40910>):
+    10:   <div id="header">
+    11:     <h1 id="logo">UCASport&trade;</h1>
+    12:     <h2 id="slogan">Expertos en zapatillas deportivas</h2>
+    13:     <% if current_user %>
+    14:       <p id="loginlogout">
+    15:         Logged in as <%= current_user.login %>
+    16:         (<%= link_to "Editar cuenta", :controller => '/user', :action => :show %>)
+  app/models/user_session.rb:2:in `<class:UserSession>'
+  app/models/user_session.rb:1:in `<top (required)>'
+  app/controllers/application_controller.rb:23:in `current_user_session'
+  app/controllers/application_controller.rb:29:in `current_user'
+  app/views/layouts/application.html.erb:13:in `_app_views_layouts_application_html_erb___2866269030430141927_30981140'
+
+
+  Rendered /home/toni/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.9ms)
+  Rendered /home/toni/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered /home/toni/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/toni/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (23.1ms)
+  Rendered /home/toni/.rvm/gems/ruby-2.2.4/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/toni/.rvm/gems/ruby-2.2.4/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/toni/.rvm/gems/ruby-2.2.4/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/toni/.rvm/gems/ruby-2.2.4/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/toni/.rvm/gems/ruby-2.2.4/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (14.0ms)
+  Rendered /home/toni/.rvm/gems/ruby-2.2.4/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/toni/.rvm/gems/ruby-2.2.4/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/toni/.rvm/gems/ruby-2.2.4/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (28.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-09 11:22:52 +0200
+Processing by CatalogController#index as HTML
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `carts` (`created_at`, `updated_at`) VALUES ('2017-05-09 09:22:52', '2017-05-09 09:22:52')
+  [1m[36m (45.5ms)[0m  [1mCOMMIT[0m
+  [1m[35mArticle Load (0.4ms)[0m  SELECT  `articles`.* FROM `articles`  ORDER BY articles.id desc LIMIT 5 OFFSET 0
+  [1m[36mHABTM_Suppliers Load (0.3ms)[0m  [1mSELECT `articles_suppliers`.* FROM `articles_suppliers` WHERE `articles_suppliers`.`article_id` IN (12, 11, 8, 6, 5)[0m
+  [1m[35mSupplier Load (0.4ms)[0m  SELECT `suppliers`.* FROM `suppliers` WHERE `suppliers`.`id` IN (2, 3, 4, 5, 6)
+  [1m[36mManufacturer Load (0.3ms)[0m  [1mSELECT `manufacturers`.* FROM `manufacturers` WHERE `manufacturers`.`id` IN (5, 7, 6)[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `articles`
+  Rendered catalog/_articles.html.erb (96.8ms)
+  Rendered catalog/index.html.erb within layouts/application (97.5ms)
+ApplicationController::current_user
+ApplicationController::current_user_session
+Completed 500 Internal Server Error in 188ms (ActiveRecord: 107.8ms)
+
+ActionView::Template::Error (undefined method `logout_on_timeout' for #<Class:0x00000004fc9c58>):
+    10:   <div id="header">
+    11:     <h1 id="logo">UCASport&trade;</h1>
+    12:     <h2 id="slogan">Expertos en zapatillas deportivas</h2>
+    13:     <% if current_user %>
+    14:       <p id="loginlogout">
+    15:         Logged in as <%= current_user.login %>
+    16:         (<%= link_to "Editar cuenta", :controller => '/user', :action => :show %>)
+  app/models/user_session.rb:2:in `<class:UserSession>'
+  app/models/user_session.rb:1:in `<top (required)>'
+  app/controllers/application_controller.rb:23:in `current_user_session'
+  app/controllers/application_controller.rb:29:in `current_user'
+  app/views/layouts/application.html.erb:13:in `_app_views_layouts_application_html_erb___2866269030430141927_30981140'
+
+
+  Rendered /home/toni/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.8ms)
+  Rendered /home/toni/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /home/toni/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/toni/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (22.1ms)
+  Rendered /home/toni/.rvm/gems/ruby-2.2.4/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/toni/.rvm/gems/ruby-2.2.4/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/toni/.rvm/gems/ruby-2.2.4/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/toni/.rvm/gems/ruby-2.2.4/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/toni/.rvm/gems/ruby-2.2.4/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (13.9ms)
+  Rendered /home/toni/.rvm/gems/ruby-2.2.4/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/toni/.rvm/gems/ruby-2.2.4/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/toni/.rvm/gems/ruby-2.2.4/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (27.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-09 11:31:04 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by CatalogController#index as HTML
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `carts` (`created_at`, `updated_at`) VALUES ('2017-05-09 09:31:04', '2017-05-09 09:31:04')[0m
+  [1m[35m (34.8ms)[0m  COMMIT
+ApplicationController::require_no_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+Completed 404 Not Found in 64ms (ActiveRecord: 36.9ms)
+
+ActiveRecord::RecordNotFound (Couldn't find UserSession without an ID):
+  app/controllers/application_controller.rb:23:in `current_user_session'
+  app/controllers/application_controller.rb:29:in `current_user'
+  app/controllers/application_controller.rb:44:in `require_no_user'
+
+
+  Rendered /home/toni/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.8ms)
+  Rendered /home/toni/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /home/toni/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/toni/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (21.8ms)
+  Rendered /home/toni/.rvm/gems/ruby-2.2.4/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/toni/.rvm/gems/ruby-2.2.4/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/toni/.rvm/gems/ruby-2.2.4/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/toni/.rvm/gems/ruby-2.2.4/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/toni/.rvm/gems/ruby-2.2.4/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (14.9ms)
+  Rendered /home/toni/.rvm/gems/ruby-2.2.4/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/toni/.rvm/gems/ruby-2.2.4/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/toni/.rvm/gems/ruby-2.2.4/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (33.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-09 11:58:23 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by CatalogController#index as HTML
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `carts` (`created_at`, `updated_at`) VALUES ('2017-05-09 09:58:23', '2017-05-09 09:58:23')[0m
+  [1m[35m (42.3ms)[0m  COMMIT
+ApplicationController::require_no_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+Completed 500 Internal Server Error in 63ms (ActiveRecord: 44.1ms)
+
+NoMethodError (undefined method `logout_on_timeout' for #<Class:0x000000038568a0>):
+  app/models/user_session.rb:2:in `<class:UserSession>'
+  app/models/user_session.rb:1:in `<top (required)>'
+  app/controllers/application_controller.rb:23:in `current_user_session'
+  app/controllers/application_controller.rb:29:in `current_user'
+  app/controllers/application_controller.rb:44:in `require_no_user'
+
+
+  Rendered /home/toni/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.9ms)
+  Rendered /home/toni/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.3ms)
+  Rendered /home/toni/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /home/toni/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (29.7ms)
+  Rendered /home/toni/.rvm/gems/ruby-2.2.4/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/toni/.rvm/gems/ruby-2.2.4/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/toni/.rvm/gems/ruby-2.2.4/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/toni/.rvm/gems/ruby-2.2.4/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/toni/.rvm/gems/ruby-2.2.4/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (15.4ms)
+  Rendered /home/toni/.rvm/gems/ruby-2.2.4/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/toni/.rvm/gems/ruby-2.2.4/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/toni/.rvm/gems/ruby-2.2.4/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (33.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-09 12:00:40 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by CatalogController#index as HTML
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `carts` (`created_at`, `updated_at`) VALUES ('2017-05-09 10:00:41', '2017-05-09 10:00:41')[0m
+  [1m[35m (103.7ms)[0m  COMMIT
+ApplicationController::require_no_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[36mArticle Load (0.5ms)[0m  [1mSELECT  `articles`.* FROM `articles`  ORDER BY articles.id desc LIMIT 5 OFFSET 0[0m
+  [1m[35mHABTM_Suppliers Load (0.3ms)[0m  SELECT `articles_suppliers`.* FROM `articles_suppliers` WHERE `articles_suppliers`.`article_id` IN (12, 11, 8, 6, 5)
+  [1m[36mSupplier Load (0.3ms)[0m  [1mSELECT `suppliers`.* FROM `suppliers` WHERE `suppliers`.`id` IN (2, 3, 4, 5, 6)[0m
+  [1m[35mManufacturer Load (0.2ms)[0m  SELECT `manufacturers`.* FROM `manufacturers` WHERE `manufacturers`.`id` IN (5, 7, 6)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `articles`[0m
+  Rendered catalog/_articles.html.erb (73.4ms)
+  Rendered catalog/index.html.erb within layouts/application (77.0ms)
+ApplicationController::current_user
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `users`
+  [1m[36mCartItem Load (0.3ms)[0m  [1mSELECT `cart_items`.* FROM `cart_items` WHERE `cart_items`.`cart_id` = 15[0m
+  Rendered cart/_cart.html.erb (14.6ms)
+Completed 200 OK in 834ms (Views: 581.4ms | ActiveRecord: 141.4ms)
+
+
+Started GET "/assets/about.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-05-09 12:00:41 +0200
+
+
+Started GET "/assets/admin/manufacturer.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-05-09 12:00:41 +0200
+
+
+Started GET "/assets/admin/article.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-05-09 12:00:41 +0200
+
+
+Started GET "/assets/admin/order.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-05-09 12:00:41 +0200
+
+
+Started GET "/assets/cart.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-05-09 12:00:41 +0200
+
+
+Started GET "/assets/admin/supplier.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-05-09 12:00:41 +0200
+
+
+Started GET "/assets/catalog.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-05-09 12:00:41 +0200
+
+
+Started GET "/assets/checkout.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-05-09 12:00:41 +0200
+
+
+Started GET "/assets/style.self-28c50fed0fbf40c4e00e2c6a9dc7872cb7466e25803d031cd7fc5cb4ba105fd8.css?body=1" for 127.0.0.1 at 2017-05-09 12:00:41 +0200
+
+
+Started GET "/assets/user.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-05-09 12:00:41 +0200
+
+
+Started GET "/assets/user_sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-05-09 12:00:41 +0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2017-05-09 12:00:41 +0200
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2017-05-09 12:00:41 +0200
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2017-05-09 12:00:41 +0200
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2017-05-09 12:00:41 +0200
+
+
+Started GET "/assets/about.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-05-09 12:00:41 +0200
+
+
+Started GET "/assets/admin/article.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-05-09 12:00:41 +0200
+
+
+Started GET "/assets/admin/manufacturer.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-05-09 12:00:41 +0200
+
+
+Started GET "/assets/admin/order.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-05-09 12:00:41 +0200
+
+
+Started GET "/assets/admin/supplier.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-05-09 12:00:42 +0200
+
+
+Started GET "/assets/cart.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-05-09 12:00:42 +0200
+
+
+Started GET "/assets/catalog.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-05-09 12:00:42 +0200
+
+
+Started GET "/assets/checkout.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-05-09 12:00:42 +0200
+
+
+Started GET "/assets/user.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-05-09 12:00:42 +0200
+
+
+Started GET "/assets/user_sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-05-09 12:00:42 +0200
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2017-05-09 12:00:42 +0200
+
+
+Started GET "/about" for 127.0.0.1 at 2017-05-09 12:00:53 +0200
+Processing by AboutController#index as HTML
+  Rendered about/index.html.erb within layouts/application (0.6ms)
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM `users`
+Completed 200 OK in 154ms (Views: 152.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/user/new" for 127.0.0.1 at 2017-05-09 12:00:56 +0200
+Processing by UserController#new as HTML
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM `users`[0m
+  Rendered user/_form.html.erb (27.5ms)
+  Rendered user/new.html.erb within layouts/application (30.3ms)
+ApplicationController::current_user
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM `users`
+Completed 200 OK in 114ms (Views: 84.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/admin/supplier" for 127.0.0.1 at 2017-05-09 12:03:02 +0200
+Processing by Admin::SupplierController#index as HTML
+ApplicationController::require_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+Redirected to http://localhost:3000/user_sessions/new
+Filter chain halted as :require_user rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/user_sessions/new" for 127.0.0.1 at 2017-05-09 12:03:02 +0200
+Processing by UserSessionsController#new as HTML
+ApplicationController::require_no_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+  Rendered user_sessions/_form.html.erb (43.1ms)
+  Rendered user_sessions/new.html.erb within layouts/application (45.4ms)
+ApplicationController::current_user
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM `users`[0m
+Completed 200 OK in 117ms (Views: 114.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/admin/manufacturer" for 127.0.0.1 at 2017-05-09 12:03:32 +0200
+Processing by Admin::ManufacturerController#index as HTML
+ApplicationController::require_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+Redirected to http://localhost:3000/user_sessions/new
+Filter chain halted as :require_user rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/user_sessions/new" for 127.0.0.1 at 2017-05-09 12:03:32 +0200
+Processing by UserSessionsController#new as HTML
+ApplicationController::require_no_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+  Rendered user_sessions/_form.html.erb (0.3ms)
+  Rendered user_sessions/new.html.erb within layouts/application (1.6ms)
+ApplicationController::current_user
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `users`
+Completed 200 OK in 50ms (Views: 47.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/admin/article" for 127.0.0.1 at 2017-05-09 12:03:33 +0200
+Processing by Admin::ArticleController#index as HTML
+ApplicationController::require_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+Redirected to http://localhost:3000/user_sessions/new
+Filter chain halted as :require_user rendered or redirected
+Completed 302 Found in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/user_sessions/new" for 127.0.0.1 at 2017-05-09 12:03:33 +0200
+Processing by UserSessionsController#new as HTML
+ApplicationController::require_no_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+  Rendered user_sessions/_form.html.erb (0.7ms)
+  Rendered user_sessions/new.html.erb within layouts/application (2.4ms)
+ApplicationController::current_user
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM `users`[0m
+Completed 200 OK in 57ms (Views: 54.8ms | ActiveRecord: 0.6ms)

@@ -1,4 +1,4 @@
-class Admin::ArticleController < ApplicationController
+class Admin::ArticleController < Admin::AuthenticatedController
   def new
     load_data
     @article = Article.new
