@@ -29,4 +29,13 @@ class CartControllerTest < ActionController::TestCase
     assert_redirected_to :controller => 'catalog'
     assert_equal [], Cart.find(@request.session[:cart_id]).articles
   end
+
+  test "add_xhr" do
+    assert_difference(CartItem, :count) do
+      xhr :post, :add, :id => 5
+    end
+
+    assert_response :success
+    assert_equal 1, Cart.find(@request.session[:cart_id]).cart_items.size
+  end
 end

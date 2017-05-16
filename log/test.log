@@ -12478,3 +12478,1471 @@ ApplicationController::current_user
 Completed 200 OK in 7ms (Views: 1.8ms | ActiveRecord: 2.0ms)
   [1m[35mUser Load (0.7ms)[0m  SELECT  `users`.* FROM `users`  ORDER BY `users`.`id` DESC LIMIT 1
   [1m[36m (40.5ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (39.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.5ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.4ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mFixture Delete (12.8ms)[0m  [1mDELETE FROM `order_items`[0m
+  [1m[35mFixture Insert (76.6ms)[0m  INSERT INTO `order_items` (`created_at`, `updated_at`, `id`) VALUES ('2017-05-16 09:45:14', '2017-05-16 09:45:14', 980190962)
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO `order_items` (`created_at`, `updated_at`, `id`) VALUES ('2017-05-16 09:45:14', '2017-05-16 09:45:14', 298486374)[0m
+  [1m[35mFixture Delete (0.6ms)[0m  DELETE FROM `carts`
+  [1m[36mFixture Insert (0.6ms)[0m  [1mINSERT INTO `carts` (`created_at`, `updated_at`, `id`) VALUES ('2017-05-16 09:45:14', '2017-05-16 09:45:14', 980190962)[0m
+  [1m[35mFixture Insert (0.6ms)[0m  INSERT INTO `carts` (`created_at`, `updated_at`, `id`) VALUES ('2017-05-16 09:45:14', '2017-05-16 09:45:14', 298486374)
+  [1m[36mFixture Delete (0.6ms)[0m  [1mDELETE FROM `orders`[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `orders` (`created_at`, `updated_at`, `id`) VALUES ('2017-05-16 09:45:14', '2017-05-16 09:45:14', 980190962)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `orders` (`created_at`, `updated_at`, `id`) VALUES ('2017-05-16 09:45:14', '2017-05-16 09:45:14', 298486374)[0m
+  [1m[35mFixture Delete (1.1ms)[0m  DELETE FROM `articles`
+  [1m[36mFixture Insert (0.7ms)[0m  [1mINSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (1, 'Articulo_1', 1, '199-199-199-1', '2017-05-16', 100.0, 40, '2017-05-16 09:45:14', '2017-05-16 09:45:14')[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (2, 'Articulo_2', 1, '199-199-199-2', '2017-05-16', 200.0, 40, '2017-05-16 09:45:14', '2017-05-16 09:45:14')
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (3, 'Articulo_3', 2, '199-199-199-3', '2017-05-16', 300.0, 40, '2017-05-16 09:45:14', '2017-05-16 09:45:14')[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (4, 'Articulo_4', 2, '199-199-199-4', '2017-05-16', 400.0, 40, '2017-05-16 09:45:14', '2017-05-16 09:45:14')
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (5, 'Articulo_5', 2, '199-199-199-5', '2017-05-16', 500.0, 40, '2017-05-16 09:45:14', '2017-05-16 09:45:14')[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (6, 'Articulo_6', 2, '199-199-199-6', '2017-05-16', 600.0, 40, '2017-05-16 09:45:14', '2017-05-16 09:45:14')
+  [1m[36mFixture Insert (0.6ms)[0m  [1mINSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (7, 'Articulo_7', 2, '199-199-199-7', '2017-05-16', 700.0, 40, '2017-05-16 09:45:14', '2017-05-16 09:45:14')[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (8, 'Articulo_8', 2, '199-199-199-8', '2017-05-16', 800.0, 40, '2017-05-16 09:45:14', '2017-05-16 09:45:14')
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (9, 'Articulo_9', 2, '199-199-199-9', '2017-05-16', 900.0, 40, '2017-05-16 09:45:14', '2017-05-16 09:45:14')[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (10, 'Articulo_10', 2, '299-199-199-1', '2017-05-16', 1000.0, 40, '2017-05-16 09:45:14', '2017-05-16 09:45:14')
+  [1m[36mFixture Delete (43.7ms)[0m  [1mDELETE FROM `articles_suppliers`[0m
+  [1m[35mFixture Insert (0.8ms)[0m  INSERT INTO `articles_suppliers` (`created_at`, `updated_at`, `article_id`, `supplier_id`) VALUES ('2017-05-16 11:45:14', '2017-05-16 11:45:14', 1, 1)
+  [1m[36mFixture Insert (0.6ms)[0m  [1mINSERT INTO `articles_suppliers` (`created_at`, `updated_at`, `article_id`, `supplier_id`) VALUES ('2017-05-16 11:45:14', '2017-05-16 11:45:14', 2, 1)[0m
+  [1m[35mFixture Insert (0.6ms)[0m  INSERT INTO `articles_suppliers` (`created_at`, `updated_at`, `article_id`, `supplier_id`) VALUES ('2017-05-16 11:45:14', '2017-05-16 11:45:14', 3, 2)
+  [1m[36mFixture Insert (0.6ms)[0m  [1mINSERT INTO `articles_suppliers` (`created_at`, `updated_at`, `article_id`, `supplier_id`) VALUES ('2017-05-16 11:45:14', '2017-05-16 11:45:14', 4, 2)[0m
+  [1m[35mFixture Insert (0.6ms)[0m  INSERT INTO `articles_suppliers` (`created_at`, `updated_at`, `article_id`, `supplier_id`) VALUES ('2017-05-16 11:45:14', '2017-05-16 11:45:14', 5, 1)
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM `cart_items`[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `cart_items` (`created_at`, `updated_at`, `id`) VALUES ('2017-05-16 09:45:14', '2017-05-16 09:45:14', 980190962)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `cart_items` (`created_at`, `updated_at`, `id`) VALUES ('2017-05-16 09:45:14', '2017-05-16 09:45:14', 298486374)[0m
+  [1m[35mFixture Delete (0.4ms)[0m  DELETE FROM `suppliers`
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `suppliers` (`id`, `first_name`, `last_name`, `created_at`, `updated_at`) VALUES (1, 'Pepe', 'Mateo', '2017-05-16 09:45:14', '2017-05-16 09:45:14')[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `suppliers` (`id`, `first_name`, `last_name`, `created_at`, `updated_at`) VALUES (2, 'Toni', 'Gavira', '2017-05-16 09:45:14', '2017-05-16 09:45:14')
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM `manufacturers`[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `manufacturers` (`id`, `name`, `created_at`, `updated_at`) VALUES (1, 'Adidas', '2017-05-16 09:45:14', '2017-05-16 09:45:14')
+  [1m[36mFixture Insert (0.6ms)[0m  [1mINSERT INTO `manufacturers` (`id`, `name`, `created_at`, `updated_at`) VALUES (2, 'Nike', '2017-05-16 09:45:14', '2017-05-16 09:45:14')[0m
+  [1m[35m (95.4ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+-------------------------------------
+BrowsingAndSearchingTest: test_browse
+-------------------------------------
+Started GET "/catalog/index" for 127.0.0.1 at 2017-05-16 11:45:14 +0200
+Processing by CatalogController#index as HTML
+  [1m[36m (0.4ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO `carts` (`created_at`, `updated_at`) VALUES ('2017-05-16 09:45:14', '2017-05-16 09:45:14')
+  [1m[36m (0.3ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+ApplicationController::require_no_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[35mArticle Load (0.8ms)[0m  SELECT  `articles`.* FROM `articles`  ORDER BY articles.id desc LIMIT 5 OFFSET 0
+  [1m[36mHABTM_Suppliers Load (0.6ms)[0m  [1mSELECT `articles_suppliers`.* FROM `articles_suppliers` WHERE `articles_suppliers`.`article_id` IN (10, 9, 8, 7, 6)[0m
+  [1m[35mManufacturer Load (0.7ms)[0m  SELECT `manufacturers`.* FROM `manufacturers` WHERE `manufacturers`.`id` IN (2)
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM `articles`[0m
+  Rendered catalog/_articles.html.erb (95.8ms)
+  Rendered catalog/index.html.erb within layouts/application (106.8ms)
+ApplicationController::current_user
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM `users`
+  [1m[36mCartItem Load (0.8ms)[0m  [1mSELECT `cart_items`.* FROM `cart_items` WHERE `cart_items`.`cart_id` = 980190963[0m
+  Rendered cart/_cart.html.erb (6.8ms)
+Completed 200 OK in 2609ms (Views: 2524.1ms | ActiveRecord: 32.8ms)
+Started GET "/catalog/index?page=2" for 127.0.0.1 at 2017-05-16 11:45:17 +0200
+Processing by CatalogController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[35mCart Load (0.7ms)[0m  SELECT  `carts`.* FROM `carts` WHERE `carts`.`id` = 980190963 LIMIT 1
+ApplicationController::require_no_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[36mArticle Load (0.6ms)[0m  [1mSELECT  `articles`.* FROM `articles`  ORDER BY articles.id desc LIMIT 5 OFFSET 5[0m
+  [1m[35mHABTM_Suppliers Load (0.7ms)[0m  SELECT `articles_suppliers`.* FROM `articles_suppliers` WHERE `articles_suppliers`.`article_id` IN (5, 4, 3, 2, 1)
+  [1m[36mSupplier Load (0.8ms)[0m  [1mSELECT `suppliers`.* FROM `suppliers` WHERE `suppliers`.`id` IN (1, 2)[0m
+  [1m[35mManufacturer Load (0.6ms)[0m  SELECT `manufacturers`.* FROM `manufacturers` WHERE `manufacturers`.`id` IN (2, 1)
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM `articles`[0m
+  Rendered catalog/_articles.html.erb (20.5ms)
+  Rendered catalog/index.html.erb within layouts/application (21.1ms)
+ApplicationController::current_user
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM `users`
+  [1m[36mCartItem Load (0.6ms)[0m  [1mSELECT `cart_items`.* FROM `cart_items` WHERE `cart_items`.`cart_id` = 980190963[0m
+  Rendered cart/_cart.html.erb (1.5ms)
+Completed 200 OK in 31ms (Views: 20.9ms | ActiveRecord: 5.5ms)
+  [1m[35mArticle Load (0.7ms)[0m  SELECT  `articles`.* FROM `articles` WHERE `articles`.`title` = 'Articulo_1' LIMIT 1
+  [1m[36mArticle Load (0.9ms)[0m  [1mSELECT  `articles`.* FROM `articles` WHERE `articles`.`title` = 'Articulo_9'  ORDER BY `articles`.`id` ASC LIMIT 1[0m
+Started GET "/catalog/show/9" for 127.0.0.1 at 2017-05-16 11:45:17 +0200
+Processing by CatalogController#show as HTML
+  Parameters: {"id"=>"9"}
+ApplicationController::require_no_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[35mArticle Load (0.7ms)[0m  SELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 9 LIMIT 1
+  [1m[36mSupplier Load (15.7ms)[0m  [1mSELECT `suppliers`.* FROM `suppliers` INNER JOIN `articles_suppliers` ON `suppliers`.`id` = `articles_suppliers`.`supplier_id` WHERE `articles_suppliers`.`article_id` = 9[0m
+  [1m[35mManufacturer Load (0.7ms)[0m  SELECT  `manufacturers`.* FROM `manufacturers` WHERE `manufacturers`.`id` = 2 LIMIT 1
+  Rendered catalog/show.html.erb within layouts/application (42.7ms)
+ApplicationController::current_user
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM `users`[0m
+Completed 200 OK in 51ms (Views: 30.9ms | ActiveRecord: 17.7ms)
+  [1m[35mSupplier Load (0.9ms)[0m  SELECT `suppliers`.* FROM `suppliers` INNER JOIN `articles_suppliers` ON `suppliers`.`id` = `articles_suppliers`.`supplier_id` WHERE `articles_suppliers`.`article_id` = 9
+Started GET "/catalog/latest" for 127.0.0.1 at 2017-05-16 11:45:17 +0200
+Processing by CatalogController#latest as HTML
+  [1m[36mCart Load (0.6ms)[0m  [1mSELECT  `carts`.* FROM `carts` WHERE `carts`.`id` = 980190963 LIMIT 1[0m
+ApplicationController::require_no_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[35mArticle Load (0.7ms)[0m  SELECT  `articles`.* FROM `articles`  ORDER BY articles.id desc LIMIT 5
+  [1m[36mHABTM_Suppliers Load (0.7ms)[0m  [1mSELECT `articles_suppliers`.* FROM `articles_suppliers` WHERE `articles_suppliers`.`article_id` IN (10, 9, 8, 7, 6)[0m
+  [1m[35mManufacturer Load (0.6ms)[0m  SELECT `manufacturers`.* FROM `manufacturers` WHERE `manufacturers`.`id` IN (2)
+  Rendered catalog/_articles.html.erb (15.8ms)
+  Rendered catalog/latest.html.erb within layouts/application (16.7ms)
+ApplicationController::current_user
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM `users`[0m
+  [1m[35mCartItem Load (0.6ms)[0m  SELECT `cart_items`.* FROM `cart_items` WHERE `cart_items`.`cart_id` = 980190963
+  Rendered cart/_cart.html.erb (2.1ms)
+Completed 200 OK in 28ms (Views: 20.9ms | ActiveRecord: 3.8ms)
+  [1m[36mArticle Load (0.6ms)[0m  [1mSELECT  `articles`.* FROM `articles`  ORDER BY articles.id desc LIMIT 5[0m
+  [1m[35mHABTM_Suppliers Load (0.7ms)[0m  SELECT `articles_suppliers`.* FROM `articles_suppliers` WHERE `articles_suppliers`.`article_id` IN (10, 9, 8, 7, 6)
+  [1m[36mManufacturer Load (0.5ms)[0m  [1mSELECT `manufacturers`.* FROM `manufacturers` WHERE `manufacturers`.`id` IN (2)[0m
+Started GET "/catalog/rss" for 127.0.0.1 at 2017-05-16 11:45:17 +0200
+Processing by CatalogController#rss as HTML
+  [1m[35mCart Load (0.6ms)[0m  SELECT  `carts`.* FROM `carts` WHERE `carts`.`id` = 980190963 LIMIT 1
+ApplicationController::require_no_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[36mArticle Load (0.7ms)[0m  [1mSELECT  `articles`.* FROM `articles`  ORDER BY articles.id desc LIMIT 5[0m
+  [1m[35mHABTM_Suppliers Load (0.6ms)[0m  SELECT `articles_suppliers`.* FROM `articles_suppliers` WHERE `articles_suppliers`.`article_id` IN (10, 9, 8, 7, 6)
+  [1m[36mManufacturer Load (0.5ms)[0m  [1mSELECT `manufacturers`.* FROM `manufacturers` WHERE `manufacturers`.`id` IN (2)[0m
+  Rendered catalog/rss.builder (15.4ms)
+Completed 200 OK in 20ms (Views: 14.8ms | ActiveRecord: 2.4ms)
+  [1m[35m (43.5ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.3ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `order_items`[0m
+  [1m[35mFixture Insert (123.6ms)[0m  INSERT INTO `order_items` (`created_at`, `updated_at`, `id`) VALUES ('2017-05-16 09:47:33', '2017-05-16 09:47:33', 980190962)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `order_items` (`created_at`, `updated_at`, `id`) VALUES ('2017-05-16 09:47:33', '2017-05-16 09:47:33', 298486374)[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM `carts`
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO `carts` (`created_at`, `updated_at`, `id`) VALUES ('2017-05-16 09:47:34', '2017-05-16 09:47:34', 980190962)[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO `carts` (`created_at`, `updated_at`, `id`) VALUES ('2017-05-16 09:47:34', '2017-05-16 09:47:34', 298486374)
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM `orders`[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `orders` (`created_at`, `updated_at`, `id`) VALUES ('2017-05-16 09:47:34', '2017-05-16 09:47:34', 980190962)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `orders` (`created_at`, `updated_at`, `id`) VALUES ('2017-05-16 09:47:34', '2017-05-16 09:47:34', 298486374)[0m
+  [1m[35mFixture Delete (0.7ms)[0m  DELETE FROM `articles`
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (1, 'Articulo_1', 1, '199-199-199-1', '2017-05-16', 100.0, 40, '2017-05-16 09:47:34', '2017-05-16 09:47:34')[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (2, 'Articulo_2', 1, '199-199-199-2', '2017-05-16', 200.0, 40, '2017-05-16 09:47:34', '2017-05-16 09:47:34')
+  [1m[36mFixture Insert (0.6ms)[0m  [1mINSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (3, 'Articulo_3', 2, '199-199-199-3', '2017-05-16', 300.0, 40, '2017-05-16 09:47:34', '2017-05-16 09:47:34')[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (4, 'Articulo_4', 2, '199-199-199-4', '2017-05-16', 400.0, 40, '2017-05-16 09:47:34', '2017-05-16 09:47:34')
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (5, 'Articulo_5', 2, '199-199-199-5', '2017-05-16', 500.0, 40, '2017-05-16 09:47:34', '2017-05-16 09:47:34')[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (6, 'Articulo_6', 2, '199-199-199-6', '2017-05-16', 600.0, 40, '2017-05-16 09:47:34', '2017-05-16 09:47:34')
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (7, 'Articulo_7', 2, '199-199-199-7', '2017-05-16', 700.0, 40, '2017-05-16 09:47:34', '2017-05-16 09:47:34')[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (8, 'Articulo_8', 2, '199-199-199-8', '2017-05-16', 800.0, 40, '2017-05-16 09:47:34', '2017-05-16 09:47:34')
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (9, 'Articulo_9', 2, '199-199-199-9', '2017-05-16', 900.0, 40, '2017-05-16 09:47:34', '2017-05-16 09:47:34')[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (10, 'Articulo_10', 2, '299-199-199-1', '2017-05-16', 1000.0, 40, '2017-05-16 09:47:34', '2017-05-16 09:47:34')
+  [1m[36mFixture Delete (0.5ms)[0m  [1mDELETE FROM `articles_suppliers`[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO `articles_suppliers` (`created_at`, `updated_at`, `article_id`, `supplier_id`) VALUES ('2017-05-16 11:47:33', '2017-05-16 11:47:33', 1, 1)
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO `articles_suppliers` (`created_at`, `updated_at`, `article_id`, `supplier_id`) VALUES ('2017-05-16 11:47:33', '2017-05-16 11:47:33', 2, 1)[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO `articles_suppliers` (`created_at`, `updated_at`, `article_id`, `supplier_id`) VALUES ('2017-05-16 11:47:33', '2017-05-16 11:47:33', 3, 2)
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO `articles_suppliers` (`created_at`, `updated_at`, `article_id`, `supplier_id`) VALUES ('2017-05-16 11:47:33', '2017-05-16 11:47:33', 4, 2)[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO `articles_suppliers` (`created_at`, `updated_at`, `article_id`, `supplier_id`) VALUES ('2017-05-16 11:47:33', '2017-05-16 11:47:33', 5, 1)
+  [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM `cart_items`[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `cart_items` (`created_at`, `updated_at`, `id`) VALUES ('2017-05-16 09:47:34', '2017-05-16 09:47:34', 980190962)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `cart_items` (`created_at`, `updated_at`, `id`) VALUES ('2017-05-16 09:47:34', '2017-05-16 09:47:34', 298486374)[0m
+  [1m[35mFixture Delete (0.4ms)[0m  DELETE FROM `suppliers`
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO `suppliers` (`id`, `first_name`, `last_name`, `created_at`, `updated_at`) VALUES (1, 'Pepe', 'Mateo', '2017-05-16 09:47:34', '2017-05-16 09:47:34')[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO `suppliers` (`id`, `first_name`, `last_name`, `created_at`, `updated_at`) VALUES (2, 'Toni', 'Gavira', '2017-05-16 09:47:34', '2017-05-16 09:47:34')
+  [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM `manufacturers`[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `manufacturers` (`id`, `name`, `created_at`, `updated_at`) VALUES (1, 'Adidas', '2017-05-16 09:47:34', '2017-05-16 09:47:34')
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `manufacturers` (`id`, `name`, `created_at`, `updated_at`) VALUES (2, 'Nike', '2017-05-16 09:47:34', '2017-05-16 09:47:34')[0m
+  [1m[35m (86.0ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+-------------------------------------
+BrowsingAndSearchingTest: test_browse
+-------------------------------------
+Started GET "/catalog/index" for 127.0.0.1 at 2017-05-16 11:47:34 +0200
+Processing by CatalogController#index as HTML
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `carts` (`created_at`, `updated_at`) VALUES ('2017-05-16 09:47:34', '2017-05-16 09:47:34')
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+ApplicationController::require_no_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[35mArticle Load (0.5ms)[0m  SELECT  `articles`.* FROM `articles`  ORDER BY articles.id desc LIMIT 5 OFFSET 0
+  [1m[36mHABTM_Suppliers Load (0.5ms)[0m  [1mSELECT `articles_suppliers`.* FROM `articles_suppliers` WHERE `articles_suppliers`.`article_id` IN (10, 9, 8, 7, 6)[0m
+  [1m[35mManufacturer Load (0.5ms)[0m  SELECT `manufacturers`.* FROM `manufacturers` WHERE `manufacturers`.`id` IN (2)
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM `articles`[0m
+  Rendered catalog/_articles.html.erb (53.2ms)
+  Rendered catalog/index.html.erb within layouts/application (58.0ms)
+ApplicationController::current_user
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `users`
+  [1m[36mCartItem Load (0.2ms)[0m  [1mSELECT `cart_items`.* FROM `cart_items` WHERE `cart_items`.`cart_id` = 980190964[0m
+  Rendered cart/_cart.html.erb (3.5ms)
+Completed 200 OK in 245ms (Views: 209.2ms | ActiveRecord: 5.2ms)
+Started GET "/catalog/index?page=2" for 127.0.0.1 at 2017-05-16 11:47:34 +0200
+Processing by CatalogController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[35mCart Load (0.4ms)[0m  SELECT  `carts`.* FROM `carts` WHERE `carts`.`id` = 980190964 LIMIT 1
+ApplicationController::require_no_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[36mArticle Load (0.3ms)[0m  [1mSELECT  `articles`.* FROM `articles`  ORDER BY articles.id desc LIMIT 5 OFFSET 5[0m
+  [1m[35mHABTM_Suppliers Load (0.3ms)[0m  SELECT `articles_suppliers`.* FROM `articles_suppliers` WHERE `articles_suppliers`.`article_id` IN (5, 4, 3, 2, 1)
+  [1m[36mSupplier Load (0.3ms)[0m  [1mSELECT `suppliers`.* FROM `suppliers` WHERE `suppliers`.`id` IN (1, 2)[0m
+  [1m[35mManufacturer Load (0.3ms)[0m  SELECT `manufacturers`.* FROM `manufacturers` WHERE `manufacturers`.`id` IN (2, 1)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `articles`[0m
+  Rendered catalog/_articles.html.erb (14.1ms)
+  Rendered catalog/index.html.erb within layouts/application (14.5ms)
+ApplicationController::current_user
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `users`
+  [1m[36mCartItem Load (0.2ms)[0m  [1mSELECT `cart_items`.* FROM `cart_items` WHERE `cart_items`.`cart_id` = 980190964[0m
+  Rendered cart/_cart.html.erb (0.9ms)
+Completed 200 OK in 22ms (Views: 15.5ms | ActiveRecord: 2.2ms)
+  [1m[35mArticle Load (0.2ms)[0m  SELECT  `articles`.* FROM `articles` WHERE `articles`.`title` = 'Articulo_1' LIMIT 1
+  [1m[36mArticle Load (0.4ms)[0m  [1mSELECT  `articles`.* FROM `articles` WHERE `articles`.`title` = 'Articulo_9'  ORDER BY `articles`.`id` ASC LIMIT 1[0m
+Started GET "/catalog/show/9" for 127.0.0.1 at 2017-05-16 11:47:34 +0200
+Processing by CatalogController#show as HTML
+  Parameters: {"id"=>"9"}
+ApplicationController::require_no_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[35mArticle Load (0.3ms)[0m  SELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 9 LIMIT 1
+  [1m[36mSupplier Load (0.4ms)[0m  [1mSELECT `suppliers`.* FROM `suppliers` INNER JOIN `articles_suppliers` ON `suppliers`.`id` = `articles_suppliers`.`supplier_id` WHERE `articles_suppliers`.`article_id` = 9[0m
+  [1m[35mManufacturer Load (0.2ms)[0m  SELECT  `manufacturers`.* FROM `manufacturers` WHERE `manufacturers`.`id` = 2 LIMIT 1
+  Rendered catalog/show.html.erb within layouts/application (6.9ms)
+ApplicationController::current_user
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `users`[0m
+Completed 200 OK in 11ms (Views: 8.4ms | ActiveRecord: 1.1ms)
+  [1m[35mSupplier Load (0.5ms)[0m  SELECT `suppliers`.* FROM `suppliers` INNER JOIN `articles_suppliers` ON `suppliers`.`id` = `articles_suppliers`.`supplier_id` WHERE `articles_suppliers`.`article_id` = 9
+Started GET "/catalog/latest" for 127.0.0.1 at 2017-05-16 11:47:34 +0200
+Processing by CatalogController#latest as HTML
+  [1m[36mCart Load (0.4ms)[0m  [1mSELECT  `carts`.* FROM `carts` WHERE `carts`.`id` = 980190964 LIMIT 1[0m
+ApplicationController::require_no_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[35mArticle Load (0.5ms)[0m  SELECT  `articles`.* FROM `articles`  ORDER BY articles.id desc LIMIT 5
+  [1m[36mHABTM_Suppliers Load (0.4ms)[0m  [1mSELECT `articles_suppliers`.* FROM `articles_suppliers` WHERE `articles_suppliers`.`article_id` IN (10, 9, 8, 7, 6)[0m
+  [1m[35mManufacturer Load (0.4ms)[0m  SELECT `manufacturers`.* FROM `manufacturers` WHERE `manufacturers`.`id` IN (2)
+  Rendered catalog/_articles.html.erb (7.2ms)
+  Rendered catalog/latest.html.erb within layouts/application (7.7ms)
+ApplicationController::current_user
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `users`[0m
+  [1m[35mCartItem Load (0.3ms)[0m  SELECT `cart_items`.* FROM `cart_items` WHERE `cart_items`.`cart_id` = 980190964
+  Rendered cart/_cart.html.erb (1.0ms)
+Completed 200 OK in 13ms (Views: 9.3ms | ActiveRecord: 2.3ms)
+  [1m[36mArticle Load (0.4ms)[0m  [1mSELECT  `articles`.* FROM `articles`  ORDER BY articles.id desc LIMIT 5[0m
+  [1m[35mHABTM_Suppliers Load (0.5ms)[0m  SELECT `articles_suppliers`.* FROM `articles_suppliers` WHERE `articles_suppliers`.`article_id` IN (10, 9, 8, 7, 6)
+  [1m[36mManufacturer Load (0.4ms)[0m  [1mSELECT `manufacturers`.* FROM `manufacturers` WHERE `manufacturers`.`id` IN (2)[0m
+Started GET "/catalog/rss" for 127.0.0.1 at 2017-05-16 11:47:34 +0200
+Processing by CatalogController#rss as HTML
+  [1m[35mCart Load (0.5ms)[0m  SELECT  `carts`.* FROM `carts` WHERE `carts`.`id` = 980190964 LIMIT 1
+ApplicationController::require_no_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[36mArticle Load (0.3ms)[0m  [1mSELECT  `articles`.* FROM `articles`  ORDER BY articles.id desc LIMIT 5[0m
+  [1m[35mHABTM_Suppliers Load (0.4ms)[0m  SELECT `articles_suppliers`.* FROM `articles_suppliers` WHERE `articles_suppliers`.`article_id` IN (10, 9, 8, 7, 6)
+  [1m[36mManufacturer Load (0.3ms)[0m  [1mSELECT `manufacturers`.* FROM `manufacturers` WHERE `manufacturers`.`id` IN (2)[0m
+  Rendered catalog/rss.builder (7.5ms)
+Completed 200 OK in 10ms (Views: 7.1ms | ActiveRecord: 1.5ms)
+  [1m[35m (90.6ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.4ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.3ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `order_items`[0m
+  [1m[35mFixture Insert (72.4ms)[0m  INSERT INTO `order_items` (`created_at`, `updated_at`, `id`) VALUES ('2017-05-16 09:53:02', '2017-05-16 09:53:02', 980190962)
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO `order_items` (`created_at`, `updated_at`, `id`) VALUES ('2017-05-16 09:53:02', '2017-05-16 09:53:02', 298486374)[0m
+  [1m[35mFixture Delete (0.5ms)[0m  DELETE FROM `carts`
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO `carts` (`created_at`, `updated_at`, `id`) VALUES ('2017-05-16 09:53:02', '2017-05-16 09:53:02', 980190962)[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO `carts` (`created_at`, `updated_at`, `id`) VALUES ('2017-05-16 09:53:02', '2017-05-16 09:53:02', 298486374)
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `orders`[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `orders` (`created_at`, `updated_at`, `id`) VALUES ('2017-05-16 09:53:02', '2017-05-16 09:53:02', 980190962)
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO `orders` (`created_at`, `updated_at`, `id`) VALUES ('2017-05-16 09:53:02', '2017-05-16 09:53:02', 298486374)[0m
+  [1m[35mFixture Delete (0.7ms)[0m  DELETE FROM `articles`
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (1, 'Articulo_1', 1, '199-199-199-1', '2017-05-16', 100.0, 40, '2017-05-16 09:53:02', '2017-05-16 09:53:02')[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (2, 'Articulo_2', 1, '199-199-199-2', '2017-05-16', 200.0, 40, '2017-05-16 09:53:02', '2017-05-16 09:53:02')
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (3, 'Articulo_3', 2, '199-199-199-3', '2017-05-16', 300.0, 40, '2017-05-16 09:53:02', '2017-05-16 09:53:02')[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (4, 'Articulo_4', 2, '199-199-199-4', '2017-05-16', 400.0, 40, '2017-05-16 09:53:02', '2017-05-16 09:53:02')
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (5, 'Articulo_5', 2, '199-199-199-5', '2017-05-16', 500.0, 40, '2017-05-16 09:53:02', '2017-05-16 09:53:02')[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (6, 'Articulo_6', 2, '199-199-199-6', '2017-05-16', 600.0, 40, '2017-05-16 09:53:02', '2017-05-16 09:53:02')
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (7, 'Articulo_7', 2, '199-199-199-7', '2017-05-16', 700.0, 40, '2017-05-16 09:53:02', '2017-05-16 09:53:02')[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (8, 'Articulo_8', 2, '199-199-199-8', '2017-05-16', 800.0, 40, '2017-05-16 09:53:02', '2017-05-16 09:53:02')
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (9, 'Articulo_9', 2, '199-199-199-9', '2017-05-16', 900.0, 40, '2017-05-16 09:53:02', '2017-05-16 09:53:02')[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (10, 'Articulo_10', 2, '299-199-199-1', '2017-05-16', 1000.0, 40, '2017-05-16 09:53:02', '2017-05-16 09:53:02')
+  [1m[36mFixture Delete (0.5ms)[0m  [1mDELETE FROM `articles_suppliers`[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO `articles_suppliers` (`created_at`, `updated_at`, `article_id`, `supplier_id`) VALUES ('2017-05-16 11:53:02', '2017-05-16 11:53:02', 1, 1)
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO `articles_suppliers` (`created_at`, `updated_at`, `article_id`, `supplier_id`) VALUES ('2017-05-16 11:53:02', '2017-05-16 11:53:02', 2, 1)[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO `articles_suppliers` (`created_at`, `updated_at`, `article_id`, `supplier_id`) VALUES ('2017-05-16 11:53:02', '2017-05-16 11:53:02', 3, 2)
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO `articles_suppliers` (`created_at`, `updated_at`, `article_id`, `supplier_id`) VALUES ('2017-05-16 11:53:02', '2017-05-16 11:53:02', 4, 2)[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO `articles_suppliers` (`created_at`, `updated_at`, `article_id`, `supplier_id`) VALUES ('2017-05-16 11:53:02', '2017-05-16 11:53:02', 5, 1)
+  [1m[36mFixture Delete (0.5ms)[0m  [1mDELETE FROM `cart_items`[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `cart_items` (`created_at`, `updated_at`, `id`) VALUES ('2017-05-16 09:53:02', '2017-05-16 09:53:02', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `cart_items` (`created_at`, `updated_at`, `id`) VALUES ('2017-05-16 09:53:02', '2017-05-16 09:53:02', 298486374)[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM `suppliers`
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `suppliers` (`id`, `first_name`, `last_name`, `created_at`, `updated_at`) VALUES (1, 'Pepe', 'Mateo', '2017-05-16 09:53:02', '2017-05-16 09:53:02')[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `suppliers` (`id`, `first_name`, `last_name`, `created_at`, `updated_at`) VALUES (2, 'Toni', 'Gavira', '2017-05-16 09:53:02', '2017-05-16 09:53:02')
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM `manufacturers`[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `manufacturers` (`id`, `name`, `created_at`, `updated_at`) VALUES (1, 'Adidas', '2017-05-16 09:53:02', '2017-05-16 09:53:02')
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `manufacturers` (`id`, `name`, `created_at`, `updated_at`) VALUES (2, 'Nike', '2017-05-16 09:53:02', '2017-05-16 09:53:02')[0m
+  [1m[35m (65.8ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+-------------------------------------
+BrowsingAndSearchingTest: test_browse
+-------------------------------------
+Started GET "/catalog/index" for 127.0.0.1 at 2017-05-16 11:53:03 +0200
+Processing by CatalogController#index as HTML
+  [1m[36m (0.4ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO `carts` (`created_at`, `updated_at`) VALUES ('2017-05-16 09:53:03', '2017-05-16 09:53:03')
+  [1m[36m (0.3ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+ApplicationController::require_no_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[35mArticle Load (0.8ms)[0m  SELECT  `articles`.* FROM `articles`  ORDER BY articles.id desc LIMIT 5 OFFSET 0
+  [1m[36mHABTM_Suppliers Load (0.7ms)[0m  [1mSELECT `articles_suppliers`.* FROM `articles_suppliers` WHERE `articles_suppliers`.`article_id` IN (10, 9, 8, 7, 6)[0m
+  [1m[35mManufacturer Load (0.7ms)[0m  SELECT `manufacturers`.* FROM `manufacturers` WHERE `manufacturers`.`id` IN (2)
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM `articles`[0m
+  Rendered catalog/_articles.html.erb (54.9ms)
+  Rendered catalog/index.html.erb within layouts/application (59.2ms)
+ApplicationController::current_user
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM `users`
+  [1m[36mCartItem Load (0.6ms)[0m  [1mSELECT `cart_items`.* FROM `cart_items` WHERE `cart_items`.`cart_id` = 980190965[0m
+  Rendered cart/_cart.html.erb (4.0ms)
+Completed 200 OK in 250ms (Views: 208.8ms | ActiveRecord: 8.7ms)
+Started GET "/catalog/index?page=2" for 127.0.0.1 at 2017-05-16 11:53:03 +0200
+Processing by CatalogController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[35mCart Load (0.7ms)[0m  SELECT  `carts`.* FROM `carts` WHERE `carts`.`id` = 980190965 LIMIT 1
+ApplicationController::require_no_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[36mArticle Load (0.7ms)[0m  [1mSELECT  `articles`.* FROM `articles`  ORDER BY articles.id desc LIMIT 5 OFFSET 5[0m
+  [1m[35mHABTM_Suppliers Load (0.7ms)[0m  SELECT `articles_suppliers`.* FROM `articles_suppliers` WHERE `articles_suppliers`.`article_id` IN (5, 4, 3, 2, 1)
+  [1m[36mSupplier Load (0.7ms)[0m  [1mSELECT `suppliers`.* FROM `suppliers` WHERE `suppliers`.`id` IN (1, 2)[0m
+  [1m[35mManufacturer Load (0.7ms)[0m  SELECT `manufacturers`.* FROM `manufacturers` WHERE `manufacturers`.`id` IN (2, 1)
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM `articles`[0m
+  Rendered catalog/_articles.html.erb (16.5ms)
+  Rendered catalog/index.html.erb within layouts/application (16.9ms)
+ApplicationController::current_user
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM `users`
+  [1m[36mCartItem Load (0.6ms)[0m  [1mSELECT `cart_items`.* FROM `cart_items` WHERE `cart_items`.`cart_id` = 980190965[0m
+  Rendered cart/_cart.html.erb (1.3ms)
+Completed 200 OK in 25ms (Views: 15.8ms | ActiveRecord: 5.5ms)
+  [1m[35mArticle Load (0.6ms)[0m  SELECT  `articles`.* FROM `articles` WHERE `articles`.`title` = 'Articulo_1' LIMIT 1
+  [1m[36mArticle Load (0.8ms)[0m  [1mSELECT  `articles`.* FROM `articles` WHERE `articles`.`title` = 'Articulo_9'  ORDER BY `articles`.`id` ASC LIMIT 1[0m
+Started GET "/catalog/show/9" for 127.0.0.1 at 2017-05-16 11:53:03 +0200
+Processing by CatalogController#show as HTML
+  Parameters: {"id"=>"9"}
+ApplicationController::require_no_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[35mArticle Load (0.7ms)[0m  SELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 9 LIMIT 1
+  [1m[36mSupplier Load (0.8ms)[0m  [1mSELECT `suppliers`.* FROM `suppliers` INNER JOIN `articles_suppliers` ON `suppliers`.`id` = `articles_suppliers`.`supplier_id` WHERE `articles_suppliers`.`article_id` = 9[0m
+  [1m[35mManufacturer Load (0.5ms)[0m  SELECT  `manufacturers`.* FROM `manufacturers` WHERE `manufacturers`.`id` = 2 LIMIT 1
+  Rendered catalog/show.html.erb within layouts/application (7.7ms)
+ApplicationController::current_user
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM `users`[0m
+Completed 200 OK in 13ms (Views: 8.7ms | ActiveRecord: 2.5ms)
+  [1m[35mSupplier Load (0.8ms)[0m  SELECT `suppliers`.* FROM `suppliers` INNER JOIN `articles_suppliers` ON `suppliers`.`id` = `articles_suppliers`.`supplier_id` WHERE `articles_suppliers`.`article_id` = 9
+Started GET "/catalog/latest" for 127.0.0.1 at 2017-05-16 11:53:03 +0200
+Processing by CatalogController#latest as HTML
+  [1m[36mCart Load (0.5ms)[0m  [1mSELECT  `carts`.* FROM `carts` WHERE `carts`.`id` = 980190965 LIMIT 1[0m
+ApplicationController::require_no_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[35mArticle Load (0.3ms)[0m  SELECT  `articles`.* FROM `articles`  ORDER BY articles.id desc LIMIT 5
+  [1m[36mHABTM_Suppliers Load (0.3ms)[0m  [1mSELECT `articles_suppliers`.* FROM `articles_suppliers` WHERE `articles_suppliers`.`article_id` IN (10, 9, 8, 7, 6)[0m
+  [1m[35mManufacturer Load (0.4ms)[0m  SELECT `manufacturers`.* FROM `manufacturers` WHERE `manufacturers`.`id` IN (2)
+  Rendered catalog/_articles.html.erb (7.4ms)
+  Rendered catalog/latest.html.erb within layouts/application (7.8ms)
+ApplicationController::current_user
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM `users`[0m
+  [1m[35mCartItem Load (0.4ms)[0m  SELECT `cart_items`.* FROM `cart_items` WHERE `cart_items`.`cart_id` = 980190965
+  Rendered cart/_cart.html.erb (1.2ms)
+Completed 200 OK in 14ms (Views: 10.0ms | ActiveRecord: 2.4ms)
+  [1m[36mArticle Load (0.4ms)[0m  [1mSELECT  `articles`.* FROM `articles`  ORDER BY articles.id desc LIMIT 5[0m
+  [1m[35mHABTM_Suppliers Load (0.5ms)[0m  SELECT `articles_suppliers`.* FROM `articles_suppliers` WHERE `articles_suppliers`.`article_id` IN (10, 9, 8, 7, 6)
+  [1m[36mManufacturer Load (0.2ms)[0m  [1mSELECT `manufacturers`.* FROM `manufacturers` WHERE `manufacturers`.`id` IN (2)[0m
+Started GET "/catalog/rss" for 127.0.0.1 at 2017-05-16 11:53:03 +0200
+Processing by CatalogController#rss as HTML
+  [1m[35mCart Load (0.3ms)[0m  SELECT  `carts`.* FROM `carts` WHERE `carts`.`id` = 980190965 LIMIT 1
+ApplicationController::require_no_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT  `articles`.* FROM `articles`  ORDER BY articles.id desc LIMIT 5[0m
+  [1m[35mHABTM_Suppliers Load (0.3ms)[0m  SELECT `articles_suppliers`.* FROM `articles_suppliers` WHERE `articles_suppliers`.`article_id` IN (10, 9, 8, 7, 6)
+  [1m[36mManufacturer Load (0.2ms)[0m  [1mSELECT `manufacturers`.* FROM `manufacturers` WHERE `manufacturers`.`id` IN (2)[0m
+  Rendered catalog/rss.builder (7.1ms)
+Completed 200 OK in 9ms (Views: 7.1ms | ActiveRecord: 0.9ms)
+  [1m[35m (42.8ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.3ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `order_items`[0m
+  [1m[35mFixture Insert (89.7ms)[0m  INSERT INTO `order_items` (`created_at`, `updated_at`, `id`) VALUES ('2017-05-16 09:55:08', '2017-05-16 09:55:08', 980190962)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `order_items` (`created_at`, `updated_at`, `id`) VALUES ('2017-05-16 09:55:08', '2017-05-16 09:55:08', 298486374)[0m
+  [1m[35mFixture Delete (0.4ms)[0m  DELETE FROM `carts`
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO `carts` (`created_at`, `updated_at`, `id`) VALUES ('2017-05-16 09:55:08', '2017-05-16 09:55:08', 980190962)[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO `carts` (`created_at`, `updated_at`, `id`) VALUES ('2017-05-16 09:55:08', '2017-05-16 09:55:08', 298486374)
+  [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM `orders`[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `orders` (`created_at`, `updated_at`, `id`) VALUES ('2017-05-16 09:55:08', '2017-05-16 09:55:08', 980190962)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `orders` (`created_at`, `updated_at`, `id`) VALUES ('2017-05-16 09:55:08', '2017-05-16 09:55:08', 298486374)[0m
+  [1m[35mFixture Delete (1.1ms)[0m  DELETE FROM `articles`
+  [1m[36mFixture Insert (0.6ms)[0m  [1mINSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (1, 'Articulo_1', 1, '199-199-199-1', '2017-05-16', 100.0, 40, '2017-05-16 09:55:08', '2017-05-16 09:55:08')[0m
+  [1m[35mFixture Insert (0.6ms)[0m  INSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (2, 'Articulo_2', 1, '199-199-199-2', '2017-05-16', 200.0, 40, '2017-05-16 09:55:08', '2017-05-16 09:55:08')
+  [1m[36mFixture Insert (0.6ms)[0m  [1mINSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (3, 'Articulo_3', 2, '199-199-199-3', '2017-05-16', 300.0, 40, '2017-05-16 09:55:08', '2017-05-16 09:55:08')[0m
+  [1m[35mFixture Insert (0.6ms)[0m  INSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (4, 'Articulo_4', 2, '199-199-199-4', '2017-05-16', 400.0, 40, '2017-05-16 09:55:08', '2017-05-16 09:55:08')
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (5, 'Articulo_5', 2, '199-199-199-5', '2017-05-16', 500.0, 40, '2017-05-16 09:55:08', '2017-05-16 09:55:08')[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (6, 'Articulo_6', 2, '199-199-199-6', '2017-05-16', 600.0, 40, '2017-05-16 09:55:08', '2017-05-16 09:55:08')
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (7, 'Articulo_7', 2, '199-199-199-7', '2017-05-16', 700.0, 40, '2017-05-16 09:55:08', '2017-05-16 09:55:08')[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (8, 'Articulo_8', 2, '199-199-199-8', '2017-05-16', 800.0, 40, '2017-05-16 09:55:08', '2017-05-16 09:55:08')
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (9, 'Articulo_9', 2, '199-199-199-9', '2017-05-16', 900.0, 40, '2017-05-16 09:55:08', '2017-05-16 09:55:08')[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (10, 'Articulo_10', 2, '299-199-199-1', '2017-05-16', 1000.0, 40, '2017-05-16 09:55:08', '2017-05-16 09:55:08')
+  [1m[36mFixture Delete (0.6ms)[0m  [1mDELETE FROM `articles_suppliers`[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `articles_suppliers` (`created_at`, `updated_at`, `article_id`, `supplier_id`) VALUES ('2017-05-16 11:55:08', '2017-05-16 11:55:08', 1, 1)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `articles_suppliers` (`created_at`, `updated_at`, `article_id`, `supplier_id`) VALUES ('2017-05-16 11:55:08', '2017-05-16 11:55:08', 2, 1)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `articles_suppliers` (`created_at`, `updated_at`, `article_id`, `supplier_id`) VALUES ('2017-05-16 11:55:08', '2017-05-16 11:55:08', 3, 2)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `articles_suppliers` (`created_at`, `updated_at`, `article_id`, `supplier_id`) VALUES ('2017-05-16 11:55:08', '2017-05-16 11:55:08', 4, 2)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `articles_suppliers` (`created_at`, `updated_at`, `article_id`, `supplier_id`) VALUES ('2017-05-16 11:55:08', '2017-05-16 11:55:08', 5, 1)
+  [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM `cart_items`[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `cart_items` (`created_at`, `updated_at`, `id`) VALUES ('2017-05-16 09:55:08', '2017-05-16 09:55:08', 980190962)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `cart_items` (`created_at`, `updated_at`, `id`) VALUES ('2017-05-16 09:55:08', '2017-05-16 09:55:08', 298486374)[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM `suppliers`
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `suppliers` (`id`, `first_name`, `last_name`, `created_at`, `updated_at`) VALUES (1, 'Pepe', 'Mateo', '2017-05-16 09:55:08', '2017-05-16 09:55:08')[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `suppliers` (`id`, `first_name`, `last_name`, `created_at`, `updated_at`) VALUES (2, 'Toni', 'Gavira', '2017-05-16 09:55:08', '2017-05-16 09:55:08')
+  [1m[36mFixture Delete (0.6ms)[0m  [1mDELETE FROM `manufacturers`[0m
+  [1m[35mFixture Insert (0.6ms)[0m  INSERT INTO `manufacturers` (`id`, `name`, `created_at`, `updated_at`) VALUES (1, 'Adidas', '2017-05-16 09:55:08', '2017-05-16 09:55:08')
+  [1m[36mFixture Insert (0.6ms)[0m  [1mINSERT INTO `manufacturers` (`id`, `name`, `created_at`, `updated_at`) VALUES (2, 'Nike', '2017-05-16 09:55:08', '2017-05-16 09:55:08')[0m
+  [1m[35m (69.5ms)[0m  COMMIT
+  [1m[36m (0.5ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+-------------------------------------
+BrowsingAndSearchingTest: test_browse
+-------------------------------------
+Started GET "/catalog/index" for 127.0.0.1 at 2017-05-16 11:55:08 +0200
+Processing by CatalogController#index as HTML
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `carts` (`created_at`, `updated_at`) VALUES ('2017-05-16 09:55:08', '2017-05-16 09:55:08')
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+ApplicationController::require_no_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[35mArticle Load (0.4ms)[0m  SELECT  `articles`.* FROM `articles`  ORDER BY articles.id desc LIMIT 5 OFFSET 0
+  [1m[36mHABTM_Suppliers Load (0.4ms)[0m  [1mSELECT `articles_suppliers`.* FROM `articles_suppliers` WHERE `articles_suppliers`.`article_id` IN (10, 9, 8, 7, 6)[0m
+  [1m[35mManufacturer Load (0.4ms)[0m  SELECT `manufacturers`.* FROM `manufacturers` WHERE `manufacturers`.`id` IN (2)
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `articles`[0m
+  Rendered catalog/_articles.html.erb (52.9ms)
+  Rendered catalog/index.html.erb within layouts/application (57.5ms)
+ApplicationController::current_user
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM `users`
+  [1m[36mCartItem Load (0.7ms)[0m  [1mSELECT `cart_items`.* FROM `cart_items` WHERE `cart_items`.`cart_id` = 980190966[0m
+  Rendered cart/_cart.html.erb (4.1ms)
+Completed 200 OK in 275ms (Views: 215.1ms | ActiveRecord: 5.3ms)
+Started GET "/catalog/index?page=2" for 127.0.0.1 at 2017-05-16 11:55:09 +0200
+Processing by CatalogController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[35mCart Load (0.3ms)[0m  SELECT  `carts`.* FROM `carts` WHERE `carts`.`id` = 980190966 LIMIT 1
+ApplicationController::require_no_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[36mArticle Load (0.3ms)[0m  [1mSELECT  `articles`.* FROM `articles`  ORDER BY articles.id desc LIMIT 5 OFFSET 5[0m
+  [1m[35mHABTM_Suppliers Load (0.3ms)[0m  SELECT `articles_suppliers`.* FROM `articles_suppliers` WHERE `articles_suppliers`.`article_id` IN (5, 4, 3, 2, 1)
+  [1m[36mSupplier Load (0.2ms)[0m  [1mSELECT `suppliers`.* FROM `suppliers` WHERE `suppliers`.`id` IN (1, 2)[0m
+  [1m[35mManufacturer Load (0.2ms)[0m  SELECT `manufacturers`.* FROM `manufacturers` WHERE `manufacturers`.`id` IN (2, 1)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `articles`[0m
+  Rendered catalog/_articles.html.erb (14.2ms)
+  Rendered catalog/index.html.erb within layouts/application (14.6ms)
+ApplicationController::current_user
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `users`
+  [1m[36mCartItem Load (0.2ms)[0m  [1mSELECT `cart_items`.* FROM `cart_items` WHERE `cart_items`.`cart_id` = 980190966[0m
+  Rendered cart/_cart.html.erb (0.9ms)
+Completed 200 OK in 22ms (Views: 15.8ms | ActiveRecord: 2.2ms)
+  [1m[35mArticle Load (0.3ms)[0m  SELECT  `articles`.* FROM `articles` WHERE `articles`.`title` = 'Articulo_1' LIMIT 1
+  [1m[36mArticle Load (0.3ms)[0m  [1mSELECT  `articles`.* FROM `articles` WHERE `articles`.`title` = 'Articulo_9'  ORDER BY `articles`.`id` ASC LIMIT 1[0m
+Started GET "/catalog/show/9" for 127.0.0.1 at 2017-05-16 11:55:09 +0200
+Processing by CatalogController#show as HTML
+  Parameters: {"id"=>"9"}
+ApplicationController::require_no_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[35mArticle Load (0.3ms)[0m  SELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 9 LIMIT 1
+  [1m[36mSupplier Load (0.4ms)[0m  [1mSELECT `suppliers`.* FROM `suppliers` INNER JOIN `articles_suppliers` ON `suppliers`.`id` = `articles_suppliers`.`supplier_id` WHERE `articles_suppliers`.`article_id` = 9[0m
+  [1m[35mManufacturer Load (0.2ms)[0m  SELECT  `manufacturers`.* FROM `manufacturers` WHERE `manufacturers`.`id` = 2 LIMIT 1
+  Rendered catalog/show.html.erb within layouts/application (6.8ms)
+ApplicationController::current_user
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `users`[0m
+Completed 200 OK in 11ms (Views: 8.2ms | ActiveRecord: 1.1ms)
+  [1m[35mSupplier Load (0.3ms)[0m  SELECT `suppliers`.* FROM `suppliers` INNER JOIN `articles_suppliers` ON `suppliers`.`id` = `articles_suppliers`.`supplier_id` WHERE `articles_suppliers`.`article_id` = 9
+Started GET "/catalog/latest" for 127.0.0.1 at 2017-05-16 11:55:09 +0200
+Processing by CatalogController#latest as HTML
+  [1m[36mCart Load (0.2ms)[0m  [1mSELECT  `carts`.* FROM `carts` WHERE `carts`.`id` = 980190966 LIMIT 1[0m
+ApplicationController::require_no_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[35mArticle Load (0.2ms)[0m  SELECT  `articles`.* FROM `articles`  ORDER BY articles.id desc LIMIT 5
+  [1m[36mHABTM_Suppliers Load (0.2ms)[0m  [1mSELECT `articles_suppliers`.* FROM `articles_suppliers` WHERE `articles_suppliers`.`article_id` IN (10, 9, 8, 7, 6)[0m
+  [1m[35mManufacturer Load (0.2ms)[0m  SELECT `manufacturers`.* FROM `manufacturers` WHERE `manufacturers`.`id` IN (2)
+  Rendered catalog/_articles.html.erb (6.4ms)
+  Rendered catalog/latest.html.erb within layouts/application (6.8ms)
+ApplicationController::current_user
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `users`[0m
+  [1m[35mCartItem Load (0.2ms)[0m  SELECT `cart_items`.* FROM `cart_items` WHERE `cart_items`.`cart_id` = 980190966
+  Rendered cart/_cart.html.erb (0.8ms)
+Completed 200 OK in 11ms (Views: 9.0ms | ActiveRecord: 1.2ms)
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT  `articles`.* FROM `articles`  ORDER BY articles.id desc LIMIT 5[0m
+  [1m[35mHABTM_Suppliers Load (0.2ms)[0m  SELECT `articles_suppliers`.* FROM `articles_suppliers` WHERE `articles_suppliers`.`article_id` IN (10, 9, 8, 7, 6)
+  [1m[36mManufacturer Load (0.2ms)[0m  [1mSELECT `manufacturers`.* FROM `manufacturers` WHERE `manufacturers`.`id` IN (2)[0m
+Started GET "/catalog/rss" for 127.0.0.1 at 2017-05-16 11:55:09 +0200
+Processing by CatalogController#rss as HTML
+  [1m[35mCart Load (0.2ms)[0m  SELECT  `carts`.* FROM `carts` WHERE `carts`.`id` = 980190966 LIMIT 1
+ApplicationController::require_no_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT  `articles`.* FROM `articles`  ORDER BY articles.id desc LIMIT 5[0m
+  [1m[35mHABTM_Suppliers Load (0.2ms)[0m  SELECT `articles_suppliers`.* FROM `articles_suppliers` WHERE `articles_suppliers`.`article_id` IN (10, 9, 8, 7, 6)
+  [1m[36mManufacturer Load (0.2ms)[0m  [1mSELECT `manufacturers`.* FROM `manufacturers` WHERE `manufacturers`.`id` IN (2)[0m
+  Rendered catalog/rss.builder (6.9ms)
+Completed 200 OK in 9ms (Views: 6.8ms | ActiveRecord: 0.9ms)
+  [1m[35m (35.4ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.3ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.2ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.5ms)[0m  [1mDELETE FROM `order_items`[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO `order_items` (`created_at`, `updated_at`, `id`) VALUES ('2017-05-16 09:55:27', '2017-05-16 09:55:27', 980190962)
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO `order_items` (`created_at`, `updated_at`, `id`) VALUES ('2017-05-16 09:55:27', '2017-05-16 09:55:27', 298486374)[0m
+  [1m[35mFixture Delete (0.4ms)[0m  DELETE FROM `carts`
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `carts` (`created_at`, `updated_at`, `id`) VALUES ('2017-05-16 09:55:27', '2017-05-16 09:55:27', 980190962)[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO `carts` (`created_at`, `updated_at`, `id`) VALUES ('2017-05-16 09:55:27', '2017-05-16 09:55:27', 298486374)
+  [1m[36mFixture Delete (0.6ms)[0m  [1mDELETE FROM `orders`[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO `orders` (`created_at`, `updated_at`, `id`) VALUES ('2017-05-16 09:55:27', '2017-05-16 09:55:27', 980190962)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `orders` (`created_at`, `updated_at`, `id`) VALUES ('2017-05-16 09:55:27', '2017-05-16 09:55:27', 298486374)[0m
+  [1m[35mFixture Delete (72.4ms)[0m  DELETE FROM `articles`
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (1, 'Articulo_1', 1, '199-199-199-1', '2017-05-16', 100.0, 40, '2017-05-16 09:55:27', '2017-05-16 09:55:27')[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (2, 'Articulo_2', 1, '199-199-199-2', '2017-05-16', 200.0, 40, '2017-05-16 09:55:27', '2017-05-16 09:55:27')
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (3, 'Articulo_3', 2, '199-199-199-3', '2017-05-16', 300.0, 40, '2017-05-16 09:55:27', '2017-05-16 09:55:27')[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (4, 'Articulo_4', 2, '199-199-199-4', '2017-05-16', 400.0, 40, '2017-05-16 09:55:27', '2017-05-16 09:55:27')
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (5, 'Articulo_5', 2, '199-199-199-5', '2017-05-16', 500.0, 40, '2017-05-16 09:55:27', '2017-05-16 09:55:27')[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (6, 'Articulo_6', 2, '199-199-199-6', '2017-05-16', 600.0, 40, '2017-05-16 09:55:27', '2017-05-16 09:55:27')
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (7, 'Articulo_7', 2, '199-199-199-7', '2017-05-16', 700.0, 40, '2017-05-16 09:55:27', '2017-05-16 09:55:27')[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (8, 'Articulo_8', 2, '199-199-199-8', '2017-05-16', 800.0, 40, '2017-05-16 09:55:27', '2017-05-16 09:55:27')
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (9, 'Articulo_9', 2, '199-199-199-9', '2017-05-16', 900.0, 40, '2017-05-16 09:55:27', '2017-05-16 09:55:27')[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (10, 'Articulo_10', 2, '299-199-199-1', '2017-05-16', 1000.0, 40, '2017-05-16 09:55:27', '2017-05-16 09:55:27')
+  [1m[36mFixture Delete (0.6ms)[0m  [1mDELETE FROM `articles_suppliers`[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO `articles_suppliers` (`created_at`, `updated_at`, `article_id`, `supplier_id`) VALUES ('2017-05-16 11:55:27', '2017-05-16 11:55:27', 1, 1)
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO `articles_suppliers` (`created_at`, `updated_at`, `article_id`, `supplier_id`) VALUES ('2017-05-16 11:55:27', '2017-05-16 11:55:27', 2, 1)[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO `articles_suppliers` (`created_at`, `updated_at`, `article_id`, `supplier_id`) VALUES ('2017-05-16 11:55:27', '2017-05-16 11:55:27', 3, 2)
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO `articles_suppliers` (`created_at`, `updated_at`, `article_id`, `supplier_id`) VALUES ('2017-05-16 11:55:27', '2017-05-16 11:55:27', 4, 2)[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO `articles_suppliers` (`created_at`, `updated_at`, `article_id`, `supplier_id`) VALUES ('2017-05-16 11:55:27', '2017-05-16 11:55:27', 5, 1)
+  [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM `cart_items`[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `cart_items` (`created_at`, `updated_at`, `id`) VALUES ('2017-05-16 09:55:27', '2017-05-16 09:55:27', 980190962)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `cart_items` (`created_at`, `updated_at`, `id`) VALUES ('2017-05-16 09:55:27', '2017-05-16 09:55:27', 298486374)[0m
+  [1m[35mFixture Delete (0.6ms)[0m  DELETE FROM `suppliers`
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `suppliers` (`id`, `first_name`, `last_name`, `created_at`, `updated_at`) VALUES (1, 'Pepe', 'Mateo', '2017-05-16 09:55:27', '2017-05-16 09:55:27')[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `suppliers` (`id`, `first_name`, `last_name`, `created_at`, `updated_at`) VALUES (2, 'Toni', 'Gavira', '2017-05-16 09:55:27', '2017-05-16 09:55:27')
+  [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM `manufacturers`[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `manufacturers` (`id`, `name`, `created_at`, `updated_at`) VALUES (1, 'Adidas', '2017-05-16 09:55:27', '2017-05-16 09:55:27')
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `manufacturers` (`id`, `name`, `created_at`, `updated_at`) VALUES (2, 'Nike', '2017-05-16 09:55:27', '2017-05-16 09:55:27')[0m
+  [1m[35m (83.8ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+-------------------------------------
+BrowsingAndSearchingTest: test_browse
+-------------------------------------
+Started GET "/catalog/index" for 127.0.0.1 at 2017-05-16 11:55:28 +0200
+Processing by CatalogController#index as HTML
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `carts` (`created_at`, `updated_at`) VALUES ('2017-05-16 09:55:28', '2017-05-16 09:55:28')
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+ApplicationController::require_no_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[35mArticle Load (0.4ms)[0m  SELECT  `articles`.* FROM `articles`  ORDER BY articles.id desc LIMIT 5 OFFSET 0
+  [1m[36mHABTM_Suppliers Load (0.3ms)[0m  [1mSELECT `articles_suppliers`.* FROM `articles_suppliers` WHERE `articles_suppliers`.`article_id` IN (10, 9, 8, 7, 6)[0m
+  [1m[35mManufacturer Load (0.3ms)[0m  SELECT `manufacturers`.* FROM `manufacturers` WHERE `manufacturers`.`id` IN (2)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `articles`[0m
+  Rendered catalog/_articles.html.erb (39.9ms)
+  Rendered catalog/index.html.erb within layouts/application (42.9ms)
+ApplicationController::current_user
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM `users`
+  [1m[36mCartItem Load (0.7ms)[0m  [1mSELECT `cart_items`.* FROM `cart_items` WHERE `cart_items`.`cart_id` = 980190967[0m
+  Rendered cart/_cart.html.erb (4.6ms)
+Completed 200 OK in 226ms (Views: 189.4ms | ActiveRecord: 14.7ms)
+Started GET "/catalog/index?page=2" for 127.0.0.1 at 2017-05-16 11:55:28 +0200
+Processing by CatalogController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[35mCart Load (0.7ms)[0m  SELECT  `carts`.* FROM `carts` WHERE `carts`.`id` = 980190967 LIMIT 1
+ApplicationController::require_no_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[36mArticle Load (0.7ms)[0m  [1mSELECT  `articles`.* FROM `articles`  ORDER BY articles.id desc LIMIT 5 OFFSET 5[0m
+  [1m[35mHABTM_Suppliers Load (0.7ms)[0m  SELECT `articles_suppliers`.* FROM `articles_suppliers` WHERE `articles_suppliers`.`article_id` IN (5, 4, 3, 2, 1)
+  [1m[36mSupplier Load (0.7ms)[0m  [1mSELECT `suppliers`.* FROM `suppliers` WHERE `suppliers`.`id` IN (1, 2)[0m
+  [1m[35mManufacturer Load (0.6ms)[0m  SELECT `manufacturers`.* FROM `manufacturers` WHERE `manufacturers`.`id` IN (2, 1)
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM `articles`[0m
+  Rendered catalog/_articles.html.erb (16.9ms)
+  Rendered catalog/index.html.erb within layouts/application (17.3ms)
+ApplicationController::current_user
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM `users`
+  [1m[36mCartItem Load (0.6ms)[0m  [1mSELECT `cart_items`.* FROM `cart_items` WHERE `cart_items`.`cart_id` = 980190967[0m
+  Rendered cart/_cart.html.erb (1.3ms)
+Completed 200 OK in 26ms (Views: 16.5ms | ActiveRecord: 5.4ms)
+  [1m[35mArticle Load (0.6ms)[0m  SELECT  `articles`.* FROM `articles` WHERE `articles`.`title` = 'Articulo_1' LIMIT 1
+  [1m[36mArticle Load (0.8ms)[0m  [1mSELECT  `articles`.* FROM `articles` WHERE `articles`.`title` = 'Articulo_9'  ORDER BY `articles`.`id` ASC LIMIT 1[0m
+Started GET "/catalog/show/9" for 127.0.0.1 at 2017-05-16 11:55:28 +0200
+Processing by CatalogController#show as HTML
+  Parameters: {"id"=>"9"}
+ApplicationController::require_no_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[35mArticle Load (0.6ms)[0m  SELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 9 LIMIT 1
+  [1m[36mSupplier Load (0.8ms)[0m  [1mSELECT `suppliers`.* FROM `suppliers` INNER JOIN `articles_suppliers` ON `suppliers`.`id` = `articles_suppliers`.`supplier_id` WHERE `articles_suppliers`.`article_id` = 9[0m
+  [1m[35mManufacturer Load (0.4ms)[0m  SELECT  `manufacturers`.* FROM `manufacturers` WHERE `manufacturers`.`id` = 2 LIMIT 1
+  Rendered catalog/show.html.erb within layouts/application (8.6ms)
+ApplicationController::current_user
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM `users`[0m
+Completed 200 OK in 13ms (Views: 9.5ms | ActiveRecord: 2.4ms)
+  [1m[35mSupplier Load (0.7ms)[0m  SELECT `suppliers`.* FROM `suppliers` INNER JOIN `articles_suppliers` ON `suppliers`.`id` = `articles_suppliers`.`supplier_id` WHERE `articles_suppliers`.`article_id` = 9
+Started GET "/catalog/latest" for 127.0.0.1 at 2017-05-16 11:55:28 +0200
+Processing by CatalogController#latest as HTML
+  [1m[36mCart Load (0.6ms)[0m  [1mSELECT  `carts`.* FROM `carts` WHERE `carts`.`id` = 980190967 LIMIT 1[0m
+ApplicationController::require_no_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[35mArticle Load (0.7ms)[0m  SELECT  `articles`.* FROM `articles`  ORDER BY articles.id desc LIMIT 5
+  [1m[36mHABTM_Suppliers Load (0.6ms)[0m  [1mSELECT `articles_suppliers`.* FROM `articles_suppliers` WHERE `articles_suppliers`.`article_id` IN (10, 9, 8, 7, 6)[0m
+  [1m[35mManufacturer Load (0.5ms)[0m  SELECT `manufacturers`.* FROM `manufacturers` WHERE `manufacturers`.`id` IN (2)
+  Rendered catalog/_articles.html.erb (7.9ms)
+  Rendered catalog/latest.html.erb within layouts/application (8.4ms)
+ApplicationController::current_user
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM `users`[0m
+  [1m[35mCartItem Load (0.5ms)[0m  SELECT `cart_items`.* FROM `cart_items` WHERE `cart_items`.`cart_id` = 980190967
+  Rendered cart/_cart.html.erb (1.2ms)
+Completed 200 OK in 14ms (Views: 9.5ms | ActiveRecord: 3.3ms)
+  [1m[36mArticle Load (0.6ms)[0m  [1mSELECT  `articles`.* FROM `articles`  ORDER BY articles.id desc LIMIT 5[0m
+  [1m[35mHABTM_Suppliers Load (0.7ms)[0m  SELECT `articles_suppliers`.* FROM `articles_suppliers` WHERE `articles_suppliers`.`article_id` IN (10, 9, 8, 7, 6)
+  [1m[36mManufacturer Load (0.5ms)[0m  [1mSELECT `manufacturers`.* FROM `manufacturers` WHERE `manufacturers`.`id` IN (2)[0m
+Started GET "/catalog/rss" for 127.0.0.1 at 2017-05-16 11:55:28 +0200
+Processing by CatalogController#rss as HTML
+  [1m[35mCart Load (0.6ms)[0m  SELECT  `carts`.* FROM `carts` WHERE `carts`.`id` = 980190967 LIMIT 1
+ApplicationController::require_no_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[36mArticle Load (0.6ms)[0m  [1mSELECT  `articles`.* FROM `articles`  ORDER BY articles.id desc LIMIT 5[0m
+  [1m[35mHABTM_Suppliers Load (0.6ms)[0m  SELECT `articles_suppliers`.* FROM `articles_suppliers` WHERE `articles_suppliers`.`article_id` IN (10, 9, 8, 7, 6)
+  [1m[36mManufacturer Load (0.4ms)[0m  [1mSELECT `manufacturers`.* FROM `manufacturers` WHERE `manufacturers`.`id` IN (2)[0m
+  Rendered catalog/rss.builder (30.2ms)
+Completed 200 OK in 33ms (Views: 29.3ms | ActiveRecord: 2.2ms)
+  [1m[35m (41.2ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.3ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `order_items`[0m
+  [1m[35mFixture Insert (74.6ms)[0m  INSERT INTO `order_items` (`created_at`, `updated_at`, `id`) VALUES ('2017-05-16 09:58:03', '2017-05-16 09:58:03', 980190962)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `order_items` (`created_at`, `updated_at`, `id`) VALUES ('2017-05-16 09:58:03', '2017-05-16 09:58:03', 298486374)[0m
+  [1m[35mFixture Delete (0.4ms)[0m  DELETE FROM `carts`
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `carts` (`created_at`, `updated_at`, `id`) VALUES ('2017-05-16 09:58:03', '2017-05-16 09:58:03', 980190962)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `carts` (`created_at`, `updated_at`, `id`) VALUES ('2017-05-16 09:58:03', '2017-05-16 09:58:03', 298486374)
+  [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM `orders`[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `orders` (`created_at`, `updated_at`, `id`) VALUES ('2017-05-16 09:58:03', '2017-05-16 09:58:03', 980190962)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `orders` (`created_at`, `updated_at`, `id`) VALUES ('2017-05-16 09:58:03', '2017-05-16 09:58:03', 298486374)[0m
+  [1m[35mFixture Delete (0.7ms)[0m  DELETE FROM `articles`
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (1, 'Articulo_1', 1, '199-199-199-1', '2017-05-16', 100.0, 40, '2017-05-16 09:58:03', '2017-05-16 09:58:03')[0m
+  [1m[35mFixture Insert (1.9ms)[0m  INSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (2, 'Articulo_2', 1, '199-199-199-2', '2017-05-16', 200.0, 40, '2017-05-16 09:58:03', '2017-05-16 09:58:03')
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (3, 'Articulo_3', 2, '199-199-199-3', '2017-05-16', 300.0, 40, '2017-05-16 09:58:03', '2017-05-16 09:58:03')[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (4, 'Articulo_4', 2, '199-199-199-4', '2017-05-16', 400.0, 40, '2017-05-16 09:58:03', '2017-05-16 09:58:03')
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (5, 'Articulo_5', 2, '199-199-199-5', '2017-05-16', 500.0, 40, '2017-05-16 09:58:03', '2017-05-16 09:58:03')[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (6, 'Articulo_6', 2, '199-199-199-6', '2017-05-16', 600.0, 40, '2017-05-16 09:58:03', '2017-05-16 09:58:03')
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (7, 'Articulo_7', 2, '199-199-199-7', '2017-05-16', 700.0, 40, '2017-05-16 09:58:03', '2017-05-16 09:58:03')[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (8, 'Articulo_8', 2, '199-199-199-8', '2017-05-16', 800.0, 40, '2017-05-16 09:58:03', '2017-05-16 09:58:03')
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (9, 'Articulo_9', 2, '199-199-199-9', '2017-05-16', 900.0, 40, '2017-05-16 09:58:03', '2017-05-16 09:58:03')[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (10, 'Articulo_10', 2, '299-199-199-1', '2017-05-16', 1000.0, 40, '2017-05-16 09:58:03', '2017-05-16 09:58:03')
+  [1m[36mFixture Delete (0.6ms)[0m  [1mDELETE FROM `articles_suppliers`[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO `articles_suppliers` (`created_at`, `updated_at`, `article_id`, `supplier_id`) VALUES ('2017-05-16 11:58:03', '2017-05-16 11:58:03', 1, 1)
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO `articles_suppliers` (`created_at`, `updated_at`, `article_id`, `supplier_id`) VALUES ('2017-05-16 11:58:03', '2017-05-16 11:58:03', 2, 1)[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO `articles_suppliers` (`created_at`, `updated_at`, `article_id`, `supplier_id`) VALUES ('2017-05-16 11:58:03', '2017-05-16 11:58:03', 3, 2)
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO `articles_suppliers` (`created_at`, `updated_at`, `article_id`, `supplier_id`) VALUES ('2017-05-16 11:58:03', '2017-05-16 11:58:03', 4, 2)[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO `articles_suppliers` (`created_at`, `updated_at`, `article_id`, `supplier_id`) VALUES ('2017-05-16 11:58:03', '2017-05-16 11:58:03', 5, 1)
+  [1m[36mFixture Delete (1.2ms)[0m  [1mDELETE FROM `cart_items`[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `cart_items` (`created_at`, `updated_at`, `id`) VALUES ('2017-05-16 09:58:03', '2017-05-16 09:58:03', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `cart_items` (`created_at`, `updated_at`, `id`) VALUES ('2017-05-16 09:58:03', '2017-05-16 09:58:03', 298486374)[0m
+  [1m[35mFixture Delete (0.4ms)[0m  DELETE FROM `suppliers`
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `suppliers` (`id`, `first_name`, `last_name`, `created_at`, `updated_at`) VALUES (1, 'Pepe', 'Mateo', '2017-05-16 09:58:03', '2017-05-16 09:58:03')[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `suppliers` (`id`, `first_name`, `last_name`, `created_at`, `updated_at`) VALUES (2, 'Toni', 'Gavira', '2017-05-16 09:58:03', '2017-05-16 09:58:03')
+  [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM `manufacturers`[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `manufacturers` (`id`, `name`, `created_at`, `updated_at`) VALUES (1, 'Adidas', '2017-05-16 09:58:03', '2017-05-16 09:58:03')
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `manufacturers` (`id`, `name`, `created_at`, `updated_at`) VALUES (2, 'Nike', '2017-05-16 09:58:03', '2017-05-16 09:58:03')[0m
+  [1m[35m (67.9ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+-------------------------------------
+BrowsingAndSearchingTest: test_browse
+-------------------------------------
+Started GET "/catalog/index" for 127.0.0.1 at 2017-05-16 11:58:03 +0200
+Processing by CatalogController#index as HTML
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `carts` (`created_at`, `updated_at`) VALUES ('2017-05-16 09:58:03', '2017-05-16 09:58:03')
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+ApplicationController::require_no_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[35mArticle Load (0.5ms)[0m  SELECT  `articles`.* FROM `articles`  ORDER BY articles.id desc LIMIT 5 OFFSET 0
+  [1m[36mHABTM_Suppliers Load (0.7ms)[0m  [1mSELECT `articles_suppliers`.* FROM `articles_suppliers` WHERE `articles_suppliers`.`article_id` IN (10, 9, 8, 7, 6)[0m
+  [1m[35mManufacturer Load (0.8ms)[0m  SELECT `manufacturers`.* FROM `manufacturers` WHERE `manufacturers`.`id` IN (2)
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM `articles`[0m
+  Rendered catalog/_articles.html.erb (54.5ms)
+  Rendered catalog/index.html.erb within layouts/application (59.8ms)
+ApplicationController::current_user
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM `users`
+  [1m[36mCartItem Load (0.6ms)[0m  [1mSELECT `cart_items`.* FROM `cart_items` WHERE `cart_items`.`cart_id` = 980190968[0m
+  Rendered cart/_cart.html.erb (4.0ms)
+Completed 200 OK in 246ms (Views: 208.9ms | ActiveRecord: 6.7ms)
+Started GET "/catalog/index?page=2" for 127.0.0.1 at 2017-05-16 11:58:04 +0200
+Processing by CatalogController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[35mCart Load (0.6ms)[0m  SELECT  `carts`.* FROM `carts` WHERE `carts`.`id` = 980190968 LIMIT 1
+ApplicationController::require_no_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[36mArticle Load (0.6ms)[0m  [1mSELECT  `articles`.* FROM `articles`  ORDER BY articles.id desc LIMIT 5 OFFSET 5[0m
+  [1m[35mHABTM_Suppliers Load (0.6ms)[0m  SELECT `articles_suppliers`.* FROM `articles_suppliers` WHERE `articles_suppliers`.`article_id` IN (5, 4, 3, 2, 1)
+  [1m[36mSupplier Load (0.6ms)[0m  [1mSELECT `suppliers`.* FROM `suppliers` WHERE `suppliers`.`id` IN (1, 2)[0m
+  [1m[35mManufacturer Load (0.5ms)[0m  SELECT `manufacturers`.* FROM `manufacturers` WHERE `manufacturers`.`id` IN (2, 1)
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM `articles`[0m
+  Rendered catalog/_articles.html.erb (15.8ms)
+  Rendered catalog/index.html.erb within layouts/application (16.3ms)
+ApplicationController::current_user
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM `users`
+  [1m[36mCartItem Load (0.5ms)[0m  [1mSELECT `cart_items`.* FROM `cart_items` WHERE `cart_items`.`cart_id` = 980190968[0m
+  Rendered cart/_cart.html.erb (1.2ms)
+Completed 200 OK in 24ms (Views: 15.8ms | ActiveRecord: 4.7ms)
+  [1m[35mArticle Load (0.6ms)[0m  SELECT  `articles`.* FROM `articles` WHERE `articles`.`title` = 'Articulo_1' LIMIT 1
+  [1m[36mArticle Load (0.7ms)[0m  [1mSELECT  `articles`.* FROM `articles` WHERE `articles`.`title` = 'Articulo_9'  ORDER BY `articles`.`id` ASC LIMIT 1[0m
+Started GET "/catalog/show/9" for 127.0.0.1 at 2017-05-16 11:58:04 +0200
+Processing by CatalogController#show as HTML
+  Parameters: {"id"=>"9"}
+ApplicationController::require_no_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[35mArticle Load (0.6ms)[0m  SELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 9 LIMIT 1
+  [1m[36mSupplier Load (0.7ms)[0m  [1mSELECT `suppliers`.* FROM `suppliers` INNER JOIN `articles_suppliers` ON `suppliers`.`id` = `articles_suppliers`.`supplier_id` WHERE `articles_suppliers`.`article_id` = 9[0m
+  [1m[35mManufacturer Load (0.4ms)[0m  SELECT  `manufacturers`.* FROM `manufacturers` WHERE `manufacturers`.`id` = 2 LIMIT 1
+  Rendered catalog/show.html.erb within layouts/application (7.6ms)
+ApplicationController::current_user
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM `users`[0m
+Completed 200 OK in 12ms (Views: 8.7ms | ActiveRecord: 2.0ms)
+  [1m[35mSupplier Load (0.8ms)[0m  SELECT `suppliers`.* FROM `suppliers` INNER JOIN `articles_suppliers` ON `suppliers`.`id` = `articles_suppliers`.`supplier_id` WHERE `articles_suppliers`.`article_id` = 9
+Started GET "/catalog/latest" for 127.0.0.1 at 2017-05-16 11:58:04 +0200
+Processing by CatalogController#latest as HTML
+  [1m[36mCart Load (0.5ms)[0m  [1mSELECT  `carts`.* FROM `carts` WHERE `carts`.`id` = 980190968 LIMIT 1[0m
+ApplicationController::require_no_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[35mArticle Load (0.7ms)[0m  SELECT  `articles`.* FROM `articles`  ORDER BY articles.id desc LIMIT 5
+  [1m[36mHABTM_Suppliers Load (0.6ms)[0m  [1mSELECT `articles_suppliers`.* FROM `articles_suppliers` WHERE `articles_suppliers`.`article_id` IN (10, 9, 8, 7, 6)[0m
+  [1m[35mManufacturer Load (0.6ms)[0m  SELECT `manufacturers`.* FROM `manufacturers` WHERE `manufacturers`.`id` IN (2)
+  Rendered catalog/_articles.html.erb (7.9ms)
+  Rendered catalog/latest.html.erb within layouts/application (8.4ms)
+ApplicationController::current_user
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM `users`[0m
+  [1m[35mCartItem Load (0.5ms)[0m  SELECT `cart_items`.* FROM `cart_items` WHERE `cart_items`.`cart_id` = 980190968
+  Rendered cart/_cart.html.erb (1.3ms)
+Completed 200 OK in 14ms (Views: 9.5ms | ActiveRecord: 3.4ms)
+  [1m[36mArticle Load (0.6ms)[0m  [1mSELECT  `articles`.* FROM `articles`  ORDER BY articles.id desc LIMIT 5[0m
+  [1m[35mHABTM_Suppliers Load (0.6ms)[0m  SELECT `articles_suppliers`.* FROM `articles_suppliers` WHERE `articles_suppliers`.`article_id` IN (10, 9, 8, 7, 6)
+  [1m[36mManufacturer Load (0.6ms)[0m  [1mSELECT `manufacturers`.* FROM `manufacturers` WHERE `manufacturers`.`id` IN (2)[0m
+Started GET "/catalog/rss" for 127.0.0.1 at 2017-05-16 11:58:04 +0200
+Processing by CatalogController#rss as HTML
+  [1m[35mCart Load (0.6ms)[0m  SELECT  `carts`.* FROM `carts` WHERE `carts`.`id` = 980190968 LIMIT 1
+ApplicationController::require_no_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[36mArticle Load (0.6ms)[0m  [1mSELECT  `articles`.* FROM `articles`  ORDER BY articles.id desc LIMIT 5[0m
+  [1m[35mHABTM_Suppliers Load (0.6ms)[0m  SELECT `articles_suppliers`.* FROM `articles_suppliers` WHERE `articles_suppliers`.`article_id` IN (10, 9, 8, 7, 6)
+  [1m[36mManufacturer Load (0.5ms)[0m  [1mSELECT `manufacturers`.* FROM `manufacturers` WHERE `manufacturers`.`id` IN (2)[0m
+  Rendered catalog/rss.builder (8.1ms)
+Completed 200 OK in 10ms (Views: 7.0ms | ActiveRecord: 2.3ms)
+  [1m[35m (37.3ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.4ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.2ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.6ms)[0m  [1mDELETE FROM `order_items`[0m
+  [1m[35mFixture Insert (72.1ms)[0m  INSERT INTO `order_items` (`created_at`, `updated_at`, `id`) VALUES ('2017-05-16 10:01:27', '2017-05-16 10:01:27', 980190962)
+  [1m[36mFixture Insert (0.7ms)[0m  [1mINSERT INTO `order_items` (`created_at`, `updated_at`, `id`) VALUES ('2017-05-16 10:01:27', '2017-05-16 10:01:27', 298486374)[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM `carts`
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO `carts` (`created_at`, `updated_at`, `id`) VALUES ('2017-05-16 10:01:27', '2017-05-16 10:01:27', 980190962)[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO `carts` (`created_at`, `updated_at`, `id`) VALUES ('2017-05-16 10:01:27', '2017-05-16 10:01:27', 298486374)
+  [1m[36mFixture Delete (0.5ms)[0m  [1mDELETE FROM `orders`[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `orders` (`created_at`, `updated_at`, `id`) VALUES ('2017-05-16 10:01:27', '2017-05-16 10:01:27', 980190962)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `orders` (`created_at`, `updated_at`, `id`) VALUES ('2017-05-16 10:01:27', '2017-05-16 10:01:27', 298486374)[0m
+  [1m[35mFixture Delete (0.9ms)[0m  DELETE FROM `articles`
+  [1m[36mFixture Insert (0.6ms)[0m  [1mINSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (1, 'Articulo_1', 1, '199-199-199-1', '2017-05-16', 100.0, 40, '2017-05-16 10:01:27', '2017-05-16 10:01:27')[0m
+  [1m[35mFixture Insert (0.6ms)[0m  INSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (2, 'Articulo_2', 1, '199-199-199-2', '2017-05-16', 200.0, 40, '2017-05-16 10:01:27', '2017-05-16 10:01:27')
+  [1m[36mFixture Insert (0.6ms)[0m  [1mINSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (3, 'Articulo_3', 2, '199-199-199-3', '2017-05-16', 300.0, 40, '2017-05-16 10:01:27', '2017-05-16 10:01:27')[0m
+  [1m[35mFixture Insert (0.6ms)[0m  INSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (4, 'Articulo_4', 2, '199-199-199-4', '2017-05-16', 400.0, 40, '2017-05-16 10:01:27', '2017-05-16 10:01:27')
+  [1m[36mFixture Insert (0.6ms)[0m  [1mINSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (5, 'Articulo_5', 2, '199-199-199-5', '2017-05-16', 500.0, 40, '2017-05-16 10:01:27', '2017-05-16 10:01:27')[0m
+  [1m[35mFixture Insert (0.6ms)[0m  INSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (6, 'Articulo_6', 2, '199-199-199-6', '2017-05-16', 600.0, 40, '2017-05-16 10:01:27', '2017-05-16 10:01:27')
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (7, 'Articulo_7', 2, '199-199-199-7', '2017-05-16', 700.0, 40, '2017-05-16 10:01:27', '2017-05-16 10:01:27')[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (8, 'Articulo_8', 2, '199-199-199-8', '2017-05-16', 800.0, 40, '2017-05-16 10:01:27', '2017-05-16 10:01:27')
+  [1m[36mFixture Insert (0.6ms)[0m  [1mINSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (9, 'Articulo_9', 2, '199-199-199-9', '2017-05-16', 900.0, 40, '2017-05-16 10:01:27', '2017-05-16 10:01:27')[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (10, 'Articulo_10', 2, '299-199-199-1', '2017-05-16', 1000.0, 40, '2017-05-16 10:01:27', '2017-05-16 10:01:27')
+  [1m[36mFixture Delete (0.7ms)[0m  [1mDELETE FROM `articles_suppliers`[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO `articles_suppliers` (`created_at`, `updated_at`, `article_id`, `supplier_id`) VALUES ('2017-05-16 12:01:27', '2017-05-16 12:01:27', 1, 1)
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO `articles_suppliers` (`created_at`, `updated_at`, `article_id`, `supplier_id`) VALUES ('2017-05-16 12:01:27', '2017-05-16 12:01:27', 2, 1)[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO `articles_suppliers` (`created_at`, `updated_at`, `article_id`, `supplier_id`) VALUES ('2017-05-16 12:01:27', '2017-05-16 12:01:27', 3, 2)
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO `articles_suppliers` (`created_at`, `updated_at`, `article_id`, `supplier_id`) VALUES ('2017-05-16 12:01:27', '2017-05-16 12:01:27', 4, 2)[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO `articles_suppliers` (`created_at`, `updated_at`, `article_id`, `supplier_id`) VALUES ('2017-05-16 12:01:27', '2017-05-16 12:01:27', 5, 1)
+  [1m[36mFixture Delete (0.5ms)[0m  [1mDELETE FROM `cart_items`[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `cart_items` (`created_at`, `updated_at`, `id`) VALUES ('2017-05-16 10:01:27', '2017-05-16 10:01:27', 980190962)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `cart_items` (`created_at`, `updated_at`, `id`) VALUES ('2017-05-16 10:01:27', '2017-05-16 10:01:27', 298486374)[0m
+  [1m[35mFixture Delete (0.6ms)[0m  DELETE FROM `suppliers`
+  [1m[36mFixture Insert (0.6ms)[0m  [1mINSERT INTO `suppliers` (`id`, `first_name`, `last_name`, `created_at`, `updated_at`) VALUES (1, 'Pepe', 'Mateo', '2017-05-16 10:01:27', '2017-05-16 10:01:27')[0m
+  [1m[35mFixture Insert (0.6ms)[0m  INSERT INTO `suppliers` (`id`, `first_name`, `last_name`, `created_at`, `updated_at`) VALUES (2, 'Toni', 'Gavira', '2017-05-16 10:01:27', '2017-05-16 10:01:27')
+  [1m[36mFixture Delete (0.5ms)[0m  [1mDELETE FROM `manufacturers`[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `manufacturers` (`id`, `name`, `created_at`, `updated_at`) VALUES (1, 'Adidas', '2017-05-16 10:01:27', '2017-05-16 10:01:27')
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `manufacturers` (`id`, `name`, `created_at`, `updated_at`) VALUES (2, 'Nike', '2017-05-16 10:01:27', '2017-05-16 10:01:27')[0m
+  [1m[35m (63.4ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+-------------------------------------
+BrowsingAndSearchingTest: test_browse
+-------------------------------------
+Started GET "/catalog/index" for 127.0.0.1 at 2017-05-16 12:01:27 +0200
+Processing by CatalogController#index as HTML
+  [1m[36m (0.4ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO `carts` (`created_at`, `updated_at`) VALUES ('2017-05-16 10:01:27', '2017-05-16 10:01:27')
+  [1m[36m (0.3ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+ApplicationController::require_no_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[35mArticle Load (0.4ms)[0m  SELECT  `articles`.* FROM `articles`  ORDER BY articles.id desc LIMIT 5 OFFSET 0
+  [1m[36mHABTM_Suppliers Load (0.3ms)[0m  [1mSELECT `articles_suppliers`.* FROM `articles_suppliers` WHERE `articles_suppliers`.`article_id` IN (10, 9, 8, 7, 6)[0m
+  [1m[35mManufacturer Load (0.4ms)[0m  SELECT `manufacturers`.* FROM `manufacturers` WHERE `manufacturers`.`id` IN (2)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `articles`[0m
+  Rendered catalog/_articles.html.erb (52.2ms)
+  Rendered catalog/index.html.erb within layouts/application (56.5ms)
+ApplicationController::current_user
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `users`
+  [1m[36mCartItem Load (0.3ms)[0m  [1mSELECT `cart_items`.* FROM `cart_items` WHERE `cart_items`.`cart_id` = 980190969[0m
+  Rendered cart/_cart.html.erb (3.6ms)
+Completed 200 OK in 247ms (Views: 207.4ms | ActiveRecord: 5.5ms)
+Started GET "/catalog/index?page=2" for 127.0.0.1 at 2017-05-16 12:01:28 +0200
+Processing by CatalogController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[35mCart Load (0.4ms)[0m  SELECT  `carts`.* FROM `carts` WHERE `carts`.`id` = 980190969 LIMIT 1
+ApplicationController::require_no_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[36mArticle Load (0.3ms)[0m  [1mSELECT  `articles`.* FROM `articles`  ORDER BY articles.id desc LIMIT 5 OFFSET 5[0m
+  [1m[35mHABTM_Suppliers Load (0.3ms)[0m  SELECT `articles_suppliers`.* FROM `articles_suppliers` WHERE `articles_suppliers`.`article_id` IN (5, 4, 3, 2, 1)
+  [1m[36mSupplier Load (0.3ms)[0m  [1mSELECT `suppliers`.* FROM `suppliers` WHERE `suppliers`.`id` IN (1, 2)[0m
+  [1m[35mManufacturer Load (0.2ms)[0m  SELECT `manufacturers`.* FROM `manufacturers` WHERE `manufacturers`.`id` IN (2, 1)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `articles`[0m
+  Rendered catalog/_articles.html.erb (14.0ms)
+  Rendered catalog/index.html.erb within layouts/application (14.4ms)
+ApplicationController::current_user
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `users`
+  [1m[36mCartItem Load (0.2ms)[0m  [1mSELECT `cart_items`.* FROM `cart_items` WHERE `cart_items`.`cart_id` = 980190969[0m
+  Rendered cart/_cart.html.erb (0.9ms)
+Completed 200 OK in 22ms (Views: 15.6ms | ActiveRecord: 2.2ms)
+  [1m[35mArticle Load (0.2ms)[0m  SELECT  `articles`.* FROM `articles` WHERE `articles`.`title` = 'Articulo_1' LIMIT 1
+  [1m[36mArticle Load (0.3ms)[0m  [1mSELECT  `articles`.* FROM `articles` WHERE `articles`.`title` = 'Articulo_9'  ORDER BY `articles`.`id` ASC LIMIT 1[0m
+Started GET "/catalog/show/9" for 127.0.0.1 at 2017-05-16 12:01:28 +0200
+Processing by CatalogController#show as HTML
+  Parameters: {"id"=>"9"}
+ApplicationController::require_no_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[35mArticle Load (0.2ms)[0m  SELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 9 LIMIT 1
+  [1m[36mSupplier Load (0.5ms)[0m  [1mSELECT `suppliers`.* FROM `suppliers` INNER JOIN `articles_suppliers` ON `suppliers`.`id` = `articles_suppliers`.`supplier_id` WHERE `articles_suppliers`.`article_id` = 9[0m
+  [1m[35mManufacturer Load (0.4ms)[0m  SELECT  `manufacturers`.* FROM `manufacturers` WHERE `manufacturers`.`id` = 2 LIMIT 1
+  Rendered catalog/show.html.erb within layouts/application (7.3ms)
+ApplicationController::current_user
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `users`[0m
+Completed 200 OK in 11ms (Views: 8.5ms | ActiveRecord: 1.5ms)
+  [1m[35mSupplier Load (0.5ms)[0m  SELECT `suppliers`.* FROM `suppliers` INNER JOIN `articles_suppliers` ON `suppliers`.`id` = `articles_suppliers`.`supplier_id` WHERE `articles_suppliers`.`article_id` = 9
+Started GET "/catalog/latest" for 127.0.0.1 at 2017-05-16 12:01:28 +0200
+Processing by CatalogController#latest as HTML
+  [1m[36mCart Load (0.4ms)[0m  [1mSELECT  `carts`.* FROM `carts` WHERE `carts`.`id` = 980190969 LIMIT 1[0m
+ApplicationController::require_no_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[35mArticle Load (0.5ms)[0m  SELECT  `articles`.* FROM `articles`  ORDER BY articles.id desc LIMIT 5
+  [1m[36mHABTM_Suppliers Load (0.5ms)[0m  [1mSELECT `articles_suppliers`.* FROM `articles_suppliers` WHERE `articles_suppliers`.`article_id` IN (10, 9, 8, 7, 6)[0m
+  [1m[35mManufacturer Load (0.3ms)[0m  SELECT `manufacturers`.* FROM `manufacturers` WHERE `manufacturers`.`id` IN (2)
+  Rendered catalog/_articles.html.erb (7.4ms)
+  Rendered catalog/latest.html.erb within layouts/application (7.9ms)
+ApplicationController::current_user
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM `users`[0m
+  [1m[35mCartItem Load (0.4ms)[0m  SELECT `cart_items`.* FROM `cart_items` WHERE `cart_items`.`cart_id` = 980190969
+  Rendered cart/_cart.html.erb (1.1ms)
+Completed 200 OK in 13ms (Views: 9.4ms | ActiveRecord: 2.5ms)
+  [1m[36mArticle Load (0.5ms)[0m  [1mSELECT  `articles`.* FROM `articles`  ORDER BY articles.id desc LIMIT 5[0m
+  [1m[35mHABTM_Suppliers Load (0.5ms)[0m  SELECT `articles_suppliers`.* FROM `articles_suppliers` WHERE `articles_suppliers`.`article_id` IN (10, 9, 8, 7, 6)
+  [1m[36mManufacturer Load (0.4ms)[0m  [1mSELECT `manufacturers`.* FROM `manufacturers` WHERE `manufacturers`.`id` IN (2)[0m
+Started GET "/catalog/rss" for 127.0.0.1 at 2017-05-16 12:01:28 +0200
+Processing by CatalogController#rss as HTML
+  [1m[35mCart Load (0.3ms)[0m  SELECT  `carts`.* FROM `carts` WHERE `carts`.`id` = 980190969 LIMIT 1
+ApplicationController::require_no_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[36mArticle Load (0.4ms)[0m  [1mSELECT  `articles`.* FROM `articles`  ORDER BY articles.id desc LIMIT 5[0m
+  [1m[35mHABTM_Suppliers Load (0.4ms)[0m  SELECT `articles_suppliers`.* FROM `articles_suppliers` WHERE `articles_suppliers`.`article_id` IN (10, 9, 8, 7, 6)
+  [1m[36mManufacturer Load (0.4ms)[0m  [1mSELECT `manufacturers`.* FROM `manufacturers` WHERE `manufacturers`.`id` IN (2)[0m
+  Rendered catalog/rss.builder (7.5ms)
+Completed 200 OK in 10ms (Views: 6.9ms | ActiveRecord: 1.5ms)
+  [1m[35m (39.8ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.5ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.3ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.6ms)[0m  [1mDELETE FROM `order_items`[0m
+  [1m[35mFixture Insert (72.7ms)[0m  INSERT INTO `order_items` (`created_at`, `updated_at`, `id`) VALUES ('2017-05-16 10:05:13', '2017-05-16 10:05:13', 980190962)
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO `order_items` (`created_at`, `updated_at`, `id`) VALUES ('2017-05-16 10:05:13', '2017-05-16 10:05:13', 298486374)[0m
+  [1m[35mFixture Delete (0.5ms)[0m  DELETE FROM `carts`
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO `carts` (`created_at`, `updated_at`, `id`) VALUES ('2017-05-16 10:05:13', '2017-05-16 10:05:13', 980190962)[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO `carts` (`created_at`, `updated_at`, `id`) VALUES ('2017-05-16 10:05:13', '2017-05-16 10:05:13', 298486374)
+  [1m[36mFixture Delete (1.7ms)[0m  [1mDELETE FROM `orders`[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `orders` (`created_at`, `updated_at`, `id`) VALUES ('2017-05-16 10:05:13', '2017-05-16 10:05:13', 980190962)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `orders` (`created_at`, `updated_at`, `id`) VALUES ('2017-05-16 10:05:13', '2017-05-16 10:05:13', 298486374)[0m
+  [1m[35mFixture Delete (0.9ms)[0m  DELETE FROM `articles`
+  [1m[36mFixture Insert (0.6ms)[0m  [1mINSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (1, 'Articulo_1', 1, '199-199-199-1', '2017-05-16', 100.0, 40, '2017-05-16 10:05:13', '2017-05-16 10:05:13')[0m
+  [1m[35mFixture Insert (0.6ms)[0m  INSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (2, 'Articulo_2', 1, '199-199-199-2', '2017-05-16', 200.0, 40, '2017-05-16 10:05:13', '2017-05-16 10:05:13')
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (3, 'Articulo_3', 2, '199-199-199-3', '2017-05-16', 300.0, 40, '2017-05-16 10:05:13', '2017-05-16 10:05:13')[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (4, 'Articulo_4', 2, '199-199-199-4', '2017-05-16', 400.0, 40, '2017-05-16 10:05:13', '2017-05-16 10:05:13')
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (5, 'Articulo_5', 2, '199-199-199-5', '2017-05-16', 500.0, 40, '2017-05-16 10:05:13', '2017-05-16 10:05:13')[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (6, 'Articulo_6', 2, '199-199-199-6', '2017-05-16', 600.0, 40, '2017-05-16 10:05:13', '2017-05-16 10:05:13')
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (7, 'Articulo_7', 2, '199-199-199-7', '2017-05-16', 700.0, 40, '2017-05-16 10:05:13', '2017-05-16 10:05:13')[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (8, 'Articulo_8', 2, '199-199-199-8', '2017-05-16', 800.0, 40, '2017-05-16 10:05:13', '2017-05-16 10:05:13')
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (9, 'Articulo_9', 2, '199-199-199-9', '2017-05-16', 900.0, 40, '2017-05-16 10:05:13', '2017-05-16 10:05:13')[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (10, 'Articulo_10', 2, '299-199-199-1', '2017-05-16', 1000.0, 40, '2017-05-16 10:05:13', '2017-05-16 10:05:13')
+  [1m[36mFixture Delete (0.7ms)[0m  [1mDELETE FROM `articles_suppliers`[0m
+  [1m[35mFixture Insert (0.6ms)[0m  INSERT INTO `articles_suppliers` (`created_at`, `updated_at`, `article_id`, `supplier_id`) VALUES ('2017-05-16 12:05:13', '2017-05-16 12:05:13', 1, 1)
+  [1m[36mFixture Insert (0.6ms)[0m  [1mINSERT INTO `articles_suppliers` (`created_at`, `updated_at`, `article_id`, `supplier_id`) VALUES ('2017-05-16 12:05:13', '2017-05-16 12:05:13', 2, 1)[0m
+  [1m[35mFixture Insert (0.6ms)[0m  INSERT INTO `articles_suppliers` (`created_at`, `updated_at`, `article_id`, `supplier_id`) VALUES ('2017-05-16 12:05:13', '2017-05-16 12:05:13', 3, 2)
+  [1m[36mFixture Insert (0.6ms)[0m  [1mINSERT INTO `articles_suppliers` (`created_at`, `updated_at`, `article_id`, `supplier_id`) VALUES ('2017-05-16 12:05:13', '2017-05-16 12:05:13', 4, 2)[0m
+  [1m[35mFixture Insert (0.6ms)[0m  INSERT INTO `articles_suppliers` (`created_at`, `updated_at`, `article_id`, `supplier_id`) VALUES ('2017-05-16 12:05:13', '2017-05-16 12:05:13', 5, 1)
+  [1m[36mFixture Delete (0.6ms)[0m  [1mDELETE FROM `cart_items`[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO `cart_items` (`created_at`, `updated_at`, `id`) VALUES ('2017-05-16 10:05:13', '2017-05-16 10:05:13', 980190962)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `cart_items` (`created_at`, `updated_at`, `id`) VALUES ('2017-05-16 10:05:13', '2017-05-16 10:05:13', 298486374)[0m
+  [1m[35mFixture Delete (0.7ms)[0m  DELETE FROM `suppliers`
+  [1m[36mFixture Insert (0.6ms)[0m  [1mINSERT INTO `suppliers` (`id`, `first_name`, `last_name`, `created_at`, `updated_at`) VALUES (1, 'Pepe', 'Mateo', '2017-05-16 10:05:13', '2017-05-16 10:05:13')[0m
+  [1m[35mFixture Insert (0.6ms)[0m  INSERT INTO `suppliers` (`id`, `first_name`, `last_name`, `created_at`, `updated_at`) VALUES (2, 'Toni', 'Gavira', '2017-05-16 10:05:13', '2017-05-16 10:05:13')
+  [1m[36mFixture Delete (0.6ms)[0m  [1mDELETE FROM `manufacturers`[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `manufacturers` (`id`, `name`, `created_at`, `updated_at`) VALUES (1, 'Adidas', '2017-05-16 10:05:14', '2017-05-16 10:05:14')
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `manufacturers` (`id`, `name`, `created_at`, `updated_at`) VALUES (2, 'Nike', '2017-05-16 10:05:14', '2017-05-16 10:05:14')[0m
+  [1m[35m (73.0ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+-------------------------------------
+BrowsingAndSearchingTest: test_browse
+-------------------------------------
+Started GET "/catalog/index" for 127.0.0.1 at 2017-05-16 12:05:14 +0200
+Processing by CatalogController#index as HTML
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `carts` (`created_at`, `updated_at`) VALUES ('2017-05-16 10:05:14', '2017-05-16 10:05:14')
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+ApplicationController::require_no_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[35mArticle Load (0.4ms)[0m  SELECT  `articles`.* FROM `articles`  ORDER BY articles.id desc LIMIT 5 OFFSET 0
+  [1m[36mHABTM_Suppliers Load (0.3ms)[0m  [1mSELECT `articles_suppliers`.* FROM `articles_suppliers` WHERE `articles_suppliers`.`article_id` IN (10, 9, 8, 7, 6)[0m
+  [1m[35mManufacturer Load (0.3ms)[0m  SELECT `manufacturers`.* FROM `manufacturers` WHERE `manufacturers`.`id` IN (2)
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `articles`[0m
+  Rendered catalog/_articles.html.erb (40.0ms)
+  Rendered catalog/index.html.erb within layouts/application (43.0ms)
+ApplicationController::current_user
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `users`
+  [1m[36mCartItem Load (0.3ms)[0m  [1mSELECT `cart_items`.* FROM `cart_items` WHERE `cart_items`.`cart_id` = 980190970[0m
+  Rendered cart/_cart.html.erb (3.6ms)
+Completed 200 OK in 228ms (Views: 191.8ms | ActiveRecord: 3.8ms)
+Started GET "/catalog/index?page=2" for 127.0.0.1 at 2017-05-16 12:05:14 +0200
+Processing by CatalogController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[35mCart Load (0.3ms)[0m  SELECT  `carts`.* FROM `carts` WHERE `carts`.`id` = 980190970 LIMIT 1
+ApplicationController::require_no_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[36mArticle Load (0.3ms)[0m  [1mSELECT  `articles`.* FROM `articles`  ORDER BY articles.id desc LIMIT 5 OFFSET 5[0m
+  [1m[35mHABTM_Suppliers Load (0.3ms)[0m  SELECT `articles_suppliers`.* FROM `articles_suppliers` WHERE `articles_suppliers`.`article_id` IN (5, 4, 3, 2, 1)
+  [1m[36mSupplier Load (0.2ms)[0m  [1mSELECT `suppliers`.* FROM `suppliers` WHERE `suppliers`.`id` IN (1, 2)[0m
+  [1m[35mManufacturer Load (0.3ms)[0m  SELECT `manufacturers`.* FROM `manufacturers` WHERE `manufacturers`.`id` IN (2, 1)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `articles`[0m
+  Rendered catalog/_articles.html.erb (14.2ms)
+  Rendered catalog/index.html.erb within layouts/application (14.6ms)
+ApplicationController::current_user
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `users`
+  [1m[36mCartItem Load (0.2ms)[0m  [1mSELECT `cart_items`.* FROM `cart_items` WHERE `cart_items`.`cart_id` = 980190970[0m
+  Rendered cart/_cart.html.erb (0.9ms)
+Completed 200 OK in 22ms (Views: 15.8ms | ActiveRecord: 2.2ms)
+  [1m[35mArticle Load (0.2ms)[0m  SELECT  `articles`.* FROM `articles` WHERE `articles`.`title` = 'Articulo_1' LIMIT 1
+  [1m[36mArticle Load (0.3ms)[0m  [1mSELECT  `articles`.* FROM `articles` WHERE `articles`.`title` = 'Articulo_9'  ORDER BY `articles`.`id` ASC LIMIT 1[0m
+Started GET "/catalog/show/9" for 127.0.0.1 at 2017-05-16 12:05:14 +0200
+Processing by CatalogController#show as HTML
+  Parameters: {"id"=>"9"}
+ApplicationController::require_no_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[35mArticle Load (0.2ms)[0m  SELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 9 LIMIT 1
+  [1m[36mSupplier Load (0.3ms)[0m  [1mSELECT `suppliers`.* FROM `suppliers` INNER JOIN `articles_suppliers` ON `suppliers`.`id` = `articles_suppliers`.`supplier_id` WHERE `articles_suppliers`.`article_id` = 9[0m
+  [1m[35mManufacturer Load (0.2ms)[0m  SELECT  `manufacturers`.* FROM `manufacturers` WHERE `manufacturers`.`id` = 2 LIMIT 1
+  Rendered catalog/show.html.erb within layouts/application (6.8ms)
+ApplicationController::current_user
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `users`[0m
+Completed 200 OK in 11ms (Views: 8.4ms | ActiveRecord: 0.9ms)
+  [1m[35mSupplier Load (0.3ms)[0m  SELECT `suppliers`.* FROM `suppliers` INNER JOIN `articles_suppliers` ON `suppliers`.`id` = `articles_suppliers`.`supplier_id` WHERE `articles_suppliers`.`article_id` = 9
+Started GET "/catalog/latest" for 127.0.0.1 at 2017-05-16 12:05:14 +0200
+Processing by CatalogController#latest as HTML
+  [1m[36mCart Load (0.2ms)[0m  [1mSELECT  `carts`.* FROM `carts` WHERE `carts`.`id` = 980190970 LIMIT 1[0m
+ApplicationController::require_no_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[35mArticle Load (0.2ms)[0m  SELECT  `articles`.* FROM `articles`  ORDER BY articles.id desc LIMIT 5
+  [1m[36mHABTM_Suppliers Load (0.3ms)[0m  [1mSELECT `articles_suppliers`.* FROM `articles_suppliers` WHERE `articles_suppliers`.`article_id` IN (10, 9, 8, 7, 6)[0m
+  [1m[35mManufacturer Load (0.2ms)[0m  SELECT `manufacturers`.* FROM `manufacturers` WHERE `manufacturers`.`id` IN (2)
+  Rendered catalog/_articles.html.erb (6.6ms)
+  Rendered catalog/latest.html.erb within layouts/application (7.0ms)
+ApplicationController::current_user
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `users`[0m
+  [1m[35mCartItem Load (0.2ms)[0m  SELECT `cart_items`.* FROM `cart_items` WHERE `cart_items`.`cart_id` = 980190970
+  Rendered cart/_cart.html.erb (0.9ms)
+Completed 200 OK in 12ms (Views: 9.1ms | ActiveRecord: 1.4ms)
+  [1m[36mArticle Load (0.3ms)[0m  [1mSELECT  `articles`.* FROM `articles`  ORDER BY articles.id desc LIMIT 5[0m
+  [1m[35mHABTM_Suppliers Load (0.3ms)[0m  SELECT `articles_suppliers`.* FROM `articles_suppliers` WHERE `articles_suppliers`.`article_id` IN (10, 9, 8, 7, 6)
+  [1m[36mManufacturer Load (0.2ms)[0m  [1mSELECT `manufacturers`.* FROM `manufacturers` WHERE `manufacturers`.`id` IN (2)[0m
+Started GET "/catalog/rss" for 127.0.0.1 at 2017-05-16 12:05:14 +0200
+Processing by CatalogController#rss as HTML
+  [1m[35mCart Load (0.3ms)[0m  SELECT  `carts`.* FROM `carts` WHERE `carts`.`id` = 980190970 LIMIT 1
+ApplicationController::require_no_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT  `articles`.* FROM `articles`  ORDER BY articles.id desc LIMIT 5[0m
+  [1m[35mHABTM_Suppliers Load (0.2ms)[0m  SELECT `articles_suppliers`.* FROM `articles_suppliers` WHERE `articles_suppliers`.`article_id` IN (10, 9, 8, 7, 6)
+  [1m[36mManufacturer Load (0.2ms)[0m  [1mSELECT `manufacturers`.* FROM `manufacturers` WHERE `manufacturers`.`id` IN (2)[0m
+  Rendered catalog/rss.builder (6.8ms)
+Completed 200 OK in 9ms (Views: 6.7ms | ActiveRecord: 0.9ms)
+  [1m[35mArticle Load (0.3ms)[0m  SELECT  `articles`.* FROM `articles`  ORDER BY articles.id desc LIMIT 5
+  [1m[36mHABTM_Suppliers Load (0.2ms)[0m  [1mSELECT `articles_suppliers`.* FROM `articles_suppliers` WHERE `articles_suppliers`.`article_id` IN (10, 9, 8, 7, 6)[0m
+  [1m[35mManufacturer Load (0.3ms)[0m  SELECT `manufacturers`.* FROM `manufacturers` WHERE `manufacturers`.`id` IN (2)
+  [1m[36m (38.4ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.3ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `order_items`[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `order_items` (`created_at`, `updated_at`, `id`) VALUES ('2017-05-16 10:05:28', '2017-05-16 10:05:28', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `order_items` (`created_at`, `updated_at`, `id`) VALUES ('2017-05-16 10:05:28', '2017-05-16 10:05:28', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM `carts`
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `carts` (`created_at`, `updated_at`, `id`) VALUES ('2017-05-16 10:05:28', '2017-05-16 10:05:28', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO `carts` (`created_at`, `updated_at`, `id`) VALUES ('2017-05-16 10:05:28', '2017-05-16 10:05:28', 298486374)
+  [1m[36mFixture Delete (0.5ms)[0m  [1mDELETE FROM `orders`[0m
+  [1m[35mFixture Insert (0.8ms)[0m  INSERT INTO `orders` (`created_at`, `updated_at`, `id`) VALUES ('2017-05-16 10:05:28', '2017-05-16 10:05:28', 980190962)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `orders` (`created_at`, `updated_at`, `id`) VALUES ('2017-05-16 10:05:28', '2017-05-16 10:05:28', 298486374)[0m
+  [1m[35mFixture Delete (69.5ms)[0m  DELETE FROM `articles`
+  [1m[36mFixture Insert (0.6ms)[0m  [1mINSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (1, 'Articulo_1', 1, '199-199-199-1', '2017-05-16', 100.0, 40, '2017-05-16 10:05:28', '2017-05-16 10:05:28')[0m
+  [1m[35mFixture Insert (0.6ms)[0m  INSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (2, 'Articulo_2', 1, '199-199-199-2', '2017-05-16', 200.0, 40, '2017-05-16 10:05:28', '2017-05-16 10:05:28')
+  [1m[36mFixture Insert (0.6ms)[0m  [1mINSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (3, 'Articulo_3', 2, '199-199-199-3', '2017-05-16', 300.0, 40, '2017-05-16 10:05:28', '2017-05-16 10:05:28')[0m
+  [1m[35mFixture Insert (0.6ms)[0m  INSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (4, 'Articulo_4', 2, '199-199-199-4', '2017-05-16', 400.0, 40, '2017-05-16 10:05:28', '2017-05-16 10:05:28')
+  [1m[36mFixture Insert (1.4ms)[0m  [1mINSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (5, 'Articulo_5', 2, '199-199-199-5', '2017-05-16', 500.0, 40, '2017-05-16 10:05:28', '2017-05-16 10:05:28')[0m
+  [1m[35mFixture Insert (0.6ms)[0m  INSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (6, 'Articulo_6', 2, '199-199-199-6', '2017-05-16', 600.0, 40, '2017-05-16 10:05:28', '2017-05-16 10:05:28')
+  [1m[36mFixture Insert (0.6ms)[0m  [1mINSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (7, 'Articulo_7', 2, '199-199-199-7', '2017-05-16', 700.0, 40, '2017-05-16 10:05:28', '2017-05-16 10:05:28')[0m
+  [1m[35mFixture Insert (0.7ms)[0m  INSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (8, 'Articulo_8', 2, '199-199-199-8', '2017-05-16', 800.0, 40, '2017-05-16 10:05:28', '2017-05-16 10:05:28')
+  [1m[36mFixture Insert (0.6ms)[0m  [1mINSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (9, 'Articulo_9', 2, '199-199-199-9', '2017-05-16', 900.0, 40, '2017-05-16 10:05:28', '2017-05-16 10:05:28')[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (10, 'Articulo_10', 2, '299-199-199-1', '2017-05-16', 1000.0, 40, '2017-05-16 10:05:28', '2017-05-16 10:05:28')
+  [1m[36mFixture Delete (0.8ms)[0m  [1mDELETE FROM `articles_suppliers`[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO `articles_suppliers` (`created_at`, `updated_at`, `article_id`, `supplier_id`) VALUES ('2017-05-16 12:05:28', '2017-05-16 12:05:28', 1, 1)
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO `articles_suppliers` (`created_at`, `updated_at`, `article_id`, `supplier_id`) VALUES ('2017-05-16 12:05:28', '2017-05-16 12:05:28', 2, 1)[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO `articles_suppliers` (`created_at`, `updated_at`, `article_id`, `supplier_id`) VALUES ('2017-05-16 12:05:28', '2017-05-16 12:05:28', 3, 2)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `articles_suppliers` (`created_at`, `updated_at`, `article_id`, `supplier_id`) VALUES ('2017-05-16 12:05:28', '2017-05-16 12:05:28', 4, 2)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `articles_suppliers` (`created_at`, `updated_at`, `article_id`, `supplier_id`) VALUES ('2017-05-16 12:05:28', '2017-05-16 12:05:28', 5, 1)
+  [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM `cart_items`[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `cart_items` (`created_at`, `updated_at`, `id`) VALUES ('2017-05-16 10:05:28', '2017-05-16 10:05:28', 980190962)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `cart_items` (`created_at`, `updated_at`, `id`) VALUES ('2017-05-16 10:05:28', '2017-05-16 10:05:28', 298486374)[0m
+  [1m[35mFixture Delete (0.4ms)[0m  DELETE FROM `suppliers`
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `suppliers` (`id`, `first_name`, `last_name`, `created_at`, `updated_at`) VALUES (1, 'Pepe', 'Mateo', '2017-05-16 10:05:28', '2017-05-16 10:05:28')[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `suppliers` (`id`, `first_name`, `last_name`, `created_at`, `updated_at`) VALUES (2, 'Toni', 'Gavira', '2017-05-16 10:05:28', '2017-05-16 10:05:28')
+  [1m[36mFixture Delete (0.6ms)[0m  [1mDELETE FROM `manufacturers`[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `manufacturers` (`id`, `name`, `created_at`, `updated_at`) VALUES (1, 'Adidas', '2017-05-16 10:05:28', '2017-05-16 10:05:28')
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `manufacturers` (`id`, `name`, `created_at`, `updated_at`) VALUES (2, 'Nike', '2017-05-16 10:05:28', '2017-05-16 10:05:28')[0m
+  [1m[35m (61.2ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+-------------------------------------
+BrowsingAndSearchingTest: test_browse
+-------------------------------------
+Started GET "/catalog/index" for 127.0.0.1 at 2017-05-16 12:05:28 +0200
+Processing by CatalogController#index as HTML
+  [1m[36m (0.4ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO `carts` (`created_at`, `updated_at`) VALUES ('2017-05-16 10:05:28', '2017-05-16 10:05:28')
+  [1m[36m (0.3ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+ApplicationController::require_no_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[35mArticle Load (0.8ms)[0m  SELECT  `articles`.* FROM `articles`  ORDER BY articles.id desc LIMIT 5 OFFSET 0
+  [1m[36mHABTM_Suppliers Load (0.7ms)[0m  [1mSELECT `articles_suppliers`.* FROM `articles_suppliers` WHERE `articles_suppliers`.`article_id` IN (10, 9, 8, 7, 6)[0m
+  [1m[35mManufacturer Load (0.7ms)[0m  SELECT `manufacturers`.* FROM `manufacturers` WHERE `manufacturers`.`id` IN (2)
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM `articles`[0m
+  Rendered catalog/_articles.html.erb (54.4ms)
+  Rendered catalog/index.html.erb within layouts/application (59.1ms)
+ApplicationController::current_user
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM `users`
+  [1m[36mCartItem Load (0.6ms)[0m  [1mSELECT `cart_items`.* FROM `cart_items` WHERE `cart_items`.`cart_id` = 980190971[0m
+  Rendered cart/_cart.html.erb (4.2ms)
+Completed 200 OK in 249ms (Views: 208.1ms | ActiveRecord: 8.7ms)
+Started GET "/catalog/index?page=2" for 127.0.0.1 at 2017-05-16 12:05:29 +0200
+Processing by CatalogController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[35mCart Load (0.7ms)[0m  SELECT  `carts`.* FROM `carts` WHERE `carts`.`id` = 980190971 LIMIT 1
+ApplicationController::require_no_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[36mArticle Load (0.6ms)[0m  [1mSELECT  `articles`.* FROM `articles`  ORDER BY articles.id desc LIMIT 5 OFFSET 5[0m
+  [1m[35mHABTM_Suppliers Load (0.6ms)[0m  SELECT `articles_suppliers`.* FROM `articles_suppliers` WHERE `articles_suppliers`.`article_id` IN (5, 4, 3, 2, 1)
+  [1m[36mSupplier Load (0.5ms)[0m  [1mSELECT `suppliers`.* FROM `suppliers` WHERE `suppliers`.`id` IN (1, 2)[0m
+  [1m[35mManufacturer Load (0.5ms)[0m  SELECT `manufacturers`.* FROM `manufacturers` WHERE `manufacturers`.`id` IN (2, 1)
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM `articles`[0m
+  Rendered catalog/_articles.html.erb (16.1ms)
+  Rendered catalog/index.html.erb within layouts/application (16.5ms)
+ApplicationController::current_user
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM `users`
+  [1m[36mCartItem Load (0.6ms)[0m  [1mSELECT `cart_items`.* FROM `cart_items` WHERE `cart_items`.`cart_id` = 980190971[0m
+  Rendered cart/_cart.html.erb (2.2ms)
+Completed 200 OK in 26ms (Views: 16.8ms | ActiveRecord: 4.9ms)
+  [1m[35mArticle Load (0.7ms)[0m  SELECT  `articles`.* FROM `articles` WHERE `articles`.`title` = 'Articulo_1' LIMIT 1
+  [1m[36mArticle Load (0.8ms)[0m  [1mSELECT  `articles`.* FROM `articles` WHERE `articles`.`title` = 'Articulo_9'  ORDER BY `articles`.`id` ASC LIMIT 1[0m
+Started GET "/catalog/show/9" for 127.0.0.1 at 2017-05-16 12:05:29 +0200
+Processing by CatalogController#show as HTML
+  Parameters: {"id"=>"9"}
+ApplicationController::require_no_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[35mArticle Load (0.6ms)[0m  SELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 9 LIMIT 1
+  [1m[36mSupplier Load (0.7ms)[0m  [1mSELECT `suppliers`.* FROM `suppliers` INNER JOIN `articles_suppliers` ON `suppliers`.`id` = `articles_suppliers`.`supplier_id` WHERE `articles_suppliers`.`article_id` = 9[0m
+  [1m[35mManufacturer Load (0.4ms)[0m  SELECT  `manufacturers`.* FROM `manufacturers` WHERE `manufacturers`.`id` = 2 LIMIT 1
+  Rendered catalog/show.html.erb within layouts/application (7.7ms)
+ApplicationController::current_user
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM `users`[0m
+Completed 200 OK in 12ms (Views: 8.9ms | ActiveRecord: 2.1ms)
+  [1m[35mSupplier Load (0.6ms)[0m  SELECT `suppliers`.* FROM `suppliers` INNER JOIN `articles_suppliers` ON `suppliers`.`id` = `articles_suppliers`.`supplier_id` WHERE `articles_suppliers`.`article_id` = 9
+Started GET "/catalog/latest" for 127.0.0.1 at 2017-05-16 12:05:29 +0200
+Processing by CatalogController#latest as HTML
+  [1m[36mCart Load (0.4ms)[0m  [1mSELECT  `carts`.* FROM `carts` WHERE `carts`.`id` = 980190971 LIMIT 1[0m
+ApplicationController::require_no_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[35mArticle Load (0.5ms)[0m  SELECT  `articles`.* FROM `articles`  ORDER BY articles.id desc LIMIT 5
+  [1m[36mHABTM_Suppliers Load (0.3ms)[0m  [1mSELECT `articles_suppliers`.* FROM `articles_suppliers` WHERE `articles_suppliers`.`article_id` IN (10, 9, 8, 7, 6)[0m
+  [1m[35mManufacturer Load (0.4ms)[0m  SELECT `manufacturers`.* FROM `manufacturers` WHERE `manufacturers`.`id` IN (2)
+  Rendered catalog/_articles.html.erb (7.4ms)
+  Rendered catalog/latest.html.erb within layouts/application (7.8ms)
+ApplicationController::current_user
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM `users`[0m
+  [1m[35mCartItem Load (0.4ms)[0m  SELECT `cart_items`.* FROM `cart_items` WHERE `cart_items`.`cart_id` = 980190971
+  Rendered cart/_cart.html.erb (1.1ms)
+Completed 200 OK in 13ms (Views: 9.5ms | ActiveRecord: 2.4ms)
+  [1m[36mArticle Load (0.4ms)[0m  [1mSELECT  `articles`.* FROM `articles`  ORDER BY articles.id desc LIMIT 5[0m
+  [1m[35mHABTM_Suppliers Load (0.5ms)[0m  SELECT `articles_suppliers`.* FROM `articles_suppliers` WHERE `articles_suppliers`.`article_id` IN (10, 9, 8, 7, 6)
+  [1m[36mManufacturer Load (0.4ms)[0m  [1mSELECT `manufacturers`.* FROM `manufacturers` WHERE `manufacturers`.`id` IN (2)[0m
+Started GET "/catalog/rss" for 127.0.0.1 at 2017-05-16 12:05:29 +0200
+Processing by CatalogController#rss as HTML
+  [1m[35mCart Load (0.5ms)[0m  SELECT  `carts`.* FROM `carts` WHERE `carts`.`id` = 980190971 LIMIT 1
+ApplicationController::require_no_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[36mArticle Load (0.5ms)[0m  [1mSELECT  `articles`.* FROM `articles`  ORDER BY articles.id desc LIMIT 5[0m
+  [1m[35mHABTM_Suppliers Load (0.4ms)[0m  SELECT `articles_suppliers`.* FROM `articles_suppliers` WHERE `articles_suppliers`.`article_id` IN (10, 9, 8, 7, 6)
+  [1m[36mManufacturer Load (0.4ms)[0m  [1mSELECT `manufacturers`.* FROM `manufacturers` WHERE `manufacturers`.`id` IN (2)[0m
+  Rendered catalog/rss.builder (7.8ms)
+Completed 200 OK in 10ms (Views: 7.1ms | ActiveRecord: 1.8ms)
+  [1m[35mArticle Load (0.5ms)[0m  SELECT  `articles`.* FROM `articles`  ORDER BY articles.id desc LIMIT 5
+  [1m[36mHABTM_Suppliers Load (0.5ms)[0m  [1mSELECT `articles_suppliers`.* FROM `articles_suppliers` WHERE `articles_suppliers`.`article_id` IN (10, 9, 8, 7, 6)[0m
+  [1m[35mManufacturer Load (0.4ms)[0m  SELECT `manufacturers`.* FROM `manufacturers` WHERE `manufacturers`.`id` IN (2)
+  [1m[36m (34.6ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.4ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.2ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `order_items`[0m
+  [1m[35mFixture Insert (129.6ms)[0m  INSERT INTO `order_items` (`created_at`, `updated_at`, `id`) VALUES ('2017-05-16 10:05:54', '2017-05-16 10:05:54', 980190962)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `order_items` (`created_at`, `updated_at`, `id`) VALUES ('2017-05-16 10:05:54', '2017-05-16 10:05:54', 298486374)[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM `carts`
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `carts` (`created_at`, `updated_at`, `id`) VALUES ('2017-05-16 10:05:54', '2017-05-16 10:05:54', 980190962)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `carts` (`created_at`, `updated_at`, `id`) VALUES ('2017-05-16 10:05:54', '2017-05-16 10:05:54', 298486374)
+  [1m[36mFixture Delete (0.5ms)[0m  [1mDELETE FROM `orders`[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `orders` (`created_at`, `updated_at`, `id`) VALUES ('2017-05-16 10:05:54', '2017-05-16 10:05:54', 980190962)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `orders` (`created_at`, `updated_at`, `id`) VALUES ('2017-05-16 10:05:54', '2017-05-16 10:05:54', 298486374)[0m
+  [1m[35mFixture Delete (84.1ms)[0m  DELETE FROM `articles`
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (1, 'Articulo_1', 1, '199-199-199-1', '2017-05-16', 100.0, 40, '2017-05-16 10:05:54', '2017-05-16 10:05:54')[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (2, 'Articulo_2', 1, '199-199-199-2', '2017-05-16', 200.0, 40, '2017-05-16 10:05:54', '2017-05-16 10:05:54')
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (3, 'Articulo_3', 2, '199-199-199-3', '2017-05-16', 300.0, 40, '2017-05-16 10:05:54', '2017-05-16 10:05:54')[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (4, 'Articulo_4', 2, '199-199-199-4', '2017-05-16', 400.0, 40, '2017-05-16 10:05:54', '2017-05-16 10:05:54')
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (5, 'Articulo_5', 2, '199-199-199-5', '2017-05-16', 500.0, 40, '2017-05-16 10:05:54', '2017-05-16 10:05:54')[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (6, 'Articulo_6', 2, '199-199-199-6', '2017-05-16', 600.0, 40, '2017-05-16 10:05:54', '2017-05-16 10:05:54')
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (7, 'Articulo_7', 2, '199-199-199-7', '2017-05-16', 700.0, 40, '2017-05-16 10:05:54', '2017-05-16 10:05:54')[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (8, 'Articulo_8', 2, '199-199-199-8', '2017-05-16', 800.0, 40, '2017-05-16 10:05:54', '2017-05-16 10:05:54')
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (9, 'Articulo_9', 2, '199-199-199-9', '2017-05-16', 900.0, 40, '2017-05-16 10:05:54', '2017-05-16 10:05:54')[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (10, 'Articulo_10', 2, '299-199-199-1', '2017-05-16', 1000.0, 40, '2017-05-16 10:05:54', '2017-05-16 10:05:54')
+  [1m[36mFixture Delete (0.5ms)[0m  [1mDELETE FROM `articles_suppliers`[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO `articles_suppliers` (`created_at`, `updated_at`, `article_id`, `supplier_id`) VALUES ('2017-05-16 12:05:54', '2017-05-16 12:05:54', 1, 1)
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO `articles_suppliers` (`created_at`, `updated_at`, `article_id`, `supplier_id`) VALUES ('2017-05-16 12:05:54', '2017-05-16 12:05:54', 2, 1)[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO `articles_suppliers` (`created_at`, `updated_at`, `article_id`, `supplier_id`) VALUES ('2017-05-16 12:05:54', '2017-05-16 12:05:54', 3, 2)
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO `articles_suppliers` (`created_at`, `updated_at`, `article_id`, `supplier_id`) VALUES ('2017-05-16 12:05:54', '2017-05-16 12:05:54', 4, 2)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `articles_suppliers` (`created_at`, `updated_at`, `article_id`, `supplier_id`) VALUES ('2017-05-16 12:05:54', '2017-05-16 12:05:54', 5, 1)
+  [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM `cart_items`[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `cart_items` (`created_at`, `updated_at`, `id`) VALUES ('2017-05-16 10:05:55', '2017-05-16 10:05:55', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `cart_items` (`created_at`, `updated_at`, `id`) VALUES ('2017-05-16 10:05:55', '2017-05-16 10:05:55', 298486374)[0m
+  [1m[35mFixture Delete (0.6ms)[0m  DELETE FROM `suppliers`
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `suppliers` (`id`, `first_name`, `last_name`, `created_at`, `updated_at`) VALUES (1, 'Pepe', 'Mateo', '2017-05-16 10:05:55', '2017-05-16 10:05:55')[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `suppliers` (`id`, `first_name`, `last_name`, `created_at`, `updated_at`) VALUES (2, 'Toni', 'Gavira', '2017-05-16 10:05:55', '2017-05-16 10:05:55')
+  [1m[36mFixture Delete (0.5ms)[0m  [1mDELETE FROM `manufacturers`[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO `manufacturers` (`id`, `name`, `created_at`, `updated_at`) VALUES (1, 'Adidas', '2017-05-16 10:05:55', '2017-05-16 10:05:55')
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO `manufacturers` (`id`, `name`, `created_at`, `updated_at`) VALUES (2, 'Nike', '2017-05-16 10:05:55', '2017-05-16 10:05:55')[0m
+  [1m[35m (39.0ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+-------------------------------------
+BrowsingAndSearchingTest: test_browse
+-------------------------------------
+Started GET "/catalog/index" for 127.0.0.1 at 2017-05-16 12:05:55 +0200
+Processing by CatalogController#index as HTML
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `carts` (`created_at`, `updated_at`) VALUES ('2017-05-16 10:05:55', '2017-05-16 10:05:55')
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+ApplicationController::require_no_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[35mArticle Load (0.4ms)[0m  SELECT  `articles`.* FROM `articles`  ORDER BY articles.id desc LIMIT 5 OFFSET 0
+  [1m[36mHABTM_Suppliers Load (0.4ms)[0m  [1mSELECT `articles_suppliers`.* FROM `articles_suppliers` WHERE `articles_suppliers`.`article_id` IN (10, 9, 8, 7, 6)[0m
+  [1m[35mManufacturer Load (0.4ms)[0m  SELECT `manufacturers`.* FROM `manufacturers` WHERE `manufacturers`.`id` IN (2)
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `articles`[0m
+  Rendered catalog/_articles.html.erb (53.5ms)
+  Rendered catalog/index.html.erb within layouts/application (58.0ms)
+ApplicationController::current_user
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `users`
+  [1m[36mCartItem Load (0.5ms)[0m  [1mSELECT `cart_items`.* FROM `cart_items` WHERE `cart_items`.`cart_id` = 980190972[0m
+  Rendered cart/_cart.html.erb (3.9ms)
+Completed 200 OK in 257ms (Views: 213.2ms | ActiveRecord: 4.7ms)
+Started GET "/catalog/index?page=2" for 127.0.0.1 at 2017-05-16 12:05:55 +0200
+Processing by CatalogController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[35mCart Load (0.5ms)[0m  SELECT  `carts`.* FROM `carts` WHERE `carts`.`id` = 980190972 LIMIT 1
+ApplicationController::require_no_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[36mArticle Load (0.5ms)[0m  [1mSELECT  `articles`.* FROM `articles`  ORDER BY articles.id desc LIMIT 5 OFFSET 5[0m
+  [1m[35mHABTM_Suppliers Load (0.5ms)[0m  SELECT `articles_suppliers`.* FROM `articles_suppliers` WHERE `articles_suppliers`.`article_id` IN (5, 4, 3, 2, 1)
+  [1m[36mSupplier Load (0.5ms)[0m  [1mSELECT `suppliers`.* FROM `suppliers` WHERE `suppliers`.`id` IN (1, 2)[0m
+  [1m[35mManufacturer Load (0.4ms)[0m  SELECT `manufacturers`.* FROM `manufacturers` WHERE `manufacturers`.`id` IN (2, 1)
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `articles`[0m
+  Rendered catalog/_articles.html.erb (15.7ms)
+  Rendered catalog/index.html.erb within layouts/application (16.1ms)
+ApplicationController::current_user
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `users`
+  [1m[36mCartItem Load (0.4ms)[0m  [1mSELECT `cart_items`.* FROM `cart_items` WHERE `cart_items`.`cart_id` = 980190972[0m
+  Rendered cart/_cart.html.erb (1.1ms)
+Completed 200 OK in 24ms (Views: 16.3ms | ActiveRecord: 3.7ms)
+  [1m[35mArticle Load (0.4ms)[0m  SELECT  `articles`.* FROM `articles` WHERE `articles`.`title` = 'Articulo_1' LIMIT 1
+  [1m[36mArticle Load (0.5ms)[0m  [1mSELECT  `articles`.* FROM `articles` WHERE `articles`.`title` = 'Articulo_9'  ORDER BY `articles`.`id` ASC LIMIT 1[0m
+Started GET "/catalog/show/9" for 127.0.0.1 at 2017-05-16 12:05:55 +0200
+Processing by CatalogController#show as HTML
+  Parameters: {"id"=>"9"}
+ApplicationController::require_no_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[35mArticle Load (0.4ms)[0m  SELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 9 LIMIT 1
+  [1m[36mSupplier Load (0.6ms)[0m  [1mSELECT `suppliers`.* FROM `suppliers` INNER JOIN `articles_suppliers` ON `suppliers`.`id` = `articles_suppliers`.`supplier_id` WHERE `articles_suppliers`.`article_id` = 9[0m
+  [1m[35mManufacturer Load (0.3ms)[0m  SELECT  `manufacturers`.* FROM `manufacturers` WHERE `manufacturers`.`id` = 2 LIMIT 1
+  Rendered catalog/show.html.erb within layouts/application (7.8ms)
+ApplicationController::current_user
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM `users`[0m
+Completed 200 OK in 14ms (Views: 9.2ms | ActiveRecord: 1.9ms)
+  [1m[35mSupplier Load (0.8ms)[0m  SELECT `suppliers`.* FROM `suppliers` INNER JOIN `articles_suppliers` ON `suppliers`.`id` = `articles_suppliers`.`supplier_id` WHERE `articles_suppliers`.`article_id` = 9
+Started GET "/catalog/latest" for 127.0.0.1 at 2017-05-16 12:05:55 +0200
+Processing by CatalogController#latest as HTML
+  [1m[36mCart Load (0.5ms)[0m  [1mSELECT  `carts`.* FROM `carts` WHERE `carts`.`id` = 980190972 LIMIT 1[0m
+ApplicationController::require_no_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[35mArticle Load (0.7ms)[0m  SELECT  `articles`.* FROM `articles`  ORDER BY articles.id desc LIMIT 5
+  [1m[36mHABTM_Suppliers Load (0.6ms)[0m  [1mSELECT `articles_suppliers`.* FROM `articles_suppliers` WHERE `articles_suppliers`.`article_id` IN (10, 9, 8, 7, 6)[0m
+  [1m[35mManufacturer Load (0.5ms)[0m  SELECT `manufacturers`.* FROM `manufacturers` WHERE `manufacturers`.`id` IN (2)
+  Rendered catalog/_articles.html.erb (7.7ms)
+  Rendered catalog/latest.html.erb within layouts/application (8.2ms)
+ApplicationController::current_user
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM `users`[0m
+  [1m[35mCartItem Load (0.6ms)[0m  SELECT `cart_items`.* FROM `cart_items` WHERE `cart_items`.`cart_id` = 980190972
+  Rendered cart/_cart.html.erb (1.3ms)
+Completed 200 OK in 14ms (Views: 9.2ms | ActiveRecord: 3.4ms)
+  [1m[36mArticle Load (0.6ms)[0m  [1mSELECT  `articles`.* FROM `articles`  ORDER BY articles.id desc LIMIT 5[0m
+  [1m[35mHABTM_Suppliers Load (0.6ms)[0m  SELECT `articles_suppliers`.* FROM `articles_suppliers` WHERE `articles_suppliers`.`article_id` IN (10, 9, 8, 7, 6)
+  [1m[36mManufacturer Load (0.5ms)[0m  [1mSELECT `manufacturers`.* FROM `manufacturers` WHERE `manufacturers`.`id` IN (2)[0m
+Started GET "/catalog/rss" for 127.0.0.1 at 2017-05-16 12:05:55 +0200
+Processing by CatalogController#rss as HTML
+  [1m[35mCart Load (0.6ms)[0m  SELECT  `carts`.* FROM `carts` WHERE `carts`.`id` = 980190972 LIMIT 1
+ApplicationController::require_no_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[36mArticle Load (0.6ms)[0m  [1mSELECT  `articles`.* FROM `articles`  ORDER BY articles.id desc LIMIT 5[0m
+  [1m[35mHABTM_Suppliers Load (0.6ms)[0m  SELECT `articles_suppliers`.* FROM `articles_suppliers` WHERE `articles_suppliers`.`article_id` IN (10, 9, 8, 7, 6)
+  [1m[36mManufacturer Load (0.7ms)[0m  [1mSELECT `manufacturers`.* FROM `manufacturers` WHERE `manufacturers`.`id` IN (2)[0m
+  Rendered catalog/rss.builder (31.0ms)
+Completed 200 OK in 34ms (Views: 29.7ms | ActiveRecord: 2.5ms)
+  [1m[35mArticle Load (0.7ms)[0m  SELECT  `articles`.* FROM `articles`  ORDER BY articles.id desc LIMIT 5
+  [1m[36mHABTM_Suppliers Load (0.7ms)[0m  [1mSELECT `articles_suppliers`.* FROM `articles_suppliers` WHERE `articles_suppliers`.`article_id` IN (10, 9, 8, 7, 6)[0m
+  [1m[35mManufacturer Load (0.6ms)[0m  SELECT `manufacturers`.* FROM `manufacturers` WHERE `manufacturers`.`id` IN (2)
+  [1m[36m (33.4ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.4ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.3ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM `order_items`[0m
+  [1m[35mFixture Insert (65.9ms)[0m  INSERT INTO `order_items` (`created_at`, `updated_at`, `id`) VALUES ('2017-05-16 10:52:34', '2017-05-16 10:52:34', 980190962)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `order_items` (`created_at`, `updated_at`, `id`) VALUES ('2017-05-16 10:52:34', '2017-05-16 10:52:34', 298486374)[0m
+  [1m[35mFixture Delete (0.4ms)[0m  DELETE FROM `carts`
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `carts` (`created_at`, `updated_at`, `id`) VALUES ('2017-05-16 10:52:34', '2017-05-16 10:52:34', 980190962)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `carts` (`created_at`, `updated_at`, `id`) VALUES ('2017-05-16 10:52:34', '2017-05-16 10:52:34', 298486374)
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM `orders`[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `orders` (`created_at`, `updated_at`, `id`) VALUES ('2017-05-16 10:52:34', '2017-05-16 10:52:34', 980190962)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `orders` (`created_at`, `updated_at`, `id`) VALUES ('2017-05-16 10:52:34', '2017-05-16 10:52:34', 298486374)[0m
+  [1m[35mFixture Delete (0.9ms)[0m  DELETE FROM `articles`
+  [1m[36mFixture Insert (0.6ms)[0m  [1mINSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (1, 'Articulo_1', 1, '199-199-199-1', '2017-05-16', 100.0, 40, '2017-05-16 10:52:34', '2017-05-16 10:52:34')[0m
+  [1m[35mFixture Insert (0.6ms)[0m  INSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (2, 'Articulo_2', 1, '199-199-199-2', '2017-05-16', 200.0, 40, '2017-05-16 10:52:34', '2017-05-16 10:52:34')
+  [1m[36mFixture Insert (0.6ms)[0m  [1mINSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (3, 'Articulo_3', 2, '199-199-199-3', '2017-05-16', 300.0, 40, '2017-05-16 10:52:34', '2017-05-16 10:52:34')[0m
+  [1m[35mFixture Insert (0.7ms)[0m  INSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (4, 'Articulo_4', 2, '199-199-199-4', '2017-05-16', 400.0, 40, '2017-05-16 10:52:34', '2017-05-16 10:52:34')
+  [1m[36mFixture Insert (0.6ms)[0m  [1mINSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (5, 'Articulo_5', 2, '199-199-199-5', '2017-05-16', 500.0, 40, '2017-05-16 10:52:34', '2017-05-16 10:52:34')[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (6, 'Articulo_6', 2, '199-199-199-6', '2017-05-16', 600.0, 40, '2017-05-16 10:52:34', '2017-05-16 10:52:34')
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (7, 'Articulo_7', 2, '199-199-199-7', '2017-05-16', 700.0, 40, '2017-05-16 10:52:34', '2017-05-16 10:52:34')[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (8, 'Articulo_8', 2, '199-199-199-8', '2017-05-16', 800.0, 40, '2017-05-16 10:52:34', '2017-05-16 10:52:34')
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (9, 'Articulo_9', 2, '199-199-199-9', '2017-05-16', 900.0, 40, '2017-05-16 10:52:34', '2017-05-16 10:52:34')[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (10, 'Articulo_10', 2, '299-199-199-1', '2017-05-16', 1000.0, 40, '2017-05-16 10:52:34', '2017-05-16 10:52:34')
+  [1m[36mFixture Delete (0.7ms)[0m  [1mDELETE FROM `articles_suppliers`[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO `articles_suppliers` (`created_at`, `updated_at`, `article_id`, `supplier_id`) VALUES ('2017-05-16 12:52:34', '2017-05-16 12:52:34', 1, 1)
+  [1m[36mFixture Insert (0.6ms)[0m  [1mINSERT INTO `articles_suppliers` (`created_at`, `updated_at`, `article_id`, `supplier_id`) VALUES ('2017-05-16 12:52:34', '2017-05-16 12:52:34', 2, 1)[0m
+  [1m[35mFixture Insert (0.6ms)[0m  INSERT INTO `articles_suppliers` (`created_at`, `updated_at`, `article_id`, `supplier_id`) VALUES ('2017-05-16 12:52:34', '2017-05-16 12:52:34', 3, 2)
+  [1m[36mFixture Insert (0.6ms)[0m  [1mINSERT INTO `articles_suppliers` (`created_at`, `updated_at`, `article_id`, `supplier_id`) VALUES ('2017-05-16 12:52:34', '2017-05-16 12:52:34', 4, 2)[0m
+  [1m[35mFixture Insert (0.6ms)[0m  INSERT INTO `articles_suppliers` (`created_at`, `updated_at`, `article_id`, `supplier_id`) VALUES ('2017-05-16 12:52:34', '2017-05-16 12:52:34', 5, 1)
+  [1m[36mFixture Delete (0.6ms)[0m  [1mDELETE FROM `cart_items`[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `cart_items` (`created_at`, `updated_at`, `id`) VALUES ('2017-05-16 10:52:34', '2017-05-16 10:52:34', 980190962)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `cart_items` (`created_at`, `updated_at`, `id`) VALUES ('2017-05-16 10:52:34', '2017-05-16 10:52:34', 298486374)[0m
+  [1m[35mFixture Delete (0.4ms)[0m  DELETE FROM `suppliers`
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO `suppliers` (`id`, `first_name`, `last_name`, `created_at`, `updated_at`) VALUES (1, 'Pepe', 'Mateo', '2017-05-16 10:52:34', '2017-05-16 10:52:34')[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO `suppliers` (`id`, `first_name`, `last_name`, `created_at`, `updated_at`) VALUES (2, 'Toni', 'Gavira', '2017-05-16 10:52:34', '2017-05-16 10:52:34')
+  [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM `manufacturers`[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `manufacturers` (`id`, `name`, `created_at`, `updated_at`) VALUES (1, 'Adidas', '2017-05-16 10:52:34', '2017-05-16 10:52:34')
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `manufacturers` (`id`, `name`, `created_at`, `updated_at`) VALUES (2, 'Nike', '2017-05-16 10:52:34', '2017-05-16 10:52:34')[0m
+  [1m[35m (65.5ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+-------------------------------
+CartControllerTest: test_remove
+-------------------------------
+Processing by CartController#add as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `carts` (`created_at`, `updated_at`) VALUES ('2017-05-16 10:52:34', '2017-05-16 10:52:34')
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mArticle Load (0.6ms)[0m  SELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 4 LIMIT 1
+  [1m[36mArticle Load (0.8ms)[0m  [1mSELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 4 LIMIT 1[0m
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM `cart_items` WHERE `cart_items`.`cart_id` = 980190973 AND `cart_items`.`article_id` = 4
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO `cart_items` (`article_id`, `amount`, `price`, `cart_id`, `created_at`, `updated_at`) VALUES (4, 1, 400.0, 980190973, '2017-05-16 10:52:34', '2017-05-16 10:52:34')
+  [1m[36m (0.3ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mArticle Load (0.5ms)[0m  SELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 4 LIMIT 1
+Redirected to http://test.host/
+Completed 302 Found in 57ms (ActiveRecord: 4.6ms)
+  [1m[36mArticle Load (0.5ms)[0m  [1mSELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 4 LIMIT 1[0m
+  [1m[35mCart Load (0.4ms)[0m  SELECT  `carts`.* FROM `carts` WHERE `carts`.`id` = 980190973 LIMIT 1
+  [1m[36mArticle Load (0.8ms)[0m  [1mSELECT `articles`.* FROM `articles` INNER JOIN `cart_items` ON `articles`.`id` = `cart_items`.`article_id` WHERE `cart_items`.`cart_id` = 980190973[0m
+Processing by CartController#remove as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mCart Load (0.4ms)[0m  SELECT  `carts`.* FROM `carts` WHERE `carts`.`id` = 980190973 LIMIT 1
+  [1m[36mArticle Load (0.4ms)[0m  [1mSELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 4 LIMIT 1[0m
+  [1m[35mCartItem Load (0.5ms)[0m  SELECT  `cart_items`.* FROM `cart_items` WHERE `cart_items`.`cart_id` = 980190973 AND `cart_items`.`article_id` = 4  ORDER BY `cart_items`.`id` ASC LIMIT 1
+  [1m[36mCartItem Load (0.4ms)[0m  [1mSELECT  `cart_items`.* FROM `cart_items` WHERE `cart_items`.`id` = 980190963 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM `cart_items` WHERE `cart_items`.`id` = 980190963[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mArticle Load (0.5ms)[0m  [1mSELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 4 LIMIT 1[0m
+Redirected to http://test.host/
+Completed 302 Found in 6ms (ActiveRecord: 3.0ms)
+  [1m[35mCart Load (0.4ms)[0m  SELECT  `carts`.* FROM `carts` WHERE `carts`.`id` = 980190973 LIMIT 1
+  [1m[36mArticle Load (0.5ms)[0m  [1mSELECT `articles`.* FROM `articles` INNER JOIN `cart_items` ON `articles`.`id` = `cart_items`.`article_id` WHERE `cart_items`.`cart_id` = 980190973[0m
+  [1m[35m (39.1ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+----------------------------
+CartControllerTest: test_add
+----------------------------
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `cart_items`
+Processing by CartController#add as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `carts` (`created_at`, `updated_at`) VALUES ('2017-05-16 10:52:34', '2017-05-16 10:52:34')
+  [1m[36m (0.3ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mArticle Load (0.4ms)[0m  SELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 4 LIMIT 1
+  [1m[36mArticle Load (0.4ms)[0m  [1mSELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 4 LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM `cart_items` WHERE `cart_items`.`cart_id` = 980190974 AND `cart_items`.`article_id` = 4
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `cart_items` (`article_id`, `amount`, `price`, `cart_id`, `created_at`, `updated_at`) VALUES (4, 1, 400.0, 980190974, '2017-05-16 10:52:34', '2017-05-16 10:52:34')
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mArticle Load (0.4ms)[0m  SELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 4 LIMIT 1
+Redirected to http://test.host/
+Completed 302 Found in 14ms (ActiveRecord: 3.3ms)
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `cart_items`[0m
+  [1m[35mCart Load (0.3ms)[0m  SELECT  `carts`.* FROM `carts` WHERE `carts`.`id` = 980190974 LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `cart_items` WHERE `cart_items`.`cart_id` = 980190974[0m
+  [1m[35m (112.1ms)[0m  ROLLBACK
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+--------------------------------
+CartControllerTest: test_add_xhr
+--------------------------------
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM `cart_items`
+Processing by CartController#add as JS
+  Parameters: {"id"=>"5"}
+  [1m[36m (0.4ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `carts` (`created_at`, `updated_at`) VALUES ('2017-05-16 10:52:34', '2017-05-16 10:52:34')
+  [1m[36m (0.4ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mArticle Load (0.8ms)[0m  SELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 5 LIMIT 1
+  [1m[36mArticle Load (0.7ms)[0m  [1mSELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 5 LIMIT 1[0m
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM `cart_items` WHERE `cart_items`.`cart_id` = 980190975 AND `cart_items`.`article_id` = 5
+  [1m[36m (0.4ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO `cart_items` (`article_id`, `amount`, `price`, `cart_id`, `created_at`, `updated_at`) VALUES (5, 1, 500.0, 980190975, '2017-05-16 10:52:34', '2017-05-16 10:52:34')
+  [1m[36m (0.4ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mArticle Load (0.7ms)[0m  SELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 5 LIMIT 1
+  Rendered cart/_cart_notice.html.erb (0.6ms)
+  [1m[36mCartItem Load (0.7ms)[0m  [1mSELECT `cart_items`.* FROM `cart_items` WHERE `cart_items`.`cart_id` = 980190975[0m
+  Rendered cart/_item.html.erb (1.6ms)
+  Rendered cart/_cart.html.erb (15.8ms)
+  Rendered cart/add_with_ajax.js.erb (30.8ms)
+Completed 200 OK in 69ms (Views: 49.0ms | ActiveRecord: 6.0ms)
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM `cart_items`
+  [1m[36mCart Load (0.6ms)[0m  [1mSELECT  `carts`.* FROM `carts` WHERE `carts`.`id` = 980190975 LIMIT 1[0m
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM `cart_items` WHERE `cart_items`.`cart_id` = 980190975
+  [1m[36m (75.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+------------------------------
+CartControllerTest: test_clear
+------------------------------
+Processing by CartController#add as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO `carts` (`created_at`, `updated_at`) VALUES ('2017-05-16 10:52:34', '2017-05-16 10:52:34')
+  [1m[36m (0.3ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mArticle Load (0.6ms)[0m  SELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 4 LIMIT 1
+  [1m[36mArticle Load (0.5ms)[0m  [1mSELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 4 LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM `cart_items` WHERE `cart_items`.`cart_id` = 980190976 AND `cart_items`.`article_id` = 4
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `cart_items` (`article_id`, `amount`, `price`, `cart_id`, `created_at`, `updated_at`) VALUES (4, 1, 400.0, 980190976, '2017-05-16 10:52:34', '2017-05-16 10:52:34')
+  [1m[36m (0.3ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mArticle Load (0.5ms)[0m  SELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 4 LIMIT 1
+Redirected to http://test.host/
+Completed 302 Found in 19ms (ActiveRecord: 4.2ms)
+  [1m[36mArticle Load (0.6ms)[0m  [1mSELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 4 LIMIT 1[0m
+  [1m[35mCart Load (0.6ms)[0m  SELECT  `carts`.* FROM `carts` WHERE `carts`.`id` = 980190976 LIMIT 1
+  [1m[36mArticle Load (0.9ms)[0m  [1mSELECT `articles`.* FROM `articles` INNER JOIN `cart_items` ON `articles`.`id` = `cart_items`.`article_id` WHERE `cart_items`.`cart_id` = 980190976[0m
+Processing by CartController#clear as HTML
+  [1m[35mCart Load (0.7ms)[0m  SELECT  `carts`.* FROM `carts` WHERE `carts`.`id` = 980190976 LIMIT 1
+  [1m[36mCartItem Load (0.6ms)[0m  [1mSELECT `cart_items`.* FROM `cart_items` WHERE `cart_items`.`cart_id` = 980190976[0m
+  [1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.6ms)[0m  [1mDELETE FROM `cart_items` WHERE `cart_items`.`id` = 980190966[0m
+  [1m[35m (0.3ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/
+Completed 302 Found in 7ms (ActiveRecord: 2.6ms)
+  [1m[36mCart Load (0.6ms)[0m  [1mSELECT  `carts`.* FROM `carts` WHERE `carts`.`id` = 980190976 LIMIT 1[0m
+  [1m[35mArticle Load (0.7ms)[0m  SELECT `articles`.* FROM `articles` INNER JOIN `cart_items` ON `articles`.`id` = `cart_items`.`article_id` WHERE `cart_items`.`cart_id` = 980190976
+  [1m[36m (46.1ms)[0m  [1mROLLBACK[0m

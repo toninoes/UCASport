@@ -2,4 +2,4 @@
 
 <%= pluralize item.amount, "artículo", "artículos" %>, <%= sprintf "%0.2f €", item.price * item.amount %>
 
-(<%= link_to '<b>-</b>'.html_safe, :controller => 'cart', :action => 'remove', :id => item.article %>)
+(<%= link_to '<b>-</b>'.html_safe, :controller => 'cart', :action => 'remove', :id => item.article, :remote => true %>)

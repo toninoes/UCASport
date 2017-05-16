@@ -16,4 +16,10 @@ class CatalogController < ApplicationController
     @articles = Article.latest 5
     @page_title = 'Últimos artículos'
   end
+
+  def rss
+    latest
+    render :layout => false
+    response.headers["Content-Type"] = "application/xml; version = 1.0; charset=utf-8"
+  end
 end
