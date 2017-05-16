@@ -20177,3 +20177,519 @@ Completed 200 OK in 99ms (Views: 91.9ms | ActiveRecord: 4.2ms)
 
 
 Started GET "/assets/favicon-3da0cc52952440e113d2ef7bb07cc6b601f1899e3ed5843f0bd6759f1277f3ba.ico" for 127.0.0.1 at 2017-05-16 19:11:18 +0200
+
+
+Started GET "/about" for 127.0.0.1 at 2017-05-16 19:13:42 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by AboutController#index as HTML
+  Rendered about/index.html.erb within layouts/application (1.0ms)
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM `users`
+Completed 200 OK in 329ms (Views: 316.4ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/user/new" for 127.0.0.1 at 2017-05-16 19:15:23 +0200
+Processing by UserController#new as HTML
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM `users`[0m
+  Rendered user/_form.html.erb (4.2ms)
+  Rendered user/new.html.erb within layouts/application (9.0ms)
+ApplicationController::current_user
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM `users`
+Completed 200 OK in 108ms (Views: 72.0ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/user/create" for 127.0.0.1 at 2017-05-16 19:16:17 +0200
+Processing by UserController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZFrxNJ86FfoEPgrFmXzJXyN4VFMX8pU2OpQp4U3JvjrvZHkdfvm+sAnPKeu+HParRXX2Th5zHNTc+atrvwXkqg==", "user"=>{"name"=>"", "login"=>"", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Crear cuenta"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT  1 AS one FROM `users` WHERE `users`.`email` = '' LIMIT 1
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `users` WHERE `users`.`login` = '' LIMIT 1[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT  1 AS one FROM `users` WHERE `users`.`persistence_token` = BINARY '85f426acd4405d4cdfa15539d4da250b135765dcb22b2469bbd80cda1cbe0de36522ec230e70b6f88b8e7224d17191aa6450e72457476eae1a9bc8fa5fea38cb' LIMIT 1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `users` WHERE `users`.`name` = BINARY '' LIMIT 1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM `users` WHERE `users`.`login` = BINARY '' LIMIT 1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY '' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  Rendered user/_form.html.erb (7.9ms)
+  Rendered user/new.html.erb within layouts/application (9.5ms)
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `users`[0m
+Completed 200 OK in 104ms (Views: 48.1ms | ActiveRecord: 2.0ms)
+
+
+Started POST "/user/create" for 127.0.0.1 at 2017-05-16 19:18:43 +0200
+Processing by UserController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZFrxNJ86FfoEPgrFmXzJXyN4VFMX8pU2OpQp4U3JvjrvZHkdfvm+sAnPKeu+HParRXX2Th5zHNTc+atrvwXkqg==", "user"=>{"name"=>"", "login"=>"", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Crear cuenta"}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM `users` WHERE `users`.`email` = '' LIMIT 1[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT  1 AS one FROM `users` WHERE `users`.`login` = '' LIMIT 1
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `users` WHERE `users`.`persistence_token` = BINARY 'edc7a4324d873b3f160c4350f1ac019429622d175af989744d9d371703aa476ce1fe480a702eded4d35b1110413e86ab3b93295eb18c62e6f265e38435113345' LIMIT 1[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT  1 AS one FROM `users` WHERE `users`.`name` = BINARY '' LIMIT 1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `users` WHERE `users`.`login` = BINARY '' LIMIT 1[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY '' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  Rendered user/_form.html.erb (5.6ms)
+  Rendered user/new.html.erb within layouts/application (7.4ms)
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM `users`
+Completed 200 OK in 88ms (Views: 51.9ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/assets/favicon-3da0cc52952440e113d2ef7bb07cc6b601f1899e3ed5843f0bd6759f1277f3ba.ico" for 127.0.0.1 at 2017-05-16 19:18:44 +0200
+
+
+Started POST "/user/create" for 127.0.0.1 at 2017-05-16 19:19:38 +0200
+Processing by UserController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZFrxNJ86FfoEPgrFmXzJXyN4VFMX8pU2OpQp4U3JvjrvZHkdfvm+sAnPKeu+HParRXX2Th5zHNTc+atrvwXkqg==", "user"=>{"name"=>"", "login"=>"", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Crear cuenta"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.8ms)[0m  SELECT  1 AS one FROM `users` WHERE `users`.`email` = '' LIMIT 1
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `users` WHERE `users`.`login` = '' LIMIT 1[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT  1 AS one FROM `users` WHERE `users`.`persistence_token` = BINARY '5a035fad608238a6b1dc4a0d7b571d4772ef194449266a2a91a8c9252caf1a714d7d677ceef13173b2c87d8c0d21b47dbff177600a814c03b1c85228fd60ab76' LIMIT 1
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `users` WHERE `users`.`name` = BINARY '' LIMIT 1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM `users` WHERE `users`.`login` = BINARY '' LIMIT 1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY '' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  Rendered user/_form.html.erb (6.5ms)
+  Rendered user/new.html.erb within layouts/application (8.2ms)
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM `users`[0m
+Completed 200 OK in 76ms (Views: 45.8ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/assets/favicon-3da0cc52952440e113d2ef7bb07cc6b601f1899e3ed5843f0bd6759f1277f3ba.ico" for 127.0.0.1 at 2017-05-16 19:19:38 +0200
+
+
+Started POST "/user/create" for 127.0.0.1 at 2017-05-16 19:20:03 +0200
+Processing by UserController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZFrxNJ86FfoEPgrFmXzJXyN4VFMX8pU2OpQp4U3JvjrvZHkdfvm+sAnPKeu+HParRXX2Th5zHNTc+atrvwXkqg==", "user"=>{"name"=>"", "login"=>"", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Crear cuenta"}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM `users` WHERE `users`.`email` = '' LIMIT 1[0m
+  [1m[35mUser Exists (0.5ms)[0m  SELECT  1 AS one FROM `users` WHERE `users`.`login` = '' LIMIT 1
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `users` WHERE `users`.`persistence_token` = BINARY '0cfc57c5ab7603c348acca45c8980d97d2c2ee5e3a85d58a2ba812c3f1613c44650b7ad76cf0131129f732299cf4218a6ef092d4f8a4b1a63e92a045c20762d3' LIMIT 1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM `users` WHERE `users`.`name` = BINARY '' LIMIT 1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `users` WHERE `users`.`login` = BINARY '' LIMIT 1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY '' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  Rendered user/_form.html.erb (5.6ms)
+  Rendered user/new.html.erb within layouts/application (7.1ms)
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `users`
+Completed 200 OK in 79ms (Views: 42.0ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/assets/favicon-3da0cc52952440e113d2ef7bb07cc6b601f1899e3ed5843f0bd6759f1277f3ba.ico" for 127.0.0.1 at 2017-05-16 19:20:03 +0200
+
+
+Started POST "/user/create" for 127.0.0.1 at 2017-05-16 19:20:41 +0200
+Processing by UserController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZFrxNJ86FfoEPgrFmXzJXyN4VFMX8pU2OpQp4U3JvjrvZHkdfvm+sAnPKeu+HParRXX2Th5zHNTc+atrvwXkqg==", "user"=>{"name"=>"", "login"=>"", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Crear cuenta"}
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT  1 AS one FROM `users` WHERE `users`.`email` = '' LIMIT 1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `users` WHERE `users`.`login` = '' LIMIT 1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM `users` WHERE `users`.`persistence_token` = BINARY '852ef0fac758ee7f731f24476e3224ddcead7a4142ff93117f161255cdcd13478c8995986fd9103f8571246bdf642889d62118eb21b2ec04b65a75ed97bcf8cf' LIMIT 1
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `users` WHERE `users`.`name` = BINARY '' LIMIT 1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM `users` WHERE `users`.`login` = BINARY '' LIMIT 1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY '' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  Rendered user/_form.html.erb (6.3ms)
+  Rendered user/new.html.erb within layouts/application (7.8ms)
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `users`[0m
+Completed 200 OK in 69ms (Views: 43.1ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/assets/favicon-3da0cc52952440e113d2ef7bb07cc6b601f1899e3ed5843f0bd6759f1277f3ba.ico" for 127.0.0.1 at 2017-05-16 19:20:42 +0200
+
+
+Started POST "/user/create" for 127.0.0.1 at 2017-05-16 19:24:27 +0200
+Processing by UserController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZFrxNJ86FfoEPgrFmXzJXyN4VFMX8pU2OpQp4U3JvjrvZHkdfvm+sAnPKeu+HParRXX2Th5zHNTc+atrvwXkqg==", "user"=>{"name"=>"", "login"=>"", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Crear cuenta"}
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `users` WHERE `users`.`email` = '' LIMIT 1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM `users` WHERE `users`.`login` = '' LIMIT 1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `users` WHERE `users`.`persistence_token` = BINARY 'ba7d1ee5bf26ebdf9eedf7864756e718216f252a615f5c28162a144c357a1a4ded0ea57777de461a14b62772d528f889272b302dfe7179591a96794109a59c2d' LIMIT 1[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT  1 AS one FROM `users` WHERE `users`.`name` = BINARY '' LIMIT 1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `users` WHERE `users`.`login` = BINARY '' LIMIT 1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY '' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  Rendered user/_form.html.erb (5.7ms)
+  Rendered user/new.html.erb within layouts/application (7.2ms)
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `users`
+Completed 200 OK in 66ms (Views: 41.0ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/assets/favicon-3da0cc52952440e113d2ef7bb07cc6b601f1899e3ed5843f0bd6759f1277f3ba.ico" for 127.0.0.1 at 2017-05-16 19:24:28 +0200
+
+
+Started POST "/user/create" for 127.0.0.1 at 2017-05-16 19:25:02 +0200
+Processing by UserController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZFrxNJ86FfoEPgrFmXzJXyN4VFMX8pU2OpQp4U3JvjrvZHkdfvm+sAnPKeu+HParRXX2Th5zHNTc+atrvwXkqg==", "user"=>{"name"=>"", "login"=>"", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Crear cuenta"}
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT  1 AS one FROM `users` WHERE `users`.`email` = '' LIMIT 1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `users` WHERE `users`.`login` = '' LIMIT 1[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT  1 AS one FROM `users` WHERE `users`.`persistence_token` = BINARY '5e699403059c6ee3e4696908ce8aede83127e9408761232568a9c26dbe4e574dd38887abd27db547d7fc56f7dd9e07cbb77c5d4058a3be15ce6b6e97fbac18ae' LIMIT 1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `users` WHERE `users`.`name` = BINARY '' LIMIT 1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM `users` WHERE `users`.`login` = BINARY '' LIMIT 1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY '' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  Rendered user/_form.html.erb (7.4ms)
+  Rendered user/new.html.erb within layouts/application (9.1ms)
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `users`[0m
+Completed 200 OK in 81ms (Views: 46.9ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/assets/favicon-3da0cc52952440e113d2ef7bb07cc6b601f1899e3ed5843f0bd6759f1277f3ba.ico" for 127.0.0.1 at 2017-05-16 19:25:02 +0200
+
+
+Started POST "/user/create" for 127.0.0.1 at 2017-05-16 19:29:22 +0200
+Processing by UserController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TRkvWMWXXFQDHuiHHeNptrYxuhu/j4TcDfEbmdGeVDLGJ6dxJFT3Hg7vy6k6g1ZC0DwYBrYODT7rnJkTI1IOog==", "user"=>{"name"=>"Administrador", "login"=>"admin", "email"=>"antonio.ruizrondan@alum.uca.es", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Crear cuenta"}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `users` WHERE `users`.`email` = 'antonio.ruizrondan@alum.uca.es' LIMIT 1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM `users` WHERE `users`.`login` = 'admin' LIMIT 1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `users` WHERE `users`.`persistence_token` = BINARY '45a90b2a41dfb97bf475caca774f49ac04f00527a62dd86c5644c6ef9e9e109ec9c5f403be311e92b03d0b568d798aad6705d2533a4aa49d5e1fed31035386e2' LIMIT 1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM `users` WHERE `users`.`name` = BINARY 'Administrador' LIMIT 1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `users` WHERE `users`.`login` = BINARY 'admin' LIMIT 1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY 'antonio.ruizrondan@alum.uca.es' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `users` (`name`, `login`, `email`, `password_salt`, `crypted_password`, `persistence_token`, `perishable_token`, `login_count`, `current_login_at`, `current_login_ip`, `last_request_at`, `created_at`, `updated_at`) VALUES ('Administrador', 'admin', 'antonio.ruizrondan@alum.uca.es', '48OcyNpk5tj8qISd9Nyr', '400$8$23$d46617d5f9ba2203$4b8b07391cea17a0606088e8d7ff7eb90c5442ce472ee576af1bbcc03501e3a6', '45a90b2a41dfb97bf475caca774f49ac04f00527a62dd86c5644c6ef9e9e109ec9c5f403be311e92b03d0b568d798aad6705d2533a4aa49d5e1fed31035386e2', 'PQNblUavQ8WGO7RP9F5', 1, '2017-05-16 17:29:23', '127.0.0.1', '2017-05-16 17:29:23', '2017-05-16 17:29:23', '2017-05-16 17:29:23')[0m
+  [1m[35m (72.2ms)[0m  COMMIT
+Redirected to http://localhost:3000/user/show
+Completed 302 Found in 340ms (ActiveRecord: 75.5ms)
+
+
+Started GET "/user/show" for 127.0.0.1 at 2017-05-16 19:29:23 +0200
+Processing by UserController#show as HTML
+ApplicationController::require_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`persistence_token` = '45a90b2a41dfb97bf475caca774f49ac04f00527a62dd86c5644c6ef9e9e109ec9c5f403be311e92b03d0b568d798aad6705d2533a4aa49d5e1fed31035386e2' LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (9.1ms)[0m  UPDATE `users` SET `last_request_at` = '2017-05-16 17:29:23', `perishable_token` = 'SWTfm8gC6DQ6D0jiTEl', `updated_at` = '2017-05-16 17:29:23' WHERE `users`.`id` = 2
+  [1m[36m (33.8ms)[0m  [1mCOMMIT[0m
+ApplicationController::current_user_session
+ApplicationController::current_user
+  Rendered user/show.html.erb within layouts/application (1.8ms)
+ApplicationController::current_user
+ApplicationController::current_user
+Completed 200 OK in 122ms (Views: 66.2ms | ActiveRecord: 44.1ms)
+
+
+Started GET "/user/edit" for 127.0.0.1 at 2017-05-16 19:30:17 +0200
+Processing by UserController#edit as HTML
+ApplicationController::require_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[35mUser Load (0.4ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE `users` SET `last_request_at` = '2017-05-16 17:30:17', `perishable_token` = 'Se8bRWfrGHFFIUPNyF8w', `updated_at` = '2017-05-16 17:30:17' WHERE `users`.`id` = 2[0m
+  [1m[35m (38.1ms)[0m  COMMIT
+ApplicationController::current_user_session
+ApplicationController::current_user
+  Rendered user/_form.html.erb (0.6ms)
+  Rendered user/edit.html.erb within layouts/application (2.8ms)
+ApplicationController::current_user
+ApplicationController::current_user
+Completed 200 OK in 102ms (Views: 54.7ms | ActiveRecord: 39.8ms)
+
+
+Started POST "/user/update" for 127.0.0.1 at 2017-05-16 19:31:08 +0200
+Processing by UserController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ffbftlgFDmJyW22jj9xVFqj2pdjEmU7ah47xaejl/uj2yFefucalKH+qTo2ovGrizvsHxc0Yxzhh43PjGimkeA==", "user"=>{"name"=>"administrador", "login"=>"admin", "email"=>"antonio.ruizrondan@alum.uca.es", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Actualizar cuenta"}
+ApplicationController::require_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE `users` SET `last_request_at` = '2017-05-16 17:31:08', `perishable_token` = '5bwmMou08JvgSVzLxm', `updated_at` = '2017-05-16 17:31:08' WHERE `users`.`id` = 2
+  [1m[36m (45.8ms)[0m  [1mCOMMIT[0m
+ApplicationController::current_user_session
+ApplicationController::current_user
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mUser Exists (0.8ms)[0m  [1mSELECT  1 AS one FROM `users` WHERE (`users`.`name` = BINARY 'administrador' AND `users`.`id` != 2) LIMIT 1[0m
+  [1m[35mUser Exists (0.7ms)[0m  SELECT  1 AS one FROM `users` WHERE (`users`.`login` = BINARY 'admin' AND `users`.`id` != 2) LIMIT 1
+  [1m[36mUser Exists (0.7ms)[0m  [1mSELECT  1 AS one FROM `users` WHERE (`users`.`email` = BINARY 'antonio.ruizrondan@alum.uca.es' AND `users`.`id` != 2) LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  Rendered user/_form.html.erb (4.7ms)
+  Rendered user/edit.html.erb within layouts/application (8.2ms)
+ApplicationController::current_user
+ApplicationController::current_user
+Completed 200 OK in 151ms (Views: 79.0ms | ActiveRecord: 50.2ms)
+
+
+Started POST "/user/update" for 127.0.0.1 at 2017-05-16 19:31:18 +0200
+Processing by UserController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2Ev2n2zKUlQRfNc8sA3u0gxnYy0bJKJLxHCWVh82RqdTdX62jQn5HhyN9BKXbdEmamrBMBKlK6kiHRTc7focNw==", "user"=>{"name"=>"administrador", "login"=>"admin", "email"=>"antonio.ruizrondan@alum.uca.es", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Actualizar cuenta"}
+ApplicationController::require_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  [1m[35mUser Load (0.6ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE `users` SET `last_request_at` = '2017-05-16 17:31:18', `perishable_token` = 'NYVZORh4Q1wSVuqg3hDY', `updated_at` = '2017-05-16 17:31:18' WHERE `users`.`id` = 2
+  [1m[36m (40.0ms)[0m  [1mCOMMIT[0m
+ApplicationController::current_user_session
+ApplicationController::current_user
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mUser Exists (0.7ms)[0m  [1mSELECT  1 AS one FROM `users` WHERE (`users`.`persistence_token` = BINARY 'e16e69b6c615949ac2d5cc5f8693b5fa1a510a6e308d5af4a0576abb189f1dee66313d088002f247d26793dce0e4f41055b0d3f9826a8aabd4a15563b437b224' AND `users`.`id` != 2) LIMIT 1[0m
+  [1m[35mUser Exists (0.5ms)[0m  SELECT  1 AS one FROM `users` WHERE (`users`.`name` = BINARY 'administrador' AND `users`.`id` != 2) LIMIT 1
+  [1m[36mUser Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM `users` WHERE (`users`.`login` = BINARY 'admin' AND `users`.`id` != 2) LIMIT 1[0m
+  [1m[35mUser Exists (0.6ms)[0m  SELECT  1 AS one FROM `users` WHERE (`users`.`email` = BINARY 'antonio.ruizrondan@alum.uca.es' AND `users`.`id` != 2) LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  [1m[35mUser Load (0.6ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36mSQL (0.6ms)[0m  [1mUPDATE `users` SET `name` = 'administrador', `password_salt` = 'po2nnyOgaVUWOFjAHd5U', `crypted_password` = '400$8$16$68da6ffd5d69d970$356c99959b268d8e20f6a6383ee3497fa6591382db1f6ead9faa225cbf615505', `persistence_token` = 'e16e69b6c615949ac2d5cc5f8693b5fa1a510a6e308d5af4a0576abb189f1dee66313d088002f247d26793dce0e4f41055b0d3f9826a8aabd4a15563b437b224', `perishable_token` = 'TgMNbmmJ6u2qrprg6T', `last_request_at` = '2017-05-16 17:31:18', `login_count` = 2, `last_login_at` = '2017-05-16 17:29:23', `current_login_at` = '2017-05-16 17:31:18', `last_login_ip` = '127.0.0.1', `updated_at` = '2017-05-16 17:31:18' WHERE `users`.`id` = 2[0m
+  [1m[35m (34.7ms)[0m  COMMIT
+Redirected to http://localhost:3000/user/show
+Completed 302 Found in 195ms (ActiveRecord: 80.9ms)
+
+
+Started GET "/user/show" for 127.0.0.1 at 2017-05-16 19:31:18 +0200
+Processing by UserController#show as HTML
+ApplicationController::require_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE `users` SET `last_request_at` = '2017-05-16 17:31:18', `perishable_token` = 'Nf87ccwnrNCTI5VdpH', `updated_at` = '2017-05-16 17:31:18' WHERE `users`.`id` = 2[0m
+  [1m[35m (39.5ms)[0m  COMMIT
+ApplicationController::current_user_session
+ApplicationController::current_user
+  Rendered user/show.html.erb within layouts/application (0.6ms)
+ApplicationController::current_user
+ApplicationController::current_user
+Completed 200 OK in 132ms (Views: 72.8ms | ActiveRecord: 41.0ms)
+
+
+Started GET "/user_sessions/destroy" for 127.0.0.1 at 2017-05-16 19:32:05 +0200
+Processing by UserSessionsController#destroy as HTML
+ApplicationController::current_user_session
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE `users` SET `last_request_at` = '2017-05-16 17:32:05', `perishable_token` = 'j9ZnyY5Kd6cUxIpKzHRE', `updated_at` = '2017-05-16 17:32:05' WHERE `users`.`id` = 2[0m
+  [1m[35m (39.8ms)[0m  COMMIT
+ApplicationController::current_user_session
+Redirected to http://localhost:3000/
+Completed 302 Found in 45ms (ActiveRecord: 40.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-16 19:32:05 +0200
+Processing by CatalogController#index as HTML
+  [1m[36mCart Load (0.5ms)[0m  [1mSELECT  `carts`.* FROM `carts` WHERE `carts`.`id` = 21 LIMIT 1[0m
+ApplicationController::require_no_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[35mArticle Load (0.4ms)[0m  SELECT  `articles`.* FROM `articles`  ORDER BY articles.id desc LIMIT 5 OFFSET 0
+  [1m[36mHABTM_Suppliers Load (0.3ms)[0m  [1mSELECT `articles_suppliers`.* FROM `articles_suppliers` WHERE `articles_suppliers`.`article_id` IN (12, 11, 8, 6, 5)[0m
+  [1m[35mSupplier Load (0.3ms)[0m  SELECT `suppliers`.* FROM `suppliers` WHERE `suppliers`.`id` IN (2, 3, 4, 5, 6)
+  [1m[36mManufacturer Load (0.4ms)[0m  [1mSELECT `manufacturers`.* FROM `manufacturers` WHERE `manufacturers`.`id` IN (5, 7, 6)[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `articles`
+  Rendered catalog/_articles.html.erb (70.6ms)
+  Rendered catalog/index.html.erb within layouts/application (72.0ms)
+ApplicationController::current_user
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `users`[0m
+  [1m[35mCartItem Load (0.2ms)[0m  SELECT `cart_items`.* FROM `cart_items` WHERE `cart_items`.`cart_id` = 21
+  Rendered cart/_cart.html.erb (6.0ms)
+Completed 200 OK in 140ms (Views: 113.0ms | ActiveRecord: 6.7ms)
+
+
+Started GET "/admin/article" for 127.0.0.1 at 2017-05-16 19:32:08 +0200
+Processing by Admin::ArticleController#index as HTML
+ApplicationController::require_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+Redirected to http://localhost:3000/user_sessions/new
+Filter chain halted as :require_user rendered or redirected
+Completed 302 Found in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/user_sessions/new" for 127.0.0.1 at 2017-05-16 19:32:08 +0200
+Processing by UserSessionsController#new as HTML
+ApplicationController::require_no_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+  Rendered user_sessions/_form.html.erb (4.4ms)
+  Rendered user_sessions/new.html.erb within layouts/application (7.6ms)
+ApplicationController::current_user
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM `users`[0m
+Completed 200 OK in 93ms (Views: 90.3ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/user_sessions/create" for 127.0.0.1 at 2017-05-16 19:33:38 +0200
+Processing by UserSessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jKmGNRFi5JmVm6Od1a/8QimoXWzYO+fgr3Mk8zyhANoHlw4c8KFP05hqgLPyz8O2T6X/cdG6bgJJHqZ5zm1aSg==", "user_session"=>{"login"=>"admin", "password"=>"[FILTERED]"}, "commit"=>"Acceder"}
+ApplicationController::require_no_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[35mUser Load (0.4ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`login` = 'admin'  ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE `users` SET `failed_login_count` = 1, `perishable_token` = 'h7390TojIxRroKonNTZ', `updated_at` = '2017-05-16 17:33:38' WHERE `users`.`id` = 2
+  [1m[36m (44.2ms)[0m  [1mCOMMIT[0m
+  Rendered user_sessions/_form.html.erb (3.7ms)
+  Rendered user_sessions/new.html.erb within layouts/application (5.4ms)
+ApplicationController::current_user
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM `users`
+Completed 200 OK in 183ms (Views: 52.2ms | ActiveRecord: 45.6ms)
+
+
+Started POST "/user_sessions/create" for 127.0.0.1 at 2017-05-16 19:34:25 +0200
+Processing by UserSessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WgkHRIOQ0hPWA8FtaZWhBwLgnaIDJ0F7uKEIZGJJh5XRN49tYlN5Wdvy4kNO9Z7zZO0/vwqmyJlezIrukIXdBQ==", "user_session"=>{"login"=>"admina", "password"=>"[FILTERED]"}, "commit"=>"Acceder"}
+ApplicationController::require_no_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`login` = 'admina'  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered user_sessions/_form.html.erb (1.5ms)
+  Rendered user_sessions/new.html.erb within layouts/application (2.8ms)
+ApplicationController::current_user
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM `users`
+Completed 200 OK in 55ms (Views: 50.8ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/user_sessions/create" for 127.0.0.1 at 2017-05-16 19:34:42 +0200
+Processing by UserSessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bMrr/Gh74s+dCAxVtw8SzET+nCS53g7gzo4hMPmLFTDn9GPVibhJhZD5L3uQby04IvM+ObBfhwIo46O6C0dPoA==", "user_session"=>{"login"=>"admina", "password"=>"[FILTERED]"}, "commit"=>"Acceder"}
+ApplicationController::require_no_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`login` = 'admina'  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered user_sessions/_form.html.erb (3.3ms)
+  Rendered user_sessions/new.html.erb within layouts/application (5.8ms)
+ApplicationController::current_user
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM `users`
+Completed 200 OK in 91ms (Views: 86.9ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/user_sessions/create" for 127.0.0.1 at 2017-05-16 19:35:08 +0200
+Processing by UserSessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bMrr/Gh74s+dCAxVtw8SzET+nCS53g7gzo4hMPmLFTDn9GPVibhJhZD5L3uQby04IvM+ObBfhwIo46O6C0dPoA==", "user_session"=>{"login"=>"admina", "password"=>"[FILTERED]"}, "commit"=>"Acceder"}
+ApplicationController::require_no_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`login` = 'admina'  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered user_sessions/_form.html.erb (3.3ms)
+  Rendered user_sessions/new.html.erb within layouts/application (5.9ms)
+ApplicationController::current_user
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM `users`
+Completed 200 OK in 82ms (Views: 76.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/favicon-3da0cc52952440e113d2ef7bb07cc6b601f1899e3ed5843f0bd6759f1277f3ba.ico" for 127.0.0.1 at 2017-05-16 19:35:08 +0200
+
+
+Started POST "/user_sessions/create" for 127.0.0.1 at 2017-05-16 19:35:25 +0200
+Processing by UserSessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jDVP3DOioZ8hjVrXT7EL8he18l7suWAVyO1KT09gWHYHC8f10mEK1Sx8eflo0TQGcbhQQ+U46fcugMjFvawC5g==", "user_session"=>{"login"=>"hola", "password"=>"[FILTERED]"}, "commit"=>"Acceder"}
+ApplicationController::require_no_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`login` = 'hola'  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered user_sessions/_form.html.erb (2.3ms)
+  Rendered user_sessions/new.html.erb within layouts/application (4.3ms)
+ApplicationController::current_user
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM `users`
+Completed 200 OK in 78ms (Views: 72.7ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/user_sessions/create" for 127.0.0.1 at 2017-05-16 19:36:31 +0200
+Processing by UserSessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"q/BgHoOhVk69FeWvPsQl6POPPawS8LE7Pox+nnhKaxQgzug3YmL9BLDkxoEZpBoclYKfsRtxONnY4fwUioYxhA==", "user_session"=>{"login"=>"admin", "password"=>"[FILTERED]"}, "commit"=>"Acceder"}
+ApplicationController::require_no_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`login` = 'admin'  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE `users` SET `login_count` = 3, `failed_login_count` = 0, `last_login_at` = '2017-05-16 17:31:18', `current_login_at` = '2017-05-16 17:36:31', `last_request_at` = '2017-05-16 17:36:31', `perishable_token` = 'b8Q1VuKRzPQ92d64cg66', `updated_at` = '2017-05-16 17:36:31' WHERE `users`.`id` = 2[0m
+  [1m[35m (30.7ms)[0m  COMMIT
+Redirected to http://localhost:3000/admin/article
+Completed 302 Found in 134ms (ActiveRecord: 32.0ms)
+
+
+Started GET "/admin/article" for 127.0.0.1 at 2017-05-16 19:36:31 +0200
+Processing by Admin::ArticleController#index as HTML
+ApplicationController::require_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE `users` SET `last_request_at` = '2017-05-16 17:36:31', `perishable_token` = '81DR7qHVNE5waQXpiauD', `updated_at` = '2017-05-16 17:36:31' WHERE `users`.`id` = 2[0m
+  [1m[35m (32.3ms)[0m  COMMIT
+ApplicationController::current_user_session
+  [1m[36mArticle Load (0.5ms)[0m  [1mSELECT  `articles`.* FROM `articles` LIMIT 5 OFFSET 0[0m
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM `articles`
+  [1m[36mManufacturer Load (0.6ms)[0m  [1mSELECT  `manufacturers`.* FROM `manufacturers` WHERE `manufacturers`.`id` = 5 LIMIT 1[0m
+  [1m[35mManufacturer Load (0.6ms)[0m  SELECT  `manufacturers`.* FROM `manufacturers` WHERE `manufacturers`.`id` = 7 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `manufacturers`.* FROM `manufacturers` WHERE `manufacturers`.`id` = 5 LIMIT 1[0m  [["id", 5]]
+  [1m[35mManufacturer Load (0.3ms)[0m  SELECT  `manufacturers`.* FROM `manufacturers` WHERE `manufacturers`.`id` = 6 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `manufacturers`.* FROM `manufacturers` WHERE `manufacturers`.`id` = 7 LIMIT 1[0m  [["id", 7]]
+  Rendered admin/article/index.html.erb within layouts/application (27.4ms)
+ApplicationController::current_user
+ApplicationController::current_user
+Completed 200 OK in 141ms (Views: 98.4ms | ActiveRecord: 35.9ms)
+
+
+Started GET "/user_sessions/destroy" for 127.0.0.1 at 2017-05-16 19:37:29 +0200
+Processing by UserSessionsController#destroy as HTML
+ApplicationController::current_user_session
+  [1m[35mUser Load (0.8ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  UPDATE `users` SET `last_request_at` = '2017-05-16 17:37:29', `perishable_token` = 'BycUxbj61hXh093iVId', `updated_at` = '2017-05-16 17:37:29' WHERE `users`.`id` = 2
+  [1m[36m (38.7ms)[0m  [1mCOMMIT[0m
+ApplicationController::current_user_session
+Redirected to http://localhost:3000/
+Completed 302 Found in 52ms (ActiveRecord: 40.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-16 19:37:29 +0200
+Processing by CatalogController#index as HTML
+  [1m[35mCart Load (0.6ms)[0m  SELECT  `carts`.* FROM `carts` WHERE `carts`.`id` = 21 LIMIT 1
+ApplicationController::require_no_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[36mArticle Load (0.5ms)[0m  [1mSELECT  `articles`.* FROM `articles`  ORDER BY articles.id desc LIMIT 5 OFFSET 0[0m
+  [1m[35mHABTM_Suppliers Load (0.5ms)[0m  SELECT `articles_suppliers`.* FROM `articles_suppliers` WHERE `articles_suppliers`.`article_id` IN (12, 11, 8, 6, 5)
+  [1m[36mSupplier Load (0.5ms)[0m  [1mSELECT `suppliers`.* FROM `suppliers` WHERE `suppliers`.`id` IN (2, 3, 4, 5, 6)[0m
+  [1m[35mManufacturer Load (0.5ms)[0m  SELECT `manufacturers`.* FROM `manufacturers` WHERE `manufacturers`.`id` IN (5, 7, 6)
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM `articles`[0m
+  Rendered catalog/_articles.html.erb (26.3ms)
+  Rendered catalog/index.html.erb within layouts/application (28.2ms)
+ApplicationController::current_user
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM `users`
+  [1m[36mCartItem Load (0.3ms)[0m  [1mSELECT `cart_items`.* FROM `cart_items` WHERE `cart_items`.`cart_id` = 21[0m
+  Rendered cart/_cart.html.erb (1.5ms)
+Completed 200 OK in 101ms (Views: 93.6ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-16 21:15:36 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (51.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by CatalogController#index as HTML
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mSQL (20.7ms)[0m  [1mINSERT INTO `carts` (`created_at`, `updated_at`) VALUES ('2017-05-16 19:15:36', '2017-05-16 19:15:36')[0m
+  [1m[35m (41.0ms)[0m  COMMIT
+ApplicationController::require_no_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[36mArticle Load (1.7ms)[0m  [1mSELECT  `articles`.* FROM `articles`  ORDER BY articles.id desc LIMIT 5 OFFSET 0[0m
+  [1m[35mHABTM_Suppliers Load (0.6ms)[0m  SELECT `articles_suppliers`.* FROM `articles_suppliers` WHERE `articles_suppliers`.`article_id` IN (12, 11, 8, 6, 5)
+  [1m[36mSupplier Load (0.3ms)[0m  [1mSELECT `suppliers`.* FROM `suppliers` WHERE `suppliers`.`id` IN (2, 3, 4, 5, 6)[0m
+  [1m[35mManufacturer Load (0.4ms)[0m  SELECT `manufacturers`.* FROM `manufacturers` WHERE `manufacturers`.`id` IN (5, 7, 6)
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM `articles`[0m
+  Rendered catalog/_articles.html.erb (145.5ms)
+  Rendered catalog/index.html.erb within layouts/application (176.9ms)
+ApplicationController::current_user
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM `users`
+  [1m[36mCartItem Load (0.6ms)[0m  [1mSELECT `cart_items`.* FROM `cart_items` WHERE `cart_items`.`cart_id` = 22[0m
+  Rendered cart/_cart.html.erb (65.9ms)
+Completed 200 OK in 2625ms (Views: 2239.6ms | ActiveRecord: 147.8ms)

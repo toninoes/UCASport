@@ -13946,3 +13946,276 @@ Completed 302 Found in 7ms (ActiveRecord: 2.6ms)
   [1m[36mCart Load (0.6ms)[0m  [1mSELECT  `carts`.* FROM `carts` WHERE `carts`.`id` = 980190976 LIMIT 1[0m
   [1m[35mArticle Load (0.7ms)[0m  SELECT `articles`.* FROM `articles` INNER JOIN `cart_items` ON `articles`.`id` = `cart_items`.`article_id` WHERE `cart_items`.`cart_id` = 980190976
   [1m[36m (46.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.5ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.4ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM `order_items`[0m
+  [1m[35mFixture Insert (65.1ms)[0m  INSERT INTO `order_items` (`created_at`, `updated_at`, `id`) VALUES ('2017-05-16 17:40:36', '2017-05-16 17:40:36', 980190962)
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO `order_items` (`created_at`, `updated_at`, `id`) VALUES ('2017-05-16 17:40:36', '2017-05-16 17:40:36', 298486374)[0m
+  [1m[35mFixture Delete (0.5ms)[0m  DELETE FROM `carts`
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO `carts` (`created_at`, `updated_at`, `id`) VALUES ('2017-05-16 17:40:36', '2017-05-16 17:40:36', 980190962)[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO `carts` (`created_at`, `updated_at`, `id`) VALUES ('2017-05-16 17:40:36', '2017-05-16 17:40:36', 298486374)
+  [1m[36mFixture Delete (0.5ms)[0m  [1mDELETE FROM `orders`[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `orders` (`created_at`, `updated_at`, `id`) VALUES ('2017-05-16 17:40:36', '2017-05-16 17:40:36', 980190962)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `orders` (`created_at`, `updated_at`, `id`) VALUES ('2017-05-16 17:40:36', '2017-05-16 17:40:36', 298486374)[0m
+  [1m[35mFixture Delete (1.0ms)[0m  DELETE FROM `articles`
+  [1m[36mFixture Insert (0.8ms)[0m  [1mINSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (1, 'Articulo_1', 1, '199-199-199-1', '2017-05-16', 100.0, 40, '2017-05-16 17:40:36', '2017-05-16 17:40:36')[0m
+  [1m[35mFixture Insert (0.6ms)[0m  INSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (2, 'Articulo_2', 1, '199-199-199-2', '2017-05-16', 200.0, 40, '2017-05-16 17:40:36', '2017-05-16 17:40:36')
+  [1m[36mFixture Insert (0.6ms)[0m  [1mINSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (3, 'Articulo_3', 2, '199-199-199-3', '2017-05-16', 300.0, 40, '2017-05-16 17:40:36', '2017-05-16 17:40:36')[0m
+  [1m[35mFixture Insert (0.6ms)[0m  INSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (4, 'Articulo_4', 2, '199-199-199-4', '2017-05-16', 400.0, 40, '2017-05-16 17:40:36', '2017-05-16 17:40:36')
+  [1m[36mFixture Insert (0.6ms)[0m  [1mINSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (5, 'Articulo_5', 2, '199-199-199-5', '2017-05-16', 500.0, 40, '2017-05-16 17:40:36', '2017-05-16 17:40:36')[0m
+  [1m[35mFixture Insert (0.6ms)[0m  INSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (6, 'Articulo_6', 2, '199-199-199-6', '2017-05-16', 600.0, 40, '2017-05-16 17:40:36', '2017-05-16 17:40:36')
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (7, 'Articulo_7', 2, '199-199-199-7', '2017-05-16', 700.0, 40, '2017-05-16 17:40:36', '2017-05-16 17:40:36')[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (8, 'Articulo_8', 2, '199-199-199-8', '2017-05-16', 800.0, 40, '2017-05-16 17:40:36', '2017-05-16 17:40:36')
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (9, 'Articulo_9', 2, '199-199-199-9', '2017-05-16', 900.0, 40, '2017-05-16 17:40:36', '2017-05-16 17:40:36')[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (10, 'Articulo_10', 2, '299-199-199-1', '2017-05-16', 1000.0, 40, '2017-05-16 17:40:36', '2017-05-16 17:40:36')
+  [1m[36mFixture Delete (1.0ms)[0m  [1mDELETE FROM `articles_suppliers`[0m
+  [1m[35mFixture Insert (0.7ms)[0m  INSERT INTO `articles_suppliers` (`created_at`, `updated_at`, `article_id`, `supplier_id`) VALUES ('2017-05-16 19:40:36', '2017-05-16 19:40:36', 1, 1)
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO `articles_suppliers` (`created_at`, `updated_at`, `article_id`, `supplier_id`) VALUES ('2017-05-16 19:40:36', '2017-05-16 19:40:36', 2, 1)[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO `articles_suppliers` (`created_at`, `updated_at`, `article_id`, `supplier_id`) VALUES ('2017-05-16 19:40:36', '2017-05-16 19:40:36', 3, 2)
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO `articles_suppliers` (`created_at`, `updated_at`, `article_id`, `supplier_id`) VALUES ('2017-05-16 19:40:36', '2017-05-16 19:40:36', 4, 2)[0m
+  [1m[35mFixture Insert (0.6ms)[0m  INSERT INTO `articles_suppliers` (`created_at`, `updated_at`, `article_id`, `supplier_id`) VALUES ('2017-05-16 19:40:36', '2017-05-16 19:40:36', 5, 1)
+  [1m[36mFixture Delete (0.6ms)[0m  [1mDELETE FROM `cart_items`[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `cart_items` (`created_at`, `updated_at`, `id`) VALUES ('2017-05-16 17:40:36', '2017-05-16 17:40:36', 980190962)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `cart_items` (`created_at`, `updated_at`, `id`) VALUES ('2017-05-16 17:40:36', '2017-05-16 17:40:36', 298486374)[0m
+  [1m[35mFixture Delete (0.6ms)[0m  DELETE FROM `suppliers`
+  [1m[36mFixture Insert (0.6ms)[0m  [1mINSERT INTO `suppliers` (`id`, `first_name`, `last_name`, `created_at`, `updated_at`) VALUES (1, 'Pepe', 'Mateo', '2017-05-16 17:40:36', '2017-05-16 17:40:36')[0m
+  [1m[35mFixture Insert (0.6ms)[0m  INSERT INTO `suppliers` (`id`, `first_name`, `last_name`, `created_at`, `updated_at`) VALUES (2, 'Toni', 'Gavira', '2017-05-16 17:40:36', '2017-05-16 17:40:36')
+  [1m[36mFixture Delete (0.5ms)[0m  [1mDELETE FROM `manufacturers`[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `manufacturers` (`id`, `name`, `created_at`, `updated_at`) VALUES (1, 'Adidas', '2017-05-16 17:40:36', '2017-05-16 17:40:36')
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `manufacturers` (`id`, `name`, `created_at`, `updated_at`) VALUES (2, 'Nike', '2017-05-16 17:40:36', '2017-05-16 17:40:36')[0m
+  [1m[35m (73.0ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+-----------------------------------------
+AuthenticationTest: test_successful_login
+-----------------------------------------
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.5ms)[0m  SELECT  1 AS one FROM `users` WHERE `users`.`email` = 'george@emporium.com' LIMIT 1
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM `users` WHERE `users`.`login` = 'george' LIMIT 1[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT  1 AS one FROM `users` WHERE `users`.`persistence_token` = BINARY '1dfeaa2cdd14b4032ba32a2663d15bbf08afeed6ef5688aedd29f529143b888eb66fb2de154f79ed8b9ee41a1906cb3d914c7b655d79e37becc088a656a6eab8' LIMIT 1
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM `users` WHERE `users`.`name` = BINARY 'George Smith' LIMIT 1[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT  1 AS one FROM `users` WHERE `users`.`login` = BINARY 'george' LIMIT 1
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY 'george@emporium.com' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `users` (`name`, `login`, `email`, `password_salt`, `crypted_password`, `persistence_token`, `perishable_token`, `created_at`, `updated_at`) VALUES ('George Smith', 'george', 'george@emporium.com', 'xajlB73Kf7mDpaxN3I62', '400$8$39$0d9070d263497b34$16aff98973d8f660c26d2b93b5fed276a55b2f53a4eb8faf7d321642acc7a2fa', '1dfeaa2cdd14b4032ba32a2663d15bbf08afeed6ef5688aedd29f529143b888eb66fb2de154f79ed8b9ee41a1906cb3d914c7b655d79e37becc088a656a6eab8', 'pgzytQ0PJvDhnvtYQNT', '2017-05-16 17:40:36', '2017-05-16 17:40:36')
+  [1m[36m (0.3ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/admin/article/new" for 127.0.0.1 at 2017-05-16 19:40:36 +0200
+Processing by Admin::ArticleController#new as HTML
+ApplicationController::require_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+Redirected to http://www.example.com/user_sessions/new
+Filter chain halted as :require_user rendered or redirected
+Completed 302 Found in 9ms (ActiveRecord: 0.0ms)
+Started POST "/user_sessions/create" for 127.0.0.1 at 2017-05-16 19:40:37 +0200
+Processing by UserSessionsController#create as HTML
+  Parameters: {"user_session"=>{"login"=>"george", "password"=>"[FILTERED]"}}
+ApplicationController::require_no_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[35mUser Load (0.4ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`login` = 'george'  ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE `users` SET `login_count` = 1, `current_login_at` = '2017-05-16 17:40:37', `current_login_ip` = '127.0.0.1', `last_request_at` = '2017-05-16 17:40:37', `perishable_token` = '6S9YRocp6NFDyJgPwxQ', `updated_at` = '2017-05-16 17:40:37' WHERE `users`.`id` = 1
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/admin/article/new
+Completed 302 Found in 147ms (ActiveRecord: 1.1ms)
+  [1m[35m (38.2ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+-------------------------------------
+AuthenticationTest: test_failed_login
+-------------------------------------
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `users` WHERE `users`.`email` = 'george@emporium.com' LIMIT 1[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT  1 AS one FROM `users` WHERE `users`.`login` = 'george' LIMIT 1
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `users` WHERE `users`.`persistence_token` = BINARY '67519cf6394c7c0288c7c7d4f62f28c233c342660b0c491509273523bc2c1454f68a8c3799507ee82e4a23986db7a546b9c92338cd049f5e37cf3cb9f237896d' LIMIT 1[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT  1 AS one FROM `users` WHERE `users`.`name` = BINARY 'George Smith' LIMIT 1
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `users` WHERE `users`.`login` = BINARY 'george' LIMIT 1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY 'george@emporium.com' LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO `users` (`name`, `login`, `email`, `password_salt`, `crypted_password`, `persistence_token`, `perishable_token`, `created_at`, `updated_at`) VALUES ('George Smith', 'george', 'george@emporium.com', '1muWAoBGaLvdYMpmrlfT', '400$8$16$4d3ddc91eaa45d0d$97f59f8f41b376784f6d49909584fce42daae5d707d47e7df5a925586cf12798', '67519cf6394c7c0288c7c7d4f62f28c233c342660b0c491509273523bc2c1454f68a8c3799507ee82e4a23986db7a546b9c92338cd049f5e37cf3cb9f237896d', 'cWrW6diD8SRZbHnwvOht', '2017-05-16 17:40:37', '2017-05-16 17:40:37')[0m
+  [1m[35m (0.3ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/admin/article/new" for 127.0.0.1 at 2017-05-16 19:40:37 +0200
+Processing by Admin::ArticleController#new as HTML
+ApplicationController::require_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+Redirected to http://www.example.com/user_sessions/new
+Filter chain halted as :require_user rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+Started POST "/user_sessions/create" for 127.0.0.1 at 2017-05-16 19:40:37 +0200
+Processing by UserSessionsController#create as HTML
+  Parameters: {"user_session"=>{"login"=>"harry", "password"=>"[FILTERED]"}}
+ApplicationController::require_no_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`login` = 'harry'  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered user_sessions/_form.html.erb (7.8ms)
+  Rendered user_sessions/new.html.erb within layouts/application (14.1ms)
+ApplicationController::current_user
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM `users`
+Completed 200 OK in 305ms (Views: 301.3ms | ActiveRecord: 1.2ms)
+  [1m[36m (45.0ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `order_items`[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `order_items` (`created_at`, `updated_at`, `id`) VALUES ('2017-05-16 17:40:52', '2017-05-16 17:40:52', 980190962)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `order_items` (`created_at`, `updated_at`, `id`) VALUES ('2017-05-16 17:40:52', '2017-05-16 17:40:52', 298486374)[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM `carts`
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `carts` (`created_at`, `updated_at`, `id`) VALUES ('2017-05-16 17:40:52', '2017-05-16 17:40:52', 980190962)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `carts` (`created_at`, `updated_at`, `id`) VALUES ('2017-05-16 17:40:52', '2017-05-16 17:40:52', 298486374)
+  [1m[36mFixture Delete (0.6ms)[0m  [1mDELETE FROM `orders`[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `orders` (`created_at`, `updated_at`, `id`) VALUES ('2017-05-16 17:40:52', '2017-05-16 17:40:52', 980190962)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `orders` (`created_at`, `updated_at`, `id`) VALUES ('2017-05-16 17:40:52', '2017-05-16 17:40:52', 298486374)[0m
+  [1m[35mFixture Delete (72.3ms)[0m  DELETE FROM `articles`
+  [1m[36mFixture Insert (0.6ms)[0m  [1mINSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (1, 'Articulo_1', 1, '199-199-199-1', '2017-05-16', 100.0, 40, '2017-05-16 17:40:52', '2017-05-16 17:40:52')[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (2, 'Articulo_2', 1, '199-199-199-2', '2017-05-16', 200.0, 40, '2017-05-16 17:40:52', '2017-05-16 17:40:52')
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (3, 'Articulo_3', 2, '199-199-199-3', '2017-05-16', 300.0, 40, '2017-05-16 17:40:52', '2017-05-16 17:40:52')[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (4, 'Articulo_4', 2, '199-199-199-4', '2017-05-16', 400.0, 40, '2017-05-16 17:40:52', '2017-05-16 17:40:52')
+  [1m[36mFixture Insert (0.6ms)[0m  [1mINSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (5, 'Articulo_5', 2, '199-199-199-5', '2017-05-16', 500.0, 40, '2017-05-16 17:40:52', '2017-05-16 17:40:52')[0m
+  [1m[35mFixture Insert (0.6ms)[0m  INSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (6, 'Articulo_6', 2, '199-199-199-6', '2017-05-16', 600.0, 40, '2017-05-16 17:40:52', '2017-05-16 17:40:52')
+  [1m[36mFixture Insert (0.6ms)[0m  [1mINSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (7, 'Articulo_7', 2, '199-199-199-7', '2017-05-16', 700.0, 40, '2017-05-16 17:40:52', '2017-05-16 17:40:52')[0m
+  [1m[35mFixture Insert (0.7ms)[0m  INSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (8, 'Articulo_8', 2, '199-199-199-8', '2017-05-16', 800.0, 40, '2017-05-16 17:40:52', '2017-05-16 17:40:52')
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (9, 'Articulo_9', 2, '199-199-199-9', '2017-05-16', 900.0, 40, '2017-05-16 17:40:52', '2017-05-16 17:40:52')[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO `articles` (`id`, `title`, `manufacturer_id`, `reference`, `manufactured_at`, `price`, `size`, `created_at`, `updated_at`) VALUES (10, 'Articulo_10', 2, '299-199-199-1', '2017-05-16', 1000.0, 40, '2017-05-16 17:40:52', '2017-05-16 17:40:52')
+  [1m[36mFixture Delete (0.7ms)[0m  [1mDELETE FROM `articles_suppliers`[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO `articles_suppliers` (`created_at`, `updated_at`, `article_id`, `supplier_id`) VALUES ('2017-05-16 19:40:52', '2017-05-16 19:40:52', 1, 1)
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO `articles_suppliers` (`created_at`, `updated_at`, `article_id`, `supplier_id`) VALUES ('2017-05-16 19:40:52', '2017-05-16 19:40:52', 2, 1)[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO `articles_suppliers` (`created_at`, `updated_at`, `article_id`, `supplier_id`) VALUES ('2017-05-16 19:40:52', '2017-05-16 19:40:52', 3, 2)
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO `articles_suppliers` (`created_at`, `updated_at`, `article_id`, `supplier_id`) VALUES ('2017-05-16 19:40:52', '2017-05-16 19:40:52', 4, 2)[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO `articles_suppliers` (`created_at`, `updated_at`, `article_id`, `supplier_id`) VALUES ('2017-05-16 19:40:52', '2017-05-16 19:40:52', 5, 1)
+  [1m[36mFixture Delete (0.5ms)[0m  [1mDELETE FROM `cart_items`[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `cart_items` (`created_at`, `updated_at`, `id`) VALUES ('2017-05-16 17:40:52', '2017-05-16 17:40:52', 980190962)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `cart_items` (`created_at`, `updated_at`, `id`) VALUES ('2017-05-16 17:40:52', '2017-05-16 17:40:52', 298486374)[0m
+  [1m[35mFixture Delete (0.6ms)[0m  DELETE FROM `suppliers`
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `suppliers` (`id`, `first_name`, `last_name`, `created_at`, `updated_at`) VALUES (1, 'Pepe', 'Mateo', '2017-05-16 17:40:52', '2017-05-16 17:40:52')[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `suppliers` (`id`, `first_name`, `last_name`, `created_at`, `updated_at`) VALUES (2, 'Toni', 'Gavira', '2017-05-16 17:40:52', '2017-05-16 17:40:52')
+  [1m[36mFixture Delete (0.6ms)[0m  [1mDELETE FROM `manufacturers`[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `manufacturers` (`id`, `name`, `created_at`, `updated_at`) VALUES (1, 'Adidas', '2017-05-16 17:40:52', '2017-05-16 17:40:52')
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `manufacturers` (`id`, `name`, `created_at`, `updated_at`) VALUES (2, 'Nike', '2017-05-16 17:40:52', '2017-05-16 17:40:52')[0m
+  [1m[35m (72.7ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+---------------------------
+UserTest: test_user_account
+---------------------------
+Started GET "/user/new" for 127.0.0.1 at 2017-05-16 19:40:53 +0200
+Processing by UserController#new as HTML
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM `users`[0m
+  Rendered user/_form.html.erb (2.4ms)
+  Rendered user/new.html.erb within layouts/application (6.3ms)
+ApplicationController::current_user
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM `users`
+Completed 200 OK in 184ms (Views: 151.9ms | ActiveRecord: 2.9ms)
+Started POST "/user/create" for 127.0.0.1 at 2017-05-16 19:40:53 +0200
+Processing by UserController#create as HTML
+  Parameters: {"user"=>{"name"=>"George Smith", "login"=>"george", "email"=>"george@emporium.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT  1 AS one FROM `users` WHERE `users`.`email` = 'george@emporium.com' LIMIT 1
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `users` WHERE `users`.`login` = 'george' LIMIT 1[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT  1 AS one FROM `users` WHERE `users`.`persistence_token` = BINARY 'f83ed7d6734c1772a79a4192873b17739f3157711fdb26a33135b0fae4a5ec035fdf5145c317a9a8012a87ab09c7adebe7ecd8b027b565d471e0662e0393d94d' LIMIT 1
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM `users` WHERE `users`.`name` = BINARY 'George Smith' LIMIT 1[0m
+  [1m[35mUser Exists (0.5ms)[0m  SELECT  1 AS one FROM `users` WHERE `users`.`login` = BINARY 'george' LIMIT 1
+  [1m[36mUser Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY 'george@emporium.com' LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO `users` (`name`, `login`, `email`, `password_salt`, `crypted_password`, `persistence_token`, `perishable_token`, `login_count`, `current_login_at`, `current_login_ip`, `last_request_at`, `created_at`, `updated_at`) VALUES ('George Smith', 'george', 'george@emporium.com', 'KTw2pUwdnyOR28zRhZFO', '400$8$3a$38e003127eca8ce1$eff7b3a2293cb54d9945032679a781d52f6dce898d741e64ad730da89278bb29', 'f83ed7d6734c1772a79a4192873b17739f3157711fdb26a33135b0fae4a5ec035fdf5145c317a9a8012a87ab09c7adebe7ecd8b027b565d471e0662e0393d94d', 'Bg6PfyR96w88iH0by6AM', 1, '2017-05-16 17:40:53', '127.0.0.1', '2017-05-16 17:40:53', '2017-05-16 17:40:53', '2017-05-16 17:40:53')
+  [1m[36m (0.3ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/user/show
+Completed 302 Found in 180ms (ActiveRecord: 3.8ms)
+Started GET "/user/show" for 127.0.0.1 at 2017-05-16 19:40:53 +0200
+Processing by UserController#show as HTML
+ApplicationController::require_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[35mUser Load (0.6ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`persistence_token` = 'f83ed7d6734c1772a79a4192873b17739f3157711fdb26a33135b0fae4a5ec035fdf5145c317a9a8012a87ab09c7adebe7ecd8b027b565d471e0662e0393d94d' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.7ms)[0m  [1mUPDATE `users` SET `last_request_at` = '2017-05-16 17:40:53', `perishable_token` = 'kTV1WMjjJMMdVSR4sA', `updated_at` = '2017-05-16 17:40:53' WHERE `users`.`id` = 3[0m
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+ApplicationController::current_user_session
+ApplicationController::current_user
+  Rendered user/show.html.erb within layouts/application (1.1ms)
+ApplicationController::current_user
+ApplicationController::current_user
+Completed 200 OK in 13ms (Views: 3.4ms | ActiveRecord: 2.4ms)
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  `users`.* FROM `users`  ORDER BY `users`.`id` DESC LIMIT 1[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`login` = 'george' LIMIT 1
+Started GET "/user/show/?id=3" for 127.0.0.1 at 2017-05-16 19:40:53 +0200
+Processing by UserController#show as HTML
+  Parameters: {"id"=>"3"}
+ApplicationController::require_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE `users` SET `last_request_at` = '2017-05-16 17:40:53', `perishable_token` = 'VTYRjoGDGKiev0T1QfL', `updated_at` = '2017-05-16 17:40:53' WHERE `users`.`id` = 3
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+ApplicationController::current_user_session
+ApplicationController::current_user
+  Rendered user/show.html.erb within layouts/application (0.3ms)
+ApplicationController::current_user
+ApplicationController::current_user
+Completed 200 OK in 8ms (Views: 2.3ms | ActiveRecord: 1.7ms)
+  [1m[35mUser Load (0.5ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+Started GET "/user/edit?id=3" for 127.0.0.1 at 2017-05-16 19:40:53 +0200
+Processing by UserController#edit as HTML
+  Parameters: {"id"=>"3"}
+ApplicationController::require_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE `users` SET `last_request_at` = '2017-05-16 17:40:53', `perishable_token` = 's0IdGUPvK1VzDJz01IxG', `updated_at` = '2017-05-16 17:40:53' WHERE `users`.`id` = 3
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+ApplicationController::current_user_session
+ApplicationController::current_user
+  Rendered user/_form.html.erb (0.5ms)
+  Rendered user/edit.html.erb within layouts/application (1.5ms)
+ApplicationController::current_user
+ApplicationController::current_user
+Completed 200 OK in 9ms (Views: 3.5ms | ActiveRecord: 1.3ms)
+Started POST "/user/update" for 127.0.0.1 at 2017-05-16 19:40:53 +0200
+Processing by UserController#update as HTML
+  Parameters: {"user"=>{"name"=>"George Jackson", "login"=>"george", "email"=>"george@emporium.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+ApplicationController::require_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[35mUser Load (0.3ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE `users` SET `last_request_at` = '2017-05-16 17:40:53', `perishable_token` = 'aNWiuvxM8Pnactngpn6', `updated_at` = '2017-05-16 17:40:53' WHERE `users`.`id` = 3[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+ApplicationController::current_user_session
+ApplicationController::current_user
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.6ms)[0m  SELECT  1 AS one FROM `users` WHERE (`users`.`persistence_token` = BINARY '127b5ef58cc96d09495a8add5882535743eff3d7aa134b4831ca6e45e3c0f88a52bfe6828c379919dfdca038fa971006f66b123e69cad069cd5d2130a1617300' AND `users`.`id` != 3) LIMIT 1
+  [1m[36mUser Exists (0.6ms)[0m  [1mSELECT  1 AS one FROM `users` WHERE (`users`.`name` = BINARY 'George Jackson' AND `users`.`id` != 3) LIMIT 1[0m
+  [1m[35mUser Exists (0.6ms)[0m  SELECT  1 AS one FROM `users` WHERE (`users`.`login` = BINARY 'george' AND `users`.`id` != 3) LIMIT 1
+  [1m[36mUser Exists (0.6ms)[0m  [1mSELECT  1 AS one FROM `users` WHERE (`users`.`email` = BINARY 'george@emporium.com' AND `users`.`id` != 3) LIMIT 1[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  [1m[35mSQL (0.7ms)[0m  UPDATE `users` SET `name` = 'George Jackson', `password_salt` = 'Luj11xFgAHSRyetvGzN', `crypted_password` = '400$8$34$b3ca865019e3c648$b91f64ddee1540a9effd0c94d8c98956946b53893c8c33fc590bedb99e65690a', `persistence_token` = '127b5ef58cc96d09495a8add5882535743eff3d7aa134b4831ca6e45e3c0f88a52bfe6828c379919dfdca038fa971006f66b123e69cad069cd5d2130a1617300', `perishable_token` = 'Fy5hO2b7E8pWlEV25fp', `last_request_at` = '2017-05-16 17:40:53', `login_count` = 2, `last_login_at` = '2017-05-16 17:40:53', `current_login_at` = '2017-05-16 17:40:53', `last_login_ip` = '127.0.0.1', `updated_at` = '2017-05-16 17:40:53' WHERE `users`.`id` = 3
+  [1m[36m (0.3ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/user/show
+Completed 302 Found in 144ms (ActiveRecord: 6.2ms)
+Started GET "/user/show" for 127.0.0.1 at 2017-05-16 19:40:53 +0200
+Processing by UserController#show as HTML
+ApplicationController::require_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[35mUser Load (0.7ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE `users` SET `last_request_at` = '2017-05-16 17:40:53', `perishable_token` = 'L1swE7rWMzKPeSAj4R8B', `updated_at` = '2017-05-16 17:40:53' WHERE `users`.`id` = 3
+  [1m[36m (0.3ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+ApplicationController::current_user_session
+ApplicationController::current_user
+  Rendered user/show.html.erb within layouts/application (0.4ms)
+ApplicationController::current_user
+ApplicationController::current_user
+Completed 200 OK in 7ms (Views: 2.2ms | ActiveRecord: 1.9ms)
+  [1m[35mUser Load (0.6ms)[0m  SELECT  `users`.* FROM `users`  ORDER BY `users`.`id` DESC LIMIT 1
+  [1m[36m (67.0ms)[0m  [1mROLLBACK[0m

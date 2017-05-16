@@ -11,6 +11,6 @@ class User < ActiveRecord::Base
   validates_presence_of :email, :message => "No has introducido el e-mail."
   validates_presence_of :password, :message => "No has introducido la contraseña."
   validates_presence_of :password_confirmation, :message => "No has confirmado la contraseña."
-  validates_length_of :name, :in => 3..225
+  validates_length_of :name, :in => 3..225, :message => "es muy corto (mínimo 3 caracteres)."
   validates_uniqueness_of :name, :login, :email
 end
