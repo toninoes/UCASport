@@ -20693,3 +20693,582 @@ ApplicationController::current_user
   [1m[36mCartItem Load (0.6ms)[0m  [1mSELECT `cart_items`.* FROM `cart_items` WHERE `cart_items`.`cart_id` = 22[0m
   Rendered cart/_cart.html.erb (65.9ms)
 Completed 200 OK in 2625ms (Views: 2239.6ms | ActiveRecord: 147.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-16 21:31:18 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by CatalogController#index as HTML
+  [1m[35mCart Load (0.3ms)[0m  SELECT  `carts`.* FROM `carts` WHERE `carts`.`id` = 22 LIMIT 1
+ApplicationController::require_no_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[36mArticle Load (0.4ms)[0m  [1mSELECT  `articles`.* FROM `articles`  ORDER BY articles.id desc LIMIT 5 OFFSET 0[0m
+  [1m[35mHABTM_Suppliers Load (0.3ms)[0m  SELECT `articles_suppliers`.* FROM `articles_suppliers` WHERE `articles_suppliers`.`article_id` IN (12, 11, 8, 6, 5)
+  [1m[36mSupplier Load (0.3ms)[0m  [1mSELECT `suppliers`.* FROM `suppliers` WHERE `suppliers`.`id` IN (2, 3, 4, 5, 6)[0m
+  [1m[35mManufacturer Load (0.3ms)[0m  SELECT `manufacturers`.* FROM `manufacturers` WHERE `manufacturers`.`id` IN (5, 7, 6)
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `articles`[0m
+  Rendered catalog/_articles.html.erb (75.7ms)
+  Rendered catalog/index.html.erb within layouts/application (79.3ms)
+ApplicationController::current_user
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM `users`
+  [1m[36mCartItem Load (0.4ms)[0m  [1mSELECT `cart_items`.* FROM `cart_items` WHERE `cart_items`.`cart_id` = 22[0m
+  Rendered cart/_cart.html.erb (16.3ms)
+Completed 200 OK in 538ms (Views: 458.5ms | ActiveRecord: 8.8ms)
+
+
+Started GET "/assets/favicon-3da0cc52952440e113d2ef7bb07cc6b601f1899e3ed5843f0bd6759f1277f3ba.ico" for 127.0.0.1 at 2017-05-16 21:31:19 +0200
+
+
+Started GET "/checkout" for 127.0.0.1 at 2017-05-16 21:31:23 +0200
+Processing by CheckoutController#index as HTML
+  [1m[35mCart Load (0.5ms)[0m  SELECT  `carts`.* FROM `carts` WHERE `carts`.`id` = 22 LIMIT 1
+  [1m[36mArticle Exists (11.1ms)[0m  [1mSELECT  1 AS one FROM `articles` INNER JOIN `cart_items` ON `articles`.`id` = `cart_items`.`article_id` WHERE `cart_items`.`cart_id` = 22 LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 210ms (ActiveRecord: 32.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-16 21:31:24 +0200
+Processing by CatalogController#index as HTML
+  [1m[35mCart Load (0.6ms)[0m  SELECT  `carts`.* FROM `carts` WHERE `carts`.`id` = 22 LIMIT 1
+ApplicationController::require_no_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[36mArticle Load (0.6ms)[0m  [1mSELECT  `articles`.* FROM `articles`  ORDER BY articles.id desc LIMIT 5 OFFSET 0[0m
+  [1m[35mHABTM_Suppliers Load (0.6ms)[0m  SELECT `articles_suppliers`.* FROM `articles_suppliers` WHERE `articles_suppliers`.`article_id` IN (12, 11, 8, 6, 5)
+  [1m[36mSupplier Load (0.5ms)[0m  [1mSELECT `suppliers`.* FROM `suppliers` WHERE `suppliers`.`id` IN (2, 3, 4, 5, 6)[0m
+  [1m[35mManufacturer Load (0.5ms)[0m  SELECT `manufacturers`.* FROM `manufacturers` WHERE `manufacturers`.`id` IN (5, 7, 6)
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM `articles`[0m
+  Rendered catalog/_articles.html.erb (22.1ms)
+  Rendered catalog/index.html.erb within layouts/application (24.5ms)
+ApplicationController::current_user
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM `users`
+  [1m[36mCartItem Load (0.5ms)[0m  [1mSELECT `cart_items`.* FROM `cart_items` WHERE `cart_items`.`cart_id` = 22[0m
+  Rendered cart/_cart.html.erb (2.7ms)
+Completed 200 OK in 87ms (Views: 80.0ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-17 09:05:02 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (3.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by CatalogController#index as HTML
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (9.5ms)[0m  [1mINSERT INTO `carts` (`created_at`, `updated_at`) VALUES ('2017-05-17 07:05:03', '2017-05-17 07:05:03')[0m
+  [1m[35m (45.8ms)[0m  COMMIT
+ApplicationController::require_no_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[36mArticle Load (1.7ms)[0m  [1mSELECT  `articles`.* FROM `articles`  ORDER BY articles.id desc LIMIT 5 OFFSET 0[0m
+  [1m[35mHABTM_Suppliers Load (0.5ms)[0m  SELECT `articles_suppliers`.* FROM `articles_suppliers` WHERE `articles_suppliers`.`article_id` IN (12, 11, 8, 6, 5)
+  [1m[36mSupplier Load (0.3ms)[0m  [1mSELECT `suppliers`.* FROM `suppliers` WHERE `suppliers`.`id` IN (2, 3, 4, 5, 6)[0m
+  [1m[35mManufacturer Load (0.4ms)[0m  SELECT `manufacturers`.* FROM `manufacturers` WHERE `manufacturers`.`id` IN (5, 7, 6)
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM `articles`[0m
+  Rendered catalog/_articles.html.erb (134.1ms)
+  Rendered catalog/index.html.erb within layouts/application (164.2ms)
+ApplicationController::current_user
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `users`
+  [1m[36mCartItem Load (0.4ms)[0m  [1mSELECT `cart_items`.* FROM `cart_items` WHERE `cart_items`.`cart_id` = 23[0m
+  Rendered cart/_cart.html.erb (86.8ms)
+Completed 200 OK in 1670ms (Views: 1365.1ms | ActiveRecord: 69.7ms)
+
+
+Started GET "/admin/article" for 127.0.0.1 at 2017-05-17 09:05:10 +0200
+Processing by Admin::ArticleController#index as HTML
+ApplicationController::require_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+Redirected to http://localhost:3000/user_sessions/new
+Filter chain halted as :require_user rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/user_sessions/new" for 127.0.0.1 at 2017-05-17 09:05:10 +0200
+Processing by UserSessionsController#new as HTML
+ApplicationController::require_no_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+  Rendered user_sessions/_form.html.erb (20.5ms)
+  Rendered user_sessions/new.html.erb within layouts/application (30.2ms)
+ApplicationController::current_user
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM `users`
+Completed 200 OK in 89ms (Views: 86.9ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/user_sessions/create" for 127.0.0.1 at 2017-05-17 09:05:19 +0200
+Processing by UserSessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5idW3+XP83xhXXqvJnVDkWePBmkERRO2KFdg6CZYDl6OOKMjsOQzNtS2x6bHycFIfOq5qbtFfyDCUxP5yKj5WQ==", "user_session"=>{"login"=>"admin", "password"=>"[FILTERED]"}, "commit"=>"Acceder"}
+ApplicationController::require_no_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`login` = 'admin'  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (21.8ms)[0m  [1mUPDATE `users` SET `login_count` = 4, `last_login_at` = '2017-05-16 17:36:31', `current_login_at` = '2017-05-17 07:05:19', `last_request_at` = '2017-05-17 07:05:19', `perishable_token` = 'UuQOk5is7L7Y81JAoQ', `updated_at` = '2017-05-17 07:05:19' WHERE `users`.`id` = 2[0m
+  [1m[35m (46.9ms)[0m  COMMIT
+Redirected to http://localhost:3000/admin/article
+Completed 302 Found in 310ms (ActiveRecord: 69.4ms)
+
+
+Started GET "/admin/article" for 127.0.0.1 at 2017-05-17 09:05:19 +0200
+Processing by Admin::ArticleController#index as HTML
+ApplicationController::require_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.9ms)[0m  [1mUPDATE `users` SET `last_request_at` = '2017-05-17 07:05:19', `perishable_token` = 'D5lVMphS0NTFW4T1TKJ', `updated_at` = '2017-05-17 07:05:19' WHERE `users`.`id` = 2[0m
+  [1m[35m (63.6ms)[0m  COMMIT
+ApplicationController::current_user_session
+  [1m[36mArticle Load (0.7ms)[0m  [1mSELECT  `articles`.* FROM `articles` LIMIT 5 OFFSET 0[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM `articles`
+  [1m[36mManufacturer Load (0.4ms)[0m  [1mSELECT  `manufacturers`.* FROM `manufacturers` WHERE `manufacturers`.`id` = 5 LIMIT 1[0m
+  [1m[35mManufacturer Load (0.3ms)[0m  SELECT  `manufacturers`.* FROM `manufacturers` WHERE `manufacturers`.`id` = 7 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `manufacturers`.* FROM `manufacturers` WHERE `manufacturers`.`id` = 5 LIMIT 1[0m  [["id", 5]]
+  [1m[35mManufacturer Load (0.5ms)[0m  SELECT  `manufacturers`.* FROM `manufacturers` WHERE `manufacturers`.`id` = 6 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `manufacturers`.* FROM `manufacturers` WHERE `manufacturers`.`id` = 7 LIMIT 1[0m  [["id", 7]]
+  Rendered admin/article/index.html.erb within layouts/application (25.8ms)
+ApplicationController::current_user
+ApplicationController::current_user
+Completed 200 OK in 242ms (Views: 137.1ms | ActiveRecord: 67.5ms)
+
+
+Started GET "/user/show" for 127.0.0.1 at 2017-05-17 09:05:26 +0200
+Processing by UserController#show as HTML
+ApplicationController::require_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[35mUser Load (0.4ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE `users` SET `last_request_at` = '2017-05-17 07:05:26', `perishable_token` = 't8elQhK9L9rhdH982K', `updated_at` = '2017-05-17 07:05:26' WHERE `users`.`id` = 2
+  [1m[36m (36.5ms)[0m  [1mCOMMIT[0m
+ApplicationController::current_user_session
+ApplicationController::current_user
+  Rendered user/show.html.erb within layouts/application (1.3ms)
+ApplicationController::current_user
+ApplicationController::current_user
+Completed 200 OK in 125ms (Views: 81.8ms | ActiveRecord: 37.3ms)
+
+
+Started GET "/user/show" for 127.0.0.1 at 2017-05-17 09:06:05 +0200
+Processing by UserController#show as HTML
+ApplicationController::require_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[35mUser Load (0.6ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE `users` SET `last_request_at` = '2017-05-17 07:06:05', `perishable_token` = 'BwfNwszN8lJnnJmyl8', `updated_at` = '2017-05-17 07:06:05' WHERE `users`.`id` = 2
+  [1m[36m (49.1ms)[0m  [1mCOMMIT[0m
+ApplicationController::current_user_session
+ApplicationController::current_user
+  Rendered user/show.html.erb within layouts/application (3.2ms)
+ApplicationController::current_user
+ApplicationController::current_user
+Completed 200 OK in 139ms (Views: 79.9ms | ActiveRecord: 50.4ms)
+
+
+Started GET "/assets/favicon-3da0cc52952440e113d2ef7bb07cc6b601f1899e3ed5843f0bd6759f1277f3ba.ico" for 127.0.0.1 at 2017-05-17 09:06:06 +0200
+
+
+Started GET "/user/show" for 127.0.0.1 at 2017-05-17 09:08:07 +0200
+Processing by UserController#show as HTML
+ApplicationController::require_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[35mUser Load (0.7ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  UPDATE `users` SET `last_request_at` = '2017-05-17 07:08:07', `perishable_token` = 'xr4l5Jc4Rr9zTIZfuVjp', `updated_at` = '2017-05-17 07:08:07' WHERE `users`.`id` = 2
+  [1m[36m (43.6ms)[0m  [1mCOMMIT[0m
+ApplicationController::current_user_session
+ApplicationController::current_user
+  Rendered user/show.html.erb within layouts/application (4.2ms)
+ApplicationController::current_user
+ApplicationController::current_user
+Completed 200 OK in 154ms (Views: 99.4ms | ActiveRecord: 45.1ms)
+
+
+Started GET "/assets/favicon-3da0cc52952440e113d2ef7bb07cc6b601f1899e3ed5843f0bd6759f1277f3ba.ico" for 127.0.0.1 at 2017-05-17 09:08:07 +0200
+
+
+Started GET "/user/show" for 127.0.0.1 at 2017-05-17 09:11:15 +0200
+Processing by UserController#show as HTML
+ApplicationController::require_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[35mUser Load (0.7ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE `users` SET `last_request_at` = '2017-05-17 07:11:15', `perishable_token` = '7whWcurAFmPm8dwoSG6', `updated_at` = '2017-05-17 07:11:15' WHERE `users`.`id` = 2
+  [1m[36m (46.5ms)[0m  [1mCOMMIT[0m
+ApplicationController::current_user_session
+ApplicationController::current_user
+  Rendered user/show.html.erb within layouts/application (1.4ms)
+ApplicationController::current_user
+ApplicationController::current_user
+Completed 200 OK in 101ms (Views: 49.8ms | ActiveRecord: 47.6ms)
+
+
+Started GET "/assets/favicon-3da0cc52952440e113d2ef7bb07cc6b601f1899e3ed5843f0bd6759f1277f3ba.ico" for 127.0.0.1 at 2017-05-17 09:11:15 +0200
+
+
+Started GET "/user_sessions/destroy" for 127.0.0.1 at 2017-05-17 09:13:02 +0200
+Processing by UserSessionsController#destroy as HTML
+ApplicationController::current_user_session
+  [1m[35mUser Load (0.3ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE `users` SET `last_request_at` = '2017-05-17 07:13:02', `perishable_token` = 'snjXwzOZ5uIfB8IUejKr', `updated_at` = '2017-05-17 07:13:02' WHERE `users`.`id` = 2
+  [1m[36m (37.0ms)[0m  [1mCOMMIT[0m
+ApplicationController::current_user_session
+Redirected to http://localhost:3000/
+Completed 302 Found in 43ms (ActiveRecord: 37.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-17 09:13:02 +0200
+Processing by CatalogController#index as HTML
+  [1m[35mCart Load (0.3ms)[0m  SELECT  `carts`.* FROM `carts` WHERE `carts`.`id` = 23 LIMIT 1
+ApplicationController::require_no_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[36mArticle Load (0.4ms)[0m  [1mSELECT  `articles`.* FROM `articles`  ORDER BY articles.id desc LIMIT 5 OFFSET 0[0m
+  [1m[35mHABTM_Suppliers Load (0.3ms)[0m  SELECT `articles_suppliers`.* FROM `articles_suppliers` WHERE `articles_suppliers`.`article_id` IN (12, 11, 8, 6, 5)
+  [1m[36mSupplier Load (0.3ms)[0m  [1mSELECT `suppliers`.* FROM `suppliers` WHERE `suppliers`.`id` IN (2, 3, 4, 5, 6)[0m
+  [1m[35mManufacturer Load (0.3ms)[0m  SELECT `manufacturers`.* FROM `manufacturers` WHERE `manufacturers`.`id` IN (5, 7, 6)
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `articles`[0m
+  Rendered catalog/_articles.html.erb (13.9ms)
+  Rendered catalog/index.html.erb within layouts/application (15.2ms)
+ApplicationController::current_user
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM `users`
+  [1m[36mCartItem Load (0.3ms)[0m  [1mSELECT `cart_items`.* FROM `cart_items` WHERE `cart_items`.`cart_id` = 23[0m
+  Rendered cart/_cart.html.erb (2.9ms)
+Completed 200 OK in 61ms (Views: 56.2ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/admin/order" for 127.0.0.1 at 2017-05-17 09:13:05 +0200
+Processing by Admin::OrderController#index as HTML
+ApplicationController::require_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+Redirected to http://localhost:3000/user_sessions/new
+Filter chain halted as :require_user rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/user_sessions/new" for 127.0.0.1 at 2017-05-17 09:13:05 +0200
+Processing by UserSessionsController#new as HTML
+ApplicationController::require_no_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+  Rendered user_sessions/_form.html.erb (0.6ms)
+  Rendered user_sessions/new.html.erb within layouts/application (2.0ms)
+ApplicationController::current_user
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM `users`
+Completed 200 OK in 52ms (Views: 49.6ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/user_sessions/create" for 127.0.0.1 at 2017-05-17 09:13:08 +0200
+Processing by UserSessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QGSrGGfYs1w5ajMd7dgLfBtKZj2o+/qTCzCaCjNtue8oe17kMvNzFoyBjhQMZImlAC/Z/Rf7lgXhNOkb3Z1O6A==", "user_session"=>{"login"=>"admin", "password"=>"[FILTERED]"}, "commit"=>"Acceder"}
+ApplicationController::require_no_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`login` = 'admin'  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE `users` SET `failed_login_count` = 1, `perishable_token` = 'cRJSuAFLnb0HzJVw18z', `updated_at` = '2017-05-17 07:13:08' WHERE `users`.`id` = 2[0m
+  [1m[35m (39.6ms)[0m  COMMIT
+  Rendered user_sessions/_form.html.erb (2.8ms)
+  Rendered user_sessions/new.html.erb within layouts/application (5.0ms)
+ApplicationController::current_user
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM `users`[0m
+Completed 200 OK in 158ms (Views: 55.3ms | ActiveRecord: 41.1ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2017-05-17 09:13:17 +0200
+Processing by AboutController#index as HTML
+  Rendered about/index.html.erb within layouts/application (0.4ms)
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `users`
+Completed 200 OK in 48ms (Views: 47.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-17 09:13:18 +0200
+Processing by CatalogController#index as HTML
+  [1m[36mCart Load (0.4ms)[0m  [1mSELECT  `carts`.* FROM `carts` WHERE `carts`.`id` = 23 LIMIT 1[0m
+ApplicationController::require_no_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[35mArticle Load (0.4ms)[0m  SELECT  `articles`.* FROM `articles`  ORDER BY articles.id desc LIMIT 5 OFFSET 0
+  [1m[36mHABTM_Suppliers Load (0.4ms)[0m  [1mSELECT `articles_suppliers`.* FROM `articles_suppliers` WHERE `articles_suppliers`.`article_id` IN (12, 11, 8, 6, 5)[0m
+  [1m[35mSupplier Load (0.3ms)[0m  SELECT `suppliers`.* FROM `suppliers` WHERE `suppliers`.`id` IN (2, 3, 4, 5, 6)
+  [1m[36mManufacturer Load (0.3ms)[0m  [1mSELECT `manufacturers`.* FROM `manufacturers` WHERE `manufacturers`.`id` IN (5, 7, 6)[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `articles`
+  Rendered catalog/_articles.html.erb (15.1ms)
+  Rendered catalog/index.html.erb within layouts/application (16.1ms)
+ApplicationController::current_user
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `users`[0m
+  [1m[35mCartItem Load (0.3ms)[0m  SELECT `cart_items`.* FROM `cart_items` WHERE `cart_items`.`cart_id` = 23
+  Rendered cart/_cart.html.erb (1.4ms)
+Completed 200 OK in 68ms (Views: 62.3ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/admin/manufacturer" for 127.0.0.1 at 2017-05-17 09:13:23 +0200
+Processing by Admin::ManufacturerController#index as HTML
+ApplicationController::require_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+Redirected to http://localhost:3000/user_sessions/new
+Filter chain halted as :require_user rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/user_sessions/new" for 127.0.0.1 at 2017-05-17 09:13:23 +0200
+Processing by UserSessionsController#new as HTML
+ApplicationController::require_no_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+  Rendered user_sessions/_form.html.erb (0.6ms)
+  Rendered user_sessions/new.html.erb within layouts/application (2.1ms)
+ApplicationController::current_user
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `users`[0m
+Completed 200 OK in 51ms (Views: 49.4ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/user_sessions/create" for 127.0.0.1 at 2017-05-17 09:13:27 +0200
+Processing by UserSessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"z0tVAi0+m8Xd2k+KFkfbrenweSw1pBxYEAYwOLcrOdqnVKD+eBVbj2gx8oP3+1l08pXG7IqkcM76AkMpWdvO3Q==", "user_session"=>{"login"=>"admin", "password"=>"[FILTERED]"}, "commit"=>"Acceder"}
+ApplicationController::require_no_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[35mUser Load (0.4ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`login` = 'admin'  ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE `users` SET `failed_login_count` = 2, `perishable_token` = 'Un1XZ8qAifo1LFcBymU', `updated_at` = '2017-05-17 07:13:27' WHERE `users`.`id` = 2
+  [1m[36m (43.5ms)[0m  [1mCOMMIT[0m
+  Rendered user_sessions/_form.html.erb (1.2ms)
+  Rendered user_sessions/new.html.erb within layouts/application (2.2ms)
+ApplicationController::current_user
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `users`
+Completed 200 OK in 156ms (Views: 46.6ms | ActiveRecord: 44.7ms)
+
+
+Started POST "/user_sessions/create" for 127.0.0.1 at 2017-05-17 09:15:09 +0200
+Processing by UserSessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"z0tVAi0+m8Xd2k+KFkfbrenweSw1pBxYEAYwOLcrOdqnVKD+eBVbj2gx8oP3+1l08pXG7IqkcM76AkMpWdvO3Q==", "user_session"=>{"login"=>"admin", "password"=>"[FILTERED]"}, "commit"=>"Acceder"}
+ApplicationController::require_no_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`login` = 'admin'  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE `users` SET `failed_login_count` = 3, `perishable_token` = 'kUUOKIYy2OYWw6sGNlU3', `updated_at` = '2017-05-17 07:15:10' WHERE `users`.`id` = 2[0m
+  [1m[35m (30.3ms)[0m  COMMIT
+  Rendered user_sessions/_form.html.erb (1.6ms)
+  Rendered user_sessions/new.html.erb within layouts/application (4.1ms)
+ApplicationController::current_user
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `users`[0m
+Completed 200 OK in 170ms (Views: 51.3ms | ActiveRecord: 32.7ms)
+
+
+Started GET "/assets/favicon-3da0cc52952440e113d2ef7bb07cc6b601f1899e3ed5843f0bd6759f1277f3ba.ico" for 127.0.0.1 at 2017-05-17 09:15:10 +0200
+
+
+Started POST "/user_sessions/create" for 127.0.0.1 at 2017-05-17 09:15:15 +0200
+Processing by UserSessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/6TfMPRrrJEYWx/wNlpwllV3XkgI+Sv3IjMSA0/TrXKXuyrMoUBs262wovnX5vJPThLhiLf5R2HIN2ESoSNadQ==", "user_session"=>{"login"=>"admin", "password"=>"[FILTERED]"}, "commit"=>"Acceder"}
+ApplicationController::require_no_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[35mUser Load (0.4ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`login` = 'admin'  ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE `users` SET `login_count` = 5, `failed_login_count` = 0, `last_login_at` = '2017-05-17 07:05:19', `current_login_at` = '2017-05-17 07:15:15', `last_request_at` = '2017-05-17 07:15:15', `perishable_token` = '7rhrbb397JBUqR7jRI', `updated_at` = '2017-05-17 07:15:15' WHERE `users`.`id` = 2
+  [1m[36m (37.7ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/admin/manufacturer
+Completed 302 Found in 103ms (ActiveRecord: 38.7ms)
+
+
+Started GET "/admin/manufacturer" for 127.0.0.1 at 2017-05-17 09:15:15 +0200
+Processing by Admin::ManufacturerController#index as HTML
+ApplicationController::require_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[35mUser Load (0.5ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE `users` SET `last_request_at` = '2017-05-17 07:15:15', `perishable_token` = 'AHTTL36HzvyAWARn4Xng', `updated_at` = '2017-05-17 07:15:15' WHERE `users`.`id` = 2
+  [1m[36m (38.1ms)[0m  [1mCOMMIT[0m
+ApplicationController::current_user_session
+  [1m[35mManufacturer Load (0.4ms)[0m  SELECT `manufacturers`.* FROM `manufacturers`
+  Rendered admin/manufacturer/_manufacturer.html.erb (2.8ms)
+  Rendered admin/manufacturer/index.html.erb within layouts/application (11.8ms)
+ApplicationController::current_user
+ApplicationController::current_user
+Completed 200 OK in 130ms (Views: 79.7ms | ActiveRecord: 40.4ms)
+
+
+Started GET "/user_sessions/destroy" for 127.0.0.1 at 2017-05-17 09:15:40 +0200
+Processing by UserSessionsController#destroy as HTML
+ApplicationController::current_user_session
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE `users` SET `last_request_at` = '2017-05-17 07:15:40', `perishable_token` = 'mHRwKQeVZ7MUSboErFej', `updated_at` = '2017-05-17 07:15:40' WHERE `users`.`id` = 2[0m
+  [1m[35m (38.3ms)[0m  COMMIT
+ApplicationController::current_user_session
+Redirected to http://localhost:3000/
+Completed 302 Found in 63ms (ActiveRecord: 40.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-17 09:15:40 +0200
+Processing by CatalogController#index as HTML
+  [1m[36mCart Load (0.3ms)[0m  [1mSELECT  `carts`.* FROM `carts` WHERE `carts`.`id` = 23 LIMIT 1[0m
+ApplicationController::require_no_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[35mArticle Load (0.4ms)[0m  SELECT  `articles`.* FROM `articles`  ORDER BY articles.id desc LIMIT 5 OFFSET 0
+  [1m[36mHABTM_Suppliers Load (0.3ms)[0m  [1mSELECT `articles_suppliers`.* FROM `articles_suppliers` WHERE `articles_suppliers`.`article_id` IN (12, 11, 8, 6, 5)[0m
+  [1m[35mSupplier Load (0.3ms)[0m  SELECT `suppliers`.* FROM `suppliers` WHERE `suppliers`.`id` IN (2, 3, 4, 5, 6)
+  [1m[36mManufacturer Load (0.3ms)[0m  [1mSELECT `manufacturers`.* FROM `manufacturers` WHERE `manufacturers`.`id` IN (5, 7, 6)[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `articles`
+  Rendered catalog/_articles.html.erb (49.2ms)
+  Rendered catalog/index.html.erb within layouts/application (50.0ms)
+ApplicationController::current_user
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `users`[0m
+  [1m[35mCartItem Load (0.3ms)[0m  SELECT `cart_items`.* FROM `cart_items` WHERE `cart_items`.`cart_id` = 23
+  Rendered cart/_cart.html.erb (5.1ms)
+Completed 200 OK in 108ms (Views: 86.9ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/admin/article" for 127.0.0.1 at 2017-05-17 09:15:42 +0200
+Processing by Admin::ArticleController#index as HTML
+ApplicationController::require_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+Redirected to http://localhost:3000/user_sessions/new
+Filter chain halted as :require_user rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/user_sessions/new" for 127.0.0.1 at 2017-05-17 09:15:43 +0200
+Processing by UserSessionsController#new as HTML
+ApplicationController::require_no_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+  Rendered user_sessions/_form.html.erb (0.4ms)
+  Rendered user_sessions/new.html.erb within layouts/application (1.4ms)
+ApplicationController::current_user
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `users`[0m
+Completed 200 OK in 37ms (Views: 35.5ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/user_sessions/create" for 127.0.0.1 at 2017-05-17 09:15:46 +0200
+Processing by UserSessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Z4A3Rh0p57ut0azlFLNaCAmcNdhQviO81Go6txNamaUPn8K6SAIn8Rg6Eez1D9jREvmKGO++Tyo+bkmm/apuog==", "user_session"=>{"login"=>"admin", "password"=>"[FILTERED]"}, "commit"=>"Acceder"}
+ApplicationController::require_no_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[35mUser Load (0.4ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`login` = 'admin'  ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE `users` SET `failed_login_count` = 1, `perishable_token` = 'T5zQIpNCZj6KvQbrrfp', `updated_at` = '2017-05-17 07:15:46' WHERE `users`.`id` = 2
+  [1m[36m (33.3ms)[0m  [1mCOMMIT[0m
+  Rendered user_sessions/_form.html.erb (3.2ms)
+  Rendered user_sessions/new.html.erb within layouts/application (5.1ms)
+ApplicationController::current_user
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `users`
+Completed 200 OK in 149ms (Views: 50.4ms | ActiveRecord: 34.6ms)
+
+
+Started POST "/user_sessions/create" for 127.0.0.1 at 2017-05-17 09:15:50 +0200
+Processing by UserSessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"06HSEOLAAhCkKwgOnc1J+wQeJBZFbFYGPi+7bAdgrXq7vifst+vCWhHAtQd8ccsiH3ub1vpsOpDUK8h96ZBafQ==", "user_session"=>{"login"=>"admin", "password"=>"[FILTERED]"}, "commit"=>"Acceder"}
+ApplicationController::require_no_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`login` = 'admin'  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE `users` SET `login_count` = 6, `failed_login_count` = 0, `last_login_at` = '2017-05-17 07:15:15', `current_login_at` = '2017-05-17 07:15:50', `last_request_at` = '2017-05-17 07:15:50', `perishable_token` = 'ixSyqpr4PcwF7613NoIo', `updated_at` = '2017-05-17 07:15:50' WHERE `users`.`id` = 2[0m
+  [1m[35m (138.1ms)[0m  COMMIT
+Redirected to http://localhost:3000/admin/article
+Completed 302 Found in 204ms (ActiveRecord: 139.1ms)
+
+
+Started GET "/admin/article" for 127.0.0.1 at 2017-05-17 09:15:51 +0200
+Processing by Admin::ArticleController#index as HTML
+ApplicationController::require_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE `users` SET `last_request_at` = '2017-05-17 07:15:51', `perishable_token` = 'uGEYRkz6YxGmYMqYXQvA', `updated_at` = '2017-05-17 07:15:51' WHERE `users`.`id` = 2[0m
+  [1m[35m (45.3ms)[0m  COMMIT
+ApplicationController::current_user_session
+  [1m[36mArticle Load (0.5ms)[0m  [1mSELECT  `articles`.* FROM `articles` LIMIT 5 OFFSET 0[0m
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM `articles`
+  [1m[36mManufacturer Load (0.4ms)[0m  [1mSELECT  `manufacturers`.* FROM `manufacturers` WHERE `manufacturers`.`id` = 5 LIMIT 1[0m
+  [1m[35mManufacturer Load (0.4ms)[0m  SELECT  `manufacturers`.* FROM `manufacturers` WHERE `manufacturers`.`id` = 7 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `manufacturers`.* FROM `manufacturers` WHERE `manufacturers`.`id` = 5 LIMIT 1[0m  [["id", 5]]
+  [1m[35mManufacturer Load (0.4ms)[0m  SELECT  `manufacturers`.* FROM `manufacturers` WHERE `manufacturers`.`id` = 6 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `manufacturers`.* FROM `manufacturers` WHERE `manufacturers`.`id` = 7 LIMIT 1[0m  [["id", 7]]
+  Rendered admin/article/index.html.erb within layouts/application (17.8ms)
+ApplicationController::current_user
+ApplicationController::current_user
+Completed 200 OK in 113ms (Views: 59.2ms | ActiveRecord: 48.5ms)
+
+
+Started GET "/user_sessions/destroy" for 127.0.0.1 at 2017-05-17 09:20:02 +0200
+Processing by UserSessionsController#destroy as HTML
+ApplicationController::current_user_session
+  [1m[35mUser Load (0.3ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE `users` SET `last_request_at` = '2017-05-17 07:20:02', `perishable_token` = 'Cj1tMgbepOyNvAEM0cQ', `updated_at` = '2017-05-17 07:20:02' WHERE `users`.`id` = 2
+  [1m[36m (88.7ms)[0m  [1mCOMMIT[0m
+ApplicationController::current_user_session
+Redirected to http://localhost:3000/
+Completed 302 Found in 113ms (ActiveRecord: 91.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-17 09:20:03 +0200
+Processing by CatalogController#index as HTML
+  [1m[35mCart Load (0.3ms)[0m  SELECT  `carts`.* FROM `carts` WHERE `carts`.`id` = 23 LIMIT 1
+ApplicationController::require_no_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[36mArticle Load (0.4ms)[0m  [1mSELECT  `articles`.* FROM `articles`  ORDER BY articles.id desc LIMIT 5 OFFSET 0[0m
+  [1m[35mHABTM_Suppliers Load (0.3ms)[0m  SELECT `articles_suppliers`.* FROM `articles_suppliers` WHERE `articles_suppliers`.`article_id` IN (12, 11, 8, 6, 5)
+  [1m[36mSupplier Load (0.3ms)[0m  [1mSELECT `suppliers`.* FROM `suppliers` WHERE `suppliers`.`id` IN (2, 3, 4, 5, 6)[0m
+  [1m[35mManufacturer Load (0.5ms)[0m  SELECT `manufacturers`.* FROM `manufacturers` WHERE `manufacturers`.`id` IN (5, 7, 6)
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM `articles`[0m
+  Rendered catalog/_articles.html.erb (49.7ms)
+  Rendered catalog/index.html.erb within layouts/application (50.8ms)
+ApplicationController::current_user
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `users`
+  [1m[36mCartItem Load (0.2ms)[0m  [1mSELECT `cart_items`.* FROM `cart_items` WHERE `cart_items`.`cart_id` = 23[0m
+  Rendered cart/_cart.html.erb (6.0ms)
+Completed 200 OK in 136ms (Views: 100.5ms | ActiveRecord: 7.2ms)
+
+
+Started GET "/admin/article" for 127.0.0.1 at 2017-05-17 09:20:08 +0200
+Processing by Admin::ArticleController#index as HTML
+ApplicationController::require_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+Redirected to http://localhost:3000/user_sessions/new
+Filter chain halted as :require_user rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/user_sessions/new" for 127.0.0.1 at 2017-05-17 09:20:08 +0200
+Processing by UserSessionsController#new as HTML
+ApplicationController::require_no_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+  Rendered user_sessions/_form.html.erb (0.5ms)
+  Rendered user_sessions/new.html.erb within layouts/application (1.5ms)
+ApplicationController::current_user
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `users`
+Completed 200 OK in 41ms (Views: 39.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/user_sessions/new" for 127.0.0.1 at 2017-05-17 09:20:52 +0200
+Processing by UserSessionsController#new as HTML
+ApplicationController::require_no_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+  Rendered user_sessions/_form.html.erb (0.4ms)
+  Rendered user_sessions/new.html.erb within layouts/application (1.9ms)
+ApplicationController::current_user
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `users`[0m
+Completed 200 OK in 47ms (Views: 45.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/favicon-3da0cc52952440e113d2ef7bb07cc6b601f1899e3ed5843f0bd6759f1277f3ba.ico" for 127.0.0.1 at 2017-05-17 09:20:52 +0200

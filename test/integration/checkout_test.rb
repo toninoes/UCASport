@@ -17,7 +17,7 @@ class CheckoutTest < ActionDispatch::IntegrationTest
     get '/checkout'
     assert_response :success
     assert_select 'legend', 'Información de contacto'
-    assert_select 'legend', 'Direccion de envío'
+    assert_select 'legend', 'Dirección de envío'
     assert_select 'legend', 'Información de facturación'
 
     post '/checkout/submit_order', :cart => { :id => Cart.last.id }, :order => {

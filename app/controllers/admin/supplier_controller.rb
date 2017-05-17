@@ -26,7 +26,7 @@ class Admin::SupplierController < Admin::AuthenticatedController
       flash[:notice] = "Proveedor #{@supplier.name} fue correctamente actualizado"
       redirect_to :action => 'show', :id => @supplier
     else
-      @page_title = 'Editar proveeedor'
+      @page_title = 'Editar proveedor'
       render :action => 'edit'
     end
   end

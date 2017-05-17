@@ -11,11 +11,11 @@
   <dt>Número de inicios de sesión</dt>
   <dd><%= @user.login_count %></dd>
 
-  <dt>Último acceso</dt>
+  <dt>Última petición</dt>
   <dd><%= @user.last_request_at %></dd>
 
   <% if @user.last_login_at %>
-    <dt>Last login at</dt>
+    <dt>Último inicio de sesión</dt>
     <dd><%= @user.last_login_at %></dd>
   <% end %>
 
@@ -23,7 +23,7 @@
   <dd><%= @user.current_login_at %></dd>
 
   <% if @user.last_login_ip %>
-    <dt>Last login IP</dt>
+    <dt>Dirección IP de última sesión</dt>
     <dd><%= @user.last_login_ip %></dd>
   <% end %>
 
@@ -31,4 +31,4 @@
   <dd><%= @user.current_login_ip %></dd>
 </dl>
 
-<%= link_to 'Editar', :action => 'edit' %>
+<%= link_to 'Editar cuenta', :action => 'edit' %>

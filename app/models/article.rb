@@ -13,7 +13,7 @@ class Article < ActiveRecord::Base
   validates_presence_of :manufacturer
   validates_presence_of :suppliers, :message => 'debe seleccionar al menos un proveedor'
   validates_presence_of :manufactured_at
-  validates_numericality_of :size, :only_integer => true, :greater_than => 30, :less_than => 50, :message => 'debe ser un número maayor que 30 y menor que 50'
+  validates_numericality_of :size, :only_integer => true, :greater_than => 30, :less_than => 50, :message => 'debe ser un número mayor que 30 y menor que 50'
   validates_numericality_of :price, :message => 'debe ser un número'
   validates_length_of :reference, :in => 1..13, :message => 'debe ser una cadena entre 1 y 13 caracteres'
   validates_format_of :reference, :with => /[0-9\-xX]{13}/, :message => 'formato incorrecto'

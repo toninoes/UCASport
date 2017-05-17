@@ -8,21 +8,22 @@ class UserSessionsController < ApplicationController
 
   def create
     @user_session = UserSession.new(params[:user_session])
-    @user_session.remember_me = false # just in case
+    @user_session.remember_me = false
+    @page_title = 'Inicio de sesión'
     if @user_session.save
-      flash[:notice] = "Sesión iniciada satisfactoriamente."
-      redirect_back_or_default :controller => '/admin/supplier', :action => :index # default login route
+      flash[:notice] = "Sesión iniciada correctamente."
+      redirect_back_or_default :controller => '/admin/supplier', :action => :index
     else
       render :action => :new
     end
   end
 
   def destroy
-    if current_user_session # only for an authenticated user
+    if current_user_session
       current_user_session.destroy
-      flash[:notice] = "Sesión terminada correctamente."
+      flash[:notice] = "Sesión cerrada correctamente."
     end
-    redirect_to :controller => :catalog, :action => :index # logout route
+    redirect_to :controller => :catalog, :action => :index
   end
 
   private
