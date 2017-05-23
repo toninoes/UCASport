@@ -1,0 +1,11 @@
+<% if @posts.size > 0 %>
+  <div><%= link_to 'Nuevo post', :action => 'post' %></div>
+  <p></p>
+  <table><%= display_like_a_tree @posts %>
+  </table>
+  <p></p>
+<% else %>
+  <p> No hay posts aún. <%= link_to 'Sé el primero en crear un post', :action => 'post' %></p>
+<% end %>
+
+<%= will_paginate @posts, :page_links => false, :link_separator => ' | ', :previous_label => 'Página anterior', :next_label => 'Siguiente página' %>

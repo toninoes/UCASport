@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   get 'admin/supplier' => 'admin/supplier#index'
   get 'admin/article' => 'admin/article#index'
   get 'admin/order' => 'admin/order#index'
+  get 'forum' => 'forum#index'
 
   get 'about/index'
 
@@ -74,5 +75,13 @@ Rails.application.routes.draw do
   get 'checkout/index'
   post 'checkout/submit_order'
   get 'checkout/thank_you'
+
+  get 'forum/post'
+  post 'forum/create'
+  get 'forum/reply'
+  get 'forum/destroy'
+  post 'forum/destroy'
+  get 'forum/show'
+  get 'forum/index'
 
 end

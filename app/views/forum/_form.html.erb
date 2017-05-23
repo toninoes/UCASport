@@ -1,0 +1,37 @@
+<% if @post.errors.any? %>
+    <div id="errorExplanation">
+      <h2><%= pluralize(@post.errors.count, "error") %> prohibió este post de ser creado:</h2>
+      <ul>
+        <% @post.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+<% end %>
+
+<div class="field">
+  <%= hidden_field :post, :root_id %>
+</div>
+
+<div class="field">
+  <%= hidden_field :post, :parent_id %>
+</div>
+
+<div class="field">
+  <%= hidden_field :post, :depth %>
+</div>
+
+<div class="field">
+  <p><label for="post_name">Nombre</label><br/>
+    <%= text_field 'post', 'name' %>
+</div>
+
+<div class="field">
+  <p><label for="post_subject">Tema</label><br/>
+    <%= text_field 'post', 'subject' %>
+</div>
+
+<div class="field">
+  <p><label for="post_body">Descripción</label><br/>
+    <%= text_area 'post', 'body' %>
+</div>

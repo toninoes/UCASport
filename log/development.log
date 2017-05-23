@@ -21272,3 +21272,1323 @@ Completed 200 OK in 47ms (Views: 45.8ms | ActiveRecord: 0.3ms)
 
 
 Started GET "/assets/favicon-3da0cc52952440e113d2ef7bb07cc6b601f1899e3ed5843f0bd6759f1277f3ba.ico" for 127.0.0.1 at 2017-05-17 09:20:52 +0200
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-23 11:56:21 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (52.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rake db:migrate RAILS_ENV=development
+
+):
+  activerecord (4.2.5) lib/active_record/migration.rb:392:in `check_pending!'
+  activerecord (4.2.5) lib/active_record/migration.rb:373:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  request_store (1.3.2) lib/request_store/middleware.rb:9:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.5) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.5) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.5) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.5) lib/rack/lock.rb:17:in `call'
+  rack (1.6.5) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.5) lib/rack/handler/webrick.rb:88:in `service'
+  /home/toni/.rvm/rubies/ruby-2.2.4/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/toni/.rvm/rubies/ruby-2.2.4/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/toni/.rvm/rubies/ruby-2.2.4/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /home/toni/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.1ms)
+  Rendered /home/toni/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /home/toni/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/toni/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (32.8ms)
+  Rendered /home/toni/.rvm/gems/ruby-2.2.4/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /home/toni/.rvm/gems/ruby-2.2.4/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/toni/.rvm/gems/ruby-2.2.4/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/toni/.rvm/gems/ruby-2.2.4/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/toni/.rvm/gems/ruby-2.2.4/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (17.5ms)
+  Rendered /home/toni/.rvm/gems/ruby-2.2.4/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/toni/.rvm/gems/ruby-2.2.4/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/toni/.rvm/gems/ruby-2.2.4/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (49.1ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to CreateForumPosts (20170523090915)
+DEPRECATION WARNING: `#timestamps` was called without specifying an option for `null`. In Rails 5, this behavior will change to `null: false`. You should manually specify `null: true` to prevent the behavior of your existing migrations from changing. (called from block in change at /home/toni/projects/UCASport/db/migrate/20170523090915_create_forum_posts.rb:11)
+  [1m[35m (266.6ms)[0m  CREATE TABLE `forum_posts` (`id` int(11) auto_increment PRIMARY KEY, `name` varchar(50) NOT NULL, `subject` varchar(255) NOT NULL, `body` text, `root_id` int(11) DEFAULT 0 NOT NULL, `parent_id` int(11) DEFAULT 0 NOT NULL, `depth` int(11) DEFAULT 0 NOT NULL, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (16.8ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20170523090915')
+  [1m[36m (35.5ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+  [1m[36m (0.3ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'eshop6_development'
+  AND fk.table_name = 'articles'
+[0m
+  [1m[35m (0.2ms)[0m  SHOW CREATE TABLE `articles`
+  [1m[36m (0.3ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'eshop6_development'
+  AND fk.table_name = 'articles_suppliers'
+[0m
+  [1m[35m (0.2ms)[0m  SHOW CREATE TABLE `articles_suppliers`
+  [1m[36m (0.3ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'eshop6_development'
+  AND fk.table_name = 'cart_items'
+[0m
+  [1m[35m (0.2ms)[0m  SHOW CREATE TABLE `cart_items`
+  [1m[36m (0.3ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'eshop6_development'
+  AND fk.table_name = 'carts'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `carts`
+  [1m[36m (0.3ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'eshop6_development'
+  AND fk.table_name = 'forum_posts'
+[0m
+  [1m[35m (0.3ms)[0m  SHOW CREATE TABLE `forum_posts`
+  [1m[36m (0.5ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'eshop6_development'
+  AND fk.table_name = 'manufacturers'
+[0m
+  [1m[35m (0.4ms)[0m  SHOW CREATE TABLE `manufacturers`
+  [1m[36m (0.4ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'eshop6_development'
+  AND fk.table_name = 'order_items'
+[0m
+  [1m[35m (0.4ms)[0m  SHOW CREATE TABLE `order_items`
+  [1m[36m (0.5ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'eshop6_development'
+  AND fk.table_name = 'orders'
+[0m
+  [1m[35m (0.4ms)[0m  SHOW CREATE TABLE `orders`
+  [1m[36m (0.6ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'eshop6_development'
+  AND fk.table_name = 'suppliers'
+[0m
+  [1m[35m (0.2ms)[0m  SHOW CREATE TABLE `suppliers`
+  [1m[36m (0.3ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'eshop6_development'
+  AND fk.table_name = 'user_sessions'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `user_sessions`
+  [1m[36m (0.2ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'eshop6_development'
+  AND fk.table_name = 'users'
+[0m
+  [1m[35m (0.2ms)[0m  SHOW CREATE TABLE `users`
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-23 11:56:54 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by CatalogController#index as HTML
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `carts` (`created_at`, `updated_at`) VALUES ('2017-05-23 09:56:54', '2017-05-23 09:56:54')[0m
+  [1m[35m (37.9ms)[0m  COMMIT
+ApplicationController::require_no_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[36mArticle Load (0.5ms)[0m  [1mSELECT  `articles`.* FROM `articles`  ORDER BY articles.id desc LIMIT 5 OFFSET 0[0m
+  [1m[35mHABTM_Suppliers Load (0.4ms)[0m  SELECT `articles_suppliers`.* FROM `articles_suppliers` WHERE `articles_suppliers`.`article_id` IN (12, 11, 8, 6, 5)
+  [1m[36mSupplier Load (0.2ms)[0m  [1mSELECT `suppliers`.* FROM `suppliers` WHERE `suppliers`.`id` IN (2, 3, 4, 5, 6)[0m
+  [1m[35mManufacturer Load (0.4ms)[0m  SELECT `manufacturers`.* FROM `manufacturers` WHERE `manufacturers`.`id` IN (5, 7, 6)
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM `articles`[0m
+  Rendered catalog/_articles.html.erb (95.4ms)
+  Rendered catalog/index.html.erb within layouts/application (110.2ms)
+ApplicationController::current_user
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `users`
+  [1m[36mCartItem Load (0.4ms)[0m  [1mSELECT `cart_items`.* FROM `cart_items` WHERE `cart_items`.`cart_id` = 24[0m
+  Rendered cart/_cart.html.erb (31.3ms)
+Completed 200 OK in 4082ms (Views: 3829.6ms | ActiveRecord: 46.7ms)
+
+
+Started GET "/assets/about.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-05-23 11:56:58 +0200
+
+
+Started GET "/assets/admin/manufacturer.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-05-23 11:56:58 +0200
+
+
+Started GET "/assets/cart.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-05-23 11:56:58 +0200
+
+
+Started GET "/assets/admin/order.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-05-23 11:56:58 +0200
+
+
+Started GET "/assets/admin/supplier.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-05-23 11:56:58 +0200
+
+
+Started GET "/assets/admin/article.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-05-23 11:56:58 +0200
+
+
+Started GET "/assets/catalog.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-05-23 11:56:58 +0200
+
+
+Started GET "/assets/checkout.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-05-23 11:56:58 +0200
+
+
+Started GET "/assets/forum.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-05-23 11:56:58 +0200
+
+
+Started GET "/assets/style.self-28c50fed0fbf40c4e00e2c6a9dc7872cb7466e25803d031cd7fc5cb4ba105fd8.css?body=1" for 127.0.0.1 at 2017-05-23 11:56:58 +0200
+
+
+Started GET "/assets/user.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-05-23 11:56:58 +0200
+
+
+Started GET "/assets/user_sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-05-23 11:56:58 +0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2017-05-23 11:56:58 +0200
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2017-05-23 11:56:58 +0200
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2017-05-23 11:56:58 +0200
+
+
+Started GET "/assets/jquery.ui.effect.self-febac90f6986b480a8dd00d6bfb6a560516a1610269faa285b9bde10bea826d9.js?body=1" for 127.0.0.1 at 2017-05-23 11:56:58 +0200
+
+
+Started GET "/assets/jquery.ui.effect-fade.self-842b0b75c2a59e4021b207cd17fd3abadd53dadc74205c0a96ef824b0470fbc7.js?body=1" for 127.0.0.1 at 2017-05-23 11:56:58 +0200
+
+
+Started GET "/assets/jquery.ui.effect-highlight.self-09f6f0983af5c26c41e5c48c6189e462d23c7837d3b8b35cd248e2cf5b348b85.js?body=1" for 127.0.0.1 at 2017-05-23 11:56:58 +0200
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2017-05-23 11:56:58 +0200
+
+
+Started GET "/assets/about.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-05-23 11:56:58 +0200
+
+
+Started GET "/assets/admin/article.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-05-23 11:56:58 +0200
+
+
+Started GET "/assets/admin/manufacturer.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-05-23 11:56:58 +0200
+
+
+Started GET "/assets/admin/order.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-05-23 11:56:58 +0200
+
+
+Started GET "/assets/admin/supplier.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-05-23 11:56:58 +0200
+
+
+Started GET "/assets/cart.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-05-23 11:56:58 +0200
+
+
+Started GET "/assets/catalog.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-05-23 11:56:58 +0200
+
+
+Started GET "/assets/checkout.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-05-23 11:56:58 +0200
+
+
+Started GET "/assets/forum.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-05-23 11:56:58 +0200
+
+
+Started GET "/assets/user.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-05-23 11:56:58 +0200
+
+
+Started GET "/assets/user_sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-05-23 11:56:58 +0200
+
+
+Started GET "/assets/application.self-7862a8a8b42407b4741a1adeeea35f0d13ddc4f702ec532adb0674491d296495.js?body=1" for 127.0.0.1 at 2017-05-23 11:56:58 +0200
+
+
+Started GET "/assets/favicon-3da0cc52952440e113d2ef7bb07cc6b601f1899e3ed5843f0bd6759f1277f3ba.ico" for 127.0.0.1 at 2017-05-23 11:56:59 +0200
+
+
+Started GET "/forum" for 127.0.0.1 at 2017-05-23 11:57:12 +0200
+Processing by ForumController#index as HTML
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `forum_posts`
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM `forum_posts`[0m
+  Rendered forum/index.html.erb within layouts/application (3.6ms)
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `users`
+Completed 200 OK in 90ms (Views: 85.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/forum/post" for 127.0.0.1 at 2017-05-23 11:57:19 +0200
+Processing by ForumController#post as HTML
+  Rendered forum/_form.html.erb (16.1ms)
+  Rendered forum/post.html.erb within layouts/application (19.2ms)
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `users`[0m
+Completed 200 OK in 101ms (Views: 86.6ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/forum/create" for 127.0.0.1 at 2017-05-23 11:57:44 +0200
+Processing by ForumController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hoGIdNECjlxZg5tM6Vk/PQ0O3w9SKcE3riX3JOnl2bI833d4vbt/76sFoarQN0ZJRfnwAHoOHeTRK3IcSyN+ag==", "post"=>{"root_id"=>"0", "parent_id"=>"0", "depth"=>"0", "name"=>"Andrés", "subject"=>"Tema 1", "body"=>"hola luisfe"}, "commit"=>"Crear post"}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `forum_posts` (`name`, `subject`, `body`, `created_at`, `updated_at`) VALUES ('Andrés', 'Tema 1', 'hola luisfe', '2017-05-23 09:57:44', '2017-05-23 09:57:44')[0m
+  [1m[35m (36.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (17.2ms)[0m  UPDATE `forum_posts` SET `root_id` = 1, `updated_at` = '2017-05-23 09:57:44' WHERE `forum_posts`.`id` = 1
+  [1m[36m (37.3ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/forum
+Completed 302 Found in 130ms (ActiveRecord: 91.2ms)
+
+
+Started GET "/forum" for 127.0.0.1 at 2017-05-23 11:57:44 +0200
+Processing by ForumController#index as HTML
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `forum_posts`
+  [1m[36mForumPost Load (0.3ms)[0m  [1mSELECT  `forum_posts`.* FROM `forum_posts`  ORDER BY root_id desc , created_at LIMIT 10 OFFSET 0[0m
+  Rendered forum/_posts.html.erb (1.7ms)
+  Rendered forum/index.html.erb within layouts/application (3.3ms)
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `users`
+Completed 200 OK in 43ms (Views: 41.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/forum/show?id=1" for 127.0.0.1 at 2017-05-23 11:57:52 +0200
+Processing by ForumController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mForumPost Load (0.4ms)[0m  [1mSELECT  `forum_posts`.* FROM `forum_posts` WHERE `forum_posts`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `forum_posts` WHERE `forum_posts`.`root_id` = 1
+  Rendered forum/show.html.erb within layouts/application (2.5ms)
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `users`[0m
+Completed 200 OK in 44ms (Views: 41.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/forum/reply?id=1" for 127.0.0.1 at 2017-05-23 11:57:56 +0200
+Processing by ForumController#reply as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mForumPost Load (0.4ms)[0m  SELECT  `forum_posts`.* FROM `forum_posts` WHERE `forum_posts`.`id` = 1 LIMIT 1
+  Rendered forum/_form.html.erb (0.6ms)
+  Rendered forum/post.html.erb within layouts/application (1.7ms)
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `users`[0m
+Completed 200 OK in 41ms (Views: 39.0ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/forum/create" for 127.0.0.1 at 2017-05-23 11:58:26 +0200
+Processing by ForumController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"r1a9Vlen23zsrUbzw8GhADCb03XMP2y/JT2l78zrJGEVCEJaOx4qzx4rfBX6r9h0eGz8euQYsGxaMyDXbi2DuQ==", "post"=>{"root_id"=>"1", "parent_id"=>"1", "depth"=>"1", "name"=>"toni de cay", "subject"=>"que dise killo", "body"=>"ke me deje"}, "commit"=>"Crear post"}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `forum_posts` (`name`, `subject`, `body`, `root_id`, `parent_id`, `depth`, `created_at`, `updated_at`) VALUES ('toni de cay', 'que dise killo', 'ke me deje', 1, 1, 1, '2017-05-23 09:58:26', '2017-05-23 09:58:26')[0m
+  [1m[35m (70.8ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+Redirected to http://localhost:3000/forum
+Completed 302 Found in 77ms (ActiveRecord: 71.6ms)
+
+
+Started GET "/forum" for 127.0.0.1 at 2017-05-23 11:58:26 +0200
+Processing by ForumController#index as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `forum_posts`[0m
+  [1m[35mForumPost Load (0.3ms)[0m  SELECT  `forum_posts`.* FROM `forum_posts`  ORDER BY root_id desc , created_at LIMIT 10 OFFSET 0
+  Rendered forum/_posts.html.erb (1.3ms)
+  Rendered forum/index.html.erb within layouts/application (2.7ms)
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `users`[0m
+Completed 200 OK in 42ms (Views: 40.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/forum/show?id=2" for 127.0.0.1 at 2017-05-23 11:58:45 +0200
+Processing by ForumController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mForumPost Load (0.3ms)[0m  SELECT  `forum_posts`.* FROM `forum_posts` WHERE `forum_posts`.`id` = 2 LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `forum_posts` WHERE `forum_posts`.`root_id` = 1[0m
+  [1m[35mForumPost Load (0.2ms)[0m  SELECT `forum_posts`.* FROM `forum_posts` WHERE `forum_posts`.`root_id` = 1
+  Rendered forum/show.html.erb within layouts/application (2.2ms)
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `users`[0m
+Completed 200 OK in 51ms (Views: 48.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/forum/destroy?id=2" for 127.0.0.1 at 2017-05-23 11:58:59 +0200
+Processing by ForumController#destroy as HTML
+  Parameters: {"id"=>"2"}
+ApplicationController::require_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+Redirected to http://localhost:3000/user_sessions/new
+Filter chain halted as :require_user rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/user_sessions/new" for 127.0.0.1 at 2017-05-23 11:58:59 +0200
+Processing by UserSessionsController#new as HTML
+ApplicationController::require_no_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+  Rendered user_sessions/_form.html.erb (20.0ms)
+  Rendered user_sessions/new.html.erb within layouts/application (35.8ms)
+ApplicationController::current_user
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM `users`
+Completed 200 OK in 84ms (Views: 81.9ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/user_sessions/create" for 127.0.0.1 at 2017-05-23 11:59:02 +0200
+Processing by UserSessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"W/MmWSel/krMajG8/pkTD7n7SVtHoiTET7ETVuEMH0DhrdlVSxwP+T7sC1rH92p78QxmVG+F+Bcwv5ZuQ8q4mA==", "user_session"=>{"login"=>"admin", "password"=>"[FILTERED]"}, "commit"=>"Iniciar sesión"}
+ApplicationController::require_no_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`login` = 'admin'  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE `users` SET `login_count` = 7, `last_login_at` = '2017-05-17 07:15:50', `current_login_at` = '2017-05-23 09:59:02', `last_request_at` = '2017-05-23 09:59:02', `perishable_token` = 'P61iiYzAg9aycU4zYGqt', `updated_at` = '2017-05-23 09:59:02' WHERE `users`.`id` = 2[0m
+  [1m[35m (52.5ms)[0m  COMMIT
+Redirected to http://localhost:3000/forum/destroy?id=2
+Completed 302 Found in 247ms (ActiveRecord: 53.5ms)
+
+
+Started GET "/forum/destroy?id=2" for 127.0.0.1 at 2017-05-23 11:59:02 +0200
+Processing by ForumController#destroy as HTML
+  Parameters: {"id"=>"2"}
+ApplicationController::require_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE `users` SET `last_request_at` = '2017-05-23 09:59:02', `perishable_token` = 'O4w6nD9mUhOmbgqPZd6a', `updated_at` = '2017-05-23 09:59:02' WHERE `users`.`id` = 2[0m
+  [1m[35m (38.8ms)[0m  COMMIT
+ApplicationController::current_user_session
+  [1m[36mForumPost Load (0.4ms)[0m  [1mSELECT  `forum_posts`.* FROM `forum_posts` WHERE `forum_posts`.`id` = 2 LIMIT 1[0m
+  [1m[35mForumPost Load (0.3ms)[0m  SELECT `forum_posts`.* FROM `forum_posts` WHERE `forum_posts`.`root_id` = 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM `forum_posts` WHERE `forum_posts`.`id` = 1
+  [1m[36m (41.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM `forum_posts` WHERE `forum_posts`.`id` = 2[0m
+  [1m[35m (65.7ms)[0m  COMMIT
+Redirected to http://localhost:3000/forum
+Completed 302 Found in 157ms (ActiveRecord: 148.6ms)
+
+
+Started GET "/forum" for 127.0.0.1 at 2017-05-23 11:59:03 +0200
+Processing by ForumController#index as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `forum_posts`[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM `forum_posts`
+  Rendered forum/index.html.erb within layouts/application (1.7ms)
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE `users` SET `last_request_at` = '2017-05-23 09:59:03', `perishable_token` = 'IVeNFGgdkrBcUDjrJJYo', `updated_at` = '2017-05-23 09:59:03' WHERE `users`.`id` = 2[0m
+  [1m[35m (34.7ms)[0m  COMMIT
+ApplicationController::current_user_session
+ApplicationController::current_user
+Completed 200 OK in 80ms (Views: 43.1ms | ActiveRecord: 35.7ms)
+
+
+Started GET "/user_sessions/destroy" for 127.0.0.1 at 2017-05-23 11:59:22 +0200
+Processing by UserSessionsController#destroy as HTML
+ApplicationController::current_user_session
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.7ms)[0m  [1mUPDATE `users` SET `last_request_at` = '2017-05-23 09:59:22', `perishable_token` = 'K9pxReIv7VEuS9qRyvwE', `updated_at` = '2017-05-23 09:59:22' WHERE `users`.`id` = 2[0m
+  [1m[35m (95.0ms)[0m  COMMIT
+ApplicationController::current_user_session
+Redirected to http://localhost:3000/
+Completed 302 Found in 103ms (ActiveRecord: 96.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-23 11:59:22 +0200
+Processing by CatalogController#index as HTML
+  [1m[36mCart Load (0.3ms)[0m  [1mSELECT  `carts`.* FROM `carts` WHERE `carts`.`id` = 24 LIMIT 1[0m
+ApplicationController::require_no_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[35mArticle Load (0.3ms)[0m  SELECT  `articles`.* FROM `articles`  ORDER BY articles.id desc LIMIT 5 OFFSET 0
+  [1m[36mHABTM_Suppliers Load (0.3ms)[0m  [1mSELECT `articles_suppliers`.* FROM `articles_suppliers` WHERE `articles_suppliers`.`article_id` IN (12, 11, 8, 6, 5)[0m
+  [1m[35mSupplier Load (0.3ms)[0m  SELECT `suppliers`.* FROM `suppliers` WHERE `suppliers`.`id` IN (2, 3, 4, 5, 6)
+  [1m[36mManufacturer Load (0.4ms)[0m  [1mSELECT `manufacturers`.* FROM `manufacturers` WHERE `manufacturers`.`id` IN (5, 7, 6)[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `articles`
+  Rendered catalog/_articles.html.erb (13.9ms)
+  Rendered catalog/index.html.erb within layouts/application (15.2ms)
+ApplicationController::current_user
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `users`[0m
+  [1m[35mCartItem Load (0.3ms)[0m  SELECT `cart_items`.* FROM `cart_items` WHERE `cart_items`.`cart_id` = 24
+  Rendered cart/_cart.html.erb (1.9ms)
+Completed 200 OK in 59ms (Views: 54.5ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/forum" for 127.0.0.1 at 2017-05-23 12:08:16 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by ForumController#index as HTML
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `forum_posts`
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM `forum_posts`[0m
+  Rendered forum/index.html.erb within layouts/application (6.0ms)
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `users`
+Completed 200 OK in 362ms (Views: 345.4ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/forum/post" for 127.0.0.1 at 2017-05-23 12:08:22 +0200
+Processing by ForumController#post as HTML
+  Rendered forum/_form.html.erb (6.0ms)
+  Rendered forum/post.html.erb within layouts/application (13.0ms)
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM `users`[0m
+Completed 200 OK in 85ms (Views: 69.9ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/forum/create" for 127.0.0.1 at 2017-05-23 12:08:31 +0200
+Processing by ForumController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MWx+VKqxS/d+ataGk10TEzDHzP6r/DNwuJlHzasRHhCLMoFYxgi6RIzs7GCqM2pneDDj8YPb76PHl8L1Cde5yA==", "post"=>{"root_id"=>"0", "parent_id"=>"0", "depth"=>"0", "name"=>"andre", "subject"=>"jj", "body"=>"kk"}, "commit"=>"Crear post"}
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  Rendered forum/_form.html.erb (2.9ms)
+  Rendered forum/post.html.erb within layouts/application (4.7ms)
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `users`
+Completed 200 OK in 50ms (Views: 43.6ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/forum/create" for 127.0.0.1 at 2017-05-23 12:08:46 +0200
+Processing by ForumController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FTCommYl/L4Fup/IyIz+lNOZSA9CnlydL6ZYgTFM/5evbleWCpwNDfc8pS7x4ofgm25nAGq5gE5QqN25k4pYTw==", "post"=>{"root_id"=>"0", "parent_id"=>"0", "depth"=>"0", "name"=>"andres", "subject"=>"tema1", "body"=>"descripcion1"}, "commit"=>"Crear post"}
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO `forum_posts` (`name`, `subject`, `body`, `created_at`, `updated_at`) VALUES ('andres', 'tema1', 'descripcion1', '2017-05-23 10:08:46', '2017-05-23 10:08:46')
+  [1m[36m (81.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE `forum_posts` SET `root_id` = 3, `updated_at` = '2017-05-23 10:08:46' WHERE `forum_posts`.`id` = 3[0m
+  [1m[35m (32.5ms)[0m  COMMIT
+Redirected to http://localhost:3000/forum
+Completed 302 Found in 133ms (ActiveRecord: 115.5ms)
+
+
+Started GET "/forum" for 127.0.0.1 at 2017-05-23 12:08:46 +0200
+Processing by ForumController#index as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `forum_posts`[0m
+  [1m[35mForumPost Load (0.8ms)[0m  SELECT  `forum_posts`.* FROM `forum_posts`  ORDER BY root_id desc , created_at LIMIT 10 OFFSET 0
+  Rendered forum/index.html.erb within layouts/application (4.5ms)
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM `users`[0m
+Completed 200 OK in 55ms (Views: 53.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/forum" for 127.0.0.1 at 2017-05-23 12:10:39 +0200
+Processing by ForumController#index as HTML
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `forum_posts`
+  [1m[36mForumPost Load (0.4ms)[0m  [1mSELECT  `forum_posts`.* FROM `forum_posts`  ORDER BY root_id desc , created_at LIMIT 10 OFFSET 0[0m
+  Rendered forum/index.html.erb within layouts/application (11.9ms)
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `users`
+Completed 200 OK in 69ms (Views: 62.8ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/assets/favicon-3da0cc52952440e113d2ef7bb07cc6b601f1899e3ed5843f0bd6759f1277f3ba.ico" for 127.0.0.1 at 2017-05-23 12:10:39 +0200
+
+
+Started GET "/forum" for 127.0.0.1 at 2017-05-23 12:15:37 +0200
+Processing by ForumController#index as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `forum_posts`[0m
+  [1m[35mForumPost Load (0.2ms)[0m  SELECT  `forum_posts`.* FROM `forum_posts`  ORDER BY root_id desc , created_at LIMIT 10 OFFSET 0
+  Rendered forum/index.html.erb within layouts/application (9.6ms)
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `users`[0m
+Completed 200 OK in 57ms (Views: 52.1ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/assets/favicon-3da0cc52952440e113d2ef7bb07cc6b601f1899e3ed5843f0bd6759f1277f3ba.ico" for 127.0.0.1 at 2017-05-23 12:15:37 +0200
+
+
+Started GET "/forum" for 127.0.0.1 at 2017-05-23 12:15:38 +0200
+Processing by ForumController#index as HTML
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM `forum_posts`
+  [1m[36mForumPost Load (0.6ms)[0m  [1mSELECT  `forum_posts`.* FROM `forum_posts`  ORDER BY root_id desc , created_at LIMIT 10 OFFSET 0[0m
+  Rendered forum/index.html.erb within layouts/application (5.0ms)
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM `users`
+Completed 200 OK in 75ms (Views: 71.8ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/favicon-3da0cc52952440e113d2ef7bb07cc6b601f1899e3ed5843f0bd6759f1277f3ba.ico" for 127.0.0.1 at 2017-05-23 12:15:38 +0200
+
+
+Started GET "/forum" for 127.0.0.1 at 2017-05-23 12:15:38 +0200
+Processing by ForumController#index as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `forum_posts`[0m
+  [1m[35mForumPost Load (0.3ms)[0m  SELECT  `forum_posts`.* FROM `forum_posts`  ORDER BY root_id desc , created_at LIMIT 10 OFFSET 0
+  Rendered forum/index.html.erb within layouts/application (2.9ms)
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `users`[0m
+Completed 200 OK in 44ms (Views: 41.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/forum/post" for 127.0.0.1 at 2017-05-23 12:19:23 +0200
+Processing by ForumController#post as HTML
+  Rendered forum/_form.html.erb (0.6ms)
+  Rendered forum/post.html.erb within layouts/application (1.9ms)
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `users`
+Completed 200 OK in 42ms (Views: 39.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/forum" for 127.0.0.1 at 2017-05-23 12:19:31 +0200
+Processing by ForumController#index as HTML
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM `forum_posts`[0m
+  [1m[35mForumPost Load (0.8ms)[0m  SELECT  `forum_posts`.* FROM `forum_posts`  ORDER BY root_id desc , created_at LIMIT 10 OFFSET 0
+  Rendered forum/index.html.erb within layouts/application (6.5ms)
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM `users`[0m
+Completed 200 OK in 83ms (Views: 79.6ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/forum" for 127.0.0.1 at 2017-05-23 12:24:32 +0200
+Processing by ForumController#index as HTML
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM `forum_posts`
+  [1m[36mForumPost Load (0.3ms)[0m  [1mSELECT  `forum_posts`.* FROM `forum_posts`  ORDER BY root_id desc , created_at LIMIT 10 OFFSET 0[0m
+  Rendered forum/index.html.erb within layouts/application (10.5ms)
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `users`
+Completed 200 OK in 60ms (Views: 55.2ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/assets/favicon-3da0cc52952440e113d2ef7bb07cc6b601f1899e3ed5843f0bd6759f1277f3ba.ico" for 127.0.0.1 at 2017-05-23 12:24:33 +0200
+
+
+Started GET "/forum" for 127.0.0.1 at 2017-05-23 12:24:33 +0200
+Processing by ForumController#index as HTML
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM `forum_posts`[0m
+  [1m[35mForumPost Load (0.4ms)[0m  SELECT  `forum_posts`.* FROM `forum_posts`  ORDER BY root_id desc , created_at LIMIT 10 OFFSET 0
+  Rendered forum/index.html.erb within layouts/application (3.6ms)
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM `users`[0m
+Completed 200 OK in 79ms (Views: 76.1ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/favicon-3da0cc52952440e113d2ef7bb07cc6b601f1899e3ed5843f0bd6759f1277f3ba.ico" for 127.0.0.1 at 2017-05-23 12:24:33 +0200
+
+
+Started GET "/forum" for 127.0.0.1 at 2017-05-23 12:32:48 +0200
+Processing by ForumController#index as HTML
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `forum_posts`
+  [1m[36mForumPost Load (0.3ms)[0m  [1mSELECT  `forum_posts`.* FROM `forum_posts`  ORDER BY root_id desc , created_at LIMIT 10 OFFSET 0[0m
+  Rendered forum/index.html.erb within layouts/application (9.6ms)
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `users`
+Completed 200 OK in 57ms (Views: 52.1ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/assets/favicon-3da0cc52952440e113d2ef7bb07cc6b601f1899e3ed5843f0bd6759f1277f3ba.ico" for 127.0.0.1 at 2017-05-23 12:32:49 +0200
+
+
+Started GET "/forum" for 127.0.0.1 at 2017-05-23 12:34:59 +0200
+Processing by ForumController#index as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `forum_posts`[0m
+  [1m[35mForumPost Load (0.3ms)[0m  SELECT  `forum_posts`.* FROM `forum_posts`  ORDER BY root_id desc , created_at LIMIT 10 OFFSET 0
+  Rendered forum/index.html.erb within layouts/application (9.7ms)
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `users`[0m
+Completed 200 OK in 57ms (Views: 52.2ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/assets/favicon-3da0cc52952440e113d2ef7bb07cc6b601f1899e3ed5843f0bd6759f1277f3ba.ico" for 127.0.0.1 at 2017-05-23 12:34:59 +0200
+
+
+Started GET "/forum" for 127.0.0.1 at 2017-05-23 12:35:40 +0200
+Processing by ForumController#index as HTML
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM `forum_posts`
+  [1m[36mForumPost Load (0.4ms)[0m  [1mSELECT  `forum_posts`.* FROM `forum_posts`  ORDER BY root_id desc , created_at LIMIT 10 OFFSET 0[0m
+  Rendered forum/index.html.erb within layouts/application (11.5ms)
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `users`
+Completed 200 OK in 64ms (Views: 57.4ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/assets/favicon-3da0cc52952440e113d2ef7bb07cc6b601f1899e3ed5843f0bd6759f1277f3ba.ico" for 127.0.0.1 at 2017-05-23 12:35:41 +0200
+
+
+Started POST "/forum/destroy?method=post" for 127.0.0.1 at 2017-05-23 12:35:44 +0200
+Processing by ForumController#destroy as HTML
+  Parameters: {"authenticity_token"=>"8WQnDsiAxjcAHI7Qk1hk8SHOs9XBDSci4h65fNpm9nxLOtgCpDk3hPKatDaqNh2FaTmc2ukq+/GdEDxEeKBRpA==", "method"=>"post"}
+ApplicationController::require_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+Redirected to http://localhost:3000/user_sessions/new
+Filter chain halted as :require_user rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/user_sessions/new" for 127.0.0.1 at 2017-05-23 12:35:44 +0200
+Processing by UserSessionsController#new as HTML
+ApplicationController::require_no_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+  Rendered user_sessions/_form.html.erb (2.9ms)
+  Rendered user_sessions/new.html.erb within layouts/application (4.5ms)
+ApplicationController::current_user
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `users`[0m
+Completed 200 OK in 58ms (Views: 56.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/forum" for 127.0.0.1 at 2017-05-23 12:37:01 +0200
+Processing by ForumController#index as HTML
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `forum_posts`
+  [1m[36mForumPost Load (0.3ms)[0m  [1mSELECT  `forum_posts`.* FROM `forum_posts`  ORDER BY root_id desc , created_at LIMIT 10 OFFSET 0[0m
+  Rendered forum/index.html.erb within layouts/application (10.5ms)
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `users`
+Completed 200 OK in 59ms (Views: 54.7ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/assets/favicon-3da0cc52952440e113d2ef7bb07cc6b601f1899e3ed5843f0bd6759f1277f3ba.ico" for 127.0.0.1 at 2017-05-23 12:37:01 +0200
+
+
+Started GET "/forum" for 127.0.0.1 at 2017-05-23 12:37:26 +0200
+Processing by ForumController#index as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `forum_posts`[0m
+  [1m[35mForumPost Load (0.3ms)[0m  SELECT  `forum_posts`.* FROM `forum_posts`  ORDER BY root_id desc , created_at LIMIT 10 OFFSET 0
+  Rendered forum/index.html.erb within layouts/application (10.0ms)
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `users`[0m
+Completed 200 OK in 61ms (Views: 55.7ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/assets/favicon-3da0cc52952440e113d2ef7bb07cc6b601f1899e3ed5843f0bd6759f1277f3ba.ico" for 127.0.0.1 at 2017-05-23 12:37:26 +0200
+
+
+Started GET "/forum" for 127.0.0.1 at 2017-05-23 12:38:33 +0200
+Processing by ForumController#index as HTML
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `forum_posts`
+  [1m[36mForumPost Load (0.3ms)[0m  [1mSELECT  `forum_posts`.* FROM `forum_posts`  ORDER BY root_id desc , created_at LIMIT 10 OFFSET 0[0m
+  Rendered forum/index.html.erb within layouts/application (9.7ms)
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `users`
+Completed 200 OK in 63ms (Views: 58.2ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/assets/favicon-3da0cc52952440e113d2ef7bb07cc6b601f1899e3ed5843f0bd6759f1277f3ba.ico" for 127.0.0.1 at 2017-05-23 12:38:34 +0200
+
+
+Started GET "/user_sessions/new" for 127.0.0.1 at 2017-05-23 12:38:38 +0200
+Processing by UserSessionsController#new as HTML
+ApplicationController::require_no_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+  Rendered user_sessions/_form.html.erb (1.1ms)
+  Rendered user_sessions/new.html.erb within layouts/application (3.1ms)
+ApplicationController::current_user
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM `users`[0m
+Completed 200 OK in 55ms (Views: 52.9ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/user_sessions/create" for 127.0.0.1 at 2017-05-23 12:38:41 +0200
+Processing by UserSessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OneCCELlBo5VFsjW8yiA8ZgH0GJoF7flZ6Y8SpMcLQSAKX0ELlz3PaeQ8jDKRvmF0PD/bUAwazYYqLlyMdqK3A==", "user_session"=>{"login"=>"admin", "password"=>"[FILTERED]"}, "commit"=>"Iniciar sesión"}
+ApplicationController::require_no_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[35mUser Load (0.4ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`login` = 'admin'  ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE `users` SET `login_count` = 8, `last_login_at` = '2017-05-23 09:59:02', `current_login_at` = '2017-05-23 10:38:41', `last_request_at` = '2017-05-23 10:38:41', `perishable_token` = 'rLgTpvxnL5sAhOnxzk22', `updated_at` = '2017-05-23 10:38:41' WHERE `users`.`id` = 2
+  [1m[36m (59.8ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/forum/destroy?method=post
+Completed 302 Found in 178ms (ActiveRecord: 60.7ms)
+
+
+Started GET "/forum/destroy?method=post" for 127.0.0.1 at 2017-05-23 12:38:41 +0200
+Processing by ForumController#destroy as HTML
+  Parameters: {"method"=>"post"}
+ApplicationController::require_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[35mUser Load (0.6ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE `users` SET `last_request_at` = '2017-05-23 10:38:41', `perishable_token` = 'R5ifsfox8IrRfi0C097q', `updated_at` = '2017-05-23 10:38:41' WHERE `users`.`id` = 2
+  [1m[36m (71.8ms)[0m  [1mCOMMIT[0m
+ApplicationController::current_user_session
+  [1m[35mForumPost Load (0.4ms)[0m  SELECT  `forum_posts`.* FROM `forum_posts` WHERE `forum_posts`.`id` = NULL LIMIT 1
+Completed 404 Not Found in 81ms (ActiveRecord: 73.6ms)
+
+ActiveRecord::RecordNotFound (Couldn't find ForumPost with 'id'=):
+  app/controllers/forum_controller.rb:38:in `destroy'
+
+
+  Rendered /home/toni/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.0ms)
+  Rendered /home/toni/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /home/toni/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/toni/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (19.7ms)
+  Rendered /home/toni/.rvm/gems/ruby-2.2.4/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/toni/.rvm/gems/ruby-2.2.4/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/toni/.rvm/gems/ruby-2.2.4/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/toni/.rvm/gems/ruby-2.2.4/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/toni/.rvm/gems/ruby-2.2.4/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (13.9ms)
+  Rendered /home/toni/.rvm/gems/ruby-2.2.4/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/toni/.rvm/gems/ruby-2.2.4/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/toni/.rvm/gems/ruby-2.2.4/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (27.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-23 12:39:22 +0200
+Processing by CatalogController#index as HTML
+  [1m[36mCart Load (0.3ms)[0m  [1mSELECT  `carts`.* FROM `carts` WHERE `carts`.`id` = 24 LIMIT 1[0m
+ApplicationController::require_no_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[35mUser Load (0.4ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE `users` SET `last_request_at` = '2017-05-23 10:39:23', `perishable_token` = 'xTIJYS064laVY53OZq6', `updated_at` = '2017-05-23 10:39:23' WHERE `users`.`id` = 2
+  [1m[36m (37.2ms)[0m  [1mCOMMIT[0m
+ApplicationController::current_user_session
+Redirected to http://localhost:3000/about
+Filter chain halted as :require_no_user rendered or redirected
+Completed 302 Found in 70ms (ActiveRecord: 40.2ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2017-05-23 12:39:23 +0200
+Processing by AboutController#index as HTML
+  Rendered about/index.html.erb within layouts/application (0.5ms)
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[35mUser Load (0.4ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE `users` SET `last_request_at` = '2017-05-23 10:39:23', `perishable_token` = 'OVIv0WljvegJVrHFBRM2', `updated_at` = '2017-05-23 10:39:23' WHERE `users`.`id` = 2
+  [1m[36m (45.2ms)[0m  [1mCOMMIT[0m
+ApplicationController::current_user_session
+ApplicationController::current_user
+Completed 200 OK in 109ms (Views: 61.6ms | ActiveRecord: 46.1ms)
+
+
+Started GET "/forum" for 127.0.0.1 at 2017-05-23 12:39:28 +0200
+Processing by ForumController#index as HTML
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM `forum_posts`
+  [1m[36mForumPost Load (0.4ms)[0m  [1mSELECT  `forum_posts`.* FROM `forum_posts`  ORDER BY root_id desc , created_at LIMIT 10 OFFSET 0[0m
+  Rendered forum/index.html.erb within layouts/application (11.6ms)
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[35mUser Load (0.4ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE `users` SET `last_request_at` = '2017-05-23 10:39:28', `perishable_token` = 'oG6csiA82ORCRS8EaklT', `updated_at` = '2017-05-23 10:39:28' WHERE `users`.`id` = 2
+  [1m[36m (98.0ms)[0m  [1mCOMMIT[0m
+ApplicationController::current_user_session
+ApplicationController::current_user
+Completed 200 OK in 167ms (Views: 63.8ms | ActiveRecord: 100.7ms)
+
+
+Started POST "/forum/destroy?id=3&method=post" for 127.0.0.1 at 2017-05-23 12:39:32 +0200
+Processing by ForumController#destroy as HTML
+  Parameters: {"authenticity_token"=>"uc1y961QBsAXCyxT4qkHgR0sTrIyoWAFCWM5C03Y2ekDk437wen3c+WNFrXbx371VdthvRqGvNZ2bbwz7x5+MQ==", "id"=>"3", "method"=>"post"}
+ApplicationController::require_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[35mUser Load (0.4ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE `users` SET `last_request_at` = '2017-05-23 10:39:32', `perishable_token` = 'eb2UqSC3mTVacWG2lm', `updated_at` = '2017-05-23 10:39:32' WHERE `users`.`id` = 2
+  [1m[36m (38.3ms)[0m  [1mCOMMIT[0m
+ApplicationController::current_user_session
+  [1m[35mForumPost Load (0.5ms)[0m  SELECT  `forum_posts`.* FROM `forum_posts` WHERE `forum_posts`.`id` = 3 LIMIT 1
+  [1m[36mForumPost Load (0.3ms)[0m  [1mSELECT `forum_posts`.* FROM `forum_posts` WHERE `forum_posts`.`root_id` = 3[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM `forum_posts` WHERE `forum_posts`.`id` = 3[0m
+  [1m[35m (74.5ms)[0m  COMMIT
+Redirected to http://localhost:3000/forum
+Completed 302 Found in 124ms (ActiveRecord: 114.9ms)
+
+
+Started GET "/forum" for 127.0.0.1 at 2017-05-23 12:39:32 +0200
+Processing by ForumController#index as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `forum_posts`[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM `forum_posts`
+  Rendered forum/index.html.erb within layouts/application (1.4ms)
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE `users` SET `last_request_at` = '2017-05-23 10:39:32', `perishable_token` = 'ZbnHDZhvHVHZ7p7HdGav', `updated_at` = '2017-05-23 10:39:32' WHERE `users`.`id` = 2[0m
+  [1m[35m (33.0ms)[0m  COMMIT
+ApplicationController::current_user_session
+ApplicationController::current_user
+Completed 200 OK in 80ms (Views: 45.5ms | ActiveRecord: 34.0ms)
+
+
+Started GET "/forum/post" for 127.0.0.1 at 2017-05-23 12:39:44 +0200
+Processing by ForumController#post as HTML
+  Rendered forum/_form.html.erb (0.9ms)
+  Rendered forum/post.html.erb within layouts/application (2.6ms)
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE `users` SET `last_request_at` = '2017-05-23 10:39:44', `perishable_token` = '6dsvvvOJyRHwdPnyjG5K', `updated_at` = '2017-05-23 10:39:44' WHERE `users`.`id` = 2[0m
+  [1m[35m (37.4ms)[0m  COMMIT
+ApplicationController::current_user_session
+ApplicationController::current_user
+Completed 200 OK in 98ms (Views: 58.0ms | ActiveRecord: 38.4ms)
+
+
+Started POST "/forum/create" for 127.0.0.1 at 2017-05-23 12:40:07 +0200
+Processing by ForumController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XiukmwBDl6eXqZEkjuNOf5Y9c+6v8yJYl/TDyE4r/6vkdVuXbPpmFGUvq8K3jTcL3spc4YfU/ovo+kbw7O1Ycw==", "post"=>{"root_id"=>"0", "parent_id"=>"0", "depth"=>"0", "name"=>"Antonio", "subject"=>"Foro", "body"=>"Texto del foro"}, "commit"=>"Crear post"}
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  Rendered forum/_form.html.erb (1.3ms)
+  Rendered forum/post.html.erb within layouts/application (2.4ms)
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE `users` SET `last_request_at` = '2017-05-23 10:40:07', `perishable_token` = 'Pps38K10XJukJdfPPPd', `updated_at` = '2017-05-23 10:40:07' WHERE `users`.`id` = 2[0m
+  [1m[35m (39.6ms)[0m  COMMIT
+ApplicationController::current_user_session
+ApplicationController::current_user
+Completed 200 OK in 93ms (Views: 48.8ms | ActiveRecord: 40.7ms)
+
+
+Started POST "/forum/create" for 127.0.0.1 at 2017-05-23 12:40:16 +0200
+Processing by ForumController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1A7/ToFpbtqB3x9t5T2ONpx3JiET1gMPeEXtsrcKXjxuUABC7dCfaXNZJYvcU/dC1IAJLjvx39wHS2iKFcz55A==", "post"=>{"root_id"=>"0", "parent_id"=>"0", "depth"=>"0", "name"=>"Antonio", "subject"=>"Asunto del foro", "body"=>"Texto del foro"}, "commit"=>"Crear post"}
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `forum_posts` (`name`, `subject`, `body`, `created_at`, `updated_at`) VALUES ('Antonio', 'Asunto del foro', 'Texto del foro', '2017-05-23 10:40:16', '2017-05-23 10:40:16')
+  [1m[36m (40.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE `forum_posts` SET `root_id` = 4, `updated_at` = '2017-05-23 10:40:16' WHERE `forum_posts`.`id` = 4[0m
+  [1m[35m (41.7ms)[0m  COMMIT
+Redirected to http://localhost:3000/forum
+Completed 302 Found in 91ms (ActiveRecord: 83.0ms)
+
+
+Started GET "/forum" for 127.0.0.1 at 2017-05-23 12:40:16 +0200
+Processing by ForumController#index as HTML
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM `forum_posts`[0m
+  [1m[35mForumPost Load (0.3ms)[0m  SELECT  `forum_posts`.* FROM `forum_posts`  ORDER BY root_id desc , created_at LIMIT 10 OFFSET 0
+  Rendered forum/index.html.erb within layouts/application (3.8ms)
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE `users` SET `last_request_at` = '2017-05-23 10:40:16', `perishable_token` = '4utn30DRgbAluYeuEgD', `updated_at` = '2017-05-23 10:40:16' WHERE `users`.`id` = 2[0m
+  [1m[35m (41.0ms)[0m  COMMIT
+ApplicationController::current_user_session
+ApplicationController::current_user
+Completed 200 OK in 106ms (Views: 61.5ms | ActiveRecord: 42.5ms)
+
+
+Started GET "/forum" for 127.0.0.1 at 2017-05-23 12:41:12 +0200
+Processing by ForumController#index as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `forum_posts`[0m
+  [1m[35mForumPost Load (0.3ms)[0m  SELECT  `forum_posts`.* FROM `forum_posts`  ORDER BY root_id desc , created_at LIMIT 10 OFFSET 0
+  Rendered forum/index.html.erb within layouts/application (10.1ms)
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE `users` SET `last_request_at` = '2017-05-23 10:41:12', `perishable_token` = 'jNEABxaP5rOD6DmJjndL', `updated_at` = '2017-05-23 10:41:12' WHERE `users`.`id` = 2[0m
+  [1m[35m (39.4ms)[0m  COMMIT
+ApplicationController::current_user_session
+ApplicationController::current_user
+Completed 200 OK in 111ms (Views: 66.2ms | ActiveRecord: 42.7ms)
+
+
+Started GET "/assets/favicon-3da0cc52952440e113d2ef7bb07cc6b601f1899e3ed5843f0bd6759f1277f3ba.ico" for 127.0.0.1 at 2017-05-23 12:41:12 +0200
+
+
+Started GET "/forum" for 127.0.0.1 at 2017-05-23 12:41:37 +0200
+Processing by ForumController#index as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `forum_posts`[0m
+  [1m[35mForumPost Load (0.3ms)[0m  SELECT  `forum_posts`.* FROM `forum_posts`  ORDER BY root_id desc , created_at LIMIT 10 OFFSET 0
+  Rendered forum/index.html.erb within layouts/application (10.5ms)
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE `users` SET `last_request_at` = '2017-05-23 10:41:38', `perishable_token` = 'pOB3okrE8EyaW4n44n', `updated_at` = '2017-05-23 10:41:38' WHERE `users`.`id` = 2[0m
+  [1m[35m (45.1ms)[0m  COMMIT
+ApplicationController::current_user_session
+ApplicationController::current_user
+Completed 200 OK in 126ms (Views: 75.0ms | ActiveRecord: 47.9ms)
+
+
+Started GET "/assets/favicon-3da0cc52952440e113d2ef7bb07cc6b601f1899e3ed5843f0bd6759f1277f3ba.ico" for 127.0.0.1 at 2017-05-23 12:41:38 +0200
+
+
+Started GET "/forum/show?id=4" for 127.0.0.1 at 2017-05-23 12:42:04 +0200
+Processing by ForumController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mForumPost Load (0.4ms)[0m  [1mSELECT  `forum_posts`.* FROM `forum_posts` WHERE `forum_posts`.`id` = 4 LIMIT 1[0m
+  Rendered forum/show.html.erb within layouts/application (1.0ms)
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[35mUser Load (0.5ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE `users` SET `last_request_at` = '2017-05-23 10:42:04', `perishable_token` = 'kul3e81fzupbnawcjPrV', `updated_at` = '2017-05-23 10:42:04' WHERE `users`.`id` = 2
+  [1m[36m (70.3ms)[0m  [1mCOMMIT[0m
+ApplicationController::current_user_session
+ApplicationController::current_user
+Completed 200 OK in 116ms (Views: 42.7ms | ActiveRecord: 71.6ms)
+
+
+Started GET "/forum/reply?id=4" for 127.0.0.1 at 2017-05-23 12:42:05 +0200
+Processing by ForumController#reply as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mForumPost Load (0.7ms)[0m  SELECT  `forum_posts`.* FROM `forum_posts` WHERE `forum_posts`.`id` = 4 LIMIT 1
+  Rendered forum/_form.html.erb (1.0ms)
+  Rendered forum/post.html.erb within layouts/application (2.9ms)
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mSQL (0.8ms)[0m  [1mUPDATE `users` SET `last_request_at` = '2017-05-23 10:42:05', `perishable_token` = 'ja0KU3jNnu5B0zC6eboi', `updated_at` = '2017-05-23 10:42:05' WHERE `users`.`id` = 2[0m
+  [1m[35m (96.3ms)[0m  COMMIT
+ApplicationController::current_user_session
+ApplicationController::current_user
+Completed 200 OK in 168ms (Views: 67.4ms | ActiveRecord: 98.4ms)
+
+
+Started POST "/forum/create" for 127.0.0.1 at 2017-05-23 12:42:44 +0200
+Processing by ForumController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ydvGfaTHrDxR0iElP7qB6yr4vv/MiTiU8zZDQycJMu5zhTlxyH5dj6NUG8MG1PifYg+R8OSu5EeMOMZ7hc+VNg==", "post"=>{"root_id"=>"4", "parent_id"=>"4", "depth"=>"1", "name"=>"Antonio", "subject"=>"Otra prueba", "body"=>"Texto de otra prueba"}, "commit"=>"Crear post"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `forum_posts` (`name`, `subject`, `body`, `root_id`, `parent_id`, `depth`, `created_at`, `updated_at`) VALUES ('Antonio', 'Otra prueba', 'Texto de otra prueba', 4, 4, 1, '2017-05-23 10:42:44', '2017-05-23 10:42:44')
+  [1m[36m (83.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/forum
+Completed 302 Found in 91ms (ActiveRecord: 83.9ms)
+
+
+Started GET "/forum" for 127.0.0.1 at 2017-05-23 12:42:44 +0200
+Processing by ForumController#index as HTML
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `forum_posts`
+  [1m[36mForumPost Load (0.3ms)[0m  [1mSELECT  `forum_posts`.* FROM `forum_posts`  ORDER BY root_id desc , created_at LIMIT 10 OFFSET 0[0m
+  Rendered forum/index.html.erb within layouts/application (3.9ms)
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[35mUser Load (0.3ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE `users` SET `last_request_at` = '2017-05-23 10:42:44', `perishable_token` = 'GRurBSGMtEzf5r4Jeb3t', `updated_at` = '2017-05-23 10:42:44' WHERE `users`.`id` = 2
+  [1m[36m (44.0ms)[0m  [1mCOMMIT[0m
+ApplicationController::current_user_session
+ApplicationController::current_user
+Completed 200 OK in 92ms (Views: 46.3ms | ActiveRecord: 45.3ms)
+
+
+Started GET "/forum" for 127.0.0.1 at 2017-05-23 12:44:24 +0200
+Processing by ForumController#index as HTML
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `forum_posts`
+  [1m[36mForumPost Load (0.3ms)[0m  [1mSELECT  `forum_posts`.* FROM `forum_posts`  ORDER BY root_id desc , created_at LIMIT 10 OFFSET 0[0m
+  Rendered forum/index.html.erb within layouts/application (10.9ms)
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[35mUser Load (0.3ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE `users` SET `last_request_at` = '2017-05-23 10:44:24', `perishable_token` = 'dPLa1CSI5IzzbXiHh92Z', `updated_at` = '2017-05-23 10:44:24' WHERE `users`.`id` = 2
+  [1m[36m (43.0ms)[0m  [1mCOMMIT[0m
+ApplicationController::current_user_session
+ApplicationController::current_user
+Completed 200 OK in 117ms (Views: 67.4ms | ActiveRecord: 46.5ms)
+
+
+Started GET "/assets/favicon-3da0cc52952440e113d2ef7bb07cc6b601f1899e3ed5843f0bd6759f1277f3ba.ico" for 127.0.0.1 at 2017-05-23 12:44:24 +0200
+
+
+Started GET "/forum/show?id=5" for 127.0.0.1 at 2017-05-23 12:44:31 +0200
+Processing by ForumController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mForumPost Load (0.3ms)[0m  SELECT  `forum_posts`.* FROM `forum_posts` WHERE `forum_posts`.`id` = 5 LIMIT 1
+  Rendered forum/show.html.erb within layouts/application (0.5ms)
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE `users` SET `last_request_at` = '2017-05-23 10:44:31', `perishable_token` = 'nPZ0upyGsg7BWRqpzBIE', `updated_at` = '2017-05-23 10:44:31' WHERE `users`.`id` = 2[0m
+  [1m[35m (31.3ms)[0m  COMMIT
+ApplicationController::current_user_session
+ApplicationController::current_user
+Completed 200 OK in 92ms (Views: 58.4ms | ActiveRecord: 32.5ms)
+
+
+Started GET "/forum/reply?id=5" for 127.0.0.1 at 2017-05-23 12:44:32 +0200
+Processing by ForumController#reply as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mForumPost Load (0.5ms)[0m  [1mSELECT  `forum_posts`.* FROM `forum_posts` WHERE `forum_posts`.`id` = 5 LIMIT 1[0m
+  Rendered forum/_form.html.erb (1.1ms)
+  Rendered forum/post.html.erb within layouts/application (2.8ms)
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[35mUser Load (0.5ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE `users` SET `last_request_at` = '2017-05-23 10:44:32', `perishable_token` = 'UVyzWpACTnTXSN8l0Cda', `updated_at` = '2017-05-23 10:44:32' WHERE `users`.`id` = 2
+  [1m[36m (44.0ms)[0m  [1mCOMMIT[0m
+ApplicationController::current_user_session
+ApplicationController::current_user
+Completed 200 OK in 107ms (Views: 59.2ms | ActiveRecord: 45.6ms)
+
+
+Started POST "/forum/create" for 127.0.0.1 at 2017-05-23 12:44:48 +0200
+Processing by ForumController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LgiBu+9J0svF3+zwCIbPMAQqamx2+csBI+KOQmq0xw2UVn63g/AjeDdZ1hYx6LZETN1FY17eF9Jc7At6yHJg1Q==", "post"=>{"root_id"=>"4", "parent_id"=>"5", "depth"=>"2", "name"=>"Antonio", "subject"=>"Otra nueva prueba", "body"=>"Texto de otra nueva prueba"}, "commit"=>"Crear post"}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO `forum_posts` (`name`, `subject`, `body`, `root_id`, `parent_id`, `depth`, `created_at`, `updated_at`) VALUES ('Antonio', 'Otra nueva prueba', 'Texto de otra nueva prueba', 4, 5, 2, '2017-05-23 10:44:48', '2017-05-23 10:44:48')[0m
+  [1m[35m (35.1ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+Redirected to http://localhost:3000/forum
+Completed 302 Found in 43ms (ActiveRecord: 36.1ms)
+
+
+Started GET "/forum" for 127.0.0.1 at 2017-05-23 12:44:48 +0200
+Processing by ForumController#index as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `forum_posts`[0m
+  [1m[35mForumPost Load (0.3ms)[0m  SELECT  `forum_posts`.* FROM `forum_posts`  ORDER BY root_id desc , created_at LIMIT 10 OFFSET 0
+  Rendered forum/index.html.erb within layouts/application (3.9ms)
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE `users` SET `last_request_at` = '2017-05-23 10:44:48', `perishable_token` = 'BfeIi5tU3vceA9Xo5b0T', `updated_at` = '2017-05-23 10:44:48' WHERE `users`.`id` = 2[0m
+  [1m[35m (44.7ms)[0m  COMMIT
+ApplicationController::current_user_session
+ApplicationController::current_user
+Completed 200 OK in 93ms (Views: 45.8ms | ActiveRecord: 46.2ms)
+
+
+Started POST "/forum/destroy?id=4&method=post" for 127.0.0.1 at 2017-05-23 12:44:53 +0200
+Processing by ForumController#destroy as HTML
+  Parameters: {"authenticity_token"=>"9uZhlOP7E9zVfVL/2Ps7ESeeLCiu7rqDOyJJKRGQ4ZVMuJ6Yj0Libyf7aBnhlUJlb2kDJ4bJZlBELMwRs1ZGTQ==", "id"=>"4", "method"=>"post"}
+ApplicationController::require_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE `users` SET `last_request_at` = '2017-05-23 10:44:53', `perishable_token` = 'vnBw05vhHPJYWWnFnqF', `updated_at` = '2017-05-23 10:44:53' WHERE `users`.`id` = 2[0m
+  [1m[35m (44.2ms)[0m  COMMIT
+ApplicationController::current_user_session
+  [1m[36mForumPost Load (0.6ms)[0m  [1mSELECT  `forum_posts`.* FROM `forum_posts` WHERE `forum_posts`.`id` = 4 LIMIT 1[0m
+  [1m[35mForumPost Load (0.5ms)[0m  SELECT `forum_posts`.* FROM `forum_posts` WHERE `forum_posts`.`root_id` = 4
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  DELETE FROM `forum_posts` WHERE `forum_posts`.`id` = 4
+  [1m[36m (82.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM `forum_posts` WHERE `forum_posts`.`id` = 5[0m
+  [1m[35m (110.1ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  DELETE FROM `forum_posts` WHERE `forum_posts`.`id` = 6
+  [1m[36m (87.0ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/forum
+Completed 302 Found in 342ms (ActiveRecord: 327.5ms)
+
+
+Started GET "/forum" for 127.0.0.1 at 2017-05-23 12:44:53 +0200
+Processing by ForumController#index as HTML
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM `forum_posts`
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM `forum_posts`[0m
+  Rendered forum/index.html.erb within layouts/application (2.4ms)
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[35mUser Load (0.5ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE `users` SET `last_request_at` = '2017-05-23 10:44:53', `perishable_token` = 'j7KjcXvVhZDr6sVFRCDP', `updated_at` = '2017-05-23 10:44:53' WHERE `users`.`id` = 2
+  [1m[36m (42.8ms)[0m  [1mCOMMIT[0m
+ApplicationController::current_user_session
+ApplicationController::current_user
+Completed 200 OK in 106ms (Views: 60.9ms | ActiveRecord: 44.2ms)
+
+
+Started GET "/forum/post" for 127.0.0.1 at 2017-05-23 12:51:29 +0200
+Processing by ForumController#post as HTML
+  Rendered forum/_form.html.erb (0.5ms)
+  Rendered forum/post.html.erb within layouts/application (2.4ms)
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[35mUser Load (0.3ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+ApplicationController::current_user_session
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM `users`[0m
+Completed 200 OK in 74ms (Views: 63.6ms | ActiveRecord: 2.6ms)
+
+
+Started POST "/forum/create" for 127.0.0.1 at 2017-05-23 12:51:35 +0200
+Processing by ForumController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"p05dBX3sfz/zc7bgLws9SCTlfusPNXCXIbbcde9Aj+MdEKIJEVWOjAH1jAYWZUQ8bBJR5CcSrEReuFlNTYYoOw==", "post"=>{"root_id"=>"0", "parent_id"=>"0", "depth"=>"0", "name"=>"fdsaaaaa", "subject"=>"adssssssssss", "body"=>"sdaaaaaaaa"}, "commit"=>"Crear post"}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `forum_posts` (`name`, `subject`, `body`, `created_at`, `updated_at`) VALUES ('fdsaaaaa', 'adssssssssss', 'sdaaaaaaaa', '2017-05-23 10:51:35', '2017-05-23 10:51:35')[0m
+  [1m[35m (41.9ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  UPDATE `forum_posts` SET `root_id` = 7, `updated_at` = '2017-05-23 10:51:35' WHERE `forum_posts`.`id` = 7
+  [1m[36m (41.7ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/forum
+Completed 302 Found in 91ms (ActiveRecord: 84.9ms)
+
+
+Started GET "/forum" for 127.0.0.1 at 2017-05-23 12:51:35 +0200
+Processing by ForumController#index as HTML
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `forum_posts`
+  [1m[36mForumPost Load (0.4ms)[0m  [1mSELECT  `forum_posts`.* FROM `forum_posts`  ORDER BY root_id desc , created_at LIMIT 10 OFFSET 0[0m
+  Rendered forum/index.html.erb within layouts/application (10.8ms)
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[35mUser Load (0.4ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+ApplicationController::current_user_session
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `users`[0m
+Completed 200 OK in 58ms (Views: 55.7ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/forum/destroy?id=7&method=post" for 127.0.0.1 at 2017-05-23 12:51:41 +0200
+Processing by ForumController#destroy as HTML
+  Parameters: {"authenticity_token"=>"tjLy1UPkqCAHUgHBNqmfmtaTNsssvYzX40l9tbILwG4MbA3ZL11Zk/XUOycPx+bunmQZxASaUAScR/iNEM1ntg==", "id"=>"7", "method"=>"post"}
+ApplicationController::require_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[35mUser Load (1.0ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+ApplicationController::current_user_session
+Redirected to http://localhost:3000/user_sessions/new
+Filter chain halted as :require_user rendered or redirected
+Completed 302 Found in 6ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/user_sessions/new" for 127.0.0.1 at 2017-05-23 12:51:41 +0200
+Processing by UserSessionsController#new as HTML
+ApplicationController::require_no_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+ApplicationController::current_user_session
+  Rendered user_sessions/_form.html.erb (0.4ms)
+  Rendered user_sessions/new.html.erb within layouts/application (1.8ms)
+ApplicationController::current_user
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM `users`
+Completed 200 OK in 51ms (Views: 47.0ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/user_sessions/create" for 127.0.0.1 at 2017-05-23 12:51:44 +0200
+Processing by UserSessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0IL2cmPp8tnVNBw/AVOaOesANPPqVM4e5G170/DJol5q3Al+D1ADaieyJtk4PeNNo/cb/MJzEs2bY/7rUg8Fhg==", "user_session"=>{"login"=>"admin", "password"=>"[FILTERED]"}, "commit"=>"Iniciar sesión"}
+ApplicationController::require_no_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+ApplicationController::current_user_session
+  [1m[35mUser Load (0.4ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`login` = 'admin'  ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE `users` SET `login_count` = 9, `last_login_at` = '2017-05-23 10:38:41', `current_login_at` = '2017-05-23 10:51:44', `last_request_at` = '2017-05-23 10:51:44', `perishable_token` = 'Rfsm2b7B3tm0CCdHk6dR', `updated_at` = '2017-05-23 10:51:44' WHERE `users`.`id` = 2
+  [1m[36m (41.3ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/forum/destroy?id=7&method=post
+Completed 302 Found in 115ms (ActiveRecord: 42.6ms)
+
+
+Started GET "/forum/destroy?id=7&method=post" for 127.0.0.1 at 2017-05-23 12:51:45 +0200
+Processing by ForumController#destroy as HTML
+  Parameters: {"id"=>"7", "method"=>"post"}
+ApplicationController::require_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[35mUser Load (0.4ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE `users` SET `last_request_at` = '2017-05-23 10:51:45', `perishable_token` = 'MDNazQ2Ng8G8z2Pj7Aq', `updated_at` = '2017-05-23 10:51:45' WHERE `users`.`id` = 2
+  [1m[36m (42.1ms)[0m  [1mCOMMIT[0m
+ApplicationController::current_user_session
+  [1m[35mForumPost Load (0.6ms)[0m  SELECT  `forum_posts`.* FROM `forum_posts` WHERE `forum_posts`.`id` = 7 LIMIT 1
+  [1m[36mForumPost Load (0.3ms)[0m  [1mSELECT `forum_posts`.* FROM `forum_posts` WHERE `forum_posts`.`root_id` = 7[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM `forum_posts` WHERE `forum_posts`.`id` = 7[0m
+  [1m[35m (85.0ms)[0m  COMMIT
+Redirected to http://localhost:3000/forum
+Completed 302 Found in 137ms (ActiveRecord: 129.4ms)
+
+
+Started GET "/forum" for 127.0.0.1 at 2017-05-23 12:51:45 +0200
+Processing by ForumController#index as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `forum_posts`[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM `forum_posts`
+  Rendered forum/index.html.erb within layouts/application (1.2ms)
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE `users` SET `last_request_at` = '2017-05-23 10:51:45', `perishable_token` = 'BxIQYLLbOwrAp5UG5p2', `updated_at` = '2017-05-23 10:51:45' WHERE `users`.`id` = 2[0m
+  [1m[35m (46.1ms)[0m  COMMIT
+ApplicationController::current_user_session
+ApplicationController::current_user
+Completed 200 OK in 91ms (Views: 43.4ms | ActiveRecord: 47.4ms)

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170509090942) do
+ActiveRecord::Schema.define(version: 20170523090915) do
 
   create_table "articles", force: :cascade do |t|
     t.string   "title",                    limit: 255,   null: false
@@ -51,6 +51,17 @@ ActiveRecord::Schema.define(version: 20170509090942) do
   end
 
   create_table "carts", force: :cascade do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "forum_posts", force: :cascade do |t|
+    t.string   "name",       limit: 50,                null: false
+    t.string   "subject",    limit: 255,               null: false
+    t.text     "body",       limit: 65535
+    t.integer  "root_id",    limit: 4,     default: 0, null: false
+    t.integer  "parent_id",  limit: 4,     default: 0, null: false
+    t.integer  "depth",      limit: 4,     default: 0, null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end

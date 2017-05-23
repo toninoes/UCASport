@@ -1,0 +1,6 @@
+<%= form_tag :action => 'create' do %>
+    <%= render :partial => 'form' %>
+    <%= submit_tag 'Crear post' %>
+<% end %>
+
+<%= link_to 'Volver', :action => 'index' %>
