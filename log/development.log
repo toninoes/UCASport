@@ -22592,3 +22592,236 @@ ApplicationController::current_user_session
 ApplicationController::current_user_session
 ApplicationController::current_user
 Completed 200 OK in 91ms (Views: 43.4ms | ActiveRecord: 47.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-02 19:06:20 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (61.7ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by CatalogController#index as HTML
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (10.9ms)[0m  [1mINSERT INTO `carts` (`created_at`, `updated_at`) VALUES ('2017-06-02 17:06:21', '2017-06-02 17:06:21')[0m
+  [1m[35m (37.9ms)[0m  COMMIT
+ApplicationController::require_no_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[36mArticle Load (22.5ms)[0m  [1mSELECT  `articles`.* FROM `articles`  ORDER BY articles.id desc LIMIT 5 OFFSET 0[0m
+  [1m[35mHABTM_Suppliers Load (5.4ms)[0m  SELECT `articles_suppliers`.* FROM `articles_suppliers` WHERE `articles_suppliers`.`article_id` IN (12, 11, 8, 6, 5)
+  [1m[36mSupplier Load (0.5ms)[0m  [1mSELECT `suppliers`.* FROM `suppliers` WHERE `suppliers`.`id` IN (2, 3, 4, 5, 6)[0m
+  [1m[35mManufacturer Load (0.5ms)[0m  SELECT `manufacturers`.* FROM `manufacturers` WHERE `manufacturers`.`id` IN (5, 7, 6)
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM `articles`[0m
+  Rendered catalog/_articles.html.erb (286.4ms)
+  Rendered catalog/index.html.erb within layouts/application (335.0ms)
+ApplicationController::current_user
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM `users`
+  [1m[36mCartItem Load (0.7ms)[0m  [1mSELECT `cart_items`.* FROM `cart_items` WHERE `cart_items`.`cart_id` = 25[0m
+  Rendered cart/_cart.html.erb (78.5ms)
+Completed 200 OK in 3273ms (Views: 2760.9ms | ActiveRecord: 242.4ms)
+
+
+Started GET "/assets/about.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-06-02 19:06:24 +0200
+
+
+Started GET "/assets/admin/article.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-06-02 19:06:24 +0200
+
+
+Started GET "/assets/cart.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-06-02 19:06:24 +0200
+
+
+Started GET "/assets/admin/order.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-06-02 19:06:24 +0200
+
+
+Started GET "/assets/admin/manufacturer.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-06-02 19:06:24 +0200
+
+
+Started GET "/assets/admin/supplier.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-06-02 19:06:24 +0200
+
+
+Started GET "/assets/catalog.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-06-02 19:06:24 +0200
+
+
+Started GET "/assets/checkout.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-06-02 19:06:24 +0200
+
+
+Started GET "/assets/forum.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-06-02 19:06:24 +0200
+
+
+Started GET "/assets/style.self-28c50fed0fbf40c4e00e2c6a9dc7872cb7466e25803d031cd7fc5cb4ba105fd8.css?body=1" for 127.0.0.1 at 2017-06-02 19:06:24 +0200
+
+
+Started GET "/assets/user.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-06-02 19:06:24 +0200
+
+
+Started GET "/assets/user_sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-06-02 19:06:24 +0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2017-06-02 19:06:24 +0200
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2017-06-02 19:06:24 +0200
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2017-06-02 19:06:24 +0200
+
+
+Started GET "/assets/jquery.ui.effect.self-febac90f6986b480a8dd00d6bfb6a560516a1610269faa285b9bde10bea826d9.js?body=1" for 127.0.0.1 at 2017-06-02 19:06:24 +0200
+
+
+Started GET "/assets/jquery.ui.effect-fade.self-842b0b75c2a59e4021b207cd17fd3abadd53dadc74205c0a96ef824b0470fbc7.js?body=1" for 127.0.0.1 at 2017-06-02 19:06:24 +0200
+
+
+Started GET "/assets/jquery.ui.effect-highlight.self-09f6f0983af5c26c41e5c48c6189e462d23c7837d3b8b35cd248e2cf5b348b85.js?body=1" for 127.0.0.1 at 2017-06-02 19:06:24 +0200
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2017-06-02 19:06:24 +0200
+
+
+Started GET "/assets/about.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-06-02 19:06:24 +0200
+
+
+Started GET "/assets/admin/article.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-06-02 19:06:24 +0200
+
+
+Started GET "/assets/admin/manufacturer.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-06-02 19:06:24 +0200
+
+
+Started GET "/assets/admin/order.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-06-02 19:06:24 +0200
+
+
+Started GET "/assets/admin/supplier.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-06-02 19:06:24 +0200
+
+
+Started GET "/assets/cart.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-06-02 19:06:24 +0200
+
+
+Started GET "/assets/catalog.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-06-02 19:06:24 +0200
+
+
+Started GET "/assets/checkout.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-06-02 19:06:24 +0200
+
+
+Started GET "/assets/forum.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-06-02 19:06:24 +0200
+
+
+Started GET "/assets/user.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-06-02 19:06:24 +0200
+
+
+Started GET "/assets/user_sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-06-02 19:06:24 +0200
+
+
+Started GET "/assets/application.self-7862a8a8b42407b4741a1adeeea35f0d13ddc4f702ec532adb0674491d296495.js?body=1" for 127.0.0.1 at 2017-06-02 19:06:24 +0200
+
+
+Started GET "/assets/favicon-3da0cc52952440e113d2ef7bb07cc6b601f1899e3ed5843f0bd6759f1277f3ba.ico" for 127.0.0.1 at 2017-06-02 19:06:24 +0200
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-02 19:08:28 +0200
+Processing by CatalogController#index as HTML
+  [1m[35mCart Load (0.5ms)[0m  SELECT  `carts`.* FROM `carts` WHERE `carts`.`id` = 25 LIMIT 1
+ApplicationController::require_no_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[36mArticle Load (0.5ms)[0m  [1mSELECT  `articles`.* FROM `articles`  ORDER BY articles.id desc LIMIT 5 OFFSET 0[0m
+  [1m[35mHABTM_Suppliers Load (0.5ms)[0m  SELECT `articles_suppliers`.* FROM `articles_suppliers` WHERE `articles_suppliers`.`article_id` IN (12, 11, 8, 6, 5)
+  [1m[36mSupplier Load (0.5ms)[0m  [1mSELECT `suppliers`.* FROM `suppliers` WHERE `suppliers`.`id` IN (2, 3, 4, 5, 6)[0m
+  [1m[35mManufacturer Load (0.4ms)[0m  SELECT `manufacturers`.* FROM `manufacturers` WHERE `manufacturers`.`id` IN (5, 7, 6)
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `articles`[0m
+  Rendered catalog/_articles.html.erb (19.0ms)
+  Rendered catalog/index.html.erb within layouts/application (20.3ms)
+ApplicationController::current_user
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM `users`
+  [1m[36mCartItem Load (0.6ms)[0m  [1mSELECT `cart_items`.* FROM `cart_items` WHERE `cart_items`.`cart_id` = 25[0m
+  Rendered cart/_cart.html.erb (1.9ms)
+Completed 200 OK in 109ms (Views: 77.2ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/assets/favicon-3da0cc52952440e113d2ef7bb07cc6b601f1899e3ed5843f0bd6759f1277f3ba.ico" for 127.0.0.1 at 2017-06-02 19:08:28 +0200
+
+
+Started GET "/forum/index" for 127.0.0.1 at 2017-06-02 19:08:32 +0200
+Processing by ForumController#index as HTML
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM `forum_posts`
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM `forum_posts`[0m
+  Rendered forum/index.html.erb within layouts/application (34.9ms)
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM `users`
+Completed 200 OK in 160ms (Views: 120.6ms | ActiveRecord: 26.6ms)
+
+
+Started GET "/forum/post" for 127.0.0.1 at 2017-06-02 19:08:35 +0200
+Processing by ForumController#post as HTML
+  Rendered forum/_form.html.erb (24.9ms)
+  Rendered forum/post.html.erb within layouts/application (44.3ms)
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM `users`[0m
+Completed 200 OK in 189ms (Views: 167.0ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/forum/create" for 127.0.0.1 at 2017-06-02 19:08:56 +0200
+Processing by ForumController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"n1byalhF/QkhJ/MRR5Jdn4/Is4AK6BBldOojdrePsNkux3atCLBs1mkM+y0Scu3OKPjyMFGI2GEXlLOYm3Ring==", "post"=>{"root_id"=>"0", "parent_id"=>"0", "depth"=>"0", "name"=>"Juan", "subject"=>"Me gusta vuesta web", "body"=>"Es muy bonita"}, "commit"=>"Crear post"}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO `forum_posts` (`name`, `subject`, `body`, `created_at`, `updated_at`) VALUES ('Juan', 'Me gusta vuesta web', 'Es muy bonita', '2017-06-02 17:08:56', '2017-06-02 17:08:56')[0m
+  [1m[35m (45.8ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (24.1ms)[0m  UPDATE `forum_posts` SET `root_id` = 1, `updated_at` = '2017-06-02 17:08:56' WHERE `forum_posts`.`id` = 1
+  [1m[36m (40.5ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/forum
+Completed 302 Found in 118ms (ActiveRecord: 111.1ms)
+
+
+Started GET "/forum" for 127.0.0.1 at 2017-06-02 19:08:56 +0200
+Processing by ForumController#index as HTML
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `forum_posts`
+  [1m[36mForumPost Load (0.3ms)[0m  [1mSELECT  `forum_posts`.* FROM `forum_posts`  ORDER BY root_id desc , created_at LIMIT 10 OFFSET 0[0m
+  Rendered forum/index.html.erb within layouts/application (3.3ms)
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `users`
+Completed 200 OK in 44ms (Views: 42.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/forum/show?id=1" for 127.0.0.1 at 2017-06-02 19:09:22 +0200
+Processing by ForumController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mForumPost Load (0.8ms)[0m  [1mSELECT  `forum_posts`.* FROM `forum_posts` WHERE `forum_posts`.`id` = 1 LIMIT 1[0m
+  Rendered forum/show.html.erb within layouts/application (3.0ms)
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM `users`
+Completed 200 OK in 100ms (Views: 94.9ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/forum/reply?id=1" for 127.0.0.1 at 2017-06-02 19:09:24 +0200
+Processing by ForumController#reply as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mForumPost Load (0.9ms)[0m  [1mSELECT  `forum_posts`.* FROM `forum_posts` WHERE `forum_posts`.`id` = 1 LIMIT 1[0m
+  Rendered forum/_form.html.erb (1.8ms)
+  Rendered forum/post.html.erb within layouts/application (4.7ms)
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM `users`
+Completed 200 OK in 87ms (Views: 82.9ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/forum/create" for 127.0.0.1 at 2017-06-02 19:10:08 +0200
+Processing by ForumController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qFPbmGTTlouk/5P6MS9LZsecSfiwA1Z6a1wA7U+/B14Zwl9fNCYHVOzUm8Zkz/s3YKwISOtjnn4IIpADY0TVGQ==", "post"=>{"root_id"=>"1", "parent_id"=>"1", "depth"=>"1", "name"=>"Miguel", "subject"=>"Es cierto", "body"=>"Es cierto, me gusta bastante también a mi. Tiene un diseño muy bonito y práctico."}, "commit"=>"Crear post"}
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `forum_posts` (`name`, `subject`, `body`, `root_id`, `parent_id`, `depth`, `created_at`, `updated_at`) VALUES ('Miguel', 'Es cierto', 'Es cierto, me gusta bastante también a mi. Tiene un diseño muy bonito y práctico.', 1, 1, 1, '2017-06-02 17:10:08', '2017-06-02 17:10:08')
+  [1m[36m (73.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/forum
+Completed 302 Found in 82ms (ActiveRecord: 74.7ms)
+
+
+Started GET "/forum" for 127.0.0.1 at 2017-06-02 19:10:08 +0200
+Processing by ForumController#index as HTML
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `forum_posts`
+  [1m[36mForumPost Load (0.2ms)[0m  [1mSELECT  `forum_posts`.* FROM `forum_posts`  ORDER BY root_id desc , created_at LIMIT 10 OFFSET 0[0m
+  Rendered forum/index.html.erb within layouts/application (3.5ms)
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM `users`
+Completed 200 OK in 50ms (Views: 48.3ms | ActiveRecord: 1.2ms)
