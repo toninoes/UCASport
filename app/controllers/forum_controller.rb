@@ -40,15 +40,15 @@ class ForumController < ApplicationController
     @posts.each do |post|
       post.destroy
     end
-    flash[:notice] = "El post #{@post.subject} se ha sido eliminado correctamente."
+    flash[:notice] = "El post #{@post.subject} ha sido eliminado correctamente."
     redirect_to :action => 'index'
   end
 
 
   def show
     @post = ForumPost.find(params[:id])
-    @posts = ForumPost.where(root_id: @post.root_id) ##########
-    @page_title = "#{@post.name}" ######
+    @posts = ForumPost.where(root_id: @post.root_id)
+    @page_title = "#{@post.name}"
   end
 
 
