@@ -1,0 +1,13 @@
+<p>
+  Introduzca el nombre (o parte del nombre) del articulo que quiere buscar.
+</p>
+
+<%= render :partial => 'search_box' %>
+
+<% if @articles %>
+    <p>
+      Resultado de la búsqueda '<%= params[:q] %>':
+      <%= pluralize @articles.size, 'resultado', 'resultados' %>
+    </p>
+    <%= render(:partial => 'articles') %>
+<% end %>
