@@ -22825,3 +22825,306 @@ ApplicationController::current_user
 ApplicationController::current_user_session
   [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM `users`
 Completed 200 OK in 50ms (Views: 48.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/admin/order" for 127.0.0.1 at 2017-06-02 19:11:59 +0200
+Processing by Admin::OrderController#index as HTML
+ApplicationController::require_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+Redirected to http://localhost:3000/user_sessions/new
+Filter chain halted as :require_user rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/user_sessions/new" for 127.0.0.1 at 2017-06-02 19:11:59 +0200
+Processing by UserSessionsController#new as HTML
+ApplicationController::require_no_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+  Rendered user_sessions/_form.html.erb (21.4ms)
+  Rendered user_sessions/new.html.erb within layouts/application (36.6ms)
+ApplicationController::current_user
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM `users`[0m
+Completed 200 OK in 122ms (Views: 118.3ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/user_sessions/create" for 127.0.0.1 at 2017-06-02 19:12:07 +0200
+Processing by UserSessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZVy82CNWeZQMrO+Nk63GW9e7y3CockO4drkXWc550jrUzTgfc6PoS0SH57HGTXYKcIuKwPMSi7wVx4e34oIAfQ==", "user_session"=>{"login"=>"admin", "password"=>"[FILTERED]"}, "commit"=>"Iniciar sesión"}
+ApplicationController::require_no_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[35mUser Load (0.5ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`login` = 'admin'  ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  UPDATE `users` SET `login_count` = 10, `last_login_at` = '2017-05-23 10:51:44', `current_login_at` = '2017-06-02 17:12:08', `last_request_at` = '2017-06-02 17:12:08', `perishable_token` = 'MTQyi0Fhz1ar0GvVXQiN', `updated_at` = '2017-06-02 17:12:08' WHERE `users`.`id` = 2
+  [1m[36m (48.4ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/admin/order
+Completed 302 Found in 326ms (ActiveRecord: 50.3ms)
+
+
+Started GET "/admin/order" for 127.0.0.1 at 2017-06-02 19:12:08 +0200
+Processing by Admin::OrderController#index as HTML
+ApplicationController::require_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[35mUser Load (0.8ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (9.9ms)[0m  UPDATE `users` SET `last_request_at` = '2017-06-02 17:12:08', `perishable_token` = '7GdP7cUIzGfCWXxUqxs', `updated_at` = '2017-06-02 17:12:08' WHERE `users`.`id` = 2
+  [1m[36m (32.7ms)[0m  [1mCOMMIT[0m
+ApplicationController::current_user_session
+  [1m[35mOrder Load (20.8ms)[0m  SELECT  `orders`.* FROM `orders` LIMIT 10 OFFSET 0
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM `orders`[0m
+  [1m[35mOrderItem Load (0.6ms)[0m  SELECT `order_items`.* FROM `order_items` WHERE `order_items`.`order_id` = 1
+  [1m[36mOrderItem Load (0.6ms)[0m  [1mSELECT `order_items`.* FROM `order_items` WHERE `order_items`.`order_id` = 2[0m
+  [1m[35mOrderItem Load (0.4ms)[0m  SELECT `order_items`.* FROM `order_items` WHERE `order_items`.`order_id` = 3
+  [1m[36mOrderItem Load (0.4ms)[0m  [1mSELECT `order_items`.* FROM `order_items` WHERE `order_items`.`order_id` = 4[0m
+  [1m[35mOrderItem Load (0.4ms)[0m  SELECT `order_items`.* FROM `order_items` WHERE `order_items`.`order_id` = 5
+  [1m[36mOrderItem Load (0.4ms)[0m  [1mSELECT `order_items`.* FROM `order_items` WHERE `order_items`.`order_id` = 6[0m
+  [1m[35mOrderItem Load (0.5ms)[0m  SELECT `order_items`.* FROM `order_items` WHERE `order_items`.`order_id` = 7
+  [1m[36mOrderItem Load (0.4ms)[0m  [1mSELECT `order_items`.* FROM `order_items` WHERE `order_items`.`order_id` = 8[0m
+  [1m[35mOrderItem Load (0.5ms)[0m  SELECT `order_items`.* FROM `order_items` WHERE `order_items`.`order_id` = 9
+  [1m[36mOrderItem Load (0.4ms)[0m  [1mSELECT `order_items`.* FROM `order_items` WHERE `order_items`.`order_id` = 10[0m
+  Rendered admin/order/_navigation.html.erb (2.4ms)
+  Rendered admin/order/index.html.erb within layouts/application (121.5ms)
+ApplicationController::current_user
+ApplicationController::current_user
+Completed 200 OK in 270ms (Views: 137.8ms | ActiveRecord: 93.1ms)
+
+
+Started GET "/admin/order/show/1" for 127.0.0.1 at 2017-06-02 19:12:14 +0200
+Processing by Admin::OrderController#show as HTML
+  Parameters: {"id"=>"1"}
+ApplicationController::require_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[35mUser Load (0.7ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  UPDATE `users` SET `last_request_at` = '2017-06-02 17:12:14', `perishable_token` = 'Ptxx2MwOyeDZ5RQm1oVJ', `updated_at` = '2017-06-02 17:12:14' WHERE `users`.`id` = 2
+  [1m[36m (65.0ms)[0m  [1mCOMMIT[0m
+ApplicationController::current_user_session
+  [1m[35mOrder Load (0.8ms)[0m  SELECT  `orders`.* FROM `orders` WHERE `orders`.`id` = 1 LIMIT 1
+  [1m[36mOrderItem Load (1.0ms)[0m  [1mSELECT `order_items`.* FROM `order_items` WHERE `order_items`.`order_id` = 1[0m
+  [1m[35mArticle Load (0.8ms)[0m  SELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 11 LIMIT 1
+  [1m[36mArticle Load (0.8ms)[0m  [1mSELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 8 LIMIT 1[0m
+  Rendered admin/order/_navigation.html.erb (3.4ms)
+  Rendered admin/order/show.html.erb within layouts/application (24.1ms)
+ApplicationController::current_user
+ApplicationController::current_user
+Completed 200 OK in 191ms (Views: 112.1ms | ActiveRecord: 69.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-02 19:20:43 +0200
+Processing by CatalogController#index as HTML
+  [1m[35mCart Load (0.6ms)[0m  SELECT  `carts`.* FROM `carts` WHERE `carts`.`id` = 25 LIMIT 1
+ApplicationController::require_no_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+ApplicationController::current_user_session
+  [1m[35mArticle Load (0.5ms)[0m  SELECT  `articles`.* FROM `articles`  ORDER BY articles.id desc LIMIT 5 OFFSET 0
+  [1m[36mHABTM_Suppliers Load (0.5ms)[0m  [1mSELECT `articles_suppliers`.* FROM `articles_suppliers` WHERE `articles_suppliers`.`article_id` IN (12, 11, 8, 6, 5)[0m
+  [1m[35mSupplier Load (0.4ms)[0m  SELECT `suppliers`.* FROM `suppliers` WHERE `suppliers`.`id` IN (2, 3, 4, 5, 6)
+  [1m[36mManufacturer Load (0.7ms)[0m  [1mSELECT `manufacturers`.* FROM `manufacturers` WHERE `manufacturers`.`id` IN (5, 7, 6)[0m
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM `articles`
+  Rendered catalog/_articles.html.erb (55.9ms)
+  Rendered catalog/index.html.erb within layouts/application (57.8ms)
+ApplicationController::current_user
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM `users`[0m
+  [1m[35mCartItem Load (0.3ms)[0m  SELECT `cart_items`.* FROM `cart_items` WHERE `cart_items`.`cart_id` = 25
+  Rendered cart/_cart.html.erb (7.0ms)
+Completed 200 OK in 167ms (Views: 112.6ms | ActiveRecord: 14.2ms)
+
+
+Started GET "/admin/order" for 127.0.0.1 at 2017-06-02 19:20:49 +0200
+Processing by Admin::OrderController#index as HTML
+ApplicationController::require_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+ApplicationController::current_user_session
+Redirected to http://localhost:3000/user_sessions/new
+Filter chain halted as :require_user rendered or redirected
+Completed 302 Found in 7ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/user_sessions/new" for 127.0.0.1 at 2017-06-02 19:20:49 +0200
+Processing by UserSessionsController#new as HTML
+ApplicationController::require_no_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[35mUser Load (0.8ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+ApplicationController::current_user_session
+  Rendered user_sessions/_form.html.erb (0.7ms)
+  Rendered user_sessions/new.html.erb within layouts/application (2.8ms)
+ApplicationController::current_user
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM `users`[0m
+Completed 200 OK in 74ms (Views: 67.6ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/user_sessions/create" for 127.0.0.1 at 2017-06-02 19:20:51 +0200
+Processing by UserSessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QTlrJxI1KxQmKJhBfRHflZGN3k1+y+nSjbBohAhunu/wqO/gQsC6y24DkH0o8W/ENr2f/SWrIdbuzvhqJJVMqA==", "user_session"=>{"login"=>"admin", "password"=>"[FILTERED]"}, "commit"=>"Iniciar sesión"}
+ApplicationController::require_no_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[35mUser Load (0.4ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+ApplicationController::current_user_session
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`login` = 'admin'  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mUPDATE `users` SET `login_count` = 11, `last_login_at` = '2017-06-02 17:12:08', `current_login_at` = '2017-06-02 17:20:51', `last_request_at` = '2017-06-02 17:20:51', `perishable_token` = 'o6JMccCoKrpnoidCfH6', `updated_at` = '2017-06-02 17:20:51' WHERE `users`.`id` = 2[0m
+  [1m[35m (45.0ms)[0m  COMMIT
+Redirected to http://localhost:3000/admin/order
+Completed 302 Found in 127ms (ActiveRecord: 46.5ms)
+
+
+Started GET "/admin/order" for 127.0.0.1 at 2017-06-02 19:20:51 +0200
+Processing by Admin::OrderController#index as HTML
+ApplicationController::require_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.7ms)[0m  [1mUPDATE `users` SET `last_request_at` = '2017-06-02 17:20:51', `perishable_token` = 'KH9vv7fnLaIKWcjY0srF', `updated_at` = '2017-06-02 17:20:51' WHERE `users`.`id` = 2[0m
+  [1m[35m (35.7ms)[0m  COMMIT
+ApplicationController::current_user_session
+  [1m[36mOrder Load (0.4ms)[0m  [1mSELECT  `orders`.* FROM `orders` LIMIT 10 OFFSET 0[0m
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM `orders`
+  [1m[36mOrderItem Load (0.7ms)[0m  [1mSELECT `order_items`.* FROM `order_items` WHERE `order_items`.`order_id` = 1[0m
+  [1m[35mOrderItem Load (0.9ms)[0m  SELECT `order_items`.* FROM `order_items` WHERE `order_items`.`order_id` = 2
+  [1m[36mOrderItem Load (0.7ms)[0m  [1mSELECT `order_items`.* FROM `order_items` WHERE `order_items`.`order_id` = 3[0m
+  [1m[35mOrderItem Load (0.8ms)[0m  SELECT `order_items`.* FROM `order_items` WHERE `order_items`.`order_id` = 4
+  [1m[36mOrderItem Load (0.7ms)[0m  [1mSELECT `order_items`.* FROM `order_items` WHERE `order_items`.`order_id` = 5[0m
+  [1m[35mOrderItem Load (0.5ms)[0m  SELECT `order_items`.* FROM `order_items` WHERE `order_items`.`order_id` = 6
+  [1m[36mOrderItem Load (0.7ms)[0m  [1mSELECT `order_items`.* FROM `order_items` WHERE `order_items`.`order_id` = 7[0m
+  [1m[35mOrderItem Load (0.4ms)[0m  SELECT `order_items`.* FROM `order_items` WHERE `order_items`.`order_id` = 8
+  [1m[36mOrderItem Load (0.3ms)[0m  [1mSELECT `order_items`.* FROM `order_items` WHERE `order_items`.`order_id` = 9[0m
+  [1m[35mOrderItem Load (0.5ms)[0m  SELECT `order_items`.* FROM `order_items` WHERE `order_items`.`order_id` = 10
+  Rendered admin/order/_navigation.html.erb (1.0ms)
+  Rendered admin/order/index.html.erb within layouts/application (53.3ms)
+ApplicationController::current_user
+ApplicationController::current_user
+Completed 200 OK in 156ms (Views: 91.1ms | ActiveRecord: 47.9ms)
+
+
+Started GET "/admin/order" for 127.0.0.1 at 2017-06-02 19:22:40 +0200
+Processing by Admin::OrderController#index as HTML
+ApplicationController::require_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE `users` SET `last_request_at` = '2017-06-02 17:22:40', `perishable_token` = 'VXoEgPEmxAjEpwZqXeu', `updated_at` = '2017-06-02 17:22:40' WHERE `users`.`id` = 2[0m
+  [1m[35m (30.1ms)[0m  COMMIT
+ApplicationController::current_user_session
+  [1m[36mOrder Load (0.6ms)[0m  [1mSELECT  `orders`.* FROM `orders` LIMIT 10 OFFSET 0[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM `orders`
+  [1m[36mOrderItem Load (0.5ms)[0m  [1mSELECT `order_items`.* FROM `order_items` WHERE `order_items`.`order_id` = 1[0m
+  [1m[35mOrderItem Load (0.6ms)[0m  SELECT `order_items`.* FROM `order_items` WHERE `order_items`.`order_id` = 2
+  [1m[36mOrderItem Load (0.5ms)[0m  [1mSELECT `order_items`.* FROM `order_items` WHERE `order_items`.`order_id` = 3[0m
+  [1m[35mOrderItem Load (0.6ms)[0m  SELECT `order_items`.* FROM `order_items` WHERE `order_items`.`order_id` = 4
+  [1m[36mOrderItem Load (0.4ms)[0m  [1mSELECT `order_items`.* FROM `order_items` WHERE `order_items`.`order_id` = 5[0m
+  [1m[35mOrderItem Load (0.4ms)[0m  SELECT `order_items`.* FROM `order_items` WHERE `order_items`.`order_id` = 6
+  [1m[36mOrderItem Load (0.4ms)[0m  [1mSELECT `order_items`.* FROM `order_items` WHERE `order_items`.`order_id` = 7[0m
+  [1m[35mOrderItem Load (0.4ms)[0m  SELECT `order_items`.* FROM `order_items` WHERE `order_items`.`order_id` = 8
+  [1m[36mOrderItem Load (0.7ms)[0m  [1mSELECT `order_items`.* FROM `order_items` WHERE `order_items`.`order_id` = 9[0m
+  [1m[35mOrderItem Load (0.6ms)[0m  SELECT `order_items`.* FROM `order_items` WHERE `order_items`.`order_id` = 10
+  Rendered admin/order/_navigation.html.erb (1.3ms)
+  Rendered admin/order/index.html.erb within layouts/application (35.1ms)
+ApplicationController::current_user
+ApplicationController::current_user
+Completed 200 OK in 131ms (Views: 86.1ms | ActiveRecord: 37.4ms)
+
+
+Started GET "/assets/favicon-3da0cc52952440e113d2ef7bb07cc6b601f1899e3ed5843f0bd6759f1277f3ba.ico" for 127.0.0.1 at 2017-06-02 19:22:40 +0200
+
+
+Started POST "/admin/order/destroy?id=1" for 127.0.0.1 at 2017-06-02 19:22:51 +0200
+Processing by Admin::OrderController#destroy as HTML
+  Parameters: {"authenticity_token"=>"IILcDP7jDRHltWsNLMt59qBoe/n/WfyRL/7hEmROcICRE1jLrhaczq2eYzF5K8mnB1g6SaQ5NJVMgHH8SLWixw==", "id"=>"1"}
+ApplicationController::require_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mUPDATE `users` SET `last_request_at` = '2017-06-02 17:22:51', `perishable_token` = 'Mkfa3ULJx0RvUXkRD', `updated_at` = '2017-06-02 17:22:51' WHERE `users`.`id` = 2[0m
+  [1m[35m (45.5ms)[0m  COMMIT
+ApplicationController::current_user_session
+  [1m[36mOrder Load (0.6ms)[0m  [1mSELECT  `orders`.* FROM `orders` WHERE `orders`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM `orders` WHERE `orders`.`id` = 1[0m
+  [1m[35m (41.1ms)[0m  COMMIT
+Redirected to http://localhost:3000/admin/order
+Completed 302 Found in 101ms (ActiveRecord: 89.1ms)
+
+
+Started GET "/admin/order" for 127.0.0.1 at 2017-06-02 19:22:51 +0200
+Processing by Admin::OrderController#index as HTML
+ApplicationController::require_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE `users` SET `last_request_at` = '2017-06-02 17:22:51', `perishable_token` = 'ci1hkg34NBoUVjdoaLey', `updated_at` = '2017-06-02 17:22:51' WHERE `users`.`id` = 2[0m
+  [1m[35m (80.3ms)[0m  COMMIT
+ApplicationController::current_user_session
+  [1m[36mOrder Load (0.8ms)[0m  [1mSELECT  `orders`.* FROM `orders` LIMIT 10 OFFSET 0[0m
+  [1m[35mOrderItem Load (0.6ms)[0m  SELECT `order_items`.* FROM `order_items` WHERE `order_items`.`order_id` = 2
+  [1m[36mOrderItem Load (0.7ms)[0m  [1mSELECT `order_items`.* FROM `order_items` WHERE `order_items`.`order_id` = 3[0m
+  [1m[35mOrderItem Load (0.4ms)[0m  SELECT `order_items`.* FROM `order_items` WHERE `order_items`.`order_id` = 4
+  [1m[36mOrderItem Load (0.7ms)[0m  [1mSELECT `order_items`.* FROM `order_items` WHERE `order_items`.`order_id` = 5[0m
+  [1m[35mOrderItem Load (0.5ms)[0m  SELECT `order_items`.* FROM `order_items` WHERE `order_items`.`order_id` = 6
+  [1m[36mOrderItem Load (0.5ms)[0m  [1mSELECT `order_items`.* FROM `order_items` WHERE `order_items`.`order_id` = 7[0m
+  [1m[35mOrderItem Load (0.5ms)[0m  SELECT `order_items`.* FROM `order_items` WHERE `order_items`.`order_id` = 8
+  [1m[36mOrderItem Load (0.6ms)[0m  [1mSELECT `order_items`.* FROM `order_items` WHERE `order_items`.`order_id` = 9[0m
+  [1m[35mOrderItem Load (0.6ms)[0m  SELECT `order_items`.* FROM `order_items` WHERE `order_items`.`order_id` = 10
+  Rendered admin/order/_navigation.html.erb (1.6ms)
+  Rendered admin/order/index.html.erb within layouts/application (35.8ms)
+ApplicationController::current_user
+ApplicationController::current_user
+Completed 200 OK in 193ms (Views: 99.0ms | ActiveRecord: 87.4ms)
+
+
+Started POST "/admin/order/destroy?id=5" for 127.0.0.1 at 2017-06-02 19:23:09 +0200
+Processing by Admin::OrderController#destroy as HTML
+  Parameters: {"authenticity_token"=>"WLhBje1ZFxlzG7Aq5k7DhEN3W5V3KNlfyH+V85Gk/cbpKcVKvayGxjswuBazrnPV5EcaJSxIEVurAQUdvV8vgQ==", "id"=>"5"}
+ApplicationController::require_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE `users` SET `last_request_at` = '2017-06-02 17:23:09', `perishable_token` = 'obqJCBcqPE9DLy410Lpk', `updated_at` = '2017-06-02 17:23:09' WHERE `users`.`id` = 2[0m
+  [1m[35m (34.7ms)[0m  COMMIT
+ApplicationController::current_user_session
+  [1m[36mOrder Load (0.5ms)[0m  [1mSELECT  `orders`.* FROM `orders` WHERE `orders`.`id` = 5 LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.7ms)[0m  [1mDELETE FROM `orders` WHERE `orders`.`id` = 5[0m
+  [1m[35m (85.5ms)[0m  COMMIT
+Redirected to http://localhost:3000/admin/order
+Completed 302 Found in 134ms (ActiveRecord: 122.8ms)
+
+
+Started GET "/admin/order" for 127.0.0.1 at 2017-06-02 19:23:10 +0200
+Processing by Admin::OrderController#index as HTML
+ApplicationController::require_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE `users` SET `last_request_at` = '2017-06-02 17:23:10', `perishable_token` = 't6WdvQwvkxIRKpgeEZ6', `updated_at` = '2017-06-02 17:23:10' WHERE `users`.`id` = 2[0m
+  [1m[35m (47.3ms)[0m  COMMIT
+ApplicationController::current_user_session
+  [1m[36mOrder Load (0.4ms)[0m  [1mSELECT  `orders`.* FROM `orders` LIMIT 10 OFFSET 0[0m
+  [1m[35mOrderItem Load (0.4ms)[0m  SELECT `order_items`.* FROM `order_items` WHERE `order_items`.`order_id` = 2
+  [1m[36mOrderItem Load (0.4ms)[0m  [1mSELECT `order_items`.* FROM `order_items` WHERE `order_items`.`order_id` = 3[0m
+  [1m[35mOrderItem Load (0.4ms)[0m  SELECT `order_items`.* FROM `order_items` WHERE `order_items`.`order_id` = 4
+  [1m[36mOrderItem Load (0.4ms)[0m  [1mSELECT `order_items`.* FROM `order_items` WHERE `order_items`.`order_id` = 6[0m
+  [1m[35mOrderItem Load (0.4ms)[0m  SELECT `order_items`.* FROM `order_items` WHERE `order_items`.`order_id` = 7
+  [1m[36mOrderItem Load (0.4ms)[0m  [1mSELECT `order_items`.* FROM `order_items` WHERE `order_items`.`order_id` = 8[0m
+  [1m[35mOrderItem Load (0.3ms)[0m  SELECT `order_items`.* FROM `order_items` WHERE `order_items`.`order_id` = 9
+  [1m[36mOrderItem Load (0.4ms)[0m  [1mSELECT `order_items`.* FROM `order_items` WHERE `order_items`.`order_id` = 10[0m
+  Rendered admin/order/_navigation.html.erb (1.3ms)
+  Rendered admin/order/index.html.erb within layouts/application (23.7ms)
+ApplicationController::current_user
+ApplicationController::current_user
+Completed 200 OK in 126ms (Views: 69.0ms | ActiveRecord: 51.5ms)

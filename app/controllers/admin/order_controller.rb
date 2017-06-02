@@ -33,4 +33,11 @@ class Admin::OrderController < Admin::AuthenticatedController
 
     @page_title = "Mostrando pedidos #{@status}"
   end
+
+  def destroy
+    @order = Order.find(params[:id])
+    @order.destroy
+    flash[:notice] = "La orden ##{@order.id} fue borrada correctamente."
+    redirect_to :action => 'index'
+  end
 end
