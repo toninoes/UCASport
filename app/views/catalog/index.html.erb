@@ -2,6 +2,6 @@
 <%= will_paginate @articles, :page_links => false, :link_separator => ' | ',
                           :previous_label => 'Anterior', :next_label => 'Siguiente' %>
 
-<p><%= link_to 'Últimos articulos', :action => 'latest' %></p>
-<p><%= link_to 'RSS', :action => 'rss' %></p>
-<p><%= link_to 'Buscar', :action => 'search' %></p>
+<p><%= link_to 'Últimos articulos', :action => 'latest' %> | <%= link_to 'RSS', :action => 'rss' %> | <%= link_to 'Buscar', :action => 'search' %></p>
+<p></p>
+<p></p>

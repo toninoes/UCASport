@@ -23575,3 +23575,327 @@ ApplicationController::current_user
   [1m[36mCartItem Load (0.2ms)[0m  [1mSELECT `cart_items`.* FROM `cart_items` WHERE `cart_items`.`cart_id` = 25[0m
   Rendered cart/_cart.html.erb (0.9ms)
 Completed 200 OK in 44ms (Views: 38.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-02 20:00:48 +0200
+Processing by CatalogController#index as HTML
+  [1m[35mCart Load (0.4ms)[0m  SELECT  `carts`.* FROM `carts` WHERE `carts`.`id` = 25 LIMIT 1
+ApplicationController::require_no_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+ApplicationController::current_user_session
+  [1m[35mArticle Load (0.3ms)[0m  SELECT  `articles`.* FROM `articles`  ORDER BY articles.id desc LIMIT 5 OFFSET 0
+  [1m[36mHABTM_Suppliers Load (0.4ms)[0m  [1mSELECT `articles_suppliers`.* FROM `articles_suppliers` WHERE `articles_suppliers`.`article_id` IN (12, 11, 8, 6, 5)[0m
+  [1m[35mSupplier Load (0.5ms)[0m  SELECT `suppliers`.* FROM `suppliers` WHERE `suppliers`.`id` IN (2, 3, 4, 5, 6)
+  [1m[36mManufacturer Load (0.3ms)[0m  [1mSELECT `manufacturers`.* FROM `manufacturers` WHERE `manufacturers`.`id` IN (5, 7, 6)[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `articles`
+  Rendered catalog/_articles.html.erb (14.8ms)
+  Rendered catalog/index.html.erb within layouts/application (16.0ms)
+ApplicationController::current_user
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `users`[0m
+  [1m[35mCartItem Load (0.3ms)[0m  SELECT `cart_items`.* FROM `cart_items` WHERE `cart_items`.`cart_id` = 25
+  Rendered cart/_cart.html.erb (1.1ms)
+Completed 200 OK in 56ms (Views: 50.2ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-02 20:01:38 +0200
+Processing by CatalogController#index as HTML
+  [1m[36mCart Load (0.4ms)[0m  [1mSELECT  `carts`.* FROM `carts` WHERE `carts`.`id` = 25 LIMIT 1[0m
+ApplicationController::require_no_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[35mUser Load (0.3ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+ApplicationController::current_user_session
+  [1m[36mArticle Load (0.4ms)[0m  [1mSELECT  `articles`.* FROM `articles`  ORDER BY articles.id desc LIMIT 5 OFFSET 0[0m
+  [1m[35mHABTM_Suppliers Load (0.4ms)[0m  SELECT `articles_suppliers`.* FROM `articles_suppliers` WHERE `articles_suppliers`.`article_id` IN (12, 11, 8, 6, 5)
+  [1m[36mSupplier Load (0.4ms)[0m  [1mSELECT `suppliers`.* FROM `suppliers` WHERE `suppliers`.`id` IN (2, 3, 4, 5, 6)[0m
+  [1m[35mManufacturer Load (0.4ms)[0m  SELECT `manufacturers`.* FROM `manufacturers` WHERE `manufacturers`.`id` IN (5, 7, 6)
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `articles`[0m
+  Rendered catalog/_articles.html.erb (14.2ms)
+  Rendered catalog/index.html.erb within layouts/application (16.2ms)
+ApplicationController::current_user
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `users`
+  [1m[36mCartItem Load (0.7ms)[0m  [1mSELECT `cart_items`.* FROM `cart_items` WHERE `cart_items`.`cart_id` = 25[0m
+  Rendered cart/_cart.html.erb (1.6ms)
+Completed 200 OK in 65ms (Views: 57.9ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/assets/favicon-3da0cc52952440e113d2ef7bb07cc6b601f1899e3ed5843f0bd6759f1277f3ba.ico" for 127.0.0.1 at 2017-06-02 20:01:38 +0200
+
+
+Started GET "/catalog/latest" for 127.0.0.1 at 2017-06-02 20:01:44 +0200
+Processing by CatalogController#latest as HTML
+  [1m[35mCart Load (0.5ms)[0m  SELECT  `carts`.* FROM `carts` WHERE `carts`.`id` = 25 LIMIT 1
+ApplicationController::require_no_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+ApplicationController::current_user_session
+  [1m[35mArticle Load (0.4ms)[0m  SELECT  `articles`.* FROM `articles`  ORDER BY articles.id desc LIMIT 5
+  [1m[36mHABTM_Suppliers Load (0.7ms)[0m  [1mSELECT `articles_suppliers`.* FROM `articles_suppliers` WHERE `articles_suppliers`.`article_id` IN (12, 11, 8, 6, 5)[0m
+  [1m[35mSupplier Load (0.5ms)[0m  SELECT `suppliers`.* FROM `suppliers` WHERE `suppliers`.`id` IN (2, 3, 4, 5, 6)
+  [1m[36mManufacturer Load (0.4ms)[0m  [1mSELECT `manufacturers`.* FROM `manufacturers` WHERE `manufacturers`.`id` IN (5, 7, 6)[0m
+  Rendered catalog/_articles.html.erb (15.0ms)
+  Rendered catalog/latest.html.erb within layouts/application (16.2ms)
+ApplicationController::current_user
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM `users`
+  [1m[36mCartItem Load (0.3ms)[0m  [1mSELECT `cart_items`.* FROM `cart_items` WHERE `cart_items`.`cart_id` = 25[0m
+  Rendered cart/_cart.html.erb (1.2ms)
+Completed 200 OK in 71ms (Views: 63.6ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-02 20:01:53 +0200
+Processing by CatalogController#index as HTML
+  [1m[35mCart Load (0.3ms)[0m  SELECT  `carts`.* FROM `carts` WHERE `carts`.`id` = 25 LIMIT 1
+ApplicationController::require_no_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+ApplicationController::current_user_session
+  [1m[35mArticle Load (0.4ms)[0m  SELECT  `articles`.* FROM `articles`  ORDER BY articles.id desc LIMIT 5 OFFSET 0
+  [1m[36mHABTM_Suppliers Load (0.3ms)[0m  [1mSELECT `articles_suppliers`.* FROM `articles_suppliers` WHERE `articles_suppliers`.`article_id` IN (12, 11, 8, 6, 5)[0m
+  [1m[35mSupplier Load (0.2ms)[0m  SELECT `suppliers`.* FROM `suppliers` WHERE `suppliers`.`id` IN (2, 3, 4, 5, 6)
+  [1m[36mManufacturer Load (0.3ms)[0m  [1mSELECT `manufacturers`.* FROM `manufacturers` WHERE `manufacturers`.`id` IN (5, 7, 6)[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `articles`
+  Rendered catalog/_articles.html.erb (12.1ms)
+  Rendered catalog/index.html.erb within layouts/application (14.0ms)
+ApplicationController::current_user
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM `users`[0m
+  [1m[35mCartItem Load (0.4ms)[0m  SELECT `cart_items`.* FROM `cart_items` WHERE `cart_items`.`cart_id` = 25
+  Rendered cart/_cart.html.erb (1.3ms)
+Completed 200 OK in 58ms (Views: 51.4ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/catalog/rss" for 127.0.0.1 at 2017-06-02 20:02:04 +0200
+Processing by CatalogController#rss as HTML
+  [1m[36mCart Load (0.3ms)[0m  [1mSELECT  `carts`.* FROM `carts` WHERE `carts`.`id` = 25 LIMIT 1[0m
+ApplicationController::require_no_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[35mUser Load (0.4ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+ApplicationController::current_user_session
+  [1m[36mArticle Load (0.4ms)[0m  [1mSELECT  `articles`.* FROM `articles`  ORDER BY articles.id desc LIMIT 5[0m
+  [1m[35mHABTM_Suppliers Load (0.4ms)[0m  SELECT `articles_suppliers`.* FROM `articles_suppliers` WHERE `articles_suppliers`.`article_id` IN (12, 11, 8, 6, 5)
+  [1m[36mSupplier Load (0.4ms)[0m  [1mSELECT `suppliers`.* FROM `suppliers` WHERE `suppliers`.`id` IN (2, 3, 4, 5, 6)[0m
+  [1m[35mManufacturer Load (0.5ms)[0m  SELECT `manufacturers`.* FROM `manufacturers` WHERE `manufacturers`.`id` IN (5, 7, 6)
+  Rendered catalog/rss.builder (13.6ms)
+Completed 200 OK in 19ms (Views: 13.0ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/catalog/rss" for 127.0.0.1 at 2017-06-02 20:02:04 +0200
+Processing by CatalogController#rss as HTML
+  [1m[36mCart Load (0.5ms)[0m  [1mSELECT  `carts`.* FROM `carts` WHERE `carts`.`id` = 25 LIMIT 1[0m
+ApplicationController::require_no_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[35mUser Load (0.3ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+ApplicationController::current_user_session
+  [1m[36mArticle Load (0.3ms)[0m  [1mSELECT  `articles`.* FROM `articles`  ORDER BY articles.id desc LIMIT 5[0m
+  [1m[35mHABTM_Suppliers Load (0.4ms)[0m  SELECT `articles_suppliers`.* FROM `articles_suppliers` WHERE `articles_suppliers`.`article_id` IN (12, 11, 8, 6, 5)
+  [1m[36mSupplier Load (0.2ms)[0m  [1mSELECT `suppliers`.* FROM `suppliers` WHERE `suppliers`.`id` IN (2, 3, 4, 5, 6)[0m
+  [1m[35mManufacturer Load (0.3ms)[0m  SELECT `manufacturers`.* FROM `manufacturers` WHERE `manufacturers`.`id` IN (5, 7, 6)
+  Rendered catalog/rss.builder (10.4ms)
+Completed 200 OK in 15ms (Views: 9.9ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/catalog/search" for 127.0.0.1 at 2017-06-02 20:02:11 +0200
+Processing by CatalogController#search as HTML
+  [1m[36mCart Load (0.4ms)[0m  [1mSELECT  `carts`.* FROM `carts` WHERE `carts`.`id` = 25 LIMIT 1[0m
+ApplicationController::require_no_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[35mUser Load (0.3ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+ApplicationController::current_user_session
+  Rendered catalog/_search_box.html.erb (0.3ms)
+  Rendered catalog/search.html.erb within layouts/application (1.0ms)
+ApplicationController::current_user
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM `users`[0m
+  [1m[35mCartItem Load (0.3ms)[0m  SELECT `cart_items`.* FROM `cart_items` WHERE `cart_items`.`cart_id` = 25
+  Rendered cart/_cart.html.erb (1.2ms)
+Completed 200 OK in 56ms (Views: 52.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/catalog/search?utf8=%E2%9C%93&q=oj&commit=Buscar" for 127.0.0.1 at 2017-06-02 20:02:16 +0200
+Processing by CatalogController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"oj", "commit"=>"Buscar"}
+  [1m[36mCart Load (0.6ms)[0m  [1mSELECT  `carts`.* FROM `carts` WHERE `carts`.`id` = 25 LIMIT 1[0m
+ApplicationController::require_no_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[35mUser Load (0.3ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+ApplicationController::current_user_session
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM `articles` WHERE (title LIKE '%oj%')[0m
+  Rendered catalog/_search_box.html.erb (0.5ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM `articles` WHERE (title LIKE '%oj%')
+  [1m[36mArticle Load (0.4ms)[0m  [1mSELECT `articles`.* FROM `articles` WHERE (title LIKE '%oj%')[0m
+  Rendered catalog/_articles.html.erb (0.7ms)
+  Rendered catalog/search.html.erb within layouts/application (3.2ms)
+ApplicationController::current_user
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM `users`
+  [1m[36mCartItem Load (0.4ms)[0m  [1mSELECT `cart_items`.* FROM `cart_items` WHERE `cart_items`.`cart_id` = 25[0m
+  Rendered cart/_cart.html.erb (1.5ms)
+Completed 200 OK in 62ms (Views: 56.0ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-02 20:02:19 +0200
+Processing by CatalogController#index as HTML
+  [1m[35mCart Load (0.4ms)[0m  SELECT  `carts`.* FROM `carts` WHERE `carts`.`id` = 25 LIMIT 1
+ApplicationController::require_no_user
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+ApplicationController::current_user_session
+  [1m[35mArticle Load (0.4ms)[0m  SELECT  `articles`.* FROM `articles`  ORDER BY articles.id desc LIMIT 5 OFFSET 0
+  [1m[36mHABTM_Suppliers Load (0.4ms)[0m  [1mSELECT `articles_suppliers`.* FROM `articles_suppliers` WHERE `articles_suppliers`.`article_id` IN (12, 11, 8, 6, 5)[0m
+  [1m[35mSupplier Load (0.3ms)[0m  SELECT `suppliers`.* FROM `suppliers` WHERE `suppliers`.`id` IN (2, 3, 4, 5, 6)
+  [1m[36mManufacturer Load (0.3ms)[0m  [1mSELECT `manufacturers`.* FROM `manufacturers` WHERE `manufacturers`.`id` IN (5, 7, 6)[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `articles`
+  Rendered catalog/_articles.html.erb (10.9ms)
+  Rendered catalog/index.html.erb within layouts/application (12.1ms)
+ApplicationController::current_user
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `users`[0m
+  [1m[35mCartItem Load (0.3ms)[0m  SELECT `cart_items`.* FROM `cart_items` WHERE `cart_items`.`cart_id` = 25
+  Rendered cart/_cart.html.erb (1.2ms)
+Completed 200 OK in 53ms (Views: 46.8ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/forum/index" for 127.0.0.1 at 2017-06-02 20:02:29 +0200
+Processing by ForumController#index as HTML
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM `forum_posts`[0m
+  [1m[35mForumPost Load (0.7ms)[0m  SELECT  `forum_posts`.* FROM `forum_posts`  ORDER BY root_id desc , created_at LIMIT 10 OFFSET 0
+  Rendered forum/index.html.erb within layouts/application (11.5ms)
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+ApplicationController::current_user_session
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `users`
+Completed 200 OK in 60ms (Views: 54.1ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/forum/index" for 127.0.0.1 at 2017-06-02 20:05:48 +0200
+Processing by ForumController#index as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `forum_posts`[0m
+  [1m[35mForumPost Load (0.3ms)[0m  SELECT  `forum_posts`.* FROM `forum_posts`  ORDER BY root_id desc , created_at LIMIT 10 OFFSET 0
+  Rendered forum/index.html.erb within layouts/application (9.5ms)
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+ApplicationController::current_user_session
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `users`
+Completed 200 OK in 65ms (Views: 59.7ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/assets/favicon-3da0cc52952440e113d2ef7bb07cc6b601f1899e3ed5843f0bd6759f1277f3ba.ico" for 127.0.0.1 at 2017-06-02 20:05:49 +0200
+
+
+Started GET "/forum/index" for 127.0.0.1 at 2017-06-02 20:06:16 +0200
+Processing by ForumController#index as HTML
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM `forum_posts`[0m
+  [1m[35mForumPost Load (0.4ms)[0m  SELECT  `forum_posts`.* FROM `forum_posts`  ORDER BY root_id desc , created_at LIMIT 10 OFFSET 0
+  Rendered forum/index.html.erb within layouts/application (3.6ms)
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+ApplicationController::current_user_session
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `users`
+Completed 200 OK in 51ms (Views: 48.4ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/favicon-3da0cc52952440e113d2ef7bb07cc6b601f1899e3ed5843f0bd6759f1277f3ba.ico" for 127.0.0.1 at 2017-06-02 20:06:16 +0200
+
+
+Started GET "/forum/index" for 127.0.0.1 at 2017-06-02 20:06:22 +0200
+Processing by ForumController#index as HTML
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM `forum_posts`[0m
+  [1m[35mForumPost Load (0.4ms)[0m  SELECT  `forum_posts`.* FROM `forum_posts`  ORDER BY root_id desc , created_at LIMIT 10 OFFSET 0
+  Rendered forum/index.html.erb within layouts/application (10.3ms)
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+ApplicationController::current_user_session
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM `users`
+Completed 200 OK in 67ms (Views: 60.7ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/assets/favicon-3da0cc52952440e113d2ef7bb07cc6b601f1899e3ed5843f0bd6759f1277f3ba.ico" for 127.0.0.1 at 2017-06-02 20:06:23 +0200
+
+
+Started GET "/forum/index" for 127.0.0.1 at 2017-06-02 20:07:03 +0200
+Processing by ForumController#index as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `forum_posts`[0m
+  [1m[35mForumPost Load (0.3ms)[0m  SELECT  `forum_posts`.* FROM `forum_posts`  ORDER BY root_id desc , created_at LIMIT 10 OFFSET 0
+  Rendered forum/index.html.erb within layouts/application (10.0ms)
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+ApplicationController::current_user_session
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM `users`
+Completed 200 OK in 64ms (Views: 58.5ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/assets/favicon-3da0cc52952440e113d2ef7bb07cc6b601f1899e3ed5843f0bd6759f1277f3ba.ico" for 127.0.0.1 at 2017-06-02 20:07:04 +0200
+
+
+Started GET "/forum/index" for 127.0.0.1 at 2017-06-02 20:07:29 +0200
+Processing by ForumController#index as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `forum_posts`[0m
+  [1m[35mForumPost Load (0.3ms)[0m  SELECT  `forum_posts`.* FROM `forum_posts`  ORDER BY root_id desc , created_at LIMIT 10 OFFSET 0
+  Rendered forum/index.html.erb within layouts/application (10.6ms)
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+ApplicationController::current_user_session
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `users`
+Completed 200 OK in 71ms (Views: 66.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/favicon-3da0cc52952440e113d2ef7bb07cc6b601f1899e3ed5843f0bd6759f1277f3ba.ico" for 127.0.0.1 at 2017-06-02 20:07:30 +0200
+
+
+Started GET "/forum/index" for 127.0.0.1 at 2017-06-02 20:08:57 +0200
+Processing by ForumController#index as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `forum_posts`[0m
+  [1m[35mForumPost Load (0.3ms)[0m  SELECT  `forum_posts`.* FROM `forum_posts`  ORDER BY root_id desc , created_at LIMIT 10 OFFSET 0
+  Rendered forum/index.html.erb within layouts/application (10.0ms)
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+ApplicationController::current_user_session
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `users`
+Completed 200 OK in 68ms (Views: 63.3ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/assets/favicon-3da0cc52952440e113d2ef7bb07cc6b601f1899e3ed5843f0bd6759f1277f3ba.ico" for 127.0.0.1 at 2017-06-02 20:08:58 +0200
+
+
+Started GET "/forum/index" for 127.0.0.1 at 2017-06-02 20:09:51 +0200
+Processing by ForumController#index as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `forum_posts`[0m
+  [1m[35mForumPost Load (0.3ms)[0m  SELECT  `forum_posts`.* FROM `forum_posts`  ORDER BY root_id desc , created_at LIMIT 10 OFFSET 0
+  Rendered forum/index.html.erb within layouts/application (8.9ms)
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+ApplicationController::current_user_session
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM `users`
+Completed 200 OK in 66ms (Views: 60.5ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/assets/favicon-3da0cc52952440e113d2ef7bb07cc6b601f1899e3ed5843f0bd6759f1277f3ba.ico" for 127.0.0.1 at 2017-06-02 20:09:51 +0200
+
+
+Started GET "/forum/index" for 127.0.0.1 at 2017-06-02 20:10:23 +0200
+Processing by ForumController#index as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `forum_posts`[0m
+  [1m[35mForumPost Load (0.3ms)[0m  SELECT  `forum_posts`.* FROM `forum_posts`  ORDER BY root_id desc , created_at LIMIT 10 OFFSET 0
+  Rendered forum/index.html.erb within layouts/application (9.8ms)
+ApplicationController::current_user
+ApplicationController::current_user_session
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+ApplicationController::current_user_session
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM `users`
+Completed 200 OK in 66ms (Views: 60.7ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/assets/favicon-3da0cc52952440e113d2ef7bb07cc6b601f1899e3ed5843f0bd6759f1277f3ba.ico" for 127.0.0.1 at 2017-06-02 20:10:23 +0200
