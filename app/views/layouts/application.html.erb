@@ -13,7 +13,7 @@
     <h2 id="slogan">Expertos en zapatillas deportivas</h2>
     <% if current_user %>
       <p id="loginlogout">
-        Identificado como <%= current_user.login %>
+        Identificado como <strong><%= current_user.login %></strong>
         (<%= link_to "Editar cuenta", :controller => '/user', :action => :show %>)
         <br/>
         (<%= link_to "Cerrar sesión", :controller => '/user_sessions', :action => :destroy %>)
