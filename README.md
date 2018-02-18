@@ -10,4 +10,4 @@ Grado en Ingenierı́a Informática. Curso 2016-2017
 
 ## Captura de UCASport funcionando
 
-![Diagrama ER](https://github.com/toninoes/UCASport/blob/master/app/assets/images/b.png)
+![Captura de UCASport](https://github.com/toninoes/UCASport/blob/master/app/assets/images/b.png)
