@@ -6,4 +6,4 @@ Grado en Ingenierı́a Informática. Curso 2016-2017
 
 ## Diagrama ER
 
-![Diagrama ER](https://github.com/toninoes/Proyecto/blob/master/iPresence/static/imagenes/c.png)
+![Diagrama ER](https://github.com/toninoes/UCASport/blob/master/app/assets/images/a.png)
