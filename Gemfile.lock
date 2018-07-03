@@ -100,7 +100,7 @@ GEM
     minitest (5.10.1)
     multi_json (1.12.1)
     mysql2 (0.4.2)
-    nokogiri (1.8.1)
+    nokogiri (1.8.2)
       mini_portile2 (~> 2.1.0)
     paperclip (5.2.0)
       activemodel (>= 3.2.0)
